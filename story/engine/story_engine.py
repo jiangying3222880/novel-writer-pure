@@ -82,6 +82,42 @@ class StoryEngine:
             "prompt": compiled,
         }
 
+    # ---- Agent 集成 ----
+
+    def run_with_agents(
+        self,
+        state: StoryState,
+        *,
+        project_id: str = "",
+        **kwargs: Any,
+    ) -> dict[str, Any]:
+        """运行完整链路 + Agent 协作."""
+        try:
+            from app.agents.orchestrator import OrchestratorV4
+            from story.guide.collector import collect_signals
+
+            # 收集 signals
+            signals = collect_signals(state.unit_id, project_id=project_id)
+
+            # Agent 协作
+            orch = OrchestratorV4()
+            agent_result = orch.run(
+                state.unit_id,
+                project_id=project_id,
+                state=state,
+                guides=signals,
+            )
+
+            # 合并结果
+            base_result = self.run_unit(state, signals=signals, **kwargs)
+            base_result["agent_result"] = agent_result
+
+            return base_result
+
+        except Exception as e:
+            _logger.warning("Agent integration failed, falling back: %s", e)
+            return self.run_unit(state, **kwargs)
+
     # ---- 状态查看 ----
 
     @property
