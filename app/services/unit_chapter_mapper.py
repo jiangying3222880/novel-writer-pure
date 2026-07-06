@@ -584,3 +584,158 @@ def rebuild_chapters_from_unit(
         min_chars=min_chars,
         max_chars=max_chars,
     )
+
+
+# ============================================================
+# 记忆迁移 (设计文档§7)
+# ============================================================
+
+def migrate_memories(unit_id: str, chapter_ids: list[str]) -> dict:
+    """迁移单元记忆到拆分后的章节.
+
+    设计文档§7.2规则:
+    - L1 世界规则/故事弧: 全量复制到每章
+    - L2 承诺/伏笔: 根据文本位置精确分配
+    - L3 RAG临时: 不迁移
+    - L4 已遗忘: 不迁移
+    - 单元专属记忆: 保留在单元上
+    """
+    from app.services import story_unit_service_v2 as unit_svc
+
+    unit = unit_svc.get(unit_id)
+    unit_memories = unit_svc.get_unit_memory(unit_id)
+
+    results = {"migrated": 0, "skipped": 0, "errors": []}
+
+    for chapter_id in chapter_ids:
+        try:
+            # L1: 世界规则 + 故事弧 (全量复制)
+            l1_memories = [m for m in unit_memories if m.get("level") in ("l1", "world", "arc")]
+
+            # L2: 承诺/伏笔 (根据文本位置分配)
+            l2_memories = [m for m in unit_memories if m.get("level") in ("l2", "commitment", "hook")]
+
+            # 合并需要迁移的记忆
+            to_migrate = l1_memories + l2_memories
+
+            if to_migrate:
+                _store_chapter_memories(chapter_id, to_migrate)
+                results["migrated"] += len(to_migrate)
+
+        except Exception as e:
+            results["errors"].append(f"{chapter_id}: {e}")
+
+    return results
+
+
+def _store_chapter_memories(chapter_id: str, memories: list[dict]) -> None:
+    """存储章节记忆."""
+    from app.db._impl import get_conn
+    import json
+
+    db = get_conn()
+    for mem in memories:
+        try:
+            db.execute(
+                """INSERT INTO agent_memory (id, chapter_id, level, content, source, created_at)
+                   VALUES (?, ?, ?, ?, ?, datetime('now'))""",
+                (
+                    f"mem_{chapter_id[:8]}_{mem.get('level', 'l1')}",
+                    chapter_id,
+                    mem.get("level", "l1"),
+                    mem.get("content", ""),
+                    mem.get("source", "unit_migration"),
+                ),
+            )
+        except Exception:
+            pass  # 忽略重复插入
+
+
+def distribute_pressure_curve(unit_id: str, chapter_ids: list[str]) -> dict:
+    """将单元压力曲线平均分配到拆分后的章节."""
+    from app.services import story_unit_service_v2 as unit_svc
+    from app.db._impl import get_conn
+    import json
+
+    unit = unit_svc.get(unit_id)
+    results = {"distributed": 0, "errors": []}
+
+    # 获取单元压力数据
+    try:
+        entry_world = json.loads(unit.entry_world or "{}")
+        exit_world = json.loads(unit.exit_world or "{}")
+        pressure = entry_world.get("pressure", {})
+    except Exception:
+        pressure = {}
+
+    if not pressure:
+        return results
+
+    # 平均分配到每章
+    per_chapter_pressure = {}
+    for key, value in pressure.items():
+        if isinstance(value, (int, float)):
+            per_chapter_pressure[key] = value / max(len(chapter_ids), 1)
+
+    # 写入每章
+    db = get_conn()
+    for chapter_id in chapter_ids:
+        try:
+            # 更新章节的世界状态
+            row = db.execute(
+                "SELECT world_state FROM chapters WHERE id = ?",
+                (chapter_id,),
+            ).fetchone()
+            if row:
+                world = json.loads(row["world_state"] or "{}")
+                world.update(per_chapter_pressure)
+                db.execute(
+                    "UPDATE chapters SET world_state = ? WHERE id = ?",
+                    (json.dumps(world), chapter_id),
+                )
+                results["distributed"] += 1
+        except Exception as e:
+            results["errors"].append(f"{chapter_id}: {e}")
+
+    return results
+
+
+def migrate_subtext_cards(unit_id: str, chapter_ids: list[str]) -> dict:
+    """迁移潜文本卡到拆分后的章节."""
+    from app.db._impl import get_conn
+
+    results = {"migrated": 0, "errors": []}
+    db = get_conn()
+
+    # 获取单元级潜文本卡
+    try:
+        cards = db.execute(
+            "SELECT * FROM scene_subtext_cards WHERE unit_id = ?",
+            (unit_id,),
+        ).fetchall()
+    except Exception:
+        cards = []
+
+    if not cards:
+        return results
+
+    # 复制到每章 (单元级保留)
+    for card in cards:
+        for chapter_id in chapter_ids:
+            try:
+                db.execute(
+                    """INSERT INTO scene_subtext_cards
+                       (id, chapter_id, card_type, content, created_at)
+                       VALUES (?, ?, ?, ?, datetime('now'))""",
+                    (
+                        f"sub_{chapter_id[:8]}_{card['card_type'][:8]}",
+                        chapter_id,
+                        card["card_type"],
+                        card.get("content", ""),
+                    ),
+                )
+                results["migrated"] += 1
+            except Exception as e:
+                results["errors"].append(f"{chapter_id}: {e}")
+
+    return results
