@@ -83,13 +83,12 @@ def main() -> int:
     app.setApplicationVersion(__version__)
     app.setOrganizationName("NovelWriterPure")
 
-    # Dialog adapters
-    from app.adapters.pyside6.dialogs_impl import install as _install_dialogs
-    _install_dialogs()
-
-    # Service wiring
-    from app.core.wiring import wire_default_services as _wire_services
-    _wire_services()
+    # Service wiring (skip dialog adapters for v4 minimal)
+    try:
+        from app.core.wiring import wire_default_services as _wire_services
+        _wire_services()
+    except Exception as e:
+        logging.warning("wiring failed: %s", e)
 
     # Model registry
     try:
@@ -101,16 +100,9 @@ def main() -> int:
     except Exception as e:
         logging.warning("model registry init failed: %s", e)
 
-    # Theme
-    from app.ui.theme import get_theme
-    try:
-        from app.services import app_setting_service
-        saved_theme = str(app_setting_service.get("ui.theme", "dark") or "dark")
-        if saved_theme not in ("dark", "light"):
-            saved_theme = "dark"
-    except Exception:
-        saved_theme = "dark"
-    get_theme().apply(app, saved_theme)
+    # Theme (v4)
+    from app.ui.theme_v4 import get_theme_v4
+    get_theme_v4().apply(app, "dark")
 
     window = MainWindow()
     window.show()
