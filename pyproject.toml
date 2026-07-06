@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "novel-writer"
+version = "4.0.0"
+description = "AI 辅助长篇小说创作工具 — Story OS 架构"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [
+    { name = "NovelWriter Team" },
+]
+keywords = ["novel", "writing", "ai", "creative", "pyside6", "story-os"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "License :: Other/Proprietary License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+    "Topic :: Text Processing :: Markup",
+]
+
+dependencies = [
+    "PySide6>=6.5",
+    "numpy",
+    "scikit-learn",
+    "jieba",
+    "requests",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-qt>=4.2",
+    "black",
+    "ruff",
+]
+packaging = [
+    "pyinstaller>=6.0",
+]
+
+[project.scripts]
+novel-writer = "app.main:main"
+
+[project.gui-scripts]
+novel-writer-gui = "app.main:main"
+
+[tool.setuptools.packages.find]
+include = ["app*", "story*"]
+
+[tool.setuptools.package-data]
+app = ["resources/*.json", "resources/*.qss", "db/migrations/*.sql", "db/*.sql"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["smoke", "tests"]
+addopts = "-ra -q"
