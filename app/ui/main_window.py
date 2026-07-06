@@ -618,6 +618,12 @@ class MainWindow(QMainWindow):
         self._refresh_project_progress()
         self._notify_project_changed()
 
+        # §9 双模式: 检测项目类型并设置默认视图
+        if self.current_project:
+            project_id = self.current_project.get("id")
+            if project_id:
+                self._detect_and_set_project_mode(project_id)
+
     def _refresh_project_progress(self) -> None:
         """刷新 titlebar 的项目进度: 完成章节/估算总章节.
 
@@ -648,6 +654,36 @@ class MainWindow(QMainWindow):
             self.lbl_progress_text.setText("—/—")
             self.progress_bar.setRange(0, 1)
             self.progress_bar.setValue(0)
+
+    def _detect_and_set_project_mode(self, project_id: str) -> None:
+        """§9 双模式: 检测项目类型并设置默认视图."""
+        try:
+            from app.services.project_type import detect_project_type, get_default_view
+            project_type = detect_project_type(project_id)
+            default_view = get_default_view(project_id)
+
+            log.info("[mode] 项目 %s 类型: %s, 默认视图: %s", project_id[:8], project_type, default_view)
+
+            # 根据项目类型切换到对应视图
+            if default_view == "unit":
+                # 新项目: 切换到单元视图
+                self._select_module("create")
+                # 尝试切换到故事单元页面
+                try:
+                    self._on_sub_page_selected("create", "unit")
+                except Exception:
+                    pass
+            else:
+                # 老项目: 保持章节视图 (默认)
+                pass
+
+            # 存储项目模式信息供其他组件使用
+            if self.current_project:
+                self.current_project["_project_type"] = project_type
+                self.current_project["_default_view"] = default_view
+
+        except Exception as e:
+            log.warning("[mode] 项目类型检测失败: %s", e)
 
     def _reload_projects(self) -> None:
         try:
