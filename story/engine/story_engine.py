@@ -93,19 +93,18 @@ class StoryEngine:
     ) -> dict[str, Any]:
         """运行完整链路 + Agent 协作."""
         try:
-            from app.agents.orchestrator import OrchestratorV4
+            from app.agents.orchestrator import Orchestrator, OrchestratorConfig
             from story.guide.collector import collect_signals
 
             # 收集 signals
             signals = collect_signals(state.unit_id, project_id=project_id)
 
             # Agent 协作
-            orch = OrchestratorV4()
-            agent_result = orch.run(
+            orch = Orchestrator(config=OrchestratorConfig(enable_revision_loop=False))
+            agent_result = orch.run_unit(
+                project_id,
                 state.unit_id,
-                project_id=project_id,
-                state=state,
-                guides=signals,
+                use_guide_system=True,
             )
 
             # 合并结果

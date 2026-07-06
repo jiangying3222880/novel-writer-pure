@@ -489,6 +489,13 @@ class Orchestrator:
             except Exception as e:
                 _logger.warning("[orch] Story Compiler 影响分析失败 (降级): %s", e)
 
+            # v4.0: 写后因果更新
+            try:
+                draft_text = write_r.data.get("text", "") if isinstance(write_r.data, dict) else ""
+                self.update_causal_graph(project_id, unit_id, draft_text)
+            except Exception as e:
+                _logger.warning("[orch] 因果图更新失败 (降级): %s", e)
+
             duration_ms = int((time.time() - t0) * 1000)
             return OrchestratorResult(
                 ok=True,
@@ -902,16 +909,25 @@ class Orchestrator:
             if draft_text:
                 pass  # TODO: NLP提取
 
-            # 2. 更新 brief
+            # 2. 更新 brief (注意: 实际字段名是 hooks_planned_plant/pay)
             updates = {}
             if hooks_planted:
-                existing = brief.get("hooks_planted", "[]")
+                existing = brief.get("hooks_planned_plant", "[]")
                 try:
                     planted_list = json.loads(existing) if isinstance(existing, str) else existing
                 except Exception:
                     planted_list = []
                 planted_list.extend(hooks_planted)
-                updates["hooks_planted"] = json.dumps(planted_list)
+                updates["hooks_planned_plant"] = json.dumps(planted_list)
+
+            if hooks_paid:
+                existing = brief.get("hooks_planned_pay", "[]")
+                try:
+                    paid_list = json.loads(existing) if isinstance(existing, str) else existing
+                except Exception:
+                    paid_list = []
+                paid_list.extend(hooks_paid)
+                updates["hooks_planned_pay"] = json.dumps(paid_list)
 
             if updates:
                 unit_svc.update_brief(unit_id, **updates)
