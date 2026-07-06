@@ -1,23 +1,20 @@
 """
-版本号管理 (B7: 完整做)
-- 4.0 重写版本 = 3.2 (从 3.0 重写过来)
-- 顶部菜单 / 关于页面 / 数据库版本
+版本号管理
 
 变更历史:
-  3.0 → 3.2  (4.0 重写版)
-  - 改用 PySide6 (4.0 UI 框架基线)
-  - 集成 92 条决策 (subtext/L1-L4/编排/插件等)
-  - DB 27 表
-  3.2 → 3.3  (4.0 增量)
-  - A1 题材 prompt UI: 1-5 题材多选 + 平台 + 字数目标, 注入 writer prompt
-  - H1 ai_outline_gen 插件: 前 10 章 A/B/C 3 版本大纲
-  - H7 tts_edge 插件: 章节转语音 (mock)
-  - H8 usage_analytics 插件: 使用统计
-  - Dialogs 库 + ThemeToggle widget 替换 QMessageBox / 旧主题按钮
-  - Tokens 提示系统 (welcome / PriceBar / FirstUsePopup) 3 位置
-  - Subtext 子面板 + 章节标注 + 模板帮助按钮
-  - 屏幕适配 (ScreenAdapter)
-  3.3 → 3.4  (M11: 设置 tab 完善 + AI Router 真接通 + 一键出版)
+  v4.0.0 (2026-07-06) - Story OS 架构重构
+  - 从v3.4重构，保留成熟模块，重写问题模块
+  - 新增Story OS核心: StoryState + Event + Guide + Decision + Prompt
+  - 新增智能体隔离内核 + 4个Agent
+  - 新增因果图服务 + 情绪分析器
+  - 新增双模式（新/老项目自动切换）
+  - 界面: 故事仪表盘 + 故事单元管理
+  - 测试: 6个烟雾测试，35+断言
+
+  v3.4.0 - M11 增量
+  v3.3.0 - 4.0 增量
+  v3.2.0 - 4.0 重写版
+"""
   - M10: Feature Gate UI (PRO 角标) + AI Router Status Bar (Dashboard 顶部)
   - M10-B: License 设置面板 UI (Pro/Free 切换 + 激活码)
   - M11-A: 修 6 个 pre-existing smoke (500/500)
