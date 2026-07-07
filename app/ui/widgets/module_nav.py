@@ -44,9 +44,11 @@ PAGE_MAP = {
         "knowledge": ("知识库", "knowledge"),
     },
     "publish": {
-        "export": ("导出", "export"),
-        "model": ("模型配置", "model"),
+        "overview": ("发布总览", "publish"),
+        "export": ("导出预览", "export"),
+        "model": ("AI 模型", "model"),
         "appearance": ("外观", "appearance"),
+        "logs": ("日志", "logs"),
     },
 }
 
@@ -70,9 +72,11 @@ SUB_PAGE_LABELS = {
         "knowledge": "知识库",
     },
     "publish": {
-        "export": "章节预览",
+        "overview": "发布总览",
+        "export": "导出预览",
         "model": "AI 模型",
         "appearance": "外观",
+        "logs": "日志",
     },
 }
 
@@ -87,7 +91,12 @@ class ModuleNav(QWidget):
         self._current_module: str = "create"
         self._expanded = True
         self._active_sub: str = "current"
+        self._sub_module: Optional[str] = None
         self._build()
+        self._populate_subs(self._current_module)
+        if self._active_sub in self._sub_btns:
+            for sid, btn in self._sub_btns.items():
+                btn.setChecked(sid == self._active_sub)
 
     def _build(self) -> None:
         self.setFixedWidth(220)
@@ -133,6 +142,12 @@ class ModuleNav(QWidget):
             self._btn_layout.addWidget(btn)
             self._module_btns[mod_id] = btn
 
+        self._sub_layout = QVBoxLayout()
+        self._sub_layout.setContentsMargins(22, 2, 6, 6)
+        self._sub_layout.setSpacing(2)
+        outer.addLayout(self._sub_layout)
+        self._sub_btns: dict[str, QPushButton] = {}
+
         outer.addStretch(1)
 
     def select_module(self, module_id: str) -> None:
@@ -141,8 +156,46 @@ class ModuleNav(QWidget):
                 btn.setChecked(mid == module_id)
             self._current_module = module_id
             self.module_selected.emit(module_id)
+            self._populate_subs(module_id)
             first_sub = list(PAGE_MAP[module_id].keys())[0]
             self.sub_page_selected.emit(module_id, first_sub)
+            if first_sub in self._sub_btns:
+                for sid, btn in self._sub_btns.items():
+                    btn.setChecked(sid == first_sub)
+
+    def _populate_subs(self, module_id: str) -> None:
+        """Render sub-page buttons for the given module so they are reachable."""
+        while self._sub_layout.count():
+            item = self._sub_layout.takeAt(0)
+            w = item.widget()
+            if w is not None:
+                w.deleteLater()
+        self._sub_btns.clear()
+        self._sub_module = module_id
+        subs = PAGE_MAP.get(module_id, {})
+        if len(subs) <= 1:
+            return
+        sub_font = QFont()
+        sub_font.setPointSize(10)
+        for sid, (label, page_id) in subs.items():
+            btn = QPushButton(f"  {label}")
+            btn.setObjectName("navBtn")
+            btn.setCheckable(True)
+            btn.setCursor(Qt.CursorShape.PointingHandCursor)
+            btn.setMinimumHeight(30)
+            btn.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
+            btn.setAttribute(Qt.WidgetAttribute.WA_TransparentForMouseEvents, False)
+            btn.setFont(sub_font)
+            btn.clicked.connect(
+                lambda checked, mid=module_id, s=sid: self._on_sub_clicked(mid, s)
+            )
+            self._sub_layout.addWidget(btn)
+            self._sub_btns[sid] = btn
+
+    def _on_sub_clicked(self, module_id: str, sub_id: str) -> None:
+        for sid, btn in self._sub_btns.items():
+            btn.setChecked(sid == sub_id)
+        self.sub_page_selected.emit(module_id, sub_id)
 
     def set_active_sub(self, module_id: str, sub_id: str) -> None:
         self._active_sub = sub_id
@@ -151,6 +204,10 @@ class ModuleNav(QWidget):
             for mid, btn in self._module_btns.items():
                 btn.setChecked(mid == module_id)
             self.module_selected.emit(module_id)
+        if self._sub_module != module_id:
+            self._populate_subs(module_id)
+        for sid, btn in self._sub_btns.items():
+            btn.setChecked(sid == sub_id)
 
     def get_page_id(self, module_id: str, sub_id: str) -> str:
         pages = PAGE_MAP.get(module_id, {})

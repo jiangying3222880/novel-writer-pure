@@ -14,6 +14,7 @@ import logging
 import time
 import uuid
 import warnings
+import json
 from dataclasses import dataclass, field
 from typing import Any, Optional
 
@@ -21,6 +22,21 @@ from app.agents.base import AgentBase, AgentRole, AgentState
 from app.agents.report import Report, ReportKind
 
 _logger = logging.getLogger("NovelWriter.agents.orchestrator")
+
+
+def _safe_json_list(v) -> list:
+    """把可能为 JSON 字符串/列表的字段安全解析为字符串列表."""
+    if v is None:
+        return []
+    if isinstance(v, list):
+        return [str(x) for x in v]
+    if isinstance(v, str):
+        try:
+            parsed = json.loads(v)
+            return [str(x) for x in parsed] if isinstance(parsed, list) else []
+        except Exception:
+            return []
+    return []
 
 
 # ============================================================
@@ -421,6 +437,23 @@ class Orchestrator:
                 pres_r=pw_r, ret_r=ret_r,
                 extra_block=extra_block,
             )
+
+            # ---- v4.0: 写前因果审查 (设计 §6) ----
+            _emit(6, "因果审查")
+            try:
+                causal_review = self.review_causality(project_id, unit_id)
+                if causal_review.get("ok"):
+                    for iss in causal_review.get("issues", []):
+                        _logger.info(
+                            "[orch] 因果审查 %s: %s",
+                            iss.get("type"), iss.get("message"),
+                        )
+                else:
+                    _logger.warning(
+                        "[orch] 因果审查返回失败: %s", causal_review.get("error")
+                    )
+            except Exception as e:
+                _logger.warning("[orch] 因果审查失败 (降级): %s", e)
 
             # ---- Step 7-9: 写作 + 评估 + 落库 ----
             _emit(7, "写作")
@@ -865,14 +898,23 @@ class Orchestrator:
                             "curr_cause": curr_cause[:100],
                         })
 
-        # 2. 检查呈现顺序与因果顺序
-        if hasattr(unit, 'story_order') and hasattr(unit, 'present_order'):
-            if unit.present_order < unit.story_order:
+        # 2. 伏笔履约检查 (设计 §6)
+        issues.extend(self._check_hook_fulfillment(project_id, unit_id, unit_svc))
+
+        # 3. 时间线一致性检查 (设计 §6)
+        issues.extend(self._check_timeline_consistency(project_id, unit_id, unit_svc))
+
+        # 4. 连贯性检查 (设计 §4 双时间线)
+        try:
+            coh = unit_svc.check_coherence(unit_id)
+            for iss in coh.get("issues", []):
                 issues.append({
-                    "type": "flashback_detected",
-                    "severity": "info",
-                    "message": f"呈现顺序({unit.present_order})在因果顺序({unit.story_order})之前，应标记为flashback",
+                    "type": "coherence_" + iss.get("code", "issue"),
+                    "severity": iss.get("level", "info"),
+                    "message": iss.get("msg", ""),
                 })
+        except Exception as e:
+            _logger.warning("[orch] check_coherence 失败: %s", e)
 
         return {
             "ok": True,
@@ -887,6 +929,60 @@ class Orchestrator:
         cause_words = set(cause.replace("，", " ").replace("。", " ").split())
         overlap = effect_words & cause_words
         return len(overlap) >= 2
+
+    def _check_hook_fulfillment(
+        self, project_id: str, unit_id: str, unit_svc
+    ) -> list:
+        """伏笔履约检查 (设计 §6): 本单元计划回收的伏笔是否已在更早单元埋设."""
+        issues: list = []
+        try:
+            brief = unit_svc.get_brief(unit_id) or {}
+            to_pay = _safe_json_list(brief.get("hooks_planned_pay"))
+            if not to_pay:
+                return issues
+            units = unit_svc.list_for_project(project_id, order_by="story")
+            planted: set = set()
+            for u in units:
+                if u.id == unit_id:
+                    break
+                b = unit_svc.get_brief(u.id) or {}
+                planted.update(_safe_json_list(b.get("hooks_planned_plant")))
+                planted.update(_safe_json_list(b.get("hooks_planned_pay")))
+            for h in to_pay:
+                if h and h not in planted:
+                    issues.append({
+                        "type": "hook_unfulfilled",
+                        "severity": "warning",
+                        "message": f"计划回收的伏笔未在前序单元埋设: {h}",
+                    })
+        except Exception as e:
+            _logger.warning("[orch] _check_hook_fulfillment 失败: %s", e)
+        return issues
+
+    def _check_timeline_consistency(
+        self, project_id: str, unit_id: str, unit_svc
+    ) -> list:
+        """时间线一致性检查 (设计 §6): 按呈现顺序, 伏笔是否先于回收被埋设."""
+        issues: list = []
+        try:
+            units = unit_svc.list_for_project(project_id, order_by="present")
+            planted: set = set()
+            for u in units:
+                b = unit_svc.get_brief(u.id) or {}
+                planted.update(_safe_json_list(b.get("hooks_planned_plant")))
+                to_pay = _safe_json_list(b.get("hooks_planned_pay"))
+                for h in to_pay:
+                    if h and h not in planted:
+                        issues.append({
+                            "type": "timeline_hook_misorder",
+                            "severity": "info",
+                            "message": f"伏笔[{h}]在单元[{u.title}]按呈现顺序先于埋设被回收(可能为合法 flashback)",
+                        })
+                if u.id == unit_id:
+                    break
+        except Exception as e:
+            _logger.warning("[orch] _check_timeline_consistency 失败: %s", e)
+        return issues
 
     def update_causal_graph(self, project_id: str, unit_id: str, draft_text: str = "") -> dict:
         """写后因果更新.
@@ -903,16 +999,28 @@ class Orchestrator:
             unit = unit_svc.get(unit_id)
             brief = unit_svc.get_brief(unit_id) or {}
 
-            # 1. 提取伏笔变化
+            # 1. 提取实际已埋/已收伏笔 (对照计划列表做确定性匹配, 非 AI)
             hooks_planted = []
             hooks_paid = []
             if draft_text:
-                pass  # TODO: NLP提取
+                planned_plant = _safe_json_list(getattr(brief, "hooks_planned_plant", "[]"))
+                planned_pay = _safe_json_list(getattr(brief, "hooks_planned_pay", "[]"))
+                for h in planned_plant:
+                    if h and h in draft_text:
+                        hooks_planted.append(h)
+                for h in planned_pay:
+                    if h and h in draft_text:
+                        hooks_paid.append(h)
+                _logger.info(
+                    "[orch] 因果更新: 实际埋设 %d/%d, 实际回收 %d/%d",
+                    len(hooks_planted), len(planned_plant),
+                    len(hooks_paid), len(planned_pay),
+                )
 
             # 2. 更新 brief (注意: 实际字段名是 hooks_planned_plant/pay)
             updates = {}
             if hooks_planted:
-                existing = brief.get("hooks_planned_plant", "[]")
+                existing = getattr(brief, "hooks_planned_plant", "[]")
                 try:
                     planted_list = json.loads(existing) if isinstance(existing, str) else existing
                 except Exception:
@@ -921,7 +1029,7 @@ class Orchestrator:
                 updates["hooks_planned_plant"] = json.dumps(planted_list)
 
             if hooks_paid:
-                existing = brief.get("hooks_planned_pay", "[]")
+                existing = getattr(brief, "hooks_planned_pay", "[]")
                 try:
                     paid_list = json.loads(existing) if isinstance(existing, str) else existing
                 except Exception:
@@ -932,11 +1040,11 @@ class Orchestrator:
             if updates:
                 unit_svc.update_brief(unit_id, **updates)
 
-            # 3. 更新因果边 (如果前一单元存在)
-            prev_unit = unit_svc.get_prev_unit(unit_id)
-            if prev_unit:
-                try:
-                    from app.services import unit_causal_service
+            # 3. 更新因果边 + 因果组 (设计 §3.4 / §3.5)
+            try:
+                from app.services import unit_causal_service
+                prev_unit = unit_svc.get_prev_unit(unit_id)
+                if prev_unit:
                     edges = unit_causal_service.get_edges_for_unit(unit_id)
                     has_edge = any(e["from_unit_id"] == prev_unit.id for e in edges)
                     if not has_edge:
@@ -946,8 +1054,18 @@ class Orchestrator:
                             description="自动建立因果边",
                             strength=0.5,
                         )
-                except Exception:
-                    pass
+                # 因果组: 首个单元完成后建默认"主线"组并把单元加入
+                groups = unit_causal_service.get_groups_for_project(project_id)
+                if groups:
+                    gid = groups[0]["id"]
+                else:
+                    gid = unit_causal_service.create_group(
+                        project_id, name="主线", color="#89b4fa",
+                        description="单元完成后自动创建的默认剧情线",
+                    )["id"]
+                unit_causal_service.add_unit_to_group(gid, unit_id)
+            except Exception as e:
+                _logger.warning("[orch] 因果边/组写入失败: %s", e)
 
             # 4. 标记完成
             try:

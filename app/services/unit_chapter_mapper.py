@@ -471,6 +471,62 @@ def _replace_paragraph_range(
 # Auto-split: auto create chapters from a unit (simple version)
 # ============================================================
 
+def _char_positions_to_para_indices(paragraphs, char_positions: list[int]) -> list[int]:
+    """把情绪分析给出的字符断点位置映射到段落索引 (断点落在该段之后)."""
+    offsets = []
+    pos = 0
+    for p in paragraphs:
+        offsets.append(pos)
+        pos += len(p.text) + 2  # +2 for \n\n
+    indices = []
+    for cp in sorted(char_positions):
+        best = 0
+        for i, off in enumerate(offsets):
+            if off <= cp:
+                best = i
+            else:
+                break
+        indices.append(best)
+    return sorted(set(indices))
+
+
+def _split_at_para_indices(
+    unit_id: str,
+    book_id: str,
+    para_indices: list[int],
+    start_chapter_no: int = 1,
+) -> list[dict]:
+    """按给定段落索引断点拆分单元为章节."""
+    paragraphs = _para_svc.list_for_unit(unit_id)
+    n = len(paragraphs)
+    if not para_indices:
+        specs = [{"title": f"第{start_chapter_no}章", "start_para_idx": 0, "end_para_idx": n - 1}]
+    else:
+        specs = []
+        prev = 0
+        num = 0
+        for idx in para_indices:
+            end = min(idx, n - 1)
+            if end >= prev:
+                num += 1
+                specs.append({
+                    "title": f"第{start_chapter_no + num - 1}章",
+                    "start_para_idx": prev,
+                    "end_para_idx": end,
+                })
+                prev = end + 1
+        if prev <= n - 1:
+            num += 1
+            specs.append({
+                "title": f"第{start_chapter_no + num - 1}章",
+                "start_para_idx": prev,
+                "end_para_idx": n - 1,
+            })
+    return map_unit_to_chapters(
+        unit_id, specs, book_id=book_id, start_chapter_no=start_chapter_no,
+    )
+
+
 def auto_split_unit(
     unit_id: str,
     book_id: str,
@@ -479,6 +535,7 @@ def auto_split_unit(
     min_chars: int = 2000,
     max_chars: int = 4000,
     start_chapter_no: int = 1,
+    split_positions: Optional[list[int]] = None,
 ) -> list[dict]:
     """
     Auto-split a unit into chapters based on target word count.
@@ -486,10 +543,18 @@ def auto_split_unit(
 
     This is a simpler version of unit_splitter.py that works with
     the paragraph system and creates proper mappings.
+
+    Args:
+        split_positions: 可选, 情绪分析给出的字符断点位置列表 (见 emotion_analyzer).
+            提供时优先按这些位置断章 (设计文档 §5 情绪曲线断章).
     """
     paragraphs = _para_svc.list_for_unit(unit_id)
     if not paragraphs:
         raise ValidationError("Unit has no paragraphs")
+
+    if split_positions:
+        para_indices = _char_positions_to_para_indices(paragraphs, split_positions)
+        return _split_at_para_indices(unit_id, book_id, para_indices, start_chapter_no)
 
     # Build chapter specs by accumulating paragraphs
     specs = []
@@ -558,6 +623,7 @@ def rebuild_chapters_from_unit(
     target_chars: int = 3000,
     min_chars: int = 2000,
     max_chars: int = 4000,
+    split_positions: Optional[list[int]] = None,
 ) -> list[dict]:
     """
     Delete all chapters derived from a unit and recreate them.
@@ -569,7 +635,14 @@ def rebuild_chapters_from_unit(
         target_chars: Target word count per chapter
         min_chars: Minimum word count
         max_chars: Maximum word count
+        split_positions: 可选, 情绪断点字符位置 (见 emotion_analyzer).
     """
+    # 关键: 先校验单元有正文段落, 再删除旧章节.
+    # 否则空单元拆章会先把已有章节删光、再抛错, 造成数据永久丢失.
+    paragraphs = _para_svc.list_for_unit(unit_id)
+    if not paragraphs:
+        raise ValidationError("Unit has no paragraphs")
+
     chapters = get_chapters_for_unit(unit_id)
     if chapters:
         for chap in chapters:
@@ -583,6 +656,7 @@ def rebuild_chapters_from_unit(
         target_chars=target_chars,
         min_chars=min_chars,
         max_chars=max_chars,
+        split_positions=split_positions,
     )
 
 
@@ -603,24 +677,25 @@ def migrate_memories(unit_id: str, chapter_ids: list[str]) -> dict:
     from app.services import story_unit_service_v2 as unit_svc
 
     unit = unit_svc.get(unit_id)
-    unit_memories = unit_svc.get_unit_memory(unit_id)
+    unit_memories = unit_svc.get_unit_memories(unit_id)
 
     results = {"migrated": 0, "skipped": 0, "errors": []}
 
     for chapter_id in chapter_ids:
         try:
-            # L1: 世界规则 + 故事弧 (全量复制)
-            l1_memories = [m for m in unit_memories if m.get("level") in ("l1", "world", "arc")]
-
-            # L2: 承诺/伏笔 (根据文本位置分配)
-            l2_memories = [m for m in unit_memories if m.get("level") in ("l2", "commitment", "hook")]
-
-            # 合并需要迁移的记忆
-            to_migrate = l1_memories + l2_memories
+            # 真实单元记忆由 add_unit_memory 写入, 字段是 category (l1/world/arc/l2/commitment/hook),
+            # 而非 level。这里兼容两种取值, 统一归一到 level 再判定 L1/L2。
+            to_migrate = []
+            for m in unit_memories:
+                level = (m.get("level") or m.get("category") or "l1").lower()
+                if level in ("l1", "world", "arc", "l2", "commitment", "hook"):
+                    mm = dict(m)
+                    mm["level"] = level
+                    to_migrate.append(mm)
 
             if to_migrate:
-                _store_chapter_memories(chapter_id, to_migrate)
-                results["migrated"] += len(to_migrate)
+                n = _store_chapter_memories(chapter_id, to_migrate)
+                results["migrated"] += n
 
         except Exception as e:
             results["errors"].append(f"{chapter_id}: {e}")
@@ -628,27 +703,42 @@ def migrate_memories(unit_id: str, chapter_ids: list[str]) -> dict:
     return results
 
 
-def _store_chapter_memories(chapter_id: str, memories: list[dict]) -> None:
-    """存储章节记忆."""
+def _store_chapter_memories(chapter_id: str, memories: list[dict]) -> int:
+    """存储章节记忆到 agent_memory 表.
+
+    实际表列: id/chapter_id/tier/entity_type/content/...
+    映射 memory.level (l1/l2/world/arc/commitment/hook) -> tier (L1/L2).
+    返回实际插入条数 (PK 冲突忽略).
+    """
     from app.db._impl import get_conn
-    import json
+
+    _LEVEL_TO_TIER = {
+        "l1": "L1", "world": "L1", "arc": "L1",
+        "l2": "L2", "commitment": "L2", "hook": "L2",
+    }
 
     db = get_conn()
-    for mem in memories:
+    inserted = 0
+    for idx, mem in enumerate(memories):
+        level = mem.get("level", "l1")
+        tier = _LEVEL_TO_TIER.get(level, "L1")
+        content = mem.get("content", "")
         try:
             db.execute(
-                """INSERT INTO agent_memory (id, chapter_id, level, content, source, created_at)
+                """INSERT INTO agent_memory (id, chapter_id, tier, entity_type, content, created_at)
                    VALUES (?, ?, ?, ?, ?, datetime('now'))""",
                 (
-                    f"mem_{chapter_id[:8]}_{mem.get('level', 'l1')}",
+                    f"mem_{chapter_id[:8]}_{idx}",
                     chapter_id,
-                    mem.get("level", "l1"),
-                    mem.get("content", ""),
-                    mem.get("source", "unit_migration"),
+                    tier,
+                    level,
+                    content,
                 ),
             )
+            inserted += 1
         except Exception:
             pass  # 忽略重复插入
+    return inserted
 
 
 def distribute_pressure_curve(unit_id: str, chapter_ids: list[str]) -> dict:
@@ -720,22 +810,75 @@ def migrate_subtext_cards(unit_id: str, chapter_ids: list[str]) -> dict:
         return results
 
     # 复制到每章 (单元级保留)
-    for card in cards:
+    for ci, card in enumerate(cards):
+        surface = card["surface_event"] or "" if "surface_event" in card.keys() else ""
+        intent = card["true_intent"] or "" if "true_intent" in card.keys() else ""
         for chapter_id in chapter_ids:
             try:
                 db.execute(
                     """INSERT INTO scene_subtext_cards
-                       (id, chapter_id, card_type, content, created_at)
+                       (id, chapter_id, surface_event, true_intent, created_at)
                        VALUES (?, ?, ?, ?, datetime('now'))""",
                     (
-                        f"sub_{chapter_id[:8]}_{card['card_type'][:8]}",
+                        f"sub_{chapter_id[:8]}_{ci}",
                         chapter_id,
-                        card["card_type"],
-                        card.get("content", ""),
+                        surface,
+                        intent,
                     ),
                 )
                 results["migrated"] += 1
             except Exception as e:
                 results["errors"].append(f"{chapter_id}: {e}")
+
+    return results
+
+
+# ============================================================
+# 角色状态插值 (设计文档§7: 入口复制法 MVP + 数值线性插值)
+# ============================================================
+
+def interpolate_character_state(unit_id: str, chapter_ids: list[str]) -> dict:
+    """将单元入口/出口角色状态插值分配到拆分后的章节.
+
+    设计文档§7: 角色状态用「入口复制法 (MVP)」, 后续支持插值/AI生成。
+    - 数值字段: 在入口/出口之间做线性插值 (按章节位置 ratio).
+    - 非数值字段: 前半段用入口状态, 后半段用出口状态.
+    写入各章节 character_state 列 (迁移 042 新增).
+    """
+    from app.services import story_unit_service_v2 as unit_svc
+    from app.db._impl import get_conn
+    import json
+
+    entry = unit_svc.get_entry_characters(unit_id) or {}
+    exit_ = unit_svc.get_exit_characters(unit_id) or {}
+
+    results = {"interpolated": 0, "errors": []}
+    if not entry and not exit_:
+        return results
+
+    n = max(len(chapter_ids), 1)
+    db = get_conn()
+    for i, chapter_id in enumerate(chapter_ids):
+        ratio = (i + 1) / n
+        interp = {}
+        for key in set(entry) | set(exit_):
+            ev = entry.get(key)
+            xv = exit_.get(key)
+            if isinstance(ev, (int, float)) and isinstance(xv, (int, float)):
+                interp[key] = ev + (xv - ev) * ratio
+            elif ratio < 0.5:
+                if ev is not None:
+                    interp[key] = ev
+            else:
+                if xv is not None:
+                    interp[key] = xv
+        try:
+            db.execute(
+                "UPDATE chapters SET character_state = ? WHERE id = ?",
+                (json.dumps(interp, ensure_ascii=False), chapter_id),
+            )
+            results["interpolated"] += 1
+        except Exception as e:
+            results["errors"].append(f"{chapter_id}: {e}")
 
     return results

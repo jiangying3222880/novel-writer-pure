@@ -82,6 +82,7 @@ MODULE_PAGE_MAP = {
         "knowledge": ("knowledge", "\u77e5\u8bc6\u5e93"),
     },
     "publish": {
+        "overview": ("publish", "\u53d1\u5e03\u603b\u89c8"),
         "export": ("generate", "\u5bfc\u51fa"),
         "model": ("model", "AI \u6a21\u578b"),
         "appearance": ("appearance", "\u5916\u89c2"),
@@ -656,26 +657,32 @@ class MainWindow(QMainWindow):
             self.progress_bar.setValue(0)
 
     def _detect_and_set_project_mode(self, project_id: str) -> None:
-        """§9 双模式: 检测项目类型并设置默认视图."""
+        """§9 双模式: 检测项目类型并设置默认视图; 老项目提示升级为单元模式."""
         try:
-            from app.services.project_type import detect_project_type, get_default_view
+            from app.services.project_type import (
+                detect_project_type, get_default_view, should_prompt_upgrade,
+            )
             project_type = detect_project_type(project_id)
             default_view = get_default_view(project_id)
 
             log.info("[mode] 项目 %s 类型: %s, 默认视图: %s", project_id[:8], project_type, default_view)
 
+            # §9(c): 老项目 -> 提示升级为单元模式 (包装所有章节为虚拟单元)
+            if should_prompt_upgrade(project_id):
+                self._maybe_prompt_upgrade(project_id)
+                # 升级后重新判定 (升级使项目变 mixed -> unit 视图)
+                project_type = detect_project_type(project_id)
+                default_view = get_default_view(project_id)
+
             # 根据项目类型切换到对应视图
             if default_view == "unit":
-                # 新项目: 切换到单元视图
-                self._select_module("create")
-                # 尝试切换到故事单元页面
+                # 新项目 / 已升级: 切换到单元视图
+                self.module_nav.select_module("create")
                 try:
                     self._on_sub_page_selected("create", "unit")
                 except Exception:
                     pass
-            else:
-                # 老项目: 保持章节视图 (默认)
-                pass
+            # 老项目且未升级: 保持章节视图 (默认), 不切换
 
             # 存储项目模式信息供其他组件使用
             if self.current_project:
@@ -684,6 +691,38 @@ class MainWindow(QMainWindow):
 
         except Exception as e:
             log.warning("[mode] 项目类型检测失败: %s", e)
+
+    def _maybe_prompt_upgrade(self, project_id: str) -> None:
+        """§9(c): 会话内仅提示一次, 用户确认后升级老项目为虚拟单元."""
+        if not hasattr(self, "_upgrade_prompted"):
+            self._upgrade_prompted = set()
+        if project_id in self._upgrade_prompted:
+            return
+        self._upgrade_prompted.add(project_id)
+
+        from PySide6.QtWidgets import QMessageBox
+        reply = QMessageBox.question(
+            self, "升级为单元模式",
+            "检测到这是一个「章节模式」老项目。\n\n"
+            "是否升级为「单元模式」？\n"
+            "系统会将现有章节自动包装为虚拟单元，之后即可使用故事单元的全部功能。",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+        )
+        if reply != QMessageBox.StandardButton.Yes:
+            return
+        try:
+            from app.services.project_type import upgrade_old_project
+            result = upgrade_old_project(project_id)
+            if result.get("ok"):
+                log.info(
+                    "[mode] 项目 %s 升级完成, 包装 %d 个虚拟单元",
+                    project_id[:8], result.get("wrapped_count", 0),
+                )
+                self._refresh_project_progress()
+            else:
+                log.warning("[mode] 项目 %s 升级未成功: %s", project_id[:8], result)
+        except Exception as e:
+            log.warning("[mode] 升级失败: %s", e)
 
     def _reload_projects(self) -> None:
         try:

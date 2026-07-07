@@ -66,6 +66,7 @@ from app.ui.tabs.outline_tab import OutlineTab  # 大纲管理
 from app.ui.tabs.worldview_tab import WorldviewTab  # 世界观
 from app.ui.tabs.character_mgmt_tab import CharacterMgmtTab  # 角色管理
 from app.ui.tabs.subtext_tab import SubtextTab  # 潜文本卡
+from app.ui.tabs.publish_tab import PublishTab  # 发布总览（章节树+编辑+情绪曲线+断章）
 from app.ui.widgets import Dialogs, LicenseWidget  # 授权
 from app.ui.widgets._number_input import NumberInput  # 替代 QSpinBox
 from app.ui.tabs.settings_tab import AboutWidget  # 关于
@@ -2555,6 +2556,24 @@ class StoryUnitPage(QWidget):
             self._inner.set_project(project)
 
 
+class PublishPage(QWidget):
+    """发布模块聚合页: 章节树 + 章节编辑/同步 + 情绪曲线 + 断章."""
+    PAGE_ID = "publish"
+    PAGE_TITLE = "发布"
+
+    def __init__(self, parent: QWidget | None = None) -> None:
+        super().__init__(parent)
+        outer = QVBoxLayout(self)
+        outer.setContentsMargins(0, 0, 0, 0)
+        outer.setSpacing(0)
+        self._inner = PublishTab()
+        outer.addWidget(self._inner)
+
+    def set_project(self, project) -> None:
+        if hasattr(self._inner, "set_project"):
+            self._inner.set_project(project)
+
+
 # ===================================================================== #
 # v4.0 Observe 模块页面
 # ===================================================================== #
@@ -2645,6 +2664,7 @@ PAGE_REGISTRY: dict[str, Type[QWidget]] = {
     "edit-signals":      EditSignalsPage,
     "generate":          GeneratePage,
     "story-unit":        StoryUnitPage,
+    "publish":           PublishPage,
     "world-graph":       WorldGraphPage,
     "usage-analytics":   UsageAnalyticsPage,
     "knowledge":         KnowledgePage,
@@ -2674,6 +2694,7 @@ def get_all_page_classes() -> list[Type[QWidget]]:
         EditSignalsPage,     #  6  改稿信号
         GeneratePage,        #  7  章节生成
         StoryUnitPage,       #  8  故事单元
+        PublishPage,         #  8b 发布模块 (章节树/编辑/情绪曲线/断章)
         WorldGraphPage,      #  9  世界图谱
         UsageAnalyticsPage,  # 10  用量分析
         KnowledgePage,       # 11  知识库

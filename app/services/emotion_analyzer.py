@@ -211,23 +211,70 @@ def _matches_pattern(text: str, pattern_info: dict) -> bool:
     return False
 
 
+def _reader_investment(text: str) -> float:
+    """读者投入度 0-1 (设计 §5.5)."""
+    score = 0.4
+    if text.count('"') + text.count('"') > 2:
+        score += 0.2
+    if any(w in text for w in ["他", "她", "我", "你"]):
+        score += 0.1
+    if any(w in text for w in ["震撼", "感动", "热血", "泪目", "激动", "愤怒", "恐惧", "绝望", "希望"]):
+        score += 0.2
+    return min(1.0, score)
+
+
+def _problem_urgency(text: str) -> float:
+    """问题紧迫度 0-1 (设计 §5.5)."""
+    score = 0.4
+    if "？" in text or "?" in text:
+        score += 0.2
+    if any(w in text for w in ["然后", "接下来", "但是", "然而", "就在这时"]):
+        score += 0.2
+    if any(w in text for w in ["危险", "紧急", "袭击", "死亡", "快跑", "逃", "救命"]):
+        score += 0.2
+    return min(1.0, score)
+
+
+def _answer_availability(text: str) -> float:
+    """答案可得性 >0 (设计 §5.5 分母). 文中已给出答案/解决 → 可得性高 → 痛感低.
+
+    延续悬念的词 (然后呢/但是/然而/就在这时/竟然/原来) 拉低可得性;
+    已解决/释然的词 (终于/解决/答案/真相大白) 抬高可得性.
+    """
+    avail = 1.0
+    suspense_words = ["然后呢", "接下来", "但是", "然而", "就在这时", "没想到", "竟然", "原来"]
+    if any(w in text for w in suspense_words):
+        avail -= 0.4
+    if any(w in text for w in ["终于", "解决", "答案", "真相大白", "释然"]):
+        avail += 0.3
+    return max(0.3, min(1.5, avail))
+
+
+def calculate_pain_score(
+    text: str,
+    strategy: str = "auto",
+    pattern_info: Optional[dict] = None,
+) -> float:
+    """公开痛感评分 (设计文档 §5.5): (投入度 × 紧迫度) ÷ 可得性, 结果 0-1.
+
+    供 UI 与测试直接调用; 也可传入 pattern_info 保留模式权重.
+    """
+    base = (pattern_info["pain"] / 5.0) if pattern_info else 1.0
+    investment = _reader_investment(text)
+    urgency = _problem_urgency(text)
+    availability = _answer_availability(text)
+    raw = (investment * urgency) / max(availability, 0.2)
+    return min(1.0, raw * base)
+
+
 def _calculate_pain(text: str, pattern_info: dict, strategy: str) -> float:
-    """计算断章痛感 (设计文档5.3)."""
+    """计算断章痛感 (设计文档 §5.5: (投入度 × 紧迫度) ÷ 可得性)."""
     base = pattern_info["pain"] / 5.0  # 归一化到 0-1
 
-    # 读者投入度 (基于对话和情感词)
-    engagement = 0.5
-    if text.count('"') > 2 or text.count('"') > 2:
-        engagement += 0.2
-    if any(w in text for w in ["他", "她", "我", "你"]):
-        engagement += 0.1
-
-    # 问题紧迫度 (基于问号和悬念词)
-    urgency = 0.5
-    if "？" in text or "?" in text:
-        urgency += 0.2
-    if any(w in text for w in ["然后", "接下来", "但是", "然而"]):
-        urgency += 0.2
+    investment = _reader_investment(text)
+    urgency = _problem_urgency(text)
+    availability = _answer_availability(text)
+    raw = (investment * urgency) / max(availability, 0.2)
 
     # 策略调整
     strategy_mod = {
@@ -239,7 +286,7 @@ def _calculate_pain(text: str, pattern_info: dict, strategy: str) -> float:
         "平稳": 0.8,
     }.get(strategy, 1.0)
 
-    pain = base * engagement * urgency * strategy_mod
+    pain = min(1.0, raw) * base * strategy_mod
     return min(1.0, pain)
 
 

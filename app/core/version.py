@@ -14,7 +14,6 @@
   v3.4.0 - M11 增量
   v3.3.0 - 4.0 增量
   v3.2.0 - 4.0 重写版
-"""
   - M10: Feature Gate UI (PRO 角标) + AI Router Status Bar (Dashboard 顶部)
   - M10-B: License 设置面板 UI (Pro/Free 切换 + 激活码)
   - M11-A: 修 6 个 pre-existing smoke (500/500)

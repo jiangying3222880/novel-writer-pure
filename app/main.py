@@ -100,9 +100,9 @@ def main() -> int:
     except Exception as e:
         logging.warning("model registry init failed: %s", e)
 
-    # Theme (v4)
-    from app.ui.theme_v4 import get_theme_v4
-    get_theme_v4().apply(app, "dark")
+    # Theme — 统一到 theme.py 单一主题源 (mockup 配色, 已批准)
+    from app.ui.theme import get_theme
+    get_theme().apply(app, "dark")
 
     window = MainWindow()
     window.show()
