@@ -18,6 +18,13 @@ env/
 # Project data (not source)
 .workbuddy/
 
+# Tool directories
+.trae/
+.mimocode/
+
+# Temp files
+tmp_r.js
+
 # OS / editor
 .DS_Store
 Thumbs.db
