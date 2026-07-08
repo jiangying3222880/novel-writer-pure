@@ -17,11 +17,11 @@ from PySide6.QtWidgets import (
 )
 
 HUD_SECTIONS = [
-    ("goal", "\U0001f3af \u5f53\u524d\u76ee\u6807"),
-    ("guides", "\U0001f9ed \u6d3b\u8dc3\u5f15\u5bfc"),
-    ("pressure", "\U0001f4ca \u53d9\u4e8b\u538b\u529b"),
-    ("hooks", "\U0001f3a3 \u94a9\u5b50"),
-    ("memory", "\U0001f9e0 \u8bb0\u5fc6"),
+    ("goal", "🎯 当前目标"),
+    ("guides", "📋 活跃引导"),
+    ("pressure", "📊 叙事压力"),
+    ("hooks", "🎣 钩子"),
+    ("memory", "🧠 记忆"),
 ]
 
 
@@ -70,7 +70,7 @@ class StoryHUD(QWidget):
             )
             gl = QVBoxLayout(gb)
             gl.setContentsMargins(8, 4, 8, 8)
-            label = QLabel("\u2014")
+            label = QLabel("—")
             label.setWordWrap(True)
             from app.ui.theme import text_muted
             label.setStyleSheet(f"color: {text_muted()}; font-size: 11px; border: none;")
@@ -91,7 +91,7 @@ class StoryHUD(QWidget):
     def _refresh(self) -> None:
         if not self._unit_id:
             for label in self._section_labels.values():
-                label.setText("\u2014")
+                label.setText("—")
             return
 
         self._refresh_goal()
@@ -105,22 +105,22 @@ class StoryHUD(QWidget):
             from app.services import story_unit_service_v2 as _unit_svc
             u = _unit_svc.get(self._unit_id)
             goal = getattr(u, "unit_goal", "") or ""
-            pov = getattr(u, "pov_character", "") or "(\u4efb\u610f)"
+            pov = getattr(u, "pov_character", "") or "(任意)"
             if goal:
-                self._section_labels["goal"].setText(f"\u76ee\u6807: {goal}\n\u89c6\u89d2: {pov}")
+                self._section_labels["goal"].setText(f"目标: {goal}\n视角: {pov}")
                 from app.ui.theme import score_value
                 self._section_labels["goal"].setStyleSheet(f"color: {score_value()}; font-size: 11px; border: none;")
             else:
-                self._section_labels["goal"].setText("(\u672a\u8bbe\u7f6e\u76ee\u6807)")
+                self._section_labels["goal"].setText("(未设置目标)")
         except Exception:
-            self._section_labels["goal"].setText("\u2014")
+            self._section_labels["goal"].setText("—")
 
     def _refresh_guides(self) -> None:
         try:
             from app.core.types import collect_guides
             guides = collect_guides(self._unit_id, project_id=self._project_id)
             if not guides:
-                self._section_labels["guides"].setText("(\u65e0\u5f15\u5bfc)")
+                self._section_labels["guides"].setText("(无引导)")
                 return
             top3 = sorted(guides, key=lambda g: -g.priority)[:3]
             lines = []
@@ -129,29 +129,47 @@ class StoryHUD(QWidget):
                 adv = (g.advice if hasattr(g, "advice") else "")[:60]
                 pri = g.priority if hasattr(g, "priority") else 0.5
                 lines.append(f"[{src}] p={pri:.2f} {adv}")
-            self._section_labels["guides"].setText("\n".join(lines) if lines else "(\u65e0\u5f15\u5bfc)")
+            self._section_labels["guides"].setText("\n".join(lines) if lines else "(无引导)")
             from app.ui.theme import text_meta
             self._section_labels["guides"].setStyleSheet(f"color: {text_meta()}; font-size: 11px; border: none;")
         except Exception as e:
-            self._section_labels["guides"].setText(f"(\u9519\u8bef: {e})")
+            self._section_labels["guides"].setText(f"(错误: {e})")
 
     def _refresh_pressure(self) -> None:
         try:
-            from app.services.pressure import get_pressure
-            pres = get_pressure(self._unit_id)
-            if pres:
-                zone = pres.get("zone", "green")
-                val = pres.get("pressure", 0)
-                zone_labels = {"green": "\u5b89\u5168", "yellow": "\u8b66\u89c9", "orange": "\u5371\u9669", "red": "\u7d27\u6025"}
+            from app.services import pressure
+            # 尝试获取最新的压力数据
+            latest = pressure.get_latest(self._project_id) if self._project_id else None
+            if latest:
+                zone = getattr(latest, "zone", "green")
+                val = getattr(latest, "pressure", 0)
+                zone_labels = {"green": "安全", "yellow": "警觉", "orange": "危险", "red": "紧急"}
                 color = {"green": "#72b86a", "yellow": "#d4a157", "orange": "#d4845a", "red": "#c06060"}.get(zone, "#6c7086")
                 self._section_labels["pressure"].setText(
                     f"<span style='color:{color};font-weight:700;'>"
                     f"{zone_labels.get(zone, zone.upper())}</span> ({val})"
                 )
             else:
-                self._section_labels["pressure"].setText("(\u65e0\u6570\u636e)")
-        except Exception:
-            self._section_labels["pressure"].setText("\u2014")
+                # 如果没有数据，计算当前单元的压力
+                if self._unit_id and self._project_id:
+                    pressure_val = pressure.compute_pressure(
+                        self._project_id,
+                        self._unit_id,
+                        active_hooks=0,
+                        open_promises=0,
+                        unresolved_subplots=0,
+                    )
+                    zone = pressure.compute_zone(pressure_val)
+                    zone_labels = {"green": "安全", "yellow": "警觉", "orange": "危险", "red": "紧急"}
+                    color = {"green": "#72b86a", "yellow": "#d4a157", "orange": "#d4845a", "red": "#c06060"}.get(zone, "#6c7086")
+                    self._section_labels["pressure"].setText(
+                        f"<span style='color:{color};font-weight:700;'>"
+                        f"{zone_labels.get(zone, zone.upper())}</span> ({pressure_val})"
+                    )
+                else:
+                    self._section_labels["pressure"].setText("(无数据)")
+        except Exception as e:
+            self._section_labels["pressure"].setText(f"(错误: {e})")
 
     def _refresh_hooks(self) -> None:
         try:
@@ -162,16 +180,16 @@ class StoryHUD(QWidget):
                 lines = []
                 for h in open_hooks[:5]:
                     desc = getattr(h, "description", "")[:50]
-                    lines.append(f"\u2022 {desc}")
+                    lines.append(f"• {desc}")
                 self._section_labels["hooks"].setText("\n".join(lines))
                 from app.ui.theme import text_meta
                 self._section_labels["hooks"].setStyleSheet(f"color: {text_meta()}; font-size: 11px; border: none;")
             else:
-                self._section_labels["hooks"].setText("(\u65e0\u672a\u56de\u6536\u94a9\u5b50)")
+                self._section_labels["hooks"].setText("(无未回收钩子)")
         except Exception:
-            self._section_labels["hooks"].setText("\u2014")
+            self._section_labels["hooks"].setText("—")
 
     def _refresh_memory(self) -> None:
-        self._section_labels["memory"].setText("(\u8bb0\u5fc6\u5feb\u7167)")
+        self._section_labels["memory"].setText("(记忆快照)")
         from app.ui.theme import text_muted
         self._section_labels["memory"].setStyleSheet(f"color: {text_muted()}; font-size: 11px; border: none;")
