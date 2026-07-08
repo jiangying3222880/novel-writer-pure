@@ -55,7 +55,8 @@ def create(name: str, book_title: Optional[str] = None,
            total_chapters: Optional[int] = None,
            sub_genres: Optional[list] = None,
            author: Optional[str] = None,
-           create_books: bool = False) -> dict:
+           create_books: bool = False,
+           recipe_id: Optional[str] = None) -> dict:
     """Create a new project. Returns the new row as a dict."""
     project_id = str(uuid.uuid4())
     now = _now()
@@ -77,6 +78,16 @@ def create(name: str, book_title: Optional[str] = None,
         )
 
     init_project_storage(project_id)
+
+    # v4.2新增: 应用Story Recipe
+    if recipe_id:
+        try:
+            from app.services.story_recipe import apply_recipe_to_project
+            apply_result = apply_recipe_to_project(recipe_id, project_id)
+            if apply_result.get("success"):
+                _logger.info(f"Recipe {recipe_id} applied to project {project_id}")
+        except Exception as e:
+            _logger.warning(f"Recipe应用失败: {e}")
 
     if create_books and volumes > 0:
         from app.services import book_service

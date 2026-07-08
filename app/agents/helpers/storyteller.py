@@ -56,8 +56,14 @@ class StoryTeller(AgentBase):
         失败时返回空串 (降级为纯 WRITER_SYSTEM)。
         """
         try:
-            from app.knowledge.finder import extract_for_agent
-            return extract_for_agent("writing", query)
+            from app.knowledge.finder import extract_for_agent, extract_by_capability
+            # 基础写作知识
+            kb = extract_for_agent("writing", query)
+            # v4.2新增: Capability知识注入 (Narrative + Dialogue + Language + Emotion)
+            cap_kb = extract_by_capability(["narrative", "dialogue", "language", "emotion"], query)
+            if cap_kb:
+                kb = kb + "\n\n[能力知识库: 叙事/对话/语言/情绪]\n" + cap_kb[:500]
+            return kb
         except Exception as e:
             _logger.warning("[writer] 写作知识库检索失败, 跳过: %s", e)
             return ""

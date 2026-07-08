@@ -836,6 +836,17 @@ class Orchestrator:
                 )
         except Exception as e:
             _logger.warning("[orch] 编排知识库检索失败, 跳过: %s", e)
+        # 5c) Capability知识注入 (v4.2新增: Narrative + Plot + WorldBuilding)
+        try:
+            from app.knowledge.finder import extract_by_capability
+            cap_query = orch_query.strip() if orch_query.strip() else "叙事技巧"
+            cap_kb = extract_by_capability(["narrative", "plot", "worldbuilding"], cap_query)
+            if cap_kb:
+                parts.append(
+                    "[能力知识库: 叙事/情节/世界观, 仅作参考]\n" + cap_kb[:600]
+                )
+        except Exception as e:
+            _logger.warning("[orch] Capability知识检索失败, 跳过: %s", e)
         # 6) 追读率调剧情
         adjusted = False
         if self.config.enable_retention_adjust and retention is not None:
