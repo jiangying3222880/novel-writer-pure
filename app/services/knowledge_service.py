@@ -128,7 +128,7 @@ class KnowledgePlugin:
             except Exception as e:
                 _logger.warning("HybridFinder 初始化失败, 降级到纯 BM25: %s", e)
                 try:
-                    from app.knowledge.bm25 import BM25Index
+                    from app.knowledge._bm25 import BM25Index
                     self._finder = BM25Index()
                 except Exception:
                     self._finder = None

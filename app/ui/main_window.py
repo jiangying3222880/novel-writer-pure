@@ -240,44 +240,30 @@ class MainWindow(QMainWindow):
         return w
 
     def _build_sidebar(self) -> QWidget:
-        """v4.0: ModuleNav + 齿轮按钮."""
+        """v4.2: TreeNav 树状导航."""
         wrap = QWidget()
         wrap.setObjectName("sidebar")
         lay = QVBoxLayout(wrap)
         lay.setContentsMargins(0, 0, 0, 0)
         lay.setSpacing(0)
 
-        from app.ui.widgets.module_nav import ModuleNav
-        self.module_nav = ModuleNav()
-        self.module_nav.module_selected.connect(self._on_module_selected)
-        self.module_nav.sub_page_selected.connect(self._on_sub_page_selected)
-        lay.addWidget(self.module_nav, 1)
-
-        from app.core.version import VERSION
-        footer = QWidget()
-        fl = QHBoxLayout(footer)
-        fl.setContentsMargins(12, 6, 12, 8)
-        fl.setSpacing(6)
-        gear_btn = QPushButton("⚙")
-        gear_btn.setObjectName("gearBtn")
-        gear_btn.setFixedSize(28, 28)
-        gear_btn.setToolTip("Settings (Ctrl+,)")
-        gear_btn.setCursor(Qt.CursorShape.PointingHandCursor)
-        # v4.0 patch: 移除硬编码暗色 QSS, 走全局主题 QSS (#gearBtn).
-        # 确保事件不被吞.
-        gear_btn.setAttribute(Qt.WidgetAttribute.WA_TransparentForMouseEvents, False)
-        gear_btn.clicked.connect(self._on_open_settings)
-        fl.addWidget(gear_btn)
-        flbl = QLabel(f"v{VERSION}")
-        flbl.setObjectName("sidebarFooter")
-        fl.addWidget(flbl)
-        fl.addStretch(1)
-        lay.addWidget(footer)
+        from app.ui.widgets.tree_nav import TreeNav
+        self.tree_nav = TreeNav()
+        self.tree_nav.page_selected.connect(self._on_tree_page_selected)
+        self.tree_nav.project_changed.connect(self._on_project_changed)
+        lay.addWidget(self.tree_nav, 1)
 
         return wrap
 
-    def _on_module_selected(self, module_id: str) -> None:
-        pass
+    def _on_tree_page_selected(self, page_id: str) -> None:
+        """处理树状导航页面选择"""
+        if page_id in self._pages:
+            self._select_page(page_id)
+
+    def _on_project_changed(self, project_id: str) -> None:
+        """处理项目切换"""
+        # 刷新当前页面
+        self._reload_projects()
 
     def _on_sub_page_selected(self, module_id: str, sub_id: str) -> None:
         pages = MODULE_PAGE_MAP.get(module_id, {})

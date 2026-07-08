@@ -27,7 +27,7 @@ _timer.start()
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from app.knowledge.bm25 import (
+from app.knowledge._bm25 import (
     BM25Index,
     build_from_knowledge,
     save,

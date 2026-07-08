@@ -27,7 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 import numpy as np
-from app.knowledge.vector_db import (
+from app.knowledge._vector_db import (
     Embedder,
     VectorIndex,
     build_from_knowledge,
