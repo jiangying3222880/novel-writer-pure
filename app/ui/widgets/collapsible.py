@@ -162,7 +162,7 @@ class CollapsiblePanel(QFrame):
         self._header.setStyleSheet(
             f"QWidget#collapsibleHeader {{ background: {header_bg}; border-bottom: 1px solid #2a2b2f; }}"
         )
-        self._body.setStyleSheet(f"QWidget#collapsibleBody { background: {surface_bg()}; }")
+        self._body.setStyleSheet(f"QWidget#collapsibleBody {{ background: {surface_bg()}; }}")
 
     def mousePressEvent(self, event) -> None:  # type: ignore[override]
         if (

@@ -15,7 +15,7 @@ import logging
 from typing import Any
 
 from app.services import project_service
-from app.db import _impl as _db_connection
+from app.db._impl import transaction
 from app.services.file_store import init_project_storage, load_data
 
 RECOGNISED_KEYS = {
@@ -40,7 +40,7 @@ def _check_project(project_id: str) -> None:
 
 def _db_get(project_id: str, key: str) -> Any | None:
     """从 SQLite 读 project_settings."""
-    with _db_connection.transaction() as db:
+    with transaction() as db:
         row = db.execute(
             "SELECT data FROM project_settings WHERE project_id = ? AND key = ?",
             (project_id, key),
@@ -56,7 +56,7 @@ def _db_get(project_id: str, key: str) -> Any | None:
 def _db_set(project_id: str, key: str, data: Any) -> None:
     """写 SQLite project_settings."""
     data_json = json.dumps(data, ensure_ascii=False) if data is not None else None
-    with _db_connection.transaction() as db:
+    with transaction() as db:
         db.execute(
             """INSERT OR REPLACE INTO project_settings
                (project_id, key, data, updated_at)

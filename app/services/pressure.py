@@ -15,7 +15,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional
 
-from app.db import connection
+from app.db._impl import transaction
 from app.core.constants import PressureZone, PRESSURE_THRESHOLDS
 
 _logger = logging.getLogger("NovelWriter.services.pressure")
@@ -175,7 +175,7 @@ def record(
         deadline_chapter=deadline_chapter,
         created_at=datetime.now().isoformat(timespec="seconds"),
     )
-    with connection.transaction() as conn:
+    with transaction() as conn:
         conn.execute(
             "DELETE FROM narrative_pressures WHERE project_id=? AND chapter_id=?",
             (project_id, chapter_id),
