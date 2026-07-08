@@ -26,6 +26,7 @@ from app.knowledge import (
     INDEX_DIR,
     PRESET_CATEGORIES,
     RETRIEVAL_CATEGORIES,
+    INDEX_RETRIEVAL_CATEGORIES,
     SOURCE_BUILTIN,
     KnowledgeDoc,
     read_doc,
@@ -236,6 +237,8 @@ class VectorIndex:
         genre: Optional[str] = None,
         category: Optional[str] = None,
         source: Optional[str] = None,
+        agent: Optional[str] = None,
+        doc_type: Optional[str] = None,
     ) -> list[VectorHit]:
         if self._dirty or self.vectors is None:
             self._refit()
@@ -250,8 +253,9 @@ class VectorIndex:
         # 余弦相似度 (向量已 L2 normalize)
         sims = (doc_vecs @ q_vec.T).flatten()
         # 取 top_k
-        if genre or category or source:
+        if genre or category or source or agent or doc_type:
             kept: list[tuple[str, float]] = []
+            from app.knowledge import agent_in_partition
             for i, doc_id in enumerate(self.doc_ids):
                 meta = self.doc_meta.get(doc_id, {})
                 if genre and meta.get("genre") != genre:
@@ -259,6 +263,10 @@ class VectorIndex:
                 if category and meta.get("category") != category:
                     continue
                 if source and meta.get("source") != source:
+                    continue
+                if agent and not agent_in_partition(meta.get("agent", ""), agent):
+                    continue
+                if doc_type and meta.get("doc_type") != doc_type:
                     continue
                 kept.append((doc_id, float(sims[i])))
         else:
@@ -313,7 +321,7 @@ def build_from_knowledge(
     sources = (SOURCE_BUILTIN, "local") if source == "all" else (source,)
     for src in sources:
         for cat in PRESET_CATEGORIES:
-            if for_retrieval and cat not in RETRIEVAL_CATEGORIES:
+            if for_retrieval and cat not in INDEX_RETRIEVAL_CATEGORIES:
                 continue
             docs = scan_category(cat, src)
             for d in docs:
@@ -326,6 +334,8 @@ def build_from_knowledge(
                         "source": d.source,
                         "genre": d.genre,
                         "tags": d.tags,
+                        "agent": d.agent,
+                        "doc_type": d.doc_type,
                         "snippet": _doc_to_snippet(d),
                     },
                 )
@@ -381,6 +391,8 @@ def search(
     genre: Optional[str] = None,
     category: Optional[str] = None,
     source: Optional[str] = None,
+    agent: Optional[str] = None,
+    doc_type: Optional[str] = None,
     idx: Optional[VectorIndex] = None,
 ) -> list[VectorHit]:
     """一站式检索。"""
@@ -388,7 +400,8 @@ def search(
         idx = load()
         if idx is None:
             idx, _ = build_from_knowledge()
-    return idx.search(query, top_k=top_k, genre=genre, category=category, source=source)
+    return idx.search(query, top_k=top_k, genre=genre, category=category,
+                      source=source, agent=agent, doc_type=doc_type)
 
 
 def rebuild(embedder: Optional[Embedder] = None) -> tuple[VectorIndex, str]:

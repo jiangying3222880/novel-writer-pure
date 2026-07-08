@@ -19,9 +19,19 @@ from typing import Optional
 
 from app.knowledge import (
     INDEX_DIR,
+    KNOWLEDGE_ROOT,
     PRESET_CATEGORIES,
     RETRIEVAL_CATEGORIES,
+    INDEX_RETRIEVAL_CATEGORIES,
     SOURCE_BUILTIN,
+    SOURCE_LOCAL,
+    AGENT_GENERAL,
+    DOC_MANUAL,
+    KB_BUDGET_MANUAL,
+    KB_BUDGET_RETRIEVE,
+    KB_BUDGET_SHARED,
+    KB_BUDGET_TOTAL_PER_AGENT,
+    agent_in_partition,
     KnowledgeDoc,
     extract_for_prompt,
     read_doc,
@@ -90,11 +100,15 @@ class HybridFinder:
         genre: Optional[str] = None,
         category: Optional[str] = None,
         source: Optional[str] = None,
+        agent: Optional[str] = None,
+        doc_type: Optional[str] = None,
         for_retrieval: bool = True,
     ) -> list[HybridHit]:
         """
         混合检索。
-        for_retrieval=True → 跳过非检索类 (A1.7 拍板)
+        for_retrieval=True (且未指定 agent) → 跳过非检索类 (A1.7 拍板, 旧 RAG 行为)
+        agent 给定 → 按 Agent 分区过滤 (绕过旧 category 门控)
+        doc_type 给定 → 按文档类型过滤 (manual/technique/template/dialogue/reference)
         """
         if not query.strip():
             return []
@@ -107,6 +121,7 @@ class HybridFinder:
             hits = self.bm25.top_k(
                 q_toks, k=top_k * 3,    # 多取一些, 融合后截断
                 genre=genre, category=category, source=source,
+                agent=agent, doc_type=doc_type,
             )
             for h in hits:
                 bm25_hits[h.doc_id] = h.score
@@ -116,6 +131,7 @@ class HybridFinder:
             hits = self.vector.search(
                 query, top_k=top_k * 3,
                 genre=genre, category=category, source=source,
+                agent=agent, doc_type=doc_type,
             )
             for h in hits:
                 vector_hits[h.doc_id] = h.score
@@ -140,17 +156,23 @@ class HybridFinder:
 
         out: list[HybridHit] = []
         for did in all_ids:
-            # 后置过滤: for_retrieval
-            if for_retrieval:
-                meta = self._meta.get(did, {})
+            meta = self._meta.get(did, {})
+            # 旧 category 门控 (仅未指定 agent 时生效, 保持旧 RAG 行为)
+            if for_retrieval and agent is None:
                 if meta.get("category") not in RETRIEVAL_CATEGORIES:
                     continue
+            # Agent 分区过滤 (绕过 category 门控)
+            if agent is not None:
+                if not agent_in_partition(meta.get("agent", ""), agent):
+                    continue
+            # doc_type 过滤
+            if doc_type is not None and meta.get("doc_type") != doc_type:
+                continue
             bm25_s = bm25_hits.get(did, 0.0)
             vec_s = vector_hits.get(did, 0.0)
             bm25_n = norm_bm25(bm25_s) if bm25_s > 0 else 0.0
             vec_n = norm_vector(vec_s) if vec_s > 0 else 0.0
             fused = self.w_bm25 * bm25_n + self.w_vector * vec_n
-            meta = self._meta.get(did, {})
             out.append(HybridHit(
                 doc_id=did,
                 score=fused,
@@ -165,6 +187,45 @@ class HybridFinder:
         out.sort(key=lambda x: x.score, reverse=True)
         return out[:top_k]
 
+    # ────────────────────── 文档内容读取 / 拼装辅助 ──────────────────────
+
+    def _read_doc_content(self, doc_id: str) -> str:
+        """按 doc_id (source/category/name) 读正文, 去 frontmatter。"""
+        p = KNOWLEDGE_ROOT / f"{doc_id}.md"
+        if not p.exists():
+            return ""
+        try:
+            doc = read_doc(p)
+        except Exception:
+            return ""
+        return _strip_frontmatter(doc.content)
+
+    def _hits_to_text(self, hits: list[HybridHit], max_chars: int, label_prefix: str = "") -> str:
+        """
+        把命中拼成限长文本 (复用旧 extract_for_prompt 逻辑, 但用真实正文而非 snippet)。
+        """
+        from collections import defaultdict
+        by_cat: dict[str, list[HybridHit]] = defaultdict(list)
+        for h in hits:
+            if len(by_cat[h.category]) < 2:
+                by_cat[h.category].append(h)
+        chunks: list[str] = []
+        used = 0
+        for cat, cat_hits in by_cat.items():
+            for h in cat_hits:
+                if used >= max_chars:
+                    break
+                text = self._read_doc_content(h.doc_id) or h.snippet
+                if used + len(text) > max_chars:
+                    text = text[:max_chars - used]
+                if text:
+                    label = f"{label_prefix}{cat}/{h.name}" if label_prefix else f"{cat}/{h.name}"
+                    chunks.append(f"【{label}】\n{text}")
+                    used += len(text)
+            if used >= max_chars:
+                break
+        return "\n\n".join(chunks)
+
     def extract_for_prompt(
         self,
         query: str,
@@ -172,41 +233,96 @@ class HybridFinder:
         max_total_chars: int = 200,
     ) -> str:
         """
-        A1.8 拍板: 检索后拼成 ~200 字, 给 AI 参考。
-        保持文风 + 桥段 各 1-2 段。
+        A1.8 拍板: 检索后拼成 ~200 字, 给 AI 参考 (旧 RAG 行为, 仅文风+桥段)。
         """
         hits = self.search(query, top_k=top_k * 2, for_retrieval=True)
         if not hits:
             return ""
-        # 按 category 分组, 每类最多 2 篇
-        from collections import defaultdict
-        by_cat: dict[str, list[HybridHit]] = defaultdict(list)
-        for h in hits:
-            if len(by_cat[h.category]) < 2:
-                by_cat[h.category].append(h)
-        # 拼装
+        return self._hits_to_text(hits, max_total_chars)
+
+    def _collect_manuals(self, agent: str, max_chars: int) -> list[str]:
+        """
+        收集某 Agent 分区的指导手册 (doc_type=manual, agent 命中该分区)。
+        指导手册固定注入 system 段, 不占检索预算。
+        """
         chunks: list[str] = []
         used = 0
-        for cat, cat_hits in by_cat.items():
-            for h in cat_hits:
-                if used >= max_total_chars:
-                    break
-                # 重新读 doc 取正文
-                try:
-                    doc = read_doc(f"app/knowledge/{h.doc_id}.md")
-                except Exception:
-                    # 路径猜不到 → 用 snippet
-                    text = h.snippet
-                else:
-                    text = _strip_frontmatter(doc.content)
-                if used + len(text) > max_total_chars:
-                    text = text[:max_total_chars - used]
-                if text:
-                    chunks.append(f"【{h.category}/{h.name}】\n{text}")
-                    used += len(text)
-            if used >= max_total_chars:
-                break
-        return "\n\n".join(chunks)
+        for source in (SOURCE_BUILTIN, SOURCE_LOCAL):
+            for cat in PRESET_CATEGORIES:
+                for d in scan_category(cat, source):
+                    if d.doc_type != DOC_MANUAL:
+                        continue
+                    if not agent_in_partition(d.agent, agent):
+                        continue
+                    text = _strip_frontmatter(d.content)
+                    if used + len(text) > max_chars:
+                        text = text[:max_chars - used]
+                    if text:
+                        chunks.append(f"【{cat}/{d.name}】\n{text}")
+                        used += len(text)
+                    if used >= max_chars:
+                        return chunks
+        return chunks
+
+    def extract_for_agent(
+        self,
+        agent: str,
+        query: str,
+        *,
+        include_manual: bool = True,
+        include_shared: bool = True,
+        manual_max_chars: int = KB_BUDGET_MANUAL,
+        retrieve_max_chars: int = KB_BUDGET_RETRIEVE,
+        shared_max_chars: int = KB_BUDGET_SHARED,
+        top_k: int = 3,
+    ) -> str:
+        """
+        给某 Agent 拼装专属知识块 (分层知识库 M1 核心入口)。
+
+        结构:
+        ① 【指导手册】固定注入该 Agent 的 doc_type=manual 块 (永驻, 不占检索预算)
+        ② 【专属知识-<agent>】检索该分区相关文档 (按 query 相关度)
+        ③ 【共享库】合并 agent=general 的相关文档 (include_shared 时)
+
+        带分节标记, 直接可注入 system 段; user 段保持纯净 (0 污染)。
+        """
+        sections: list[str] = []
+        total = 0
+        # ① 指导手册
+        if include_manual:
+            manuals = self._collect_manuals(agent, manual_max_chars)
+            if manuals:
+                block = "\n\n".join(manuals)
+                sections.append("【指导手册】\n" + block)
+                total += len(block)
+        # ② 专属分区检索
+        if query.strip():
+            hits = self.search(query, top_k=top_k, for_retrieval=False, agent=agent)
+            # 指导手册已固定注入, 检索段去重避免重复占用预算
+            if include_manual:
+                hits = [h for h in hits
+                        if self._meta.get(h.doc_id, {}).get("doc_type") != DOC_MANUAL]
+            if hits:
+                txt = self._hits_to_text(hits, retrieve_max_chars, label_prefix=f"专属-{agent}-")
+                if txt:
+                    sections.append("【专属知识-" + agent + "】\n" + txt)
+                    total += len(txt)
+        # ③ 共享库
+        if include_shared and agent != AGENT_GENERAL and query.strip():
+            shared = self.search(query, top_k=top_k, for_retrieval=False, agent=AGENT_GENERAL)
+            if include_manual:
+                shared = [h for h in shared
+                          if self._meta.get(h.doc_id, {}).get("doc_type") != DOC_MANUAL]
+            if shared:
+                txt = self._hits_to_text(shared, shared_max_chars, label_prefix="共享库-")
+                if txt:
+                    sections.append("【共享库】\n" + txt)
+                    total += len(txt)
+        full = "\n\n".join(sections)
+        # 总预算封顶
+        if total > KB_BUDGET_TOTAL_PER_AGENT:
+            full = full[:KB_BUDGET_TOTAL_PER_AGENT]
+        return full
 
 
 def _strip_frontmatter(text: str) -> str:
@@ -253,6 +369,25 @@ def search(query: str, top_k: int = 5, **kwargs) -> list[HybridHit]:
 def extract_for_prompt(query: str, top_k: int = 3, max_total_chars: int = 200) -> str:
     """一站式拼装。"""
     return get_finder().extract_for_prompt(query, top_k=top_k, max_total_chars=max_total_chars)
+
+
+def extract_for_agent(agent: str, query: str, **kwargs) -> str:
+    """一站式: 给某 Agent 拼装专属知识块。"""
+    return get_finder().extract_for_agent(agent, query, **kwargs)
+
+
+def rebuild_index() -> HybridFinder:
+    """
+    重建 BM25 + 向量索引 (改/加 frontmatter 或新增文档后调用)。
+    重置全局 finder 单例并返回新实例。
+    """
+    from app.knowledge.bm25 import rebuild as bm25_rebuild
+    from app.knowledge.vector_db import rebuild as vector_rebuild
+    bm25_rebuild()
+    vector_rebuild()
+    global _finder
+    _finder = None
+    return get_finder()
 
 
 # ────────────────────── CLI ──────────────────────

@@ -16,7 +16,7 @@ from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QListWidget, QListWidgetItem,
     QLabel, QPushButton, QTextBrowser, QComboBox, QSpinBox, QDialog,
-    QFrame, QMessageBox,
+    QFrame, QMessageBox, QLineEdit, QDialogButtonBox,
 )
 
 from app.services import story_unit_service_v2 as usvc
@@ -60,6 +60,9 @@ class AssemblyWizard(QDialog):
         self._unit_list = QListWidget()
         self._unit_list.setSelectionMode(QListWidget.NoSelection)
         left.addWidget(self._unit_list, 1)
+        self._btn_pool = QPushButton("＋从单元池选取")
+        self._btn_pool.clicked.connect(self._on_pick_from_pool)
+        left.addWidget(self._btn_pool)
         body.addLayout(left, 1)
 
         # 右: 操作流
@@ -141,6 +144,30 @@ class AssemblyWizard(QDialog):
             if it.checkState() == Qt.Checked:
                 ids.append(it.data(Qt.UserRole))
         return ids
+
+    # -------------------------------------------------------------- #
+    def _on_pick_from_pool(self) -> None:
+        """从单元池选取并克隆进当前项目, 刷新单元列表."""
+        if not self._pid:
+            self._status.setText("请先打开项目")
+            return
+        dlg = _UnitPoolPickerDialog(self)
+        if dlg.exec() != QDialog.Accepted:
+            return
+        picked = dlg.selected_ids()
+        if not picked:
+            return
+        from app.services import unit_pool_service as ups
+        n = 0
+        for pool_id in picked:
+            try:
+                ups.clone_to_project(pool_id, self._pid)
+                n += 1
+            except Exception as e:
+                self._status.setText(f"克隆失败: {e}")
+                return
+        self.set_project(self._pid)  # 刷新列表
+        self._status.setText(f"已从单元池克隆 {n} 个单元到本项目")
 
     # -------------------------------------------------------------- #
     def _on_assemble(self) -> None:
@@ -270,3 +297,69 @@ class AssemblyWizard(QDialog):
         self._status.setText(f"已生成 {len(ids)} 章并写入单元溯源")
         self.chapters_created.emit()
         QMessageBox.information(self, "成稿完成", f"已生成 {len(ids)} 章，可在章节树查看。")
+
+
+class _UnitPoolPickerDialog(QDialog):
+    """从单元池按条件检索并勾选的选取对话框."""
+
+    def __init__(self, parent=None) -> None:
+        super().__init__(parent)
+        self.setWindowTitle("从单元池选取")
+        self.resize(640, 520)
+        lay = QVBoxLayout(self)
+
+        filt = QHBoxLayout()
+        filt.addWidget(QLabel("题材"))
+        self._genre = QLineEdit()
+        filt.addWidget(self._genre)
+        filt.addWidget(QLabel("情绪"))
+        self._emotion = QLineEdit()
+        filt.addWidget(self._emotion)
+        filt.addWidget(QLabel("关键词"))
+        self._query = QLineEdit()
+        filt.addWidget(self._query)
+        self._btn = QPushButton("检索")
+        self._btn.clicked.connect(self._do_search)
+        filt.addWidget(self._btn)
+        lay.addLayout(filt)
+
+        self._list = QListWidget()
+        self._list.setSelectionMode(QListWidget.MultiSelection)
+        lay.addWidget(self._list, 1)
+
+        btns = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        btns.accepted.connect(self.accept)
+        btns.rejected.connect(self.reject)
+        lay.addWidget(btns)
+
+        self._do_search()
+
+    def _do_search(self) -> None:
+        from app.services import unit_pool_service as ups
+        tags = None
+        rows = ups.search_by_tags(
+            genre=self._genre.text().strip(),
+            emotion=self._emotion.text().strip(),
+            query=self._query.text().strip(),
+            tags=tags, top_k=200,
+        )
+        self._list.clear()
+        for d in rows:
+            item = QListWidgetItem(_fmt_pool_item(d))
+            item.setData(Qt.UserRole, d["id"])
+            self._list.addItem(item)
+
+    def selected_ids(self) -> list[str]:
+        return [self._list.item(i).data(Qt.UserRole)
+                for i in range(self._list.count())
+                if self._list.item(i).isSelected()]
+
+
+def _fmt_pool_item(d: dict) -> str:
+    meta = []
+    if d.get("genre") and d["genre"] != "通用":
+        meta.append(d["genre"])
+    if d.get("emotion"):
+        meta.append(d["emotion"])
+    head = f"[{','.join(meta)}] " if meta else ""
+    return f"{head}{d['title']} ({d.get('word_count', 0)}字)"

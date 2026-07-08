@@ -50,6 +50,18 @@ class StoryTeller(AgentBase):
         except Exception:
             return None
 
+    def _build_writer_kb(self, query: str) -> str:
+        """
+        M1 分层知识库: 给写作 Agent 拼装专属知识块 (指导手册 + 专属技巧/范本/对话 + 共享库)。
+        失败时返回空串 (降级为纯 WRITER_SYSTEM)。
+        """
+        try:
+            from app.knowledge.finder import extract_for_agent
+            return extract_for_agent("writing", query)
+        except Exception as e:
+            _logger.warning("[writer] 写作知识库检索失败, 跳过: %s", e)
+            return ""
+
     def _do_execute(self, task: dict) -> Report:
         ctx = task.get("context", {})
         project_id = ctx.get("project_id", "")
@@ -62,8 +74,11 @@ class StoryTeller(AgentBase):
         ai = self._get_ai()
         if ai is not None and refined:
             try:
+                # system 段注入写作知识库 (0 污染: user 段 refined 保持纯净)
+                kb_block = self._build_writer_kb(refined)
+                system = (kb_block + "\n\n" + WRITER_SYSTEM) if kb_block else WRITER_SYSTEM
                 messages = [
-                    {"role": "system", "content": WRITER_SYSTEM},
+                    {"role": "system", "content": system},
                     {"role": "user", "content": refined},
                 ]
                 result = ai.chat(

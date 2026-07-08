@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" width="100%" role="img">
+  <title>Correction Recovery Trajectory</title>
+  <desc>D1 metric before and after closed-loop correction</desc>
+
+  <rect x="40" y="20" width="620" height="480" rx="12" fill="var(--color-background-secondary)" stroke="var(--color-border-primary)" stroke-width="0.5"/>
+
+  <text x="340" y="50" text-anchor="middle" class="th">Closed-Loop Recovery: D1 Before vs After Correction</text>
+  <text x="340" y="68" text-anchor="middle" class="ts">Dashed red = before, Solid blue = after | is_stable=False</text>
+
+  <line x1="80" y1="80" x2="80" y2="380" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+  <line x1="80" y1="380" x2="576" y2="380" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+
+  <line x1="80" y1="80" x2="576" y2="80" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="2 4"/>
+  <text x="75" y="84" text-anchor="end" class="ts" fill="var(--color-text-tertiary)">1.0</text>
+
+  <line x1="80" y1="230" x2="576" y2="230" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="2 4"/>
+  <text x="75" y="234" text-anchor="end" class="ts" fill="var(--color-text-tertiary)">0.5</text>
+
+  <text x="75" y="384" text-anchor="end" class="ts" fill="var(--color-text-tertiary)">0.0</text>
+
+  <polyline points="80,108 96,109 112,124 128,122 144,131 160,124 176,126 192,122 208,164 224,126 240,153 256,155 272,152 288,142 304,208 320,213 336,253 352,248 368,245 384,153 400,243 416,204 432,238 448,190 464,224 480,212 496,330 512,210 528,286 544,288" fill="none" stroke="var(--c-coral-400)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <polyline points="80,108 96,109 112,124 128,122 144,131 160,124 176,126 192,122 208,164 224,126 240,153 256,155 272,149 288,136 304,199 320,201 336,238 352,230 368,224 384,129 400,215 416,173 432,204 448,153 464,185 480,169 496,284 512,161 528,234 544,233" fill="none" stroke="var(--c-blue-600)" stroke-width="2"/>
+
+  <!-- Legend -->
+  <rect x="520" y="90" width="120" height="65" rx="6" fill="var(--color-background-primary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+  <line x1="530" y1="108" x2="555" y2="108" stroke="var(--c-coral-400)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="562" y="112" class="ts">Before</text>
+  <line x1="530" y1="130" x2="555" y2="130" stroke="var(--c-blue-600)" stroke-width="2"/>
+  <text x="562" y="134" class="ts">After</text>
+
+  <text x="340" y="510" text-anchor="middle" class="ts" fill="var(--color-text-tertiary)">
+    1 correction(s), D1 delta=+0.183
+  </text>
+</svg>

@@ -35,15 +35,84 @@ PRESET_CATEGORIES = (
     "人物人设",
     "场景描写",
     "框架模板",
+    # ── 新增: Agent 专属知识分类 (分层知识库 M1) ──
+    "编排技巧",
+    "编排范本",
+    "写作技巧",
+    "写作范本",
+    "人物对话",
+    "指导手册",
 )
 
-# A1.7 拍板: 检索只取 文风 + 桥段
+# A1.7 拍板: 旧检索只取 文风 + 桥段 (喂给写作 RAG 的默认范围)
 RETRIEVAL_CATEGORIES = frozenset({"文风语料", "桥段"})
+
+# 新增: Agent 分区专属分类 (编排/写作 Agent 各自的知识库)
+AGENT_CATEGORIES = (
+    "编排技巧",
+    "编排范本",
+    "写作技巧",
+    "写作范本",
+    "人物对话",
+    "指导手册",
+)
+
+# 索引构建时纳入检索的分类 = 旧检索类 ∪ Agent 类
+# (旧 RAG 行为通过 finder.search 的 category 门控保持, 不会把 Agent 类混入旧 prompt)
+INDEX_RETRIEVAL_CATEGORIES = frozenset(RETRIEVAL_CATEGORIES).union(AGENT_CATEGORIES)
+
+# ── Agent 分区标识 (frontmatter `agent` 字段取值, 支持逗号分隔多归属) ──
+AGENT_ORCHESTRATION = "orchestration"   # 编排 Agent
+AGENT_WRITING = "writing"               # 写作 Agent
+AGENT_GENERAL = "general"               # 共享能用库 (所有 Agent 可取)
+AGENT_VALUES = (AGENT_ORCHESTRATION, AGENT_WRITING, AGENT_GENERAL)
+
+# ── 文档类型 (frontmatter `doc_type` 字段取值) ──
+DOC_MANUAL = "manual"           # 指导手册 (固定注入 system, 不占检索预算)
+DOC_TECHNIQUE = "technique"     # 写作/编排技巧
+DOC_TEMPLATE = "template"       # 编排/写作范本
+DOC_DIALOGUE = "dialogue"       # 人物对话
+DOC_REFERENCE = "reference"     # 参考资料
+DOC_TYPES = (DOC_MANUAL, DOC_TECHNIQUE, DOC_TEMPLATE, DOC_DIALOGUE, DOC_REFERENCE)
+
+# ── Agent 分区预算 (字符上限, 防 prompt 膨胀) ──
+KB_BUDGET_MANUAL = 800          # 指导手册固定注入上限
+KB_BUDGET_RETRIEVE = 600        # 专属分区检索上限
+KB_BUDGET_SHARED = 600          # 共享库检索上限
+KB_BUDGET_TOTAL_PER_AGENT = 1500  # 单 Agent 总字符上限
 
 # 合法来源
 SOURCE_BUILTIN = "builtin"
 SOURCE_LOCAL = "local"
 VALID_SOURCES = (SOURCE_BUILTIN, SOURCE_LOCAL)
+
+
+# ────────────────────── Agent 分区工具 ──────────────────────
+
+def split_agents(agent_field: str) -> set[str]:
+    """把 frontmatter `agent` 字段 (逗号分隔) 解析成集合。"""
+    if not agent_field:
+        return set()
+    return {a.strip() for a in str(agent_field).split(",") if a.strip()}
+
+
+def agent_in_partition(doc_agent: str, partition_agent: str) -> bool:
+    """
+    判断文档是否属于某 Agent 分区。
+    - doc_agent: 文档的 agent 字段 (可逗号多归属)
+    - partition_agent: 目标分区 (orchestration/writing/general)
+    规则: 文档 agent 含 partition_agent, 或含 general 且 partition 允许共享。
+    共享库 (general) 文档对所有分区可见; 分区专属文档仅对该分区可见。
+    """
+    doc_agents = split_agents(doc_agent)
+    if not doc_agents:
+        return False
+    if partition_agent in doc_agents:
+        return True
+    # 共享库对所有分区开放
+    if AGENT_GENERAL in doc_agents and partition_agent != AGENT_GENERAL:
+        return True
+    return False
 
 
 # ────────────────────── 数据类 ──────────────────────
@@ -57,6 +126,8 @@ class KnowledgeDoc:
     source: str         # builtin / local
     genre: str = "通用"  # 从 frontmatter 解析, 默认 "通用"
     tags: list[str] = field(default_factory=list)
+    agent: str = ""     # 从 frontmatter 解析, 逗号分隔 (orchestration/writing/general)
+    doc_type: str = ""  # 从 frontmatter 解析 (manual/technique/template/dialogue/reference)
     content: str = ""
     metadata: dict = field(default_factory=dict)
 
@@ -68,6 +139,8 @@ class KnowledgeDoc:
             "source": self.source,
             "genre": self.genre,
             "tags": self.tags,
+            "agent": self.agent,
+            "doc_type": self.doc_type,
             "content_length": len(self.content),
         }
 
@@ -207,6 +280,8 @@ def read_doc(path: str | Path) -> KnowledgeDoc:
         source=source,
         genre=meta.get("genre", "通用"),
         tags=meta.get("tags", []) or [],
+        agent=str(meta.get("agent", "")).strip(),
+        doc_type=str(meta.get("doc_type", "")).strip(),
         content=text,
         metadata=meta,
     )
@@ -220,9 +295,9 @@ def scan_category(
 ) -> list[KnowledgeDoc]:
     """
     扫描某分类下所有 MD 文件。
-    for_retrieval=True → 只返回 5 类里可检索的 (A1.7: 文风+桥段)。
+    for_retrieval=True → 只返回纳入检索的分类 (旧 文风+桥段 ∪ Agent 类)。
     """
-    if for_retrieval and category not in RETRIEVAL_CATEGORIES:
+    if for_retrieval and category not in INDEX_RETRIEVAL_CATEGORIES:
         return []
     cat_dir = get_category_dir(category, source)
     if not cat_dir.exists():
@@ -323,8 +398,20 @@ app/knowledge/
 └── index/     ← 索引缓存 (运行时生成)
 ```
 
-5 个预置分类: 文风语料 / 桥段 / 人物人设 / 场景描写 / 框架模板
-A1 拍板: 检索时只取 文风语料 + 桥段
+## 分类 (11 个)
+旧 5 类: 文风语料 / 桥段 / 人物人设 / 场景描写 / 框架模板
+Agent 专属 6 类: 编排技巧 / 编排范本 / 写作技巧 / 写作范本 / 人物对话 / 指导手册
+
+## 分层知识库 (M1)
+每篇文档 frontmatter 可带:
+- `agent`: orchestration | writing | general (可逗号多归属; general=共享能用库)
+- `doc_type`: manual | technique | template | dialogue | reference
+- `genre` / `tags` / `category`
+
+Agent 调用: `from app.knowledge.finder import extract_for_agent`
+`extract_for_agent("writing", query)` → 【指导手册】+【专属知识-writing】+【共享库】
+`extract_for_agent("orchestration", query)` → 编排分区专属
+改/加文档后务必 `rebuild_index()` 重建索引。
 """
 
 

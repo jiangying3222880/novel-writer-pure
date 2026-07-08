@@ -34,6 +34,7 @@ PAGE_MAP = {
     "create": {
         "current": ("当前创作", "generate"),
         "unit": ("故事单元", "story-unit"),
+        "unitpool": ("单元池", "unit-pool"),
         "editor": ("项目管理", "projects"),
         "signals": ("自动进化", "edit-signals"),
     },
@@ -62,6 +63,7 @@ SUB_PAGE_LABELS = {
     "create": {
         "current": "当前创作",
         "unit": "故事单元",
+        "unitpool": "单元池",
         "editor": "单元库",
         "signals": "自动进化",
     },

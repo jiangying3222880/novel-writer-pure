@@ -252,6 +252,27 @@ class KnowledgePlugin:
             text = text[:max_total_chars] + "…"
         return text
 
+    def extract_for_agent(
+        self,
+        agent: str,
+        query: str,
+        **kwargs,
+    ) -> str:
+        """
+        分层知识库 M1: 给某 Agent 拼装专属知识块。
+        agent ∈ {orchestration, writing, general}。直接注入 system 段。
+        """
+        from app.knowledge.finder import extract_for_agent as _ea
+        return _ea(agent, query, **kwargs)
+
+    def rebuild_index(self):
+        """
+        重建知识索引 (新增/修改文档或 frontmatter 后调用)。
+        返回新的 HybridFinder。
+        """
+        from app.knowledge.finder import rebuild_index
+        return rebuild_index()
+
     # ─────────────── 列表 / 统计 ───────────────
 
     def list_by_dimension(

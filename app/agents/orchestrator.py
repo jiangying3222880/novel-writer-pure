@@ -817,6 +817,25 @@ class Orchestrator:
         # 5) 检索 (文风+桥段)
         if ret_r.ok and ret_r.data.get("snippets"):
             parts.append("[文风+桥段参考 ~200字, 0 污染]\n" + ret_r.data["snippets"][:600])
+        # 5b) 编排知识库 (编排 Agent 专属: 编排技巧/编排范本/指导手册)
+        #     作为结构参考注入精炼提示, 让写手按节奏/断章/拼接范本执行
+        try:
+            from app.knowledge.finder import extract_for_agent
+            # 用已拼好的上下文/记忆/资料作为编排 KB 检索 query
+            orch_query = ""
+            if ctx_r.ok and ctx_r.data.get("ctx_formatted"):
+                orch_query += ctx_r.data["ctx_formatted"][:300] + " "
+            if res_r.ok and res_r.data.get("snippets"):
+                orch_query += res_r.data["snippets"][:200] + " "
+            if mem_r.ok and mem_r.data.get("text"):
+                orch_query += mem_r.data["text"][:200]
+            orch_kb = extract_for_agent("orchestration", orch_query.strip())
+            if orch_kb:
+                parts.append(
+                    "[编排知识库: 节奏/断章/拼接范本, 仅作结构参考]\n" + orch_kb[:800]
+                )
+        except Exception as e:
+            _logger.warning("[orch] 编排知识库检索失败, 跳过: %s", e)
         # 6) 追读率调剧情
         adjusted = False
         if self.config.enable_retention_adjust and retention is not None:

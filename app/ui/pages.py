@@ -62,6 +62,7 @@ from app.ui.tabs.settings_tab import (
 from app.ui.tabs.editor_tab import EditorTab  # 保留导入 (GenerateTab 已合并其功能)
 from app.ui.tabs.generate_tab import GenerateTab  # 章节生成
 from app.ui.tabs.story_unit_tab import StoryUnitTab  # 故事单元
+from app.ui.tabs.unit_pool_tab import UnitPoolTab  # 单元池 (M5)
 from app.ui.tabs.outline_tab import OutlineTab  # 大纲管理
 from app.ui.tabs.worldview_tab import WorldviewTab  # 世界观
 from app.ui.tabs.character_mgmt_tab import CharacterMgmtTab  # 角色管理
@@ -2574,6 +2575,24 @@ class PublishPage(QWidget):
             self._inner.set_project(project)
 
 
+class UnitPoolPage(QWidget):
+    """单元池 — 故事单元素材库 (M5)."""
+    PAGE_ID = "unit-pool"
+    PAGE_TITLE = "单元池"
+
+    def __init__(self, parent: QWidget | None = None) -> None:
+        super().__init__(parent)
+        outer = QVBoxLayout(self)
+        outer.setContentsMargins(0, 0, 0, 0)
+        outer.setSpacing(0)
+        self._inner = UnitPoolTab()
+        outer.addWidget(self._inner)
+
+    def set_project(self, project) -> None:
+        if hasattr(self._inner, "set_project"):
+            self._inner.set_project(project)
+
+
 # ===================================================================== #
 # v4.0 Observe 模块页面
 # ===================================================================== #
@@ -2664,6 +2683,7 @@ PAGE_REGISTRY: dict[str, Type[QWidget]] = {
     "edit-signals":      EditSignalsPage,
     "generate":          GeneratePage,
     "story-unit":        StoryUnitPage,
+    "unit-pool":         UnitPoolPage,
     "publish":           PublishPage,
     "world-graph":       WorldGraphPage,
     "usage-analytics":   UsageAnalyticsPage,
@@ -2694,6 +2714,7 @@ def get_all_page_classes() -> list[Type[QWidget]]:
         EditSignalsPage,     #  6  改稿信号
         GeneratePage,        #  7  章节生成
         StoryUnitPage,       #  8  故事单元
+        UnitPoolPage,        #  8a 单元池 (M5)
         PublishPage,         #  8b 发布模块 (章节树/编辑/情绪曲线/断章)
         WorldGraphPage,      #  9  世界图谱
         UsageAnalyticsPage,  # 10  用量分析

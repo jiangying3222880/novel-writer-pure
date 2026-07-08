@@ -51,6 +51,7 @@ from app.knowledge import (
     LOCAL_DIR,
     PRESET_CATEGORIES,
     RETRIEVAL_CATEGORIES,
+    INDEX_RETRIEVAL_CATEGORIES,
     SOURCE_BUILTIN,
     KnowledgeDoc,
     read_doc,
@@ -180,14 +181,16 @@ class BM25Index:
         genre: Optional[str] = None,
         category: Optional[str] = None,
         source: Optional[str] = None,
+        agent: Optional[str] = None,
+        doc_type: Optional[str] = None,
     ) -> list[BM25Hit]:
         """
         取 top-k。
-        genre/category/source 可选过滤。
+        genre/category/source/agent/doc_type 可选过滤。
         """
         scored = self.score(query_tokens)
         # 后置过滤
-        if genre or category or source:
+        if genre or category or source or agent or doc_type:
             kept = []
             for doc_id, sc in scored:
                 meta = self.doc_meta.get(doc_id, {})
@@ -196,6 +199,12 @@ class BM25Index:
                 if category and meta.get("category") != category:
                     continue
                 if source and meta.get("source") != source:
+                    continue
+                if agent:
+                    from app.knowledge import agent_in_partition
+                    if not agent_in_partition(meta.get("agent", ""), agent):
+                        continue
+                if doc_type and meta.get("doc_type") != doc_type:
                     continue
                 kept.append((doc_id, sc))
             scored = kept
@@ -292,13 +301,13 @@ def build_from_knowledge(
 ) -> BM25Index:
     """
     从 app/knowledge/ 扫描所有 MD, 构 BM25 索引。
-    for_retrieval=True → 只取 文风+桥段 (A1.7 拍板)
+    for_retrieval=True → 只取 文风+桥段 ∪ Agent 类 (索引纳入检索范围)
     """
     idx = BM25Index()
     sources = (SOURCE_BUILTIN, LOCAL_DIR.name) if source == "all" else (source,)
     for src in sources:
         for cat in PRESET_CATEGORIES:
-            if for_retrieval and cat not in RETRIEVAL_CATEGORIES:
+            if for_retrieval and cat not in INDEX_RETRIEVAL_CATEGORIES:
                 continue
             docs = scan_category(cat, src)
             for d in docs:
@@ -312,6 +321,8 @@ def build_from_knowledge(
                         "source": d.source,
                         "genre": d.genre,
                         "tags": d.tags,
+                        "agent": d.agent,
+                        "doc_type": d.doc_type,
                         "snippet": _doc_to_snippet(d),
                     },
                 )
@@ -357,6 +368,8 @@ def search(
     genre: Optional[str] = None,
     category: Optional[str] = None,
     source: Optional[str] = None,
+    agent: Optional[str] = None,
+    doc_type: Optional[str] = None,
     idx: Optional[BM25Index] = None,
 ) -> list[BM25Hit]:
     """
@@ -368,7 +381,8 @@ def search(
     if not query.strip():
         return []
     q_tokens = tokenize(query)
-    return idx.top_k(q_tokens, k=top_k, genre=genre, category=category, source=source)
+    return idx.top_k(q_tokens, k=top_k, genre=genre, category=category,
+                     source=source, agent=agent, doc_type=doc_type)
 
 
 def rebuild() -> BM25Index:
