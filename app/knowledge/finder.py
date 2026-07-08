@@ -37,8 +37,8 @@ from app.knowledge import (
     read_doc,
     scan_category,
 )
-from app.knowledge.bm25 import BM25Index, BM25Hit, build_from_knowledge as bm25_build
-from app.knowledge.vector_db import VectorIndex, VectorHit, build_from_knowledge as vector_build
+from app.knowledge._bm25 import BM25Index, BM25Hit, build_from_knowledge as bm25_build
+from app.knowledge._vector_db import VectorIndex, VectorHit, build_from_knowledge as vector_build
 
 _logger = logging.getLogger("NovelWriter.finder")
 
@@ -116,7 +116,7 @@ class HybridFinder:
         # 1) BM25
         bm25_hits: dict[str, float] = {}
         if self.bm25 is not None:
-            from app.knowledge.bm25 import tokenize as _bm25_tok
+            from app.knowledge._bm25 import tokenize as _bm25_tok
             q_toks = _bm25_tok(query)
             hits = self.bm25.top_k(
                 q_toks, k=top_k * 3,    # 多取一些, 融合后截断
@@ -324,6 +324,50 @@ class HybridFinder:
             full = full[:KB_BUDGET_TOTAL_PER_AGENT]
         return full
 
+    def extract_by_capability(
+        self,
+        capabilities: list[str],
+        query: str,
+        *,
+        max_total_chars: int = 1500,
+        top_k: int = 3,
+    ) -> str:
+        """
+        按Capability检索知识块。
+
+        Args:
+            capabilities: Capability名称列表（如 ["narrative", "dialogue"]）
+            query: 检索查询
+            max_total_chars: 总字符预算
+            top_k: 每个Capability检索数量
+
+        Returns:
+            str: 拼装后的知识块
+        """
+        from app.knowledge.capability import search_by_capability
+
+        sections: list[str] = []
+        total = 0
+
+        # 按Capability检索
+        docs = search_by_capability(capabilities, limit=top_k * len(capabilities))
+
+        for doc in docs:
+            content = doc.get("content", "")
+            if not content:
+                continue
+
+            cap_name = doc.get("capability", "unknown")
+            block = f"【{cap_name}】\n{content[:500]}"
+            sections.append(block)
+            total += len(block)
+
+            if total >= max_total_chars:
+                break
+
+        full = "\n\n".join(sections)
+        return full[:max_total_chars] if len(full) > max_total_chars else full
+
 
 def _strip_frontmatter(text: str) -> str:
     if text.startswith("---"):
@@ -376,13 +420,18 @@ def extract_for_agent(agent: str, query: str, **kwargs) -> str:
     return get_finder().extract_for_agent(agent, query, **kwargs)
 
 
+def extract_by_capability(capabilities: list[str], query: str, **kwargs) -> str:
+    """一站式: 按Capability检索知识块。"""
+    return get_finder().extract_by_capability(capabilities, query, **kwargs)
+
+
 def rebuild_index() -> HybridFinder:
     """
     重建 BM25 + 向量索引 (改/加 frontmatter 或新增文档后调用)。
     重置全局 finder 单例并返回新实例。
     """
-    from app.knowledge.bm25 import rebuild as bm25_rebuild
-    from app.knowledge.vector_db import rebuild as vector_rebuild
+    from app.knowledge._bm25 import rebuild as bm25_rebuild
+    from app.knowledge._vector_db import rebuild as vector_rebuild
     bm25_rebuild()
     vector_rebuild()
     global _finder
