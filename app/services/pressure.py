@@ -15,7 +15,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional
 
-from app.db._impl import transaction
+from app.db._impl import transaction, get_conn
 from app.core.constants import PressureZone, PRESSURE_THRESHOLDS
 
 _logger = logging.getLogger("NovelWriter.services.pressure")
@@ -195,7 +195,7 @@ def record(
 
 
 def get_for_chapter(project_id: str, chapter_id: str) -> Optional[Pressure]:
-    conn = connection.get_conn()
+    conn = get_conn()
     row = conn.execute(
         "SELECT * FROM narrative_pressures WHERE project_id=? AND chapter_id=?",
         (project_id, chapter_id),
@@ -207,7 +207,7 @@ def get_for_chapter(project_id: str, chapter_id: str) -> Optional[Pressure]:
 
 def list_for_project(project_id: str) -> list[Pressure]:
     """列出项目所有章压力, 按 chapter_id 排序。"""
-    conn = connection.get_conn()
+    conn = get_conn()
     rows = conn.execute(
         "SELECT * FROM narrative_pressures WHERE project_id=? ORDER BY chapter_id ASC",
         (project_id,),
@@ -217,7 +217,7 @@ def list_for_project(project_id: str) -> list[Pressure]:
 
 def get_latest(project_id: str) -> Optional[Pressure]:
     """取项目内最新一章压力。"""
-    conn = connection.get_conn()
+    conn = get_conn()
     row = conn.execute(
         "SELECT * FROM narrative_pressures WHERE project_id=? ORDER BY chapter_id DESC LIMIT 1",
         (project_id,),
@@ -229,7 +229,7 @@ def get_latest(project_id: str) -> Optional[Pressure]:
 
 def get_trend(project_id: str, last_n: int = 5) -> list[Pressure]:
     """取最近 N 章压力 (用于趋势分析)。"""
-    conn = connection.get_conn()
+    conn = get_conn()
     rows = conn.execute(
         "SELECT * FROM narrative_pressures WHERE project_id=? ORDER BY chapter_id DESC LIMIT ?",
         (project_id, last_n),
@@ -259,7 +259,7 @@ def can_open_new_hook(pressure_val: int) -> tuple[bool, str]:
 
 def zone_summary(project_id: str) -> dict[str, int]:
     """统计各 zone 章节数。"""
-    conn = connection.get_conn()
+    conn = get_conn()
     rows = conn.execute(
         "SELECT zone, COUNT(*) AS n FROM narrative_pressures WHERE project_id=? GROUP BY zone",
         (project_id,),
@@ -269,7 +269,7 @@ def zone_summary(project_id: str) -> dict[str, int]:
 
 def delete_for_chapter(project_id: str, chapter_id: str) -> int:
     """删除某章压力记录 (章节删除时用)。"""
-    conn = connection.get_conn()
+    conn = get_conn()
     cur = conn.execute(
         "DELETE FROM narrative_pressures WHERE project_id=? AND chapter_id=?",
         (project_id, chapter_id),

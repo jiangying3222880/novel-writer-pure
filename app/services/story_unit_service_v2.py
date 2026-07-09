@@ -27,6 +27,7 @@ VALID_STATUSES = {"draft", "outlining", "writing", "completed", "split"}
 VALID_TYPES = {
     "battle", "romance", "reveal", "transition",
     "climax", "setup", "payoff", "filler", "other",
+    "virtual",
 }
 VALID_TRANSITIONS = {
     "direct", "time_jump", "pov_switch", "flashback",

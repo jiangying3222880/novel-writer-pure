@@ -25,7 +25,6 @@ NAV_TREE = {
         "label": "📁 项目管理",
         "pages": [
             ("projects", "项目列表"),
-            ("novel-settings", "项目设置"),
         ],
     },
     "story": {
