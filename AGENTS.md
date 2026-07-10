@@ -256,9 +256,10 @@ docs/               # 设计文档+归档
 
 ## 当前待做项
 
-1. **conflict_log 参数修复**：`collect_guides()` 调 `analyze()` 时未传 `project_id`/`unit_id`，导致冲突日志永远不写入
-2. **collect_guides() 适配器模式重构**：9 个 try/except → 10 个适配器 + 循环
-3. **死代码清理**：13 个文件（~854 行）无生产调用
+1. ~~conflict_log 参数修复~~ ✅ 已修复 (v4.3)
+2. ~~collect_guides() 适配器模式重构~~ ✅ 已完成 (v4.3, guide_sources/)
+3. ~~死代码清理~~ ✅ 已完成 (v4.3, 删除 13 个文件 ~935 行)
+4. **story/ 与 app/ 连通性**：story/engine/story_engine.py、story/ui/bridge/state_bridge.py 未被 app/ 引用，需评估是否接入或清理
 
 ## 测试
 
