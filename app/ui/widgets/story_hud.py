@@ -31,6 +31,24 @@ class StoryHUD(QWidget):
         self._unit_id: str = ""
         self._project_id: str = ""
         self._build()
+        self._subscribe_events()
+
+    def _subscribe_events(self) -> None:
+        """订阅 EventBus 事件，实现响应式刷新."""
+        try:
+            from app.core.event_bus import get_bus, Events
+            bus = get_bus()
+            bus.subscribe(Events.STORY_STATE_UPDATED, self._on_state_updated)
+        except Exception:
+            pass
+
+    def _on_state_updated(self, event) -> None:
+        """收到状态更新事件， marshal 到主线程刷新."""
+        data = event.data if hasattr(event, "data") else event
+        event_unit_id = data.get("unit_id", "") if isinstance(data, dict) else ""
+        if event_unit_id == self._unit_id:
+            from PySide6.QtCore import QTimer
+            QTimer.singleShot(0, self._refresh)
 
     def _build(self) -> None:
         self.setMinimumWidth(240)

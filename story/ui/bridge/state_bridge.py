@@ -90,7 +90,8 @@ class UIStateBridge:
         bus = self._get_bus()
         if bus is not None:
             try:
-                bus.publish("story.state_updated", payload, source="v4_bridge")
+                from app.core.event_bus import Events
+                bus.publish(Events.STORY_STATE_UPDATED, payload, source="v4_bridge")
             except Exception as e:
                 _logger.warning("发布 story.state_updated 失败: %s", e)
 
@@ -119,7 +120,8 @@ class UIStateBridge:
         bus = self._get_bus()
         if bus is not None:
             try:
-                bus.publish("story.unit_completed", payload, source="v4_bridge")
+                from app.core.event_bus import Events
+                bus.publish(Events.STORY_UNIT_COMPLETED, payload, source="v4_bridge")
             except Exception as e:
                 _logger.warning("发布 story.unit_completed 失败: %s", e)
 

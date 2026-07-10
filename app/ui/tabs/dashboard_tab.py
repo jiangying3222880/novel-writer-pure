@@ -315,6 +315,21 @@ class DashboardTab(QWidget):
         super().__init__()
         self.current_project: Optional[dict] = None
         self._build_ui()
+        self._subscribe_events()
+
+    def _subscribe_events(self) -> None:
+        """订阅 EventBus，写作完成后自动刷新仪表盘."""
+        try:
+            from app.core.event_bus import get_bus, Events
+            bus = get_bus()
+            bus.subscribe(Events.STORY_UNIT_COMPLETED, self._on_unit_completed)
+        except Exception:
+            pass
+
+    def _on_unit_completed(self, event) -> None:
+        """收到单元完成事件， marshal 到主线程刷新."""
+        from PySide6.QtCore import QTimer
+        QTimer.singleShot(0, self._reload)
 
     def _build_ui(self) -> None:
         # 外层用 QScrollArea 包裹，内容过多时可滚动

@@ -388,7 +388,7 @@ class Orchestrator:
                 except Exception as e:
                     _logger.warning("[orch] 冲突图构建失败 (降级): %s", e)
 
-            # ---- v4 快速路径: UnitRunner 全链路 ----
+            # ---- v4 快速路径: StoryEngine 全链路 ----
             if use_v4_pipeline:
                 return self._run_v4_pipeline(
                     project_id, unit_id, chapter_id,
@@ -560,115 +560,41 @@ class Orchestrator:
         t0: float,
         reports: list,
     ) -> OrchestratorResult:
-        """v4 快速路径: UnitRunner 全链路 (State→Signals→Decision→Prompt→Write).
+        """v4 快速路径: StoryEngine 全链路.
 
-        跳过旧的 5-agent 编排, 直接用 v4 pipeline 生成 prompt → 写手 → 落库.
+        调用 StoryEngine 执行完整管线 (Guide→Agents→Write→Evaluate→Persist).
         """
-        from story.runtime.unit_runner import UnitRunner
+        from story.engine.story_engine import StoryEngine
 
-        runner = UnitRunner()
+        engine = StoryEngine()
 
-        # Step 1: v4 全链路生成 prompt
-        on_step(1, "v4: 构建 prompt")
-        v4_result = runner.run(project_id, unit_id)
-        if not v4_result.ok:
-            return self._fail(project_id, chapter_id, reports,
-                              f"v4 pipeline 失败: {v4_result.error}", t0)
-        self._check_cancel()
+        def _engine_step(step: int, label: str) -> None:
+            on_step(step, f"v4: {label}")
 
-        # 提取 v4 编译好的 prompt (取 user message 作为 refined_prompt)
-        compiled = v4_result.prompt
-        refined = ""
-        if compiled and compiled.messages:
-            for msg in compiled.messages:
-                if msg.get("role") == "user":
-                    refined = msg.get("content", "")
-                    break
-
-        _logger.info(
-            "[orch-v4] prompt ready: strategy=%s tokens=%d",
-            v4_result.decision.label if v4_result.decision else "?",
-            compiled.token_estimate if compiled else 0,
+        engine_result = engine.run_unit(
+            project_id, unit_id,
+            on_step=_engine_step,
+            use_guide_system=True,
+            max_revisions=self.config.max_revisions,
+            pass_score=self.config.pass_score,
+            enable_revision_loop=self.config.enable_revision_loop,
         )
 
-        # Step 2: 写手 (复用现有 Writer agent)
-        on_step(2, "v4: 写作中")
-        write_r = self._dispatch(AgentRole.WRITER, project_id, chapter_id,
-                                 step=2, extra={"refined_prompt": refined})
-        reports.append(write_r)
-        if not write_r.ok:
+        if not engine_result.ok:
             return self._fail(project_id, chapter_id, reports,
-                              f"写作失败: {write_r.error}", t0)
-        self._check_cancel()
+                              f"v4 pipeline 失败: {engine_result.error}", t0)
 
-        # Step 3: 评估 (与旧流程一致)
-        on_step(3, "v4: 评估")
-        score = self.config.pass_score
-        revisions = 0
-        ed_r = self._dispatch(AgentRole.EDITOR, project_id, chapter_id, step=3,
-                              extra={"content": write_r.data.get("content", "")})
-        crit_r = self._dispatch(AgentRole.CRITIC, project_id, chapter_id, step=3,
-                                extra={"content": write_r.data.get("content", "")})
-        reports.extend([ed_r, crit_r])
-        score = self._aggregate_score(ed_r, crit_r)
-
-        # 改稿循环
-        while (score < self.config.pass_score
-               and revisions < self.config.max_revisions
-               and self.config.enable_revision_loop):
-            revisions += 1
-            on_step(3, f"v4: 改稿第{revisions}轮")
-            refine2 = self._build_refine_from_feedback(ed_r, crit_r)
-            write_r = self._dispatch(AgentRole.WRITER, project_id, chapter_id,
-                                     step=3, extra={"refined_prompt": refine2})
-            reports.append(write_r)
-            if not write_r.ok:
-                break
-            ed_r = self._dispatch(AgentRole.EDITOR, project_id, chapter_id, step=3,
-                                  extra={"content": write_r.data.get("content", "")})
-            crit_r = self._dispatch(AgentRole.CRITIC, project_id, chapter_id, step=3,
-                                    extra={"content": write_r.data.get("content", "")})
-            reports.extend([ed_r, crit_r])
-            score = self._aggregate_score(ed_r, crit_r)
-
-        # Step 4: 落库
-        on_step(4, "v4: 落库")
-        persist_r = self._dispatch_persist(project_id, chapter_id, write_r, score,
-                                           store_as_unit=True)
-        reports.append(persist_r)
-
-        # v4: 记录 Decision
-        try:
-            from app.services.decision_service import record_batch
-            if v4_result.signals:
-                guide_dicts = [
-                    {"guide_id": s.guide_id, "source": s.source, "advice": s.advice,
-                     "priority": s.priority, "confidence": s.confidence}
-                    for s in v4_result.signals
-                ]
-                record_batch(unit_id, guide_dicts, project_id=project_id, step_no=0)
-        except Exception as e:
-            _logger.warning("[orch-v4] Decision 记录失败: %s", e)
-
-        # v4: 影响分析
-        try:
-            from app.services.story_compiler import analyze_impact
-            impact = analyze_impact(unit_id)
-            if impact.has_impact:
-                _logger.info("[orch-v4] Impact: %d affected units", len(impact.impacted_units))
-        except Exception as e:
-            _logger.warning("[orch-v4] 影响分析失败: %s", e)
-
+        # 转换为 OrchestratorResult
         duration_ms = int((time.time() - t0) * 1000)
         return OrchestratorResult(
             ok=True,
             project_id=project_id,
             chapter_id=chapter_id,
-            content=write_r.data.get("text", "") if isinstance(write_r.data, dict) else "",
-            score=score,
-            revisions=revisions,
+            content=engine_result.content,
+            score=engine_result.score,
+            revisions=engine_result.revisions,
             reports=reports,
-            refined_prompt=refined,
+            refined_prompt=engine_result.refined_prompt,
             retention_adjusted=False,
             duration_ms=duration_ms,
         )

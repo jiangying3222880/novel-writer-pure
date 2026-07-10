@@ -215,3 +215,6 @@ class Events:
     PROJECT_SWITCHED = "project.switched"
     APP_STARTED = "app.started"
     APP_CLOSING = "app.closing"
+    # ── v4.3 StoryEngine 状态同步 ──
+    STORY_STATE_UPDATED = "story.state_updated"
+    STORY_UNIT_COMPLETED = "story.unit_completed"
