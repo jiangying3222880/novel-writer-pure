@@ -229,6 +229,14 @@ def collect_guides(unit_id: str, project_id: str = "") -> list[Guide]:
     except Exception:
         pass
 
+    # ---- character_arc (角色弧线) ----
+    try:
+        from app.services import character_arc_service as _arc
+        if hasattr(_arc, "get_guides"):
+            guides.extend(_arc.get_guides(unit_id, project_id=project_id))
+    except Exception:
+        pass
+
     # ---- consistency (一致性) ----
     try:
         from app.services import consistency as _consistency

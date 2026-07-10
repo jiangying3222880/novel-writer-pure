@@ -343,17 +343,28 @@ def _extract_patterns(ai_content: str, author_content: str) -> list[dict]:
 
 
 def _calculate_weight_updates(patterns: list[dict]) -> list[dict]:
-    """计算权重更新建议"""
+    """计算权重更新建议.
+
+    evidence_id 生成策略: 基于 pattern_type + content 的 MD5 哈希,
+    保证同一内容每次生成相同 ID (幂等), 且可被 Guide 系统检索.
+    """
+    import hashlib
+
     updates = []
 
     for pattern in patterns:
-        # TODO: 匹配到知识库中的具体条目
-        # 这里简化处理，实际应该用语义匹配
+        content = pattern.get("content", "")
+        pattern_type = pattern.get("type", "")
+
+        # 生成确定性 evidence_id: type + content 前100字的哈希
+        raw = f"{pattern_type}:{content[:100]}"
+        evidence_id = f"rc_{hashlib.md5(raw.encode('utf-8')).hexdigest()[:12]}"
+
         updates.append({
-            "pattern_type": pattern["type"],
-            "content_preview": pattern["content"][:50],
+            "pattern_type": pattern_type,
+            "content_preview": content[:50],
             "delta": pattern["weight_delta"],
-            "evidence_id": None,  # 需要实际匹配
+            "evidence_id": evidence_id,
         })
 
     return updates
