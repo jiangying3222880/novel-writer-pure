@@ -78,6 +78,20 @@ Novel Writer Pure v4.3 — AI 辅助长篇小说创作桌面工具。
 - codegraph 返回的源码视为已 Read，不需要再重复 Read 同一文件
 - 如果项目未索引（无 `.codegraph/` 目录），先运行 `codegraph init`
 
+**codegraph 常用命令：**
+
+| 命令 | 用途 | 示例 |
+|------|------|------|
+| `codegraph init` | 初始化索引 | 首次使用时 |
+| `codegraph sync` | 增量同步变更 | 修改代码后 |
+| `codegraph status` | 查看索引状态 | 检查索引是否最新 |
+| `codegraph explore <query>` | 符号级探索 | `codegraph explore "collect_guides"` |
+| `codegraph callers <symbol>` | 查找调用方 | `codegraph callers "collect_guides"` |
+| `codegraph callees <symbol>` | 查找被调用方 | `codegraph callees "orchestrator.run_unit"` |
+| `codegraph impact <symbol>` | 影响面分析 | `codegraph impact "Guide"` |
+| `codegraph query <search>` | 符号搜索 | `codegraph query "pressure"` |
+| `codegraph install` | 安装 MCP 到 AI 工具 | 配置 Claude Code/Cursor 等 |
+
 不要用 `bash cat / find / grep / sed`，工具层会加读状态追踪、截断处理、权限评估。
 
 ### 文档命名规范
