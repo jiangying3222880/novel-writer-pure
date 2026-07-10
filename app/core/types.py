@@ -201,116 +201,34 @@ class Decision:
 # ============================================================
 
 def collect_guides(unit_id: str, project_id: str = "") -> list[Guide]:
-    """统一收集所有模块的 Guide (v3.5.2 升级, v4.0 集成冲突图).
+    """统一收集所有模块的 Guide.
 
-    返回按 priority 倒序排列的 Guide 列表, Orchestrator 注入 Writer prompt 时使用.
-    v4.0: Guide 带 conflicts_with/supports, 调用方可用 guide_graph.analyze() 构建冲突图.
+    适配器模式: 所有源通过 GuideSource 协议注册, 统一调度.
+    单个源失败不影响整体 (fallback try/except).
+    v4.0: Guide 带 conflicts_with/supports, guide_graph 构建冲突图.
 
-    接入顺序 (按 Source 字典序, 让输出稳定):
-      - character_state (角色状态)
-      - consistency (一致性)
-      - hook (钩子)
-      - memory (记忆)
-      - pressure (压力)
-      - reader_signal (读者信号)
-      - style (风格)
-      - voice (声音)
-      - unit_event (事件流)
-
-    每个模块内部 try/except, 单个失败不影响整体.
+    返回按 priority 倒序排列的 Guide 列表.
     """
+    from app.services.guide_sources import ALL_SOURCES
+
     guides: list[Guide] = []
 
-    # ---- character_state (角色状态) ----
-    try:
-        from app.services import character_state as _cs
-        if hasattr(_cs, "get_guides"):
-            guides.extend(_cs.get_guides(unit_id, project_id=project_id))
-    except Exception:
-        pass
-
-    # ---- character_arc (角色弧线) ----
-    try:
-        from app.services import character_arc_service as _arc
-        if hasattr(_arc, "get_guides"):
-            guides.extend(_arc.get_guides(unit_id, project_id=project_id))
-    except Exception:
-        pass
-
-    # ---- consistency (一致性) ----
-    try:
-        from app.services import consistency as _consistency
-        if hasattr(_consistency, "get_guides"):
-            guides.extend(_consistency.get_guides(unit_id, project_id=project_id))
-    except Exception:
-        pass
-
-    # ---- hook (钩子) ----
-    try:
-        from app.services import unit_hook_service as _hook
-        if hasattr(_hook, "get_guides"):
-            guides.extend(_hook.get_guides(unit_id, project_id=project_id))
-    except Exception:
-        pass
-
-    # ---- memory (记忆) ----
-    try:
-        from app.services import memory as _mem
-        if hasattr(_mem, "get_guides"):
-            guides.extend(_mem.get_guides(unit_id, project_id=project_id))
-    except Exception:
-        pass
-
-    # ---- pressure (压力) ----
-    try:
-        from app.services import pressure as _pres
-        if hasattr(_pres, "get_guides"):
-            guides.extend(_pres.get_guides(unit_id, project_id=project_id))
-    except Exception:
-        pass
-
-    # ---- reader_signal (读者信号) ----
-    try:
-        from app.services import reader_signal as _reader
-        if hasattr(_reader, "get_guides"):
-            guides.extend(_reader.get_guides(unit_id, project_id=project_id))
-    except Exception:
-        pass
-
-    # ---- style (风格) ----
-    try:
-        from app.services import style_fingerprint as _style
-        if hasattr(_style, "get_guides"):
-            guides.extend(_style.get_guides(unit_id, project_id=project_id))
-    except Exception:
-        pass
-
-    # ---- voice (声音) ----
-    try:
-        from app.services import voice_profile as _voice
-        if hasattr(_voice, "get_guides"):
-            guides.extend(_voice.get_guides(unit_id, project_id=project_id))
-    except Exception:
-        pass
-
-    # ---- unit_event (事件流) ----
-    try:
-        from app.services import unit_event_service as _ev
-        if hasattr(_ev, "get_guides"):
-            guides.extend(_ev.get_guides(unit_id, project_id=project_id))
-    except Exception:
-        pass
+    for source in ALL_SOURCES:
+        try:
+            guides.extend(source.collect(unit_id, project_id=project_id))
+        except Exception:
+            pass
 
     # v4.0: 自动构建冲突图, 标记 conflicts_with/supports
     try:
         from app.services.guide_graph import analyze as _analyze_graph
-        graph = _analyze_graph(guides)
+        graph = _analyze_graph(guides, project_id=project_id, unit_id=unit_id)
         if graph.edges:
             _set_graph_edges(guides, graph)
     except Exception:
         pass
 
-    # 按 priority 倒序 (v3.5.2: 替换 severity)
+    # 按 priority 倒序
     return sorted(guides, key=lambda g: -g.priority)
 
 
