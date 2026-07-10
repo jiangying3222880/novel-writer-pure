@@ -46,13 +46,13 @@
 from __future__ import annotations
 from pathlib import Path
 
-VERSION = "4.0.0"
+VERSION = "4.3.0"
 APP_NAME = "NovelWriter"
 APP_DISPLAY_NAME = "小说写作助手"
 APP_DESCRIPTION = "AI 辅助长篇小说创作工具"
 
 # 构建信息 (CI/CD 注入)
-BUILD_DATE = "2026-07-06"
+BUILD_DATE = "2026-07-09"
 GIT_COMMIT = "dev"
 
 CHANGELOG = """

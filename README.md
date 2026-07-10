@@ -1,14 +1,14 @@
-# 小说写作助手 v4.0 — Story OS 架构
+# 小说写作助手 v4.3 — Story OS 架构
 
-> 版本：4.0.0
-> 日期：2026-07-06
+> 版本：4.3.0
+> 日期：2026-07-09
 > 架构：事件驱动 + 多智能体 + 决策编译器 + 故事状态机
 
-> ⚠️ **本项目状态**：从 v4.0 起转为**参考实现 / 代码考古**模式。代码仍在运行、文档仍可读，但不再追新功能。
+> ⚠️ **本项目状态**：活跃开发中。v4.3 完成 Character Arc 激活 + reverse_compile 修复，持续迭代。
 
 > 🚀 **想用 AI Agent 跑这套方法论？** → 用 sister project [**story-engine-skill**](https://github.com/jiangying3222880/story-engine-skill)（活跃维护，每周迭代，纯 Markdown skill）
 
-> 📚 **本项目适合**：贡献代码 / 学习架构 / 作为'曾经探索过'的参考档案
+> 📚 **本项目适合**：贡献代码 / 学习架构 / 作为 Story Engine 参考实现
 
 ---
 
@@ -316,6 +316,17 @@ python smoke/smoke_v4_event_store.py     # 事件存储测试
 ---
 
 ## 十一、版本历史
+
+### v4.3.0 (2026-07-09)
+
+- 源码级审查后架构收敛：项目已有80%基础设施，不新建表不造冗余系统
+- Character Arc 激活：从 book_outlines.character_arcs 死数据变成活系统，接入 Guide
+- reverse_compile evidence_id 修复：模式提取结果可被 Guide 检索
+- 修复 unit_type 验证失败（VALID_TYPES 添加 virtual + migration 054 SQLite CHECK 约束）
+- 修复 pressure.py 连接未定义（import get_conn）
+- 修复导航双入口冗余（删除重复的 novel-settings 入口）
+- 100 个 Chapter 全部成功包装为 Virtual Unit
+- 设计文档：v4.3_Evidence_Library_设计文档.md
 
 ### v4.1.0 (计划中)
 
