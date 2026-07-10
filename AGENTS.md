@@ -86,6 +86,61 @@ docs/
 │   └── v3.4/                    # v3.4 时代文档
 ```
 
+### 版本同步规则
+
+**版本号变更时，必须同步以下三处：**
+
+1. `app/core/version.py` → `VERSION = "x.y.z"`
+2. `README.md` → 标题版本号 + 版本历史
+3. `AGENTS.md` → 版本历史
+
+**不允许出现：** 代码版本号是 4.3.0 但文档还写着 4.0.0。
+
+### AI 工具兼容
+
+本项目的 Agent 指南以 `AGENTS.md` 为源文件，通过符号链接兼容所有 AI 工具：
+
+| 工具 | 读取的文件 | 链接方式 |
+|------|-----------|----------|
+| MiMoCode | `AGENTS.md` | 直接读取 |
+| Claude Code | `CLAUDE.md` | symlink → AGENTS.md |
+| Codex CLI | `AGENTS.md` | 直接读取 |
+| Cursor | `.cursorrules` | symlink → AGENTS.md |
+| GitHub Copilot | `.github/copilot-instructions.md` | symlink → AGENTS.md |
+| Windsurf | `.windsurfrules` | symlink → AGENTS.md |
+| Trae CN / Trae Work CN | `.trae/rules` | symlink → AGENTS.md |
+
+修改 `AGENTS.md` 一处，所有工具同步生效。
+
+### 文档命名规范
+
+所有 `docs/` 下的文档必须遵循：
+
+```text
+{类型}-{日期}-{作者}.md
+```
+
+类型关键词：
+
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| 方案 | 设计/架构决策 | `v4.3_Evidence_Library_方案-MiMoCode-2026-07-09.md` |
+| 规划 | 路线图/计划 | `v4.4_路线图-MiMoCode-2026-07-10.md` |
+| 修改 | 变更记录 | `v4.3_修改记录_CharacterArc-MiMoCode-2026-07-09.md` |
+| 分析 | 问题分析/审查 | `模块审计-GPT意见-讨论归档.md` |
+| 归档 | 历史文档 | 放 `docs/archive/` 按版本分目录 |
+
+### 文档落库位置
+
+```text
+docs/
+├── {项目名}_{类型}_{描述}.md    # 当前版本文档
+├── archive/                     # 历史归档
+│   ├── v2.0/                    # v2.0 时代文档
+│   ├── v3.0/                    # v3.0 时代文档
+│   └── v3.4/                    # v3.4 时代文档
+```
+
 ## 架构约定
 
 ### 数据库
