@@ -20,6 +20,7 @@ from app.services import book_outline_service
 
 class VolumeTab(QWidget):
     """卷管理标签页"""
+    PAGE_TITLE = "卷管理"
 
     project_changed = Signal(str)
 

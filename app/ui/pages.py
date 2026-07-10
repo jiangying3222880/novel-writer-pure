@@ -63,6 +63,7 @@ from app.ui.tabs.editor_tab import EditorTab  # 保留导入 (GenerateTab 已合
 from app.ui.tabs.generate_tab import GenerateTab  # 章节生成
 from app.ui.tabs.story_unit_tab import StoryUnitTab  # 故事单元
 from app.ui.tabs.unit_pool_tab import UnitPoolTab  # 单元池 (M5)
+from app.ui.tabs.volume_tab import VolumeTab  # 卷管理
 from app.ui.tabs.outline_tab import OutlineTab  # 大纲管理
 from app.ui.tabs.worldview_tab import WorldviewTab  # 世界观
 from app.ui.tabs.character_mgmt_tab import CharacterMgmtTab  # 角色管理
@@ -1067,6 +1068,28 @@ class OutlineMgmtPage(QWidget):
         outer.setContentsMargins(0, 0, 0, 0)
         outer.setSpacing(0)
         self._inner = OutlineTab()
+        outer.addWidget(self._inner)
+
+    def set_project(self, project) -> None:
+        if hasattr(self._inner, "set_project"):
+            self._inner.set_project(project)
+
+
+# ===================================================================== #
+# 卷管理 Page
+# ===================================================================== #
+
+class VolumeMgmtPage(QWidget):
+    """卷管理: 分卷列表 + 卷纲编辑."""
+    PAGE_ID = "volume-mgmt"
+    PAGE_TITLE = "卷管理"
+
+    def __init__(self, parent: QWidget | None = None) -> None:
+        super().__init__(parent)
+        outer = QVBoxLayout(self)
+        outer.setContentsMargins(0, 0, 0, 0)
+        outer.setSpacing(0)
+        self._inner = VolumeTab()
         outer.addWidget(self._inner)
 
     def set_project(self, project) -> None:
@@ -2758,6 +2781,7 @@ PAGE_REGISTRY: dict[str, Type[QWidget]] = {
     "guide-graph":       GuideGraphPage,
     "impact-report":     ImpactReportPage,
     "export":            GeneratePage,
+    "volume-mgmt":       VolumeMgmtPage,
 }
 
 
@@ -2770,6 +2794,7 @@ def get_all_page_classes() -> list[Type[QWidget]]:
         WorldviewPage,       #  3  世界观 (独立tab)
         CharacterMgmtPage,   #  4  角色管理 (独立tab, 卡片展示)
         OutlineMgmtPage,     #  5  大纲管理
+        VolumeMgmtPage,      #  5a 卷管理
         EditSignalsPage,     #  6  改稿信号
         GeneratePage,        #  7  章节生成
         StoryUnitPage,       #  8  故事单元

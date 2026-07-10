@@ -32,6 +32,7 @@ NAV_TREE = {
         "pages": [
             ("novel-settings", "小说设定"),
             ("outline-mgmt", "大纲管理"),  # 分卷大纲
+            ("volume-mgmt", "卷管理"),     # 分卷编排
             ("character-mgmt", "角色管理"),
             ("worldview", "世界观"),
         ],
