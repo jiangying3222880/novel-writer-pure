@@ -259,6 +259,36 @@ book_id,book_name,avg_sentence_len,short_ratio,medium_ratio,long_ratio,dialogue_
 完美世界,辰东,19.8,0.38,0.40,0.22,0.45,...
 ```
 
+## 存放位置
+
+```text
+novel-writer-pure-v4.0/
+├── evidence_data/                          ← 提取结果统一存放目录
+│   ├── evidence.db                         ← SQLite 主库 (Phase 1-3 全部入库)
+│   ├── phase1_author_fingerprints.csv      ← Phase 1 CSV 备份 (人工检查用)
+│   ├── phase1_sentence_patterns.csv        ← Phase 1 句子模板 CSV
+│   ├── phase2_voice_prototypes.csv         ← Phase 2 Voice 原型 CSV
+│   ├── phase3_story_patterns.csv           ← Phase 3 Story Pattern CSV
+│   ├── extraction_log.jsonl                ← 提取日志 (每本书一行, 含耗时/错误)
+│   └── errors.jsonl                        ← 解析失败的书目记录
+│
+├── novels/                                 ← 8000 本小说原文 (不入库, 仅读取)
+│   ├── 斗破苍穹_天蚕土豆.txt
+│   ├── 完美世界_辰东.txt
+│   └── ...
+│
+└── evidence_extractor/                     ← 提取脚本代码
+    ├── phase1_statistics.py
+    ├── phase2_clustering.py
+    ├── phase3_distillation.py
+    ├── patterns.py
+    ├── voice_clusterer.py
+    ├── export_sqlite.py
+    └── utils.py
+```
+
+**关键：** `evidence_data/evidence.db` 是最终产物，后续由 Novel Writer Pure 的 Guide 系统读取。`novels/` 目录只读不写。CSV 文件用于人工抽检，确认准确后可删除。
+
 ## 书单来源
 
 8000 本书的文件路径和书名需要你提供。假设格式为：
