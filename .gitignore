@@ -21,6 +21,7 @@ env/
 # Tool directories
 .trae/
 .mimocode/
+.codegraph/
 
 # Temp files
 tmp_r.js
