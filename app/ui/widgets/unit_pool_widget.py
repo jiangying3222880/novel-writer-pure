@@ -109,9 +109,12 @@ class UnitPoolWidget(QWidget):
         self._btn_del.clicked.connect(self._on_delete)
         self._btn_bulk = QPushButton("⤓批量导入")
         self._btn_bulk.clicked.connect(self._on_bulk)
+        self._btn_compose = QPushButton("🧩自动组合")
+        self._btn_compose.setToolTip("根据卷纲从单元池自动推荐并组合故事骨架")
+        self._btn_compose.clicked.connect(self._on_compose)
         self._btn_send = QPushButton("➡发送到项目")
         self._btn_send.clicked.connect(self._on_send)
-        for b in (self._btn_add, self._btn_edit, self._btn_del, self._btn_bulk, self._btn_send):
+        for b in (self._btn_add, self._btn_edit, self._btn_del, self._btn_bulk, self._btn_compose, self._btn_send):
             row.addWidget(b)
         right.addLayout(row)
         body.addLayout(right, 2)
@@ -246,6 +249,88 @@ class UnitPoolWidget(QWidget):
                 self._status.setText(f"克隆失败 {pid}: {e}")
         self._status.setText(f"已克隆 {n} 个单元到当前项目")
         self.units_cloned.emit(self._project_id)
+
+    def _on_compose(self) -> None:
+        """自动组合: 根据卷纲从单元池推荐并组合故事骨架."""
+        if not self._project_id:
+            QMessageBox.information(self, "提示", "请先打开一个项目")
+            return
+
+        from app.services import unit_pool_composer as composer
+        from app.services import book_service
+
+        # 获取项目的卷列表
+        try:
+            books = book_service.list_by_project(self._project_id)
+        except Exception as e:
+            QMessageBox.warning(self, "错误", f"获取卷列表失败: {e}")
+            return
+
+        if not books:
+            QMessageBox.information(self, "提示", "该项目没有卷，请先创建卷")
+            return
+
+        # 弹窗选择卷和目标单元数
+        from PySide6.QtWidgets import QInputDialog
+        book_names = [f"{b.get('title', b.get('name', b.get('id', '?')))}" for b in books]
+        book_idx, ok = QInputDialog.getItem(
+            self, "自动组合", "选择要组合的卷:", book_names, 0, False
+        )
+        if not ok:
+            return
+
+        selected_book = books[book_names.index(book_idx)]
+        book_id = selected_book.get("id", "")
+
+        target_count, ok2 = QInputDialog.getInt(
+            self, "自动组合", "目标单元数:", 10, 1, 50
+        )
+        if not ok2:
+            return
+
+        # 推荐单元
+        try:
+            recommended = composer.recommend_for_outline(
+                book_id=book_id,
+                project_id=self._project_id,
+                target_unit_count=target_count,
+            )
+        except Exception as e:
+            QMessageBox.warning(self, "推荐失败", str(e))
+            return
+
+        if not recommended:
+            QMessageBox.information(self, "提示", "单元池中没有匹配的单元")
+            return
+
+        # 确认组合
+        preview = "\n".join(
+            f"  {i+1}. [{u.get('rhythm_type', '?')}] {u.get('title', '?')}"
+            for i, u in enumerate(recommended[:10])
+        )
+        if len(recommended) > 10:
+            preview += f"\n  ... 共 {len(recommended)} 个单元"
+
+        ok3 = QMessageBox.question(
+            self, "确认组合",
+            f"将从单元池推荐 {len(recommended)} 个单元:\n\n{preview}\n\n是否组合到项目?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+        )
+        if ok3 != QMessageBox.StandardButton.Yes:
+            return
+
+        # 组合骨架并克隆
+        try:
+            skeleton = composer.compose_skeleton(book_id, [u.get("id", "") for u in recommended])
+            created_ids = composer.clone_skeleton_to_project(skeleton, self._project_id, book_id)
+            self.refresh()
+            self.units_changed.emit()
+            self._status.setText(
+                f"自动组合完成: {len(created_ids)} 个单元, "
+                f"预计 {skeleton.total_estimated_words:,} 字"
+            )
+        except Exception as e:
+            QMessageBox.warning(self, "组合失败", str(e))
 
 
 # ────────────────────── 编辑对话框 ──────────────────────
