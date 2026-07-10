@@ -148,12 +148,15 @@ def detect_support(g_a, g_b) -> str | None:
 # 图分析
 # ============================================================
 
-def analyze(guides: list, *, skip_low_confidence: bool = True) -> GuideGraphResult:
+def analyze(guides: list, *, skip_low_confidence: bool = True,
+            project_id: str = "", unit_id: str = "") -> GuideGraphResult:
     """分析 Guide 列表中的冲突/支持关系.
 
     Args:
         guides: Guide 对象列表 (也可接受 dict)
         skip_low_confidence: 跳过 confidence < 0.5 的 Guide
+        project_id: 项目ID (可选, 用于冲突日志)
+        unit_id: 单元ID (可选, 用于冲突日志)
 
     Returns:
         GuideGraphResult
@@ -184,6 +187,26 @@ def analyze(guides: list, *, skip_low_confidence: bool = True) -> GuideGraphResu
             conflict_reason = detect_conflict(g_a, g_b)
             if conflict_reason:
                 edges.append(GuideEdge(gid_a, gid_b, "conflict", conflict_reason))
+                # 写入冲突日志
+                if project_id and unit_id:
+                    try:
+                        from app.services.conflict_log import log_conflict
+                        src_a = g_a.source if hasattr(g_a, "source") else g_a.get("source", "?")
+                        src_b = g_b.source if hasattr(g_b, "source") else g_b.get("source", "?")
+                        adv_a = g_a.advice if hasattr(g_a, "advice") else g_a.get("advice", "")
+                        adv_b = g_b.advice if hasattr(g_b, "advice") else g_b.get("advice", "")
+                        log_conflict(
+                            project_id=project_id,
+                            unit_id=unit_id,
+                            conflict_type="causal",
+                            description=f"{conflict_reason}: [{src_a}] {adv_a} vs [{src_b}] {adv_b}",
+                            source_a=f"{src_a}/{gid_a}",
+                            source_b=f"{src_b}/{gid_b}",
+                            confidence=min(g_a.confidence if hasattr(g_a, "confidence") else g_a.get("confidence", 0.7),
+                                          g_b.confidence if hasattr(g_b, "confidence") else g_b.get("confidence", 0.7)),
+                        )
+                    except Exception as e:
+                        _logger.warning("Failed to log conflict: %s", e)
                 continue
 
             # 再检测支持
