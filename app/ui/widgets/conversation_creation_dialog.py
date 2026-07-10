@@ -14,6 +14,7 @@ from __future__ import annotations
 import logging
 import os
 import re
+import json
 import time
 from typing import Optional
 
@@ -21,12 +22,19 @@ from PySide6.QtCore import Qt, QThread, Signal
 from PySide6.QtWidgets import (
     QDialog, QVBoxLayout, QHBoxLayout, QLabel, QPushButton,
     QPlainTextEdit, QTextBrowser, QFrame, QWidget, QSplitter,
-    QTextEdit, QSizePolicy,
+    QTextEdit, QSizePolicy, QLineEdit, QListWidget, QListWidgetItem,
+    QScrollArea,
 )
 
 from app.ui.widgets import Dialogs
 
 log = logging.getLogger(__name__)
+
+# 未创建项目时的对话草稿存储路径
+_DRAFT_FILE = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "..", "..", "..", "data", "creation_conversation_draft.json"
+)
 
 
 # ================================================================
@@ -160,6 +168,135 @@ class _StreamChatWorker(QThread):
 
 
 # ================================================================
+# 聊天气泡组件
+# ================================================================
+class ChatItemWidget(QWidget):
+    """单个聊天气泡组件。
+
+    根据 sender 决定左右对齐和颜色：
+      - "你" → 绿色气泡 (#95ec69) 靠右
+      - "写作助手" → 白色/暗色气泡 靠左
+      - "系统" → 居中文本
+    """
+
+    def __init__(self, sender: str, text: str,
+                 is_streaming: bool = False,
+                 parent: Optional[QWidget] = None) -> None:
+        super().__init__(parent)
+        self._sender = sender
+        self._is_streaming = is_streaming
+        self._msg_label: Optional[QLabel] = None
+        self._build_ui(text)
+
+    # ------------------------------------------------------------------
+    def _build_ui(self, text: str) -> None:
+        outer = QHBoxLayout(self)
+        outer.setContentsMargins(12, 3, 12, 3)
+        outer.setSpacing(0)
+
+        display = text + ("  |" if self._is_streaming else "")
+
+        if self._sender == "系统":
+            label = QLabel(display)
+            label.setWordWrap(True)
+            label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            label.setStyleSheet(
+                f"color:{text_muted()}; font-size:11px; background:transparent;"
+            )
+            outer.addStretch()
+            outer.addWidget(label)
+            outer.addStretch()
+            return
+
+        # ---- 气泡容器 VBox: 发送者标签 + 气泡 ----
+        bubble_col = QVBoxLayout()
+        bubble_col.setContentsMargins(0, 0, 0, 0)
+        bubble_col.setSpacing(2)
+
+        # 发送者标签
+        sender_text = "我" if self._sender == "你" else self._sender
+        slabel = QLabel(sender_text)
+        slabel.setStyleSheet(
+            f"color:{text_secondary()}; font-size:10px; background:transparent;"
+        )
+        if self._sender == "你":
+            slabel.setAlignment(Qt.AlignmentFlag.AlignRight)
+        bubble_col.addWidget(slabel)
+
+        # 气泡本体 (QFrame 支持 border-radius + background)
+        bubble = QFrame()
+        bubble.setMaximumWidth(500)
+
+        b_layout = QVBoxLayout(bubble)
+        b_layout.setContentsMargins(10, 8, 10, 8)
+
+        self._msg_label = QLabel(display)
+        self._msg_label.setWordWrap(True)
+        self._msg_label.setTextInteractionFlags(
+            Qt.TextInteractionFlag.TextSelectableByMouse
+        )
+        b_layout.addWidget(self._msg_label)
+
+        # ---- 根据发送者设样式 ----
+        if self._sender == "你":
+            bubble.setStyleSheet(
+                "QFrame {"
+                "  background:#95ec69;"
+                "  border-radius:10px 4px 10px 10px;"
+                "}"
+            )
+            self._msg_label.setStyleSheet(
+                "color:#000000; font-size:13px; background:transparent;"
+            )
+            bubble_col.addWidget(bubble)
+            outer.addStretch()
+            outer.addLayout(bubble_col)
+        else:
+            # 写作助手
+            if is_dark():
+                bubble.setStyleSheet(
+                    "QFrame {"
+                    "  background:#2d2d2d;"
+                    "  border:1px solid #404040;"
+                    "  border-radius:4px 10px 10px 10px;"
+                    "}"
+                )
+                self._msg_label.setStyleSheet(
+                    "color:#ffffff; font-size:13px; background:transparent;"
+                )
+            else:
+                bubble.setStyleSheet(
+                    "QFrame {"
+                    "  background:#ffffff;"
+                    "  border:1px solid #e5e5e5;"
+                    "  border-radius:4px 10px 10px 10px;"
+                    "}"
+                )
+                self._msg_label.setStyleSheet(
+                    "color:#000000; font-size:13px; background:transparent;"
+                )
+            bubble_col.addWidget(bubble)
+            outer.addLayout(bubble_col)
+            outer.addStretch()
+
+    # ------------------------------------------------------------------
+    def update_text(self, text: str) -> None:
+        """更新气泡文本（流式输出时原地更新，不清除重建）."""
+        display = text + ("  |" if self._is_streaming else "")
+        if self._msg_label:
+            self._msg_label.setText(display)
+
+    def set_streaming(self, streaming: bool) -> None:
+        """切换流式状态."""
+        self._is_streaming = streaming
+        if not streaming and self._msg_label:
+            # 去掉尾部光标
+            t = self._msg_label.text()
+            if t.endswith("  |"):
+                self._msg_label.setText(t[:-3].rstrip())
+
+
+# ================================================================
 # System Prompts
 # ================================================================
 CHAT_SYSTEM_PROMPT = """你是一位资深的小说策划编辑（不是代笔作家）。你的唯一任务是通过自然对话，帮作者把小说的「核心设定」聊清楚。
@@ -199,7 +336,20 @@ CHAT_SYSTEM_PROMPT = """你是一位资深的小说策划编辑（不是代笔�
 
 GENERATE_SETTINGS_PROMPT = """你是一位资深的小说策划编辑。以下是和作者的全部对话记录。
 
-请根据这些对话，生成一份完整的小说初始设定文档。必须包含以下所有部分：
+请根据这些对话，生成一份完整的小说初始设定文档。
+
+【重要规则】
+1. **只输出设定内容**，不要包含你的思考过程、分析、备注或"以下是生成的设定"之类的前缀
+2. **必须包含以下元数据字段在最顶部**，用 `---` 包裹：
+
+---
+题材: （必填，从以下选择：玄幻、都市、仙侠、科幻、悬疑、言情、历史、游戏、奇幻、轻小说、武侠、现实、军事、体育、侦探、其它）
+副题材: （可选，逗号分隔，例如：爽文、穿越、重生、系统、无限流、扮猪吃虎、脑洞）
+发布平台: （可选，从以下选择：番茄、起点、七猫、晋江、飞卢、掌阅、QQ阅读、纵横、其它）
+建议字数: （可选，例如：20万字、50万字、100万字）
+---
+
+之后的内容必须包含以下所有部分：
 
 ## 书名建议
 （3 个备选书名）
@@ -223,7 +373,7 @@ GENERATE_SETTINGS_PROMPT = """你是一位资深的小说策划编辑。以下�
 （开篇/发展/高潮/结局，各100字）
 
 ## 风格定位
-（类型/基调/节奏/建议字数）
+（类型/基调/节奏）
 
 请用清晰的 Markdown 格式输出，每个部分用 ## 标题分隔。"""
 
@@ -244,7 +394,7 @@ class ConversationCreationDialog(QDialog):
         super().__init__(parent)
         self.setWindowTitle("💬 对话创建项目 — 和写作助手聊聊你的故事")
         self.setModal(True)
-        self.resize(780, 680)
+        self.resize(1100, 750)
 
         # 状态
         self._conv_messages: list[dict] = []
@@ -257,11 +407,15 @@ class ConversationCreationDialog(QDialog):
         # 流式 UI 状态
         self._chat_messages: list[tuple[str, str]] = []  # (sender, content) 已确认的消息
         self._streaming_content: str = ""   # 当前轮正在流式的正文 (未进 _chat_messages)
+        self._streaming_widget: Optional[ChatItemWidget] = None
         self._accumulated_thinking: str = ""
         self._thinking_visible: bool = False  # 思考面板是否展开
 
         self._build_ui()
-        self._init_conversation()
+        # 尝试恢复上次未创建项目的对话草稿
+        has_draft = self._try_load_draft()
+        if not has_draft:
+            self._init_conversation()
 
     # ------------------------------------------------------------------
     # LLM 探测
@@ -322,10 +476,67 @@ class ConversationCreationDialog(QDialog):
         self._mock_banner.setVisible(not self._has_llm)
         outer.addWidget(self._mock_banner)
 
-        # — 主体: 聊天 + 设定预览 (用 Splitter) —
+        # — 主体: 聊天 + 历史面板 + 设定预览 (用 Splitter) —
         splitter = QSplitter(Qt.Orientation.Vertical)
 
-        # 上半: 聊天区域 (思考面板 + 聊天视图 + 输入行)
+        # 上半: 聊天主区域 (历史面板 + 对话区, 水平分割)
+        chat_area = QWidget()
+        chat_area_layout = QHBoxLayout(chat_area)
+        chat_area_layout.setContentsMargins(0, 0, 0, 0)
+        chat_area_layout.setSpacing(4)
+
+        # —— 历史区域 (可折叠): 左侧列表 + 中间历史对话内容 ——
+        self._history_group = QWidget()
+        self._history_group.setVisible(False)
+        hg_layout = QHBoxLayout(self._history_group)
+        hg_layout.setContentsMargins(0, 0, 0, 0)
+        hg_layout.setSpacing(4)
+
+        # 左侧: 历史列表 (搜索 + 列表)
+        self._history_list_panel = QWidget()
+        self._history_list_panel.setMinimumWidth(220)
+        self._history_list_panel.setMaximumWidth(300)
+        hlp_layout = QVBoxLayout(self._history_list_panel)
+        hlp_layout.setContentsMargins(2, 0, 2, 0)
+        hlp_layout.setSpacing(4)
+
+        hlp_layout.addWidget(QLabel("📋 历史创建对话"))
+        self._history_search = QLineEdit()
+        self._history_search.setPlaceholderText("🔍 搜索对话...")
+        self._history_search.textChanged.connect(self._filter_history)
+        hlp_layout.addWidget(self._history_search)
+
+        self._history_list = QListWidget()
+        self._history_list.currentRowChanged.connect(self._on_history_selected)
+        hlp_layout.addWidget(self._history_list, 1)
+
+        # 中间: 历史对话详情 (完整气泡展示)
+        self._history_conversation_view = QScrollArea()
+        self._history_conversation_view.setWidgetResizable(True)
+        self._history_conversation_view.setMinimumWidth(350)
+        self._history_conversation_view.setMaximumWidth(480)
+        self._history_conversation_view.setStyleSheet(
+            f"QScrollArea {{ border:1px solid {border_color()}; border-radius:6px; "
+            f"background:{surface_bg}; }}"
+        )
+        self._history_conversation_content = QWidget()
+        self._history_conversation_layout = QVBoxLayout(self._history_conversation_content)
+        self._history_conversation_layout.setContentsMargins(0, 0, 0, 0)
+        self._history_conversation_layout.setSpacing(0)
+        self._history_conversation_view.setWidget(self._history_conversation_content)
+        self._history_conversation_view.setVisible(False)
+
+        hg_layout.addWidget(self._history_list_panel, 0)
+        hg_layout.addWidget(self._history_conversation_view, 1)
+
+        # 加载历史记录
+        self._history_records: list[dict] = []
+        self._load_history_records()
+        self._render_history_list()
+
+        chat_area_layout.addWidget(self._history_group, 1)
+
+        # —— 右侧: 聊天区域 (思考面板 + 聊天视图 + 输入行) ——
         chat_widget = QWidget()
         chat_layout = QVBoxLayout(chat_widget)
         chat_layout.setContentsMargins(0, 0, 0, 0)
@@ -364,14 +575,19 @@ class ConversationCreationDialog(QDialog):
         think_layout.addWidget(self._thinking_view)
         chat_layout.addWidget(self._thinking_container)
 
-        # —— 聊天视图 ——
+        # —— 聊天视图（QScrollArea + 自定义气泡组件）——
         surface_c = deep_bg()
-        self._chat_view = QTextBrowser()
-        self._chat_view.setOpenExternalLinks(False)
+        self._chat_view = QScrollArea()
+        self._chat_view.setWidgetResizable(True)
         self._chat_view.setStyleSheet(
-            f"QTextBrowser {{ border:1px solid {border_c}; border-radius:6px; "
-            f"background:{surface_c}; padding:8px; font-size:13px; }}"
+            f"QScrollArea {{ border:1px solid {border_c}; border-radius:6px; "
+            f"background:{surface_c}; }}"
         )
+        self._chat_content = QWidget()
+        self._chat_layout = QVBoxLayout(self._chat_content)
+        self._chat_layout.setContentsMargins(0, 0, 0, 0)
+        self._chat_layout.setSpacing(0)
+        self._chat_view.setWidget(self._chat_content)
         chat_layout.addWidget(self._chat_view)
 
         # —— 输入行 ——
@@ -408,7 +624,9 @@ class ConversationCreationDialog(QDialog):
         input_row.addLayout(btn_col)
         chat_layout.addLayout(input_row)
 
-        splitter.addWidget(chat_widget)
+        chat_area_layout.addWidget(chat_widget, 1)
+
+        splitter.addWidget(chat_area)
 
         # 下半: 设定预览 (默认隐藏)
         self._settings_widget = QWidget()
@@ -456,6 +674,11 @@ class ConversationCreationDialog(QDialog):
 
         # — 底部按钮 —
         bottom_row = QHBoxLayout()
+        self._btn_history = QPushButton("📋 历史对话")
+        self._btn_history.setToolTip("切换显示/隐藏历史创建对话面板")
+        self._btn_history.setEnabled(True)
+        self._btn_history.clicked.connect(self._toggle_history_panel)
+        bottom_row.addWidget(self._btn_history)
         self._btn_cancel = QPushButton("取消")
         self._btn_cancel.clicked.connect(self.reject)
         bottom_row.addWidget(self._btn_cancel)
@@ -576,32 +799,37 @@ class ConversationCreationDialog(QDialog):
 
     def _on_chunk(self, text: str) -> None:
         """收到正文 chunk — 累积到 _streaming_content，全量重渲染."""
+        # 防御性：流式内容中也可能混入 think 标签
+        text = re.sub(r"<think>|</think>| 思考.*?结束", "", text, flags=re.DOTALL)
         self._streaming_content += text
         if self._thinking_container.isVisible():
             self._thinking_view.setVisible(False)
             self._thinking_toggle.setText("💭 AI 思考过程 ▸")
         self._status_label.setText("AI 正在输入...")
         self._status_label.setStyleSheet(f"color:{text_accent()}; font-size:11px;")
-        self._render_chat()
+        self._update_streaming(self._streaming_content)
 
     def _on_done(self, content: str, thinking: str,
                  is_first: bool = False, is_settings: bool = False) -> None:
-        """流式完成 — 把流式内容写入消息列表，重渲染."""
-        if content:
-            self._chat_messages.append(("写作助手", content))
+        """流式完成 — 把流式内容写入消息列表，重渲染。"""
+        # 统一剥离思考痕迹
+        cleaned = self._strip_thinking_artifacts(content)
+
+        if cleaned:
+            self._chat_messages.append(("写作助手", cleaned))
         self._streaming_content = ""
         self._accumulated_thinking = ""
         if self._thinking_container.isVisible():
             self._thinking_view.setVisible(False)
             self._thinking_toggle.setText("💭 AI 思考过程 ▸")
         if not is_settings:
-            self._conv_messages.append({"role": "assistant", "content": content})
+            self._conv_messages.append({"role": "assistant", "content": cleaned})
 
         self._render_chat()
 
         if is_settings:
-            self._settings_text = content
-            self._settings_edit.setPlainText(content)
+            self._settings_text = cleaned
+            self._settings_edit.setPlainText(cleaned)
             self._settings_widget.setVisible(True)
             self._set_ui_busy(False, "设定已生成 — 可编辑后点「创建项目」")
             self._chat_messages.append(("系统", "📝 设定已生成 (见下方编辑区). 确认无误后点「创建项目」."))
@@ -610,7 +838,7 @@ class ConversationCreationDialog(QDialog):
         else:
             self._set_ui_busy(False)
             # 检测 AI 是否提示信息已充足
-            if "信息已充足" in content or "生成设定" in content:
+            if "信息已充足" in cleaned or "生成设定" in cleaned:
                 self._highlight_gen_button()
                 self._status_label.setText("✅ 信息已充足 — 可以点击「生成设定」了")
                 self._status_label.setStyleSheet(
@@ -623,6 +851,51 @@ class ConversationCreationDialog(QDialog):
             if is_first:
                 self._input_edit.setPlaceholderText("描述你的故事想法... (Ctrl+Enter 发送)")
                 self._input_edit.setFocus()
+
+    @staticmethod
+    def _strip_thinking_artifacts(text: str) -> str:
+        """剥离 LLM 返回内容中的思考痕迹。
+
+        常见模式：
+        -  <think> ... </think> 标签包裹的思考过程
+        - "好的/好的，根据/根据对话" 等开头前缀
+        - "以下是/这是我为你生成" 等自指前缀
+        - 多段无用铺垫
+        """
+        # 1) 移除 <think>...</think> 块
+        text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
+        # 2) 移除 markdown 代码块中的 think 标签残留
+        text = re.sub(r"```\s*think\n.*?\n```", "", text, flags=re.DOTALL)
+
+        lines = text.split("\n")
+        # 找到第一个有效内容行（跳过纯空行和前缀行）
+        start = 0
+        prefix_patterns = [
+            r"^(好的|好的[，,。!！]|根据|以下是|这是我|我来|为你|给你)",
+            r"^根据(我们的|以上)?对话",
+            r"^(当然|没问题|稍等|让我|现在|下面|以下)",
+        ]
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if not stripped:
+                continue
+            # 如果这一行是 ## 标题，说明内容正式开始
+            if stripped.startswith("##") or stripped.startswith("---"):
+                start = i
+                break
+            # 检查是否是前缀行
+            is_prefix = False
+            for pat in prefix_patterns:
+                if re.match(pat, stripped):
+                    is_prefix = True
+                    break
+            if not is_prefix:
+                start = i
+                break
+
+        cleaned = "\n".join(lines[start:]).strip()
+        # 如果清理后为空，返回原文
+        return cleaned if cleaned else text.strip()
 
     def _highlight_gen_button(self) -> None:
         """高亮「生成设定」按钮，引导用户点击."""
@@ -650,57 +923,57 @@ class ConversationCreationDialog(QDialog):
             self._on_done(mock_text, "", is_first=is_first)
 
     # ------------------------------------------------------------------
-    # 聊天渲染（全量重建 HTML → setHtml）
+    # 聊天渲染（QScrollArea + 自定义气泡 Widget）
     # ------------------------------------------------------------------
     def _render_chat(self) -> None:
-        """从 _chat_messages + _streaming_content 重建整个聊天区 HTML.
+        """从 _chat_messages 重建聊天区全部气泡.
 
-        策略简单粗暴但可靠：
-          - 每条消息是一个 (sender, text) 元组
-          - 流式内容追加在最后（带光标）
-          - 用 setHtml() 一次性替换全部，不操作 QTextDocument block
+        非流式更新时全量重建；流式更新由 _update_streaming 原地修改。
         """
-        parts = []
+        self._clear_layout(self._chat_layout)
+        self._streaming_widget = None
+
         for sender, text in self._chat_messages:
-            parts.append(self._build_bubble_html(sender, text))
-        # 如果有正在流式的内容，追加到末尾（带光标）
+            w = ChatItemWidget(sender, text)
+            self._chat_layout.addWidget(w)
+
+        # 如果有正在流式的内容，追加流式气泡
         if self._streaming_content:
-            parts.append(self._build_bubble_html("写作助手", self._streaming_content,
-                                                  is_streaming=True))
-        html = "".join(parts)
-        if not html:
-            html = '<div style="color:' + text_muted() + '; font-size:12px; padding:12px;">'
-            html += "等待 AI 回复...</div>"
-        self._chat_view.setHtml(html)
+            self._streaming_widget = ChatItemWidget(
+                "写作助手", self._streaming_content, is_streaming=True,
+            )
+            self._chat_layout.addWidget(self._streaming_widget)
+
+        # 弹性底边确保消息不会摊开
+        self._chat_layout.addStretch()
         self._scroll_to_bottom()
 
-    def _build_bubble_html(self, sender: str, text: str,
-                           is_streaming: bool = False) -> str:
-        """构建一条聊天气泡的 HTML."""
-        if sender == "你":
-            color = text_accent()
-            bg = "rgba(108,122,224,0.20)" if is_dark() else "rgba(90,104,201,0.10)"
-            align = "right"
-        elif sender == "写作助手":
-            color = text_secondary()
-            bg = "#222326" if is_dark() else "#f3f4f6"
-            align = "left"
+    def _update_streaming(self, text: str) -> None:
+        """流式 chunk 来了，原地更新气泡文本（不清除重建）."""
+        self._streaming_content = text
+        if self._streaming_widget is not None:
+            self._streaming_widget.update_text(text)
         else:
-            color = text_muted()
-            bg = "transparent"
-            align = "center"
+            # 首次 chunk 还没有流式气泡，全量重建
+            self._render_chat()
+        self._scroll_to_bottom()
 
-        safe_text = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("\n", "<br>")
-        cursor = '<span class="stream-cursor">|</span>' if is_streaming else ""
-        html = (
-            f'<div style="text-align:{align}; margin:6px 0;">'
-            f'<span style="font-weight:700; color:{color};">{sender}：</span>'
-            f'<span style="background:{bg}; padding:6px 10px; border-radius:8px; '
-            f'display:inline-block; max-width:85%; text-align:left; '
-            f'font-size:13px; line-height:1.5; color:{text_primary()};">{safe_text}{cursor}</span>'
-            f'</div>'
-        )
-        return html
+    @staticmethod
+    def _clear_layout(layout: QVBoxLayout) -> None:
+        """递归清空布局中的所有 widget 和子布局."""
+        while layout.count():
+            item = layout.takeAt(0)
+            w = item.widget()
+            if w:
+                w.deleteLater()
+            else:
+                sub = item.layout()
+                if sub:
+                    while sub.count():
+                        si = sub.takeAt(0)
+                        sw = si.widget()
+                        if sw:
+                            sw.deleteLater()
 
     def _append_chat(self, sender: str, text: str) -> None:
         """在消息列表中追加一条并渲染."""
@@ -770,6 +1043,226 @@ class ConversationCreationDialog(QDialog):
         )
 
     # ------------------------------------------------------------------
+    # 历史对话面板
+    # ------------------------------------------------------------------
+    def _toggle_history_panel(self) -> None:
+        """切换历史面板显隐"""
+        visible = not self._history_group.isVisible()
+        self._history_group.setVisible(visible)
+        self._btn_history.setText("📋 历史对话" if not visible else "✕ 关闭历史")
+        if visible:
+            self._load_history_records()
+            self._render_history_list()
+
+    def _load_history_records(self) -> None:
+        """从数据库加载所有项目的创建对话记录"""
+        from app.services.project_service import list_all as list_projects
+        from app.services.setting_service import get_setting
+
+        self._history_records = []
+        try:
+            projs = list_projects().get("projects", [])
+        except Exception:
+            projs = []
+
+        for p in projs:
+            pid = p.get("id")
+            if not pid:
+                continue
+            try:
+                conv_data = get_setting(pid, "creation_conversation")
+            except Exception:
+                conv_data = {}
+            # get_setting 返回 {"project_id":..., "key":..., "data": 实际数据}
+            actual = conv_data.get("data") if isinstance(conv_data, dict) else None
+            msgs = actual.get("messages") if isinstance(actual, dict) else None
+            if msgs:
+                name = p.get("name", "未知项目")[:20]
+                msg_count = len(msgs)
+                preview = ""
+                for m in msgs:
+                    if m.get("role") == "user" and m.get("content"):
+                        preview = m["content"][:60]
+                        break
+                self._history_records.append({
+                    "pid": pid,
+                    "name": name,
+                    "msg_count": msg_count,
+                    "preview": preview,
+                    "data": actual,
+                    "is_draft": False,
+                })
+
+        # 加载未创建项目的对话草稿
+        self._load_draft_records()
+
+    def _load_draft_records(self) -> None:
+        """从草稿文件加载未保存的对话记录."""
+        try:
+            if not os.path.isfile(_DRAFT_FILE):
+                return
+            with open(_DRAFT_FILE, "r", encoding="utf-8") as f:
+                draft = json.load(f)
+            msgs = draft.get("messages", [])
+            if not msgs:
+                return
+            saved_at = draft.get("saved_at", 0)
+            time_str = time.strftime("%m-%d %H:%M", time.localtime(saved_at)) if saved_at else ""
+            preview = ""
+            for m in msgs:
+                if m.get("role") == "user" and m.get("content"):
+                    preview = m["content"][:60]
+                    break
+            self._history_records.append({
+                "pid": None,
+                "name": f"📝 未保存对话 {time_str}" if time_str else "📝 未保存对话",
+                "msg_count": len(msgs),
+                "preview": preview,
+                "data": draft,
+                "is_draft": True,
+            })
+        except Exception as e:
+            log.warning("加载对话草稿记录失败: %s", e)
+
+    def _render_history_list(self, filter_text: str = "") -> None:
+        """渲染历史列表，可选过滤"""
+        self._history_list.blockSignals(True)
+        self._history_list.clear()
+        filter_text = filter_text.strip().lower()
+
+        for idx, rec in enumerate(self._history_records):
+            if filter_text:
+                found = filter_text in rec["name"].lower()
+                if not found:
+                    for m in rec["data"].get("messages", []):
+                        if filter_text in m.get("content", "").lower():
+                            found = True
+                            break
+                if not found:
+                    continue
+            label = f"{rec['name']}  ({rec['msg_count']}条)"
+            item = QListWidgetItem(label)
+            item.setData(256, idx)  # Qt.UserRole
+            self._history_list.addItem(item)
+
+        self._history_list.blockSignals(False)
+
+        if self._history_list.count() == 0:
+            self._history_conversation_view.setVisible(True)
+            self._render_history_conversation(
+                [], "请点击左侧列表查看历史对话"
+            )
+        else:
+            self._history_conversation_view.setVisible(False)
+
+    def _filter_history(self, text: str) -> None:
+        """搜索框输入时实时过滤"""
+        self._render_history_list(text)
+
+    def _on_history_selected(self, index: int) -> None:
+        """选中某条历史记录，在中间面板以气泡形式展示完整对话."""
+        if index < 0 or index >= self._history_list.count():
+            return
+        item = self._history_list.item(index)
+        if not item:
+            return
+        ridx = item.data(256)
+        if ridx is None or ridx >= len(self._history_records):
+            return
+        rec = self._history_records[ridx]
+        msgs = rec["data"].get("messages", [])
+        self._history_conversation_view.setVisible(True)
+        self._render_history_conversation(msgs, rec["name"])
+
+    def _render_history_conversation(self, msgs: list[dict], title: str) -> None:
+        """将历史消息渲染为中间面板的聊天气泡."""
+        # 清空旧内容
+        while self._history_conversation_layout.count():
+            it = self._history_conversation_layout.takeAt(0)
+            w = it.widget()
+            if w:
+                w.deleteLater()
+
+        # 标题
+        header = QLabel(f"📚 {title}")
+        header.setStyleSheet(
+            f"font-size:13px; font-weight:700; color:{text_primary()}; padding:8px;"
+        )
+        header.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self._history_conversation_layout.addWidget(header)
+
+        if not msgs:
+            empty = QLabel("暂无历史对话\n选择左侧列表中的项目可查看详情")
+            empty.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            empty.setStyleSheet(f"color:{text_muted()}; font-size:12px; padding:24px;")
+            self._history_conversation_layout.addWidget(empty)
+        else:
+            # 转换 role -> sender 并渲染气泡
+            for m in msgs:
+                role = m.get("role", "")
+                content = m.get("content", "")
+                if not content:
+                    continue
+                if role == "user":
+                    sender = "你"
+                elif role == "assistant":
+                    sender = "写作助手"
+                else:
+                    sender = "系统"
+                bubble = ChatItemWidget(sender, content)
+                self._history_conversation_layout.addWidget(bubble)
+
+        self._history_conversation_layout.addStretch()
+
+    # ------------------------------------------------------------------
+    # 对话草稿（未创建项目时自动保存/恢复）
+    # ------------------------------------------------------------------
+    def closeEvent(self, event) -> None:
+        """对话框关闭时自动保存未创建项目的对话草稿."""
+        self._save_draft()
+        super().closeEvent(event)
+
+    def _save_draft(self) -> None:
+        """将当前对话保存为草稿（仅当未创建项目且有聊天内容时）."""
+        if self._created_pid:       # 已创建过项目，不存草稿
+            return
+        if not self._conv_messages:  # 没有有效对话
+            return
+        try:
+            os.makedirs(os.path.dirname(_DRAFT_FILE), exist_ok=True)
+            with open(_DRAFT_FILE, "w", encoding="utf-8") as f:
+                json.dump({
+                    "messages": self._conv_messages,
+                    "chat_pairs": self._chat_messages,
+                    "saved_at": time.time(),
+                }, f, ensure_ascii=False, indent=2)
+            log.info("对话草稿已保存 (%d 条)", len(self._conv_messages))
+        except Exception as e:
+            log.warning("保存对话草稿失败: %s", e)
+
+    def _try_load_draft(self) -> bool:
+        """尝试加载上次未保存的对话草稿，返回是否有草稿."""
+        try:
+            if not os.path.isfile(_DRAFT_FILE):
+                return False
+            with open(_DRAFT_FILE, "r", encoding="utf-8") as f:
+                draft = json.load(f)
+            msgs = draft.get("messages", [])
+            pairs = draft.get("chat_pairs", [])
+            if not msgs:
+                return False
+            self._conv_messages = msgs
+            self._chat_messages = pairs
+            # 删除草稿文件，防止重复恢复
+            os.remove(_DRAFT_FILE)
+            self._render_chat()
+            log.info("已恢复对话草稿 (%d 条)", len(msgs))
+            return True
+        except Exception as e:
+            log.warning("加载对话草稿失败: %s", e)
+            return False
+
+    # ------------------------------------------------------------------
     # 创建项目
     # ------------------------------------------------------------------
     def _on_create_project(self) -> None:
@@ -779,6 +1272,19 @@ class ConversationCreationDialog(QDialog):
             return
 
         parsed = self._parse_setting(setting)
+
+        # 估算分卷数：从故事线大纲提取段落数，至少 1 卷
+        sections = re.split(r"(?m)^##\s+", setting)
+        outline_section = ""
+        for s in sections:
+            if "故事线大纲" in s[:20]:
+                outline_section = s
+                break
+        # 按 ### 或段落推断卷数
+        volume_parts = re.split(r"(?m)^###\s+", outline_section)
+        estimated_volumes = max(1, len([p for p in volume_parts if p.strip()]) // 2)
+        estimated_volumes = min(estimated_volumes, 20)  # 上限 20 卷
+
         from app.services import project_service, ServiceError
         try:
             p = project_service.create(
@@ -786,10 +1292,12 @@ class ConversationCreationDialog(QDialog):
                 book_title=parsed["book_title"],
                 author=None,
                 genre=parsed["genre"],
-                platform=None,
+                platform=parsed["platform"],
                 word_target=parsed["word_target"],
-                volumes=1, chapters_per_volume=100, words_per_chapter=2000,
-                sub_genres=[],
+                volumes=estimated_volumes,
+                chapters_per_volume=20,
+                words_per_chapter=2500,
+                sub_genres=parsed["sub_genres"],
                 create_books=True,
             )
         except ServiceError as e:
@@ -797,38 +1305,82 @@ class ConversationCreationDialog(QDialog):
             return
         self._created_pid = p["id"]
         self._sync_settings(setting)
+        self._sync_volumes_from_outline(setting)
         self.accept()
 
     # ------------------------------------------------------------------
     # 辅助: 解析 / 同步
     # ------------------------------------------------------------------
     def _parse_setting(self, setting: str) -> dict:
+        """从 LLM 生成的设定文本中解析结构化数据。
+
+        元数据段格式（--- 包裹）：
+          题材: 仙侠
+          副题材: 爽文、穿越、重生
+          发布平台: 番茄
+          建议字数: 50万字
+        """
         from app.services.genre_presets import GENRE_PRESETS
         valid_genres = {name for (_id, name, _desc, _kw) in GENRE_PRESETS}
 
+        # 1) 书名
         m = re.search(r"《([^》]+)》", setting)
         book_title = m.group(1).strip() if m else "未命名小说"
         project_name = f"{book_title}-对话创建"
 
+        # 2) 解析 --- 元数据段 ---
         genre = "未分类"
-        for g in valid_genres:
-            if g in setting:
-                genre = g
-                break
-
+        sub_genres: list[str] = []
+        platform = None
         word_target = 200_000
-        m = re.search(r"(\d+)\s*[-~到至]\s*(\d+)\s*万\s*字", setting)
-        if m:
-            word_target = int((int(m.group(1)) + int(m.group(2))) / 2 * 10_000)
+
+        meta_m = re.search(r"^---\s*\n(.*?)\n---", setting, re.DOTALL)
+        if meta_m:
+            meta_text = meta_m.group(1)
+            # 题材
+            genre_m = re.search(r"题材\s*[:：]\s*(.+)", meta_text)
+            if genre_m:
+                raw = genre_m.group(1).strip()
+                # 匹配预设题材
+                for g in valid_genres:
+                    if g in raw:
+                        genre = g
+                        break
+                if genre == "未分类" and raw:
+                    genre = raw
+            # 副题材
+            sub_m = re.search(r"副题材\s*[:：]\s*(.+)", meta_text)
+            if sub_m:
+                raw = sub_m.group(1).strip()
+                sub_genres = [s.strip() for s in re.split(r"[、,，]", raw) if s.strip()]
+            # 平台
+            plat_m = re.search(r"发布平台\s*[:：]\s*(.+)", meta_text)
+            if plat_m:
+                platform = plat_m.group(1).strip()
+            # 字数
+            w_m = re.search(r"建议字数\s*[:：]\s*.+?(\d+)\s*万", meta_text)
+            if w_m:
+                word_target = int(w_m.group(1)) * 10_000
         else:
-            m = re.search(r"(\d+)\s*万\s*字", setting)
+            # 降级：无元数据段，从全文用 keyword 匹配
+            for g in valid_genres:
+                if g in setting:
+                    genre = g
+                    break
+            m = re.search(r"(\d+)\s*[-~到至]\s*(\d+)\s*万\s*字", setting)
             if m:
-                word_target = int(m.group(1)) * 10_000
+                word_target = int((int(m.group(1)) + int(m.group(2))) / 2 * 10_000)
+            else:
+                m = re.search(r"(\d+)\s*万\s*字", setting)
+                if m:
+                    word_target = int(m.group(1)) * 10_000
 
         return {
             "project_name": project_name[:64],
             "book_title": book_title[:128],
             "genre": genre,
+            "sub_genres": sub_genres[:5],
+            "platform": platform,
             "word_target": word_target,
         }
 
@@ -868,6 +1420,75 @@ class ConversationCreationDialog(QDialog):
             set_setting(pid, "plot_outline", setting)
         except Exception as e:
             log.warning("save plot_outline failed: %s", e)
+
+        # 保存对话历史（可搜索/回溯）
+        if self._conv_messages:
+            try:
+                from app.services.setting_service import set_setting as _set
+                _set(pid, "creation_conversation", {
+                    "messages": self._conv_messages,
+                    "created_at": __import__("time").time(),
+                })
+            except Exception as e:
+                log.warning("save creation_conversation failed: %s", e)
+
+    def _sync_volumes_from_outline(self, setting: str) -> None:
+        """从故事线大纲创建分卷和初始故事单元，让用户能直接开始写作。
+
+        解析「故事线大纲」中的 ### 子标题作为各卷大纲，为每卷创建 1 个起始单元。
+        """
+        from app.services.setting_io import _parse_md_sections
+        pid = self._created_pid
+        if not pid:
+            return
+
+        sections = _parse_md_sections(setting)
+        outline_body = ""
+        for title, body in sections:
+            if "故事线大纲" in title:
+                outline_body = body
+                break
+        if not outline_body:
+            return
+
+        # 按 ### 分段 → 每段作为一卷的规划
+        volume_chunks = re.split(r"(?m)^###\s+", outline_body)
+        volume_chunks = [c.strip() for c in volume_chunks if c.strip()]
+
+        try:
+            from app.services.book_outline_service import create_volume_for_project, list_volumes
+            from app.services.story_unit_service_v2 import create_unit_from_prompt
+        except ImportError:
+            log.warning("book_outline_service 或 story_unit_service_v2 不可用，跳过卷同步")
+            return
+
+        existing = list_volumes(pid) if 'list_volumes' in dir() else []
+        if existing:
+            return  # 已有分卷，不覆盖
+
+        for idx, chunk in enumerate(volume_chunks):
+            # 第一行为卷标题，剩余为大纲文本
+            lines = chunk.split("\n")
+            vol_title = lines[0].strip()[:80] if lines[0].strip() else f"第{idx+1}卷"
+            vol_body = "\n".join(lines[1:]).strip()[:500]
+
+            try:
+                vol = create_volume_for_project(
+                    project_id=pid,
+                    volume_index=idx + 1,
+                    title=vol_title,
+                    description=vol_body or f"{vol_title}的大纲",
+                )
+                # 为每卷创建 1 个起始故事单元
+                if 'create_unit_from_prompt' in dir():
+                    create_unit_from_prompt(
+                        project_id=pid,
+                        volume_id=vol.get("id") if isinstance(vol, dict) else vol,
+                        unit_title=f"{vol_title}·开篇",
+                        genre="",
+                    )
+            except Exception as e:
+                log.warning("创建卷/单元失败 (vol=%s): %s", vol_title, e)
 
     # ------------------------------------------------------------------
     # Mock 对话

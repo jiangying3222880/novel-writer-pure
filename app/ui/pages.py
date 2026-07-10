@@ -1040,6 +1040,17 @@ class CharacterMgmtPage(QWidget):
         if hasattr(self._inner, "set_project"):
             self._inner.set_project(project)
 
+    # ── 生命周期钩子 ──────────────────────────────────────────────
+    def activate_and_refresh(self) -> None:
+        if not hasattr(self, "context"):
+            return
+        proj = self.context.get_current_project()
+        if proj and hasattr(self._inner, "set_project"):
+            self._inner.set_project(proj)
+
+    def deactivate_and_save(self) -> None:
+        pass  # CharacterMgmtTab 有独立持久层
+
 
 # ===================================================================== #
 # 3. OutlineMgmtPage  (大纲管理 — 复用 OutlineTab)
@@ -2538,6 +2549,30 @@ class GeneratePage(QWidget):
         if hasattr(self._inner, "set_project"):
             self._inner.set_project(project)
 
+    # ── 生命周期钩子（ProjectContext 集成）──────────────────────────
+    def deactivate_and_save(self) -> None:
+        """离开写作页：编辑器文本回写 Context + 落盘"""
+        if not hasattr(self, "context"):
+            return
+        editor = getattr(self._inner, "editor", None)
+        if editor is not None:
+            self.context.update_field("current_content", editor.toPlainText())
+            self.context.save_to_disk()
+
+    def activate_and_refresh(self) -> None:
+        """进入写作页：从 Context 恢复正文 + 刷新关联数据"""
+        if not hasattr(self, "context"):
+            return
+        saved = self.context.data.get("current_content", "")
+        editor = getattr(self._inner, "editor", None)
+        if editor is not None and editor.toPlainText() != saved:
+            editor.setPlainText(saved)
+        # 刷新内页项目数据
+        if hasattr(self._inner, "set_project"):
+            proj = self.context.get_current_project()
+            if proj:
+                self._inner.set_project(proj)
+
 
 class StoryUnitPage(QWidget):
     """故事单元 — 单元创作管理."""
@@ -2574,6 +2609,19 @@ class PublishPage(QWidget):
         if hasattr(self._inner, "set_project"):
             self._inner.set_project(project)
 
+    # ── 生命周期钩子 ──────────────────────────────────────────────
+    def activate_and_refresh(self) -> None:
+        if not hasattr(self, "context"):
+            return
+        proj = self.context.get_current_project()
+        if proj and hasattr(self._inner, "set_project"):
+            self._inner.set_project(proj)
+
+    def deactivate_and_save(self) -> None:
+        if not hasattr(self, "context"):
+            return
+        self.context.save_to_disk()
+
 
 class UnitPoolPage(QWidget):
     """单元池 — 故事单元素材库 (M5)."""
@@ -2599,7 +2647,7 @@ class UnitPoolPage(QWidget):
 
 class StoryHealthPage(QWidget):
     PAGE_ID = "story-health"
-    PAGE_TITLE = "\u6545\u4e8b\u5065\u5eb7"
+    PAGE_TITLE = "故事健康"
 
     def __init__(self, parent: QWidget | None = None) -> None:
         super().__init__(parent)
@@ -2613,6 +2661,17 @@ class StoryHealthPage(QWidget):
     def set_project(self, project) -> None:
         if hasattr(self._inner, "set_project"):
             self._inner.set_project(project)
+
+    # ── 生命周期钩子 ──────────────────────────────────────────────
+    def activate_and_refresh(self) -> None:
+        if not hasattr(self, "context"):
+            return
+        proj = self.context.get_current_project()
+        if proj and hasattr(self._inner, "set_project"):
+            self._inner.set_project(proj)
+
+    def deactivate_and_save(self) -> None:
+        pass  # 观测页只读
 
 
 class DecisionHistoryPage(QWidget):

@@ -57,6 +57,7 @@ from app.ui.pages import (
 )
 from app.ui.welcome import show_welcome_if_first_time
 from app.ui.widgets import Dialogs, NewProjectDialog, ThemeToggle
+from app.core.project_context import ProjectContext
 
 log = logging.getLogger(__name__)
 
@@ -102,9 +103,14 @@ class MainWindow(QMainWindow):
         self.projects: list[dict] = []
         self._pages: dict[str, QWidget] = {}  # page_id -> widget
 
+        # 全局唯一项目状态上下文（注入到所有 Page）
+        self.context = ProjectContext()
+
         # 10 page 实例化
         for page_id, cls in PAGE_REGISTRY.items():
-            self._pages[page_id] = cls()
+            page = cls()
+            page.context = self.context  # 注入 ProjectContext 引用
+            self._pages[page_id] = page
 
         self._build_ui()
         self._build_shortcuts()
@@ -438,15 +444,46 @@ class MainWindow(QMainWindow):
         self._select_page(page_id)
 
     def _select_page(self, page_id: str) -> None:
-        """根据 page_id 切换 StackedWidget + 顶栏 title."""
+        """根据 page_id 切换 StackedWidget + 顶栏 title。
+
+        生命周期钩子（v4.2+ - ProjectContext 集成）：
+          - 离开当前页 → deactivate_and_save()  强制落库
+          - 进入新页   → activate_and_refresh()  强制刷盘
+        """
         if page_id not in self._pages:
             return
-        # 找到 index
+
+        # --- [生命周期] 离开当前页：落库 ---
+        current_widget = self.tabs.currentWidget()
+        if current_widget is not None:
+            if hasattr(current_widget, "deactivate_and_save"):
+                try:
+                    current_widget.deactivate_and_save()
+                except Exception as exc:
+                    log.warning("[_select_page] deactivate_and_save 失败: %s", exc)
+
+        # --- 切换 ---
         for idx in range(self.tabs.count()):
             w = self.tabs.widget(idx)
             if w is self._pages[page_id]:
                 self.tabs.setCurrentIndex(idx)
                 break
+
+        # --- [生命周期] 进入新页：刷盘 ---
+        new_widget = self._pages.get(page_id)
+        if new_widget is not None:
+            if hasattr(new_widget, "activate_and_refresh"):
+                try:
+                    new_widget.activate_and_refresh()
+                except Exception as exc:
+                    log.warning("[_select_page] activate_and_refresh 失败: %s", exc)
+            elif self.current_project and hasattr(new_widget, "set_project"):
+                # 降级：没有 activate_and_refresh 的页面，直接用 set_project 刷新
+                try:
+                    new_widget.set_project(self.current_project)
+                except Exception as exc:
+                    log.warning("[_select_page] set_project(进入刷新) 失败: %s", exc)
+
         title = get_page_title(page_id)
         self.lbl_page_title.setText(title)
         # 顶栏 badge: 当前项目 (仅 novel-settings / chapter-mgmt / dashboard 等数据相关页显示)
@@ -601,6 +638,15 @@ class MainWindow(QMainWindow):
         except Exception:
             full = project
         self.current_project = full or project
+        # 同步全局 ProjectContext
+        if self.current_project:
+            pid = self.current_project.get("id")
+            if pid:
+                from app.services.file_store import _get_project_dir as _proj_dir
+                proj_path = str(_proj_dir(pid))
+            else:
+                proj_path = ""
+            self.context.load(proj_path, self.current_project)
         self._update_action_states()
         self._refresh_project_progress()
         self._notify_project_changed()

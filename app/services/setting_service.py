@@ -30,6 +30,7 @@ RECOGNISED_KEYS = {
     "volume_outline",
     "foreshadowing",
     "notes",
+    "creation_conversation",
 }
 
 
