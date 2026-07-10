@@ -68,10 +68,15 @@ Novel Writer Pure v4.3 — AI 辅助长篇小说创作桌面工具。
 
 | 用途 | 工具 | 说明 |
 |------|------|------|
+| 代码探索 | `codegraph` | **首选** — 符号级查询，返回调用链+影响面+源码，一次调用替代多次 grep+read |
 | 文件查找 | `glob` | 按文件名模式匹配，如 `**/*.py` |
-| 内容搜索 | `grep` | 按正则搜索文件内容 |
-| 代码探索 | `codegraph` | 符号级查询（需先 `codegraph init`） |
+| 内容搜索 | `grep` | 按正则搜索文件内容（codegraph 不适用时降级使用） |
 | 文件读取 | `read` | 读取文件内容，支持 offset/limit |
+
+**codegraph 使用规则：**
+- 任何涉及"这个函数被谁调用""这个模块的影响面"的问题，优先用 codegraph
+- codegraph 返回的源码视为已 Read，不需要再重复 Read 同一文件
+- 如果项目未索引（无 `.codegraph/` 目录），先运行 `codegraph init`
 
 不要用 `bash cat / find / grep / sed`，工具层会加读状态追踪、截断处理、权限评估。
 
