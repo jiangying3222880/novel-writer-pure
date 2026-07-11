@@ -6,10 +6,10 @@
 from __future__ import annotations
 
 
-# ────────────────────── 章节状态符号 (I8 拍板 8 个) ──────────────────────
+# ────────────────────── 章节/单元状态符号 (I8 拍板 8 个) ──────────────────────
 
 class ChapterStatus:
-    """章节状态 (用于章节管理 Tab 树状结构)。"""
+    """章节状态 (用于章节管理 Tab 树状结构)。兼容旧代码。"""
     AI_GENERATED = "ai_generated"     # ✏️ AI 生成完
     EDITED = "edited"                 # ✓ 已编辑保存
     EDITING = "editing"               # ⏳ 编辑中未保存
@@ -18,6 +18,10 @@ class ChapterStatus:
     ERROR = "error"                   # ❌ 报错
     NEEDS_CONFIRM = "needs_confirm"   # ⚠️ 评分<阈值待确认
     PENDING = "pending"               # 待开始
+
+
+# 单元状态 = 章节状态的别名 (v4.3 统一)
+UnitStatus = ChapterStatus
 
 
 # 符号 → 状态映射

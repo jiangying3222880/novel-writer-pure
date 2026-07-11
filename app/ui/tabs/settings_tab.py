@@ -243,11 +243,11 @@ class BasicInfoWidget(QGroupBox):
 
         lbl_v = QLabel("分卷数")
         lbl_v.setObjectName("structLabel")
-        lbl_c = QLabel("章节数/卷")
+        lbl_c = QLabel("单元数/卷")
         lbl_c.setObjectName("structLabel")
-        lbl_w = QLabel("章节字数")
+        lbl_w = QLabel("单元字数")
         lbl_w.setObjectName("structLabel")
-        lbl_t = QLabel("总章节数")
+        lbl_t = QLabel("总单元数")
         lbl_t.setObjectName("structLabel")
         for w in (lbl_v, lbl_c, lbl_w, lbl_t):
             w.setStyleSheet(f"color: {text_muted()}; font-size: 10px;")
@@ -388,10 +388,10 @@ class BasicInfoWidget(QGroupBox):
         except (TypeError, ValueError):
             wpc = 2000
         self.lbl_struct_volumes.setText(f"{v} 卷")
-        self.lbl_struct_cpv.setText(f"{cpv} 章")
+        self.lbl_struct_cpv.setText(f"{cpv} 单元")
         self.lbl_struct_wpc.setText(f"{wpc:,} 字")
         total_chap = v * cpv
-        self.lbl_struct_total.setText(f"{total_chap:,} 章")
+        self.lbl_struct_total.setText(f"{total_chap:,} 单元")
 
         # 加载全文反规则
         self.ed_anti_rules.clear()

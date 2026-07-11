@@ -1,8 +1,9 @@
 """
-Chapter Tree Widget (v4.0 发布模块)
+Unit Tree Widget (v4.3 重构)
 
-以「卷(书) → 章节」的层级展示全书章节结构，供发布模块浏览/选择章节。
-点击章节时通过 chapter_selected 信号上抛 chapter_id。
+以「卷(书) → 单元」的层级展示全书单元结构，供发布模块浏览/选择。
+点击单元时通过 chapter_selected 信号上抛 unit_id。
+章节是单元的窗口，最终展示时才生成。
 """
 from __future__ import annotations
 
@@ -28,7 +29,7 @@ class ChapterTree(QWidget):
         layout.setContentsMargins(6, 6, 6, 6)
         layout.setSpacing(4)
 
-        title = QLabel("📚 章节结构")
+        title = QLabel("📚 单元结构")
         title.setStyleSheet("font-size: 13px; font-weight: 700; color: #cdd6f4;")
         layout.addWidget(title)
 
@@ -66,7 +67,7 @@ class ChapterTree(QWidget):
             books = []
 
         if not books:
-            self._empty("(无书籍/章节)")
+            self._empty("(无单元)")
             return
 
         for book in books:
@@ -85,7 +86,7 @@ class ChapterTree(QWidget):
 
             if not chapters:
                 sub = QTreeWidgetItem(book_item)
-                sub.setText(0, "  (暂无章节)")
+                sub.setText(0, "  (暂无单元)")
                 sub.setFlags(Qt.ItemFlag.NoItemFlags)
                 continue
 
@@ -94,9 +95,9 @@ class ChapterTree(QWidget):
                 ch_no = ch.get("chapter_no", "?")
                 ch_title = ch.get("title") or "未命名"
                 item = QTreeWidgetItem(book_item)
-                item.setText(0, f"第{ch_no}章  {ch_title}")
+                item.setText(0, f"单元 {ch_no}  {ch_title}")
                 item.setData(0, Qt.ItemDataRole.UserRole, cid)
-                item.setToolTip(0, f"章节 {ch_no}: {ch_title}")
+                item.setToolTip(0, f"单元 {ch_no}: {ch_title}")
             book_item.setExpanded(True)
 
     def _empty(self, text: str) -> None:

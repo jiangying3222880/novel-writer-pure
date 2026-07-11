@@ -20,7 +20,7 @@ class WritingWizard(QWidget):
 
     STEPS = [
         ("1. 基础信息", "项目名 + 题材 + 字数目标"),
-        ("2. 分卷结构", "分卷数 + 每卷章节数 + 每章字数"),
+        ("2. 分卷结构", "分卷数 + 每卷单元数 + 每单元字数"),
         ("3. 大纲概要", "核心主题 + 情绪曲线 + 关键事件"),
         ("4. 开始创作", "创建第一个单元并开始写作"),
     ]
@@ -114,12 +114,12 @@ class WritingWizard(QWidget):
         self.spn_cpv = QSpinBox()
         self.spn_cpv.setRange(1, 500)
         self.spn_cpv.setValue(100)
-        form.addRow("每卷章节数:", self.spn_cpv)
+        form.addRow("每卷单元数:", self.spn_cpv)
         self.spn_wpc = QSpinBox()
         self.spn_wpc.setRange(500, 10_000)
         self.spn_wpc.setValue(2000)
         self.spn_wpc.setSuffix(" 字")
-        form.addRow("每章字数:", self.spn_wpc)
+        form.addRow("每单元字数:", self.spn_wpc)
         return w
 
     def _build_step3(self) -> QWidget:
@@ -195,7 +195,7 @@ class WritingWizard(QWidget):
         self._summary_detail.setText(
             f"项目名: {name}\n"
             f"题材: {genre}\n"
-            f"分卷: {volumes} 卷 × {cpv} 章 = {total} 章\n"
+            f"分卷: {volumes} 卷 × {cpv} 单元 = {total} 单元\n"
             f"字数目标: {self.spn_target.value():,} 字\n"
             f"核心主题: {self.ed_theme.text().strip() or '(未填)'}"
         )

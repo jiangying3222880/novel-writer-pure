@@ -365,14 +365,14 @@ class DashboardTab(QWidget):
         # 3 个数字
         stat_row = QHBoxLayout()
         stat_row.setSpacing(10)
-        self.card_chapters = StatCard("📚 章节数", "—", "#1976d2")
+        self.card_chapters = StatCard("📚 单元数", "—", "#1976d2")
         self.card_words = StatCard("✍️ 总字数", "—", "#388e3c")
         self.card_avg = StatCard("⭐ 平均综合分", "—", "#f57c00")
         stat_row.addWidget(self.card_chapters)
         stat_row.addWidget(self.card_words)
         stat_row.addWidget(self.card_avg)
         # V4.0-P2-新: 进度环 — 直观显示「已写 / 目标」
-        self.progress_ring = ProgressRing("全书进度 (本章目标)")
+        self.progress_ring = ProgressRing("全书进度 (单元目标)")
         stat_row.addWidget(self.progress_ring)
         layout.addLayout(stat_row)
 
@@ -437,7 +437,7 @@ class DashboardTab(QWidget):
         self.weak_table = QTableWidget(0, 4)
         self.weak_table.setFrameShape(QFrame.Shape.NoFrame)
         self.weak_table.setHorizontalHeaderLabels(
-            ["章节", "标题", "综合分", "Critic/Hook"]
+            ["单元", "标题", "综合分", "Critic/Hook"]
         )
         self.weak_table.horizontalHeader().setSectionResizeMode(
             QHeaderView.ResizeMode.Stretch
@@ -598,7 +598,7 @@ class DashboardTab(QWidget):
             combined = w.get("combined", 0)
             cs = w.get("critic_score")
             hs = w.get("hook_score")
-            self.weak_table.setItem(i, 0, QTableWidgetItem(f"第{ch_no}章"))
+            self.weak_table.setItem(i, 0, QTableWidgetItem(f"单元 {ch_no}"))
             self.weak_table.setItem(i, 1, QTableWidgetItem(title))
             score_item = QTableWidgetItem(f"{combined:.1f}")
             # 颜色编码: <50 红, 50-70 黄, >=70 绿
@@ -661,7 +661,7 @@ class DashboardTab(QWidget):
             sub_str = "、".join(subs[:3]) if isinstance(subs, list) else ""
             if len(subs) > 3:
                 sub_str += f"+{len(subs) - 3}"
-            structure = f"{p.get('volumes') or 1}卷 × {p.get('chapters_per_volume') or 0}章"
+            structure = f"{p.get('volumes') or 1}卷 × {p.get('chapters_per_volume') or 0}单元"
             if sub_str:
                 structure = f"{structure}\n副: {sub_str}"
             # 计算完成度百分比
