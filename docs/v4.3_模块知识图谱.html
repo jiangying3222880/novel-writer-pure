@@ -187,48 +187,74 @@ const modules = [
 
 // 依赖关系 (source → target)
 const edges = [
-  // Orchestrator → Agents
+  // ===== UI → Service/Agent (用户操作入口) =====
+  ["generate","orchestrator"],["generate","patch_diff"],["generate","reverse_compile"],
+  ["generate","chapter_service"],["generate","story_unit_v2"],
+  ["story_unit","story_unit_v2"],["story_unit","patch_diff"],["story_unit","unit_paragraph"],
+  ["unit_pool_tab","unit_pool"],["unit_pool_tab","unit_pool_composer"],
+  ["dashboard","dashboard_svc"],["dashboard","ui_bridge"],["dashboard","pressure"],
+  ["character_tab","char_tracker"],["character_tab","voice_profile"],["character_tab","worldbuilding"],
+  ["publish_tab","exporter"],["outline_tab","outline_service"],["outline_tab","book_outline"],
+  ["volume_tab","book_outline"],["volume_tab","volume_transition"],["volume_tab","book_service"],
+  ["writing_wizard","project_service"],["writing_wizard","book_service"],
+  ["worldview_tab","worldbuilding"],["subtext_tab","subtext"],
+  ["settings_tab","style_fp"],["settings_tab","app_setting_svc"],["settings_tab","anti_ai"],
+  ["hud_tab","story_state"],["hud_tab","collector"],
+  // ===== Agent → 内部组件 =====
   ["orchestrator","storyteller"],["orchestrator","editor_agent"],["orchestrator","critic_agent"],
   ["orchestrator","memory_keeper"],["orchestrator","context_builder"],["orchestrator","researcher"],
   ["orchestrator","pressure_watcher"],["orchestrator","retriever"],
-  // Orchestrator → Story Engine
+  // ===== Agent → Service =====
+  ["storyteller","llm"],["editor_agent","llm"],["critic_agent","llm"],
+  ["memory_keeper","memory_manager"],["context_builder","worldbuilding"],
+  ["retriever","finder"],["pressure_watcher","pressure"],
+  ["researcher","knowledge_svc"],["editor_agent","anti_ai"],
+  // ===== Orchestrator → Story Engine/Service =====
   ["orchestrator","story_engine"],["orchestrator","collector"],["orchestrator","guide_graph"],
   ["orchestrator","decision_service"],["orchestrator","unit_event"],["orchestrator","unit_causal"],
-  // StoryEngine → 内部
+  ["orchestrator","story_unit_v2"],["orchestrator","unit_paragraph"],
+  ["orchestrator","conflict_log"],["orchestrator","story_compiler"],
+  // ===== StoryEngine 内部管线 =====
   ["story_engine","state_bridge"],["story_engine","story_state"],["story_engine","collector"],
   ["story_engine","decision_engine"],["story_engine","suc_builder"],["story_engine","compiler"],
-  ["story_engine","ui_bridge"],["story_engine","event_store"],
-  // StoryEngine → Services
+  ["story_engine","ui_bridge"],["story_engine","event_store"],["story_engine","token_budget"],
+  ["story_engine","reducer"],
+  // ===== StoryEngine → Service =====
   ["story_engine","story_unit_v2"],["story_engine","unit_paragraph"],
-  // Guide Sources → Services
+  ["story_engine","pressure"],["story_engine","memory"],["story_engine","hook_service"],
+  ["story_engine","consistency"],["story_engine","voice_profile"],["story_engine","style_fp"],
+  ["story_engine","char_arc"],["story_engine","char_state"],
+  // ===== Guide 系统 =====
+  ["types","guide_graph"],["types","guide_sources"],["types","guide_sources"],
   ["guide_sources","pressure"],["guide_sources","memory"],["guide_sources","consistency"],
   ["guide_sources","voice_profile"],["guide_sources","hook_service"],
   ["guide_sources","style_fp"],["guide_sources","char_state"],["guide_sources","char_arc"],
   ["guide_sources","unit_event"],["guide_sources","reader_signal"],
-  // collect_guides → GuideGraph
-  ["types","guide_graph"],["types","guide_sources"],
-  // Finder
+  // ===== Knowledge 系统 =====
   ["finder","bm25"],["finder","vector_db"],["knowledge_svc","finder"],
-  // UI → Services
-  ["generate","orchestrator"],["generate","patch_diff"],["generate","reverse_compile"],
-  ["story_unit","story_unit_v2"],["story_unit","patch_diff"],
-  ["unit_pool_tab","unit_pool"],["unit_pool_tab","unit_pool_composer"],
-  ["dashboard","dashboard_svc"],["dashboard","ui_bridge"],
-  ["character_tab","char_tracker"],["character_tab","voice_profile"],
-  ["publish_tab","exporter"],["outline_tab","outline_service"],
-  ["volume_tab","book_outline"],["volume_tab","volume_transition"],
-  ["writing_wizard","project_service"],
-  // Agent → Services
+  ["knowledge_svc","capability"],["knowledge_svc","domain_lib"],
+  ["capability","finder"],["domain_lib","finder"],
+  // ===== Agent → LLM =====
   ["storyteller","llm"],["editor_agent","llm"],["critic_agent","llm"],
-  ["memory_keeper","memory_manager"],["context_builder","worldbuilding"],
-  ["retriever","finder"],["pressure_watcher","pressure"],
-  // Core → DB
-  ["types","db"],["event_bus","db"],
-  // Style/Voice
-  ["style_fp","style_learner"],["voice_profile","voice_profile"],
-  // Misc
-  ["project_service","db"],["book_service","db"],["story_unit_v2","db"],
-  ["hook_service","db"],["unit_event","db"],
+  // ===== Service → DB (数据持久化) =====
+  ["project_service","db"],["book_service","db"],["chapter_service","db"],
+  ["story_unit_v2","db"],["unit_paragraph","db"],["unit_pool","db"],
+  ["hook_service","db"],["unit_event","db"],["unit_causal","db"],
+  ["pressure","db"],["memory","db"],["consistency","db"],
+  ["voice_profile","db"],["style_fp","db"],["char_tracker","db"],
+  ["decision_service","db"],["conflict_log","db"],["setting_service","db"],
+  ["outline_service","db"],["book_outline","db"],["volume_transition","db"],
+  ["usage_analytics","db"],["worldbuilding","db"],["story_compiler","db"],
+  ["app_setting_svc","db"],["license","db"],["story_recipe","db"],
+  // ===== Service → Service (协作) =====
+  ["virtual_unit","story_unit_v2"],["virtual_unit","chapter_service"],
+  ["unit_pool_composer","unit_pool"],["unit_pool_composer","story_unit_v2"],
+  ["memory_manager","pressure"],["memory_manager","memory"],
+  ["dashboard_svc","pressure"],["dashboard_svc","story_unit_v2"],
+  ["reverse_compile","knowledge_svc"],["patch_preview","story_unit_v2"],
+  ["character_arc","book_outline"],["char_state","char_tracker"],
+  // ===== Core 基础设施 =====
+  ["types","db"],["event_bus","db"],["config","db"],
 ];
 
 // ============================================================
@@ -385,9 +411,47 @@ function showSidebar(m) {
   const sb = document.getElementById("sidebar");
   const content = document.getElementById("sidebar-content");
 
-  // 找调用方和被调用方
+  // 找直接调用方和被调用方
   const callers = edges.filter(([s, t]) => t === m.id).map(([s]) => nodeMap[s]).filter(Boolean);
   const callees = edges.filter(([s, t]) => s === m.id).map(([, t]) => nodeMap[t]).filter(Boolean);
+
+  // 追溯完整调用链 (向上到 UI, 向下到 DB)
+  function traceUp(id, depth=0) {
+    if (depth > 3) return [];
+    const parents = edges.filter(([s, t]) => t === id).map(([s]) => s);
+    let chain = [];
+    parents.forEach(p => {
+      chain.push(p);
+      chain = chain.concat(traceUp(p, depth+1));
+    });
+    return [...new Set(chain)];
+  }
+  function traceDown(id, depth=0) {
+    if (depth > 3) return [];
+    const children = edges.filter(([s, t]) => s === id).map(([, t]) => t);
+    let chain = [];
+    children.forEach(c => {
+      chain.push(c);
+      chain = chain.concat(traceDown(c, depth+1));
+    });
+    return [...new Set(chain)];
+  }
+
+  const upChain = traceUp(m.id).map(id => nodeMap[id]).filter(Boolean);
+  const downChain = traceDown(m.id).map(id => nodeMap[id]).filter(Boolean);
+
+  // 按层级分组
+  const layerNames = {ui:"UI",service:"Service",story:"Story",agent:"Agent",knowledge:"Knowledge",core:"Core/DB"};
+  function groupByLayer(nodes) {
+    const groups = {};
+    nodes.forEach(n => {
+      if (!groups[n.layer]) groups[n.layer] = [];
+      groups[n.layer].push(n);
+    });
+    return groups;
+  }
+  const upGroups = groupByLayer(upChain);
+  const downGroups = groupByLayer(downChain);
 
   let html = `
     <h2>${m.label}</h2>
@@ -396,18 +460,25 @@ function showSidebar(m) {
     <div style="margin-top:8px"><span class="tag tag-${m.layer}">${m.layer.toUpperCase()}</span></div>
   `;
 
-  if (callers.length > 0) {
-    html += `<div class="deps"><h3>⬆ 调用方 (${callers.length})</h3>`;
-    callers.forEach(c => {
-      html += `<div class="dep-item" onclick="focusNode('${c.id}')">← ${c.label}</div>`;
+  // 完整调用链
+  if (upChain.length > 0) {
+    html += `<div class="deps"><h3>⬆ 调用链 (谁调用我)</h3>`;
+    Object.keys(upGroups).sort().forEach(layer => {
+      html += `<div style="color:#6366f1;font-size:11px;margin-top:6px;font-weight:600">${layerNames[layer] || layer}</div>`;
+      upGroups[layer].forEach(c => {
+        html += `<div class="dep-item" onclick="focusNode('${c.id}')">← ${c.label}</div>`;
+      });
     });
     html += `</div>`;
   }
 
-  if (callees.length > 0) {
-    html += `<div class="deps"><h3>⬇ 被调用 (${callees.length})</h3>`;
-    callees.forEach(c => {
-      html += `<div class="dep-item" onclick="focusNode('${c.id}')">→ ${c.label}</div>`;
+  if (downChain.length > 0) {
+    html += `<div class="deps"><h3>⬇ 调用链 (我调用谁)</h3>`;
+    Object.keys(downGroups).sort().forEach(layer => {
+      html += `<div style="color:#22c55e;font-size:11px;margin-top:6px;font-weight:600">${layerNames[layer] || layer}</div>`;
+      downGroups[layer].forEach(c => {
+        html += `<div class="dep-item" onclick="focusNode('${c.id}')">→ ${c.label}</div>`;
+      });
     });
     html += `</div>`;
   }
