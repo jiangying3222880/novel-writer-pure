@@ -791,6 +791,12 @@ class GenerateTab(QWidget):
 
         splitter.setSizes([220, 500, 280])
 
+        # ---- 底部: 写作管线进度 (StepProgressWidget) ----
+        from app.ui.widgets.step_progress import StepProgressWidget
+        self.step_progress = StepProgressWidget()
+        self.step_progress.hide()  # 默认隐藏，生成时显示
+        outer.addWidget(self.step_progress, 1)
+
         # 保留旧 worker 引用以兼容
         self.chapter_tree = QTreeWidget()
         self.chapter_tree.hide()
@@ -839,6 +845,9 @@ class GenerateTab(QWidget):
         if not self.current_project_id:
             return
         self.unit_editor.set_progress(0, True)
+        # v4.3: 显示管线进度面板
+        self.step_progress.clear()
+        self.step_progress.show()
 
         from app.agents.orchestrator import Orchestrator, OrchestratorConfig
         self._orch = Orchestrator(config=OrchestratorConfig(enable_revision_loop=False))
@@ -858,6 +867,8 @@ class GenerateTab(QWidget):
         self.unit_editor.set_content(text)
         self.unit_editor.set_progress(100, False)
         self.story_hud.set_unit(unit_id, self.current_project_id or "")
+        # v4.3: 通知管线进度面板完成
+        self.step_progress.pipeline_finished.emit()
         self._cleanup_thread()
 
     def _on_unit_error(self, msg: str) -> None:
