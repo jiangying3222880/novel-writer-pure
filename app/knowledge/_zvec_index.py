@@ -50,7 +50,7 @@ class ZvecIndex:
         self._initialized = False
 
     def _ensure_init(self):
-        """懒加载: 首次使用时初始化 zvec collection."""
+        """懒加载: 首次使用时初始化 zvec collection + 从知识库填充."""
         if self._initialized:
             return
         self._initialized = True
@@ -95,6 +95,53 @@ class ZvecIndex:
 
             _logger.info("zvec: 创建新 collection: %s", collection_path)
 
+        # 从知识库填充 (如果 collection 为空)
+        try:
+            stats = self._collection.stats
+            if stats.doc_count == 0:
+                self._populate_from_knowledge()
+        except Exception:
+            self._populate_from_knowledge()
+
+    def _populate_from_knowledge(self):
+        """从知识库文档填充 zvec collection."""
+        try:
+            from app.knowledge import scan_category, PRESET_CATEGORIES, SOURCE_BUILTIN
+
+            count = 0
+            for cat in PRESET_CATEGORIES:
+                docs = scan_category(cat, SOURCE_BUILTIN, for_retrieval=True)
+                for doc in docs:
+                    # 去掉 frontmatter
+                    content = doc.content
+                    if content.startswith("---"):
+                        end = content.find("\n---\n", 3)
+                        if end != -1:
+                            content = content[end + 5:]
+                    content = content.strip()[:2000]
+
+                    if not content:
+                        continue
+
+                    # 清洗 doc_id: zvec 不接受中文和特殊字符, 用 MD5
+                    import hashlib
+                    raw_id = f"{doc.source}_{doc.category}_{doc.name}"
+                    doc_id = "d_" + hashlib.md5(raw_id.encode()).hexdigest()[:16]
+
+                    self.add(doc_id, content, {
+                        "name": doc.name,
+                        "category": doc.category,
+                        "genre": doc.genre or "",
+                        "source": doc.source,
+                        "agent": doc.agent or "",
+                        "doc_type": doc.doc_type or "",
+                    })
+                    count += 1
+
+            _logger.info("zvec: 从知识库填充 %d 篇文档", count)
+        except Exception as e:
+            _logger.warning("zvec 填充知识库失败: %s", e)
+
     def search(
         self,
         query: str,
@@ -111,18 +158,18 @@ class ZvecIndex:
 
         import zvec
 
-        # 构建 filter 表达式
+        # 构建 filter 表达式 (zvec 用 = 不是 ==)
         filters = []
         if genre:
-            filters.append(f"genre == '{genre}'")
+            filters.append(f"genre = '{genre}'")
         if category:
-            filters.append(f"category == '{category}'")
+            filters.append(f"category = '{category}'")
         if source:
-            filters.append(f"source == '{source}'")
+            filters.append(f"source = '{source}'")
         if agent:
-            filters.append(f"agent == '{agent}'")
+            filters.append(f"agent = '{agent}'")
         if doc_type:
-            filters.append(f"doc_type == '{doc_type}'")
+            filters.append(f"doc_type = '{doc_type}'")
         filter_expr = " AND ".join(filters) if filters else None
 
         # 构建混合查询: FTS + Vector
@@ -169,21 +216,31 @@ class ZvecIndex:
             _logger.warning("zvec query 失败: %s", e)
             return []
 
-        # 转换结果
+        # 转换结果 (zvec Doc 对象, 用 .field() 或 .fields 访问)
         hits = []
         for doc in results:
-            doc_id = doc.get("doc_id", "")
-            content = doc.get("content", "")
+            doc_id = doc.id
+            try:
+                content = doc.field("content") if doc.has_field("content") else ""
+                name = doc.field("name") if doc.has_field("name") else ""
+                category = doc.field("category") if doc.has_field("category") else ""
+                genre = doc.field("genre") if doc.has_field("genre") else ""
+                source = doc.field("source") if doc.has_field("source") else ""
+                agent = doc.field("agent") if doc.has_field("agent") else ""
+                doc_type = doc.field("doc_type") if doc.has_field("doc_type") else ""
+            except Exception:
+                content = name = category = genre = source = agent = doc_type = ""
+
             hits.append(ZvecHit(
                 doc_id=doc_id,
-                score=1.0,  # zvec 不直接返回分数, 用 RRF 排序
+                score=float(doc.score) if doc.score else 1.0,
                 snippet=content[:200],
-                name=doc.get("name", ""),
-                category=doc.get("category", ""),
-                genre=doc.get("genre", ""),
-                source=doc.get("source", ""),
-                agent=doc.get("agent", ""),
-                doc_type=doc.get("doc_type", ""),
+                name=name,
+                category=category,
+                genre=genre,
+                source=source,
+                agent=agent,
+                doc_type=doc_type,
             ))
 
         return hits
@@ -197,7 +254,7 @@ class ZvecIndex:
         # 生成简单向量 (TF-IDF 风格)
         vector = self._text_to_vector(text)
 
-        doc_fields = {
+        fields = {
             "doc_id": doc_id,
             "content": text[:2000],
             "name": meta.get("name", "") if meta else "",
@@ -210,8 +267,8 @@ class ZvecIndex:
 
         doc = zvec.Doc(
             id=doc_id,
-            vectors={"embedding": vector} if vector is not None else {},
-            **doc_fields,
+            vectors={"embedding": vector} if vector is not None else None,
+            fields=fields,
         )
 
         try:

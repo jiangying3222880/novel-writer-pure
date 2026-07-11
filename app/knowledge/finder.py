@@ -14,6 +14,7 @@ D2 拍板: 知识检索 (BM25 + 向量 + 融合 + 排序)
 from __future__ import annotations
 
 import logging
+import os
 from dataclasses import dataclass
 from typing import Optional
 
@@ -415,19 +416,25 @@ def build_finder(
     use_zvec=True (默认): 使用 zvec 原生 FTS+Vector+RRF 混合检索
     use_zvec=False: 使用原有 BM25 + numpy Vector 手动融合 (fallback)
     """
+    global _finder
+
     if use_zvec:
         try:
             from app.knowledge._zvec_index import ZvecIndex
             zvec_idx = ZvecIndex()
             _logger.info("Finder: 使用 zvec 混合检索")
-            return HybridFinder(zvec=zvec_idx)
+            result = HybridFinder(zvec=zvec_idx)
+            _finder = result
+            return result
         except Exception as e:
             _logger.warning("zvec 初始化失败, 降级到 legacy: %s", e)
 
     # Fallback: 原有 BM25 + Vector
     bm25_idx = bm25_build(for_retrieval=for_retrieval)
     vec_idx, mode = vector_build(for_retrieval=for_retrieval)
-    return HybridFinder(bm25=bm25_idx, vector=vec_idx, w_bm25=w_bm25, w_vector=w_vector)
+    result = HybridFinder(bm25=bm25_idx, vector=vec_idx, w_bm25=w_bm25, w_vector=w_vector)
+    _finder = result
+    return result
 
 
 # 全局单例 (懒加载)
@@ -463,16 +470,30 @@ def extract_by_capability(capabilities: list[str], query: str, **kwargs) -> str:
 
 def rebuild_index() -> HybridFinder:
     """
-    重建 BM25 + 向量索引 (改/加 frontmatter 或新增文档后调用)。
+    重建索引 (zvec 或 legacy BM25+Vector)。
     重置全局 finder 单例并返回新实例。
     """
-    from app.knowledge._bm25 import rebuild as bm25_rebuild
-    from app.knowledge._vector_db import rebuild as vector_rebuild
-    bm25_rebuild()
-    vector_rebuild()
     global _finder
     _finder = None
-    return get_finder()
+    new_finder = build_finder()
+
+    if new_finder.zvec is not None:
+        # zvec: 删除旧 collection 让 build_finder 重建
+        import shutil
+        collection_path = os.path.join(new_finder.zvec._path, "zvec_knowledge")
+        if os.path.exists(collection_path):
+            shutil.rmtree(collection_path, ignore_errors=True)
+        new_finder.zvec._initialized = False
+        _logger.info("zvec 索引已清理, 下次搜索时重建")
+    else:
+        # Legacy: 重建 BM25 + Vector
+        from app.knowledge._bm25 import rebuild as bm25_rebuild
+        from app.knowledge._vector_db import rebuild as vector_rebuild
+        bm25_rebuild()
+        vector_rebuild()
+
+    _finder = new_finder
+    return _finder
 
 
 # ────────────────────── CLI ──────────────────────
@@ -480,7 +501,10 @@ def rebuild_index() -> HybridFinder:
 if __name__ == "__main__":
     print("=== 混合检索 ===")
     f = build_finder()
-    print(f"BM25 N={f.bm25.N}  Vector N={f.vector.N}")
+    if f.zvec is not None:
+        print(f"zvec 模式 (N={f.zvec.N})")
+    else:
+        print(f"Legacy 模式: BM25 N={f.bm25.N}  Vector N={f.vector.N}")
     test_qs = [
         "仙侠修真故事",
         "古言宫廷",
@@ -491,6 +515,6 @@ if __name__ == "__main__":
         print(f"\nQuery: {q!r}")
         hits = f.search(q, top_k=3)
         for h in hits:
-            print(f"  - {h.doc_id:60s}  fused={h.score:.3f}  bm25={h.bm25_score:.2f}  vec={h.vector_score:.2f}")
+            print(f"  - {h.doc_id:60s}  fused={h.score:.3f}")
         print(f"  → 拼装 ({len(f.extract_for_prompt(q))} 字):")
         print(f"  {f.extract_for_prompt(q)[:200]}...")

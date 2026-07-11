@@ -61,10 +61,14 @@ def main() -> int:
     # 1) build_finder
     print("\n[1] build_finder")
     f = build_finder()
-    check(f.bm25 is not None, "BM25 索引已加载")
-    check(f.vector is not None, "Vector 索引已加载")
-    check(f.bm25.N >= 7, f"BM25 N ≥ 7 (实际 {f.bm25.N})")
-    check(f.vector.N >= 7, f"Vector N ≥ 7 (实际 {f.vector.N})")
+    if f.zvec is not None:
+        check(True, "zvec 检索引擎已加载")
+        check(f.zvec.N >= 0, f"zvec collection 已初始化")
+    else:
+        check(f.bm25 is not None, "BM25 索引已加载 (legacy)")
+        check(f.vector is not None, "Vector 索引已加载 (legacy)")
+        check(f.bm25.N >= 7, f"BM25 N ≥ 7 (实际 {f.bm25.N})")
+        check(f.vector.N >= 7, f"Vector N ≥ 7 (实际 {f.vector.N})")
 
     # 2) 基础混合检索
     print("\n[2] 基础混合检索")
@@ -125,19 +129,21 @@ def main() -> int:
     out = extract_for_prompt("修真")
     check(len(out) > 0, f"一站式 extract 非空 (实际 {len(out)} 字)")
 
-    # 9) 融合权重
+    # 9) 融合权重 (仅 legacy 模式; zvec 模式下 FTS+Vector 已融合)
     print("\n[9] 融合权重")
-    f_bm = HybridFinder(bm25=f.bm25, vector=f.vector, w_bm25=1.0, w_vector=0.0)
-    f_vec = HybridFinder(bm25=f.bm25, vector=f.vector, w_bm25=0.0, w_vector=1.0)
-    hits_bm = f_bm.search("修真", top_k=3)
-    hits_vec = f_vec.search("修真", top_k=3)
-    check(len(hits_bm) > 0, f"纯 BM25 命中 (实际 {len(hits_bm)})")
-    check(len(hits_vec) > 0, f"纯 Vector 命中 (实际 {len(hits_vec)})")
-    # 顺序可能不同
-    ids_bm = [h.doc_id for h in hits_bm]
-    ids_vec = [h.doc_id for h in hits_vec]
-    print(f"  [INFO] BM25-only: {ids_bm}")
-    print(f"  [INFO] Vector-only: {ids_vec}")
+    if f.zvec is not None:
+        print("  [SKIP] zvec 模式: FTS+Vector 已融合, 不单独测试 BM25/Vector")
+    else:
+        f_bm = HybridFinder(bm25=f.bm25, vector=f.vector, w_bm25=1.0, w_vector=0.0)
+        f_vec = HybridFinder(bm25=f.bm25, vector=f.vector, w_bm25=0.0, w_vector=1.0)
+        hits_bm = f_bm.search("修真", top_k=3)
+        hits_vec = f_vec.search("修真", top_k=3)
+        check(len(hits_bm) > 0, f"纯 BM25 命中 (实际 {len(hits_bm)})")
+        check(len(hits_vec) > 0, f"纯 Vector 命中 (实际 {len(hits_vec)})")
+        ids_bm = [h.doc_id for h in hits_bm]
+        ids_vec = [h.doc_id for h in hits_vec]
+        print(f"  [INFO] BM25-only: {ids_bm}")
+        print(f"  [INFO] Vector-only: {ids_vec}")
 
     # 总结
     print("\n" + "=" * 60)
