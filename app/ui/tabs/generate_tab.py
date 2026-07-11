@@ -1004,7 +1004,31 @@ class GenerateTab(QWidget):
         if not self.current_chapter_id:
             return
         text = self.editor.toPlainText()
+
+        # v4.3: 保存前展示 diff 预览 (patch_preview 接入)
+        old_text = self._last_committed_text or ""
+        if old_text and text != old_text:
+            from PySide6.QtWidgets import QDialog
+            from app.ui.widgets.patch_diff_dialog import PatchDiffDialog
+            dlg = PatchDiffDialog(old_text, text, parent=self)
+            if dlg.exec() != QDialog.DialogCode.Accepted:
+                return  # 用户取消保存
+
         try:
+            # v4.3: reverse_compile — 保存前对比 AI 版本与用户版本，提取模式
+            old_text = self._last_committed_text or ""
+            if old_text and text != old_text and self.current_project_id:
+                try:
+                    from app.services.reverse_compile import reverse_compile
+                    reverse_compile(
+                        project_id=self.current_project_id,
+                        chapter_id=self.current_chapter_id,
+                        ai_content=old_text,
+                        author_content=text,
+                    )
+                except Exception as e:
+                    log.warning("[generate_tab] reverse_compile 失败: %s", e)
+
             chapter_service.update(
                 self.current_chapter_id,
                 draft=text,

@@ -123,15 +123,11 @@ class KnowledgePlugin:
         """懒加载 HybridFinder。"""
         if self._finder is None:
             try:
-                from app.knowledge.finder import HybridFinder
-                self._finder = HybridFinder()
+                from app.knowledge.finder import build_finder
+                self._finder = build_finder()
             except Exception as e:
-                _logger.warning("HybridFinder 初始化失败, 降级到纯 BM25: %s", e)
-                try:
-                    from app.knowledge._bm25 import BM25Index
-                    self._finder = BM25Index()
-                except Exception:
-                    self._finder = None
+                _logger.warning("HybridFinder 初始化失败, 降级: %s", e)
+                self._finder = None
         return self._finder
 
     def search(

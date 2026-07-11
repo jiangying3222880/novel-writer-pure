@@ -502,6 +502,7 @@ class StoryUnitTab(QWidget):
         self.lbl_word_count.setText(f"{unit.word_count} 字")
         self.ed_synopsis.setPlainText(unit.synopsis or "")
         self.ed_draft.setPlainText(unit.draft or "")
+        self._original_draft = unit.draft or ""  # v4.3: 保存原始草稿用于 diff
 
         # 转场
         idx = self.cmb_transition.findData(getattr(unit, "transition_type", "direct") or "direct")
@@ -729,6 +730,16 @@ class StoryUnitTab(QWidget):
         """保存草稿。"""
         if not self._current_unit_id:
             return
+
+        # v4.3: 保存前展示 diff 预览 (patch_preview 接入)
+        new_draft = self.ed_draft.toPlainText()
+        old_draft = getattr(self, "_original_draft", "")
+        if old_draft and new_draft != old_draft:
+            from PySide6.QtWidgets import QDialog
+            from app.ui.widgets.patch_diff_dialog import PatchDiffDialog
+            dlg = PatchDiffDialog(old_draft, new_draft, parent=self)
+            if dlg.exec() != QDialog.DialogCode.Accepted:
+                return
 
         title = self.ed_title.text().strip()
         if not title:
