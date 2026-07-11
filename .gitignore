@@ -17,6 +17,10 @@ env/
 
 # Project data (not source)
 .workbuddy/
+evidence_data/
+evidence_extractor/
+knowledge_index/
+types_v2.py
 
 # Tool directories
 .trae/
