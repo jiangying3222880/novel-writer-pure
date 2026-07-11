@@ -392,6 +392,117 @@ class HybridFinder:
         full = "\n\n".join(sections)
         return full[:max_total_chars] if len(full) > max_total_chars else full
 
+    # ────────────────────── v4.2 统一接口: related ──────────────────────
+
+    def related(
+        self,
+        entity_id: str,
+        *,
+        relation_types: Optional[list[str]] = None,
+        top_k: int = 5,
+    ) -> list[dict]:
+        """关联查询: 找到与给定实体相关的其他实体.
+
+        用于图谱展示、详情面板。
+        relation_types: 可选过滤 (e.g. ["references", "appears_in"])
+        返回: [{"entity_id", "name", "relation", "score"}, ...]
+        """
+        results = []
+
+        # 策略1: 用 entity_id 的文本做搜索，找相似文档
+        meta = self._meta.get(entity_id, {})
+        if not meta:
+            # 尝试从 zvec 获取
+            if self.zvec:
+                try:
+                    hits = self.zvec.search(
+                        entity_id, top_k=top_k * 2,
+                    )
+                    for h in hits:
+                        if h.doc_id != entity_id:
+                            results.append({
+                                "entity_id": h.doc_id,
+                                "name": h.name,
+                                "relation": "similar",
+                                "score": h.score,
+                            })
+                except Exception:
+                    pass
+
+        # 策略2: 同 category/genre 的文档
+        if meta.get("category") or meta.get("genre"):
+            cat = meta.get("category", "")
+            genre = meta.get("genre", "")
+            same_cat = self.search(
+                meta.get("name", entity_id),
+                top_k=top_k,
+                category=cat if cat else None,
+                genre=genre if genre else None,
+            )
+            for h in same_cat:
+                if h.doc_id != entity_id:
+                    results.append({
+                        "entity_id": h.doc_id,
+                        "name": h.name,
+                        "relation": "same_category",
+                        "score": h.score,
+                    })
+
+        # 去重
+        seen = set()
+        unique = []
+        for r in results:
+            if r["entity_id"] not in seen:
+                seen.add(r["entity_id"])
+                unique.append(r)
+
+        return unique[:top_k]
+
+    # ────────────────────── v4.2 统一接口: context ──────────────────────
+
+    def context(
+        self,
+        query: str,
+        *,
+        max_tokens: int = 2000,
+        agent: str = "",
+        capabilities: Optional[list[str]] = None,
+    ) -> str:
+        """Context Assembly: 为 LLM 生成组装上下文.
+
+        内部做预算管理和裁剪。返回拼装好的文本块。
+        """
+        sections = []
+        total_chars = 0
+        char_budget = max_tokens * 2  # 粗略: 1 token ≈ 2 中文字
+
+        # 1. 核心检索结果
+        hits = self.search(query, top_k=5)
+        for h in hits:
+            text = h.snippet or ""
+            if not text:
+                text = self._read_doc_content(h.doc_id)
+            block = f"【{h.category}/{h.name}】\n{text[:300]}"
+            sections.append(block)
+            total_chars += len(block)
+
+        # 2. Agent 专属知识
+        if agent:
+            agent_text = self.extract_for_agent(agent, query, max_total_chars=char_budget // 3)
+            if agent_text:
+                sections.append(f"【Agent 专属知识】\n{agent_text}")
+                total_chars += len(agent_text)
+
+        # 3. Capability 知识
+        if capabilities:
+            cap_text = self.extract_by_capability(capabilities, query, max_total_chars=char_budget // 3)
+            if cap_text:
+                sections.append(f"【能力知识库】\n{cap_text}")
+                total_chars += len(cap_text)
+
+        full = "\n\n".join(sections)
+        return full[:char_budget] if len(full) > char_budget else full
+
 
 def _strip_frontmatter(text: str) -> str:
     if text.startswith("---"):
@@ -466,6 +577,16 @@ def extract_for_agent(agent: str, query: str, **kwargs) -> str:
 def extract_by_capability(capabilities: list[str], query: str, **kwargs) -> str:
     """一站式: 按Capability检索知识块。"""
     return get_finder().extract_by_capability(capabilities, query, **kwargs)
+
+
+def related(entity_id: str, **kwargs) -> list[dict]:
+    """一站式: 关联查询。"""
+    return get_finder().related(entity_id, **kwargs)
+
+
+def context(query: str, **kwargs) -> str:
+    """一站式: Context Assembly。"""
+    return get_finder().context(query, **kwargs)
 
 
 def rebuild_index() -> HybridFinder:
