@@ -40,6 +40,7 @@ NAV_TREE = {
     "write": {
         "label": "✍ 开始写作",
         "pages": [
+            ("writing-wizard", "写作向导"),
             ("generate", "当前创作"),
             ("story-unit", "故事单元"),  # 可调整分卷内单元顺序
             ("unit-pool", "单元池管理"),

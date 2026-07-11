@@ -64,6 +64,7 @@ from app.ui.tabs.generate_tab import GenerateTab  # 章节生成
 from app.ui.tabs.story_unit_tab import StoryUnitTab  # 故事单元
 from app.ui.tabs.unit_pool_tab import UnitPoolTab  # 单元池 (M5)
 from app.ui.tabs.volume_tab import VolumeTab  # 卷管理
+from app.ui.tabs.writing_wizard_tab import WritingWizard  # 写作流程向导
 from app.ui.tabs.outline_tab import OutlineTab  # 大纲管理
 from app.ui.tabs.worldview_tab import WorldviewTab  # 世界观
 from app.ui.tabs.character_mgmt_tab import CharacterMgmtTab  # 角色管理
@@ -1095,6 +1096,27 @@ class VolumeMgmtPage(QWidget):
     def set_project(self, project) -> None:
         if hasattr(self._inner, "set_project"):
             self._inner.set_project(project)
+
+
+# ===================================================================== #
+# 写作流程向导 Page
+# ===================================================================== #
+
+class WritingWizardPage(QWidget):
+    """写作流程向导: 项目创建→大纲→第一单元."""
+    PAGE_ID = "writing-wizard"
+    PAGE_TITLE = "写作向导"
+
+    def __init__(self, parent: QWidget | None = None) -> None:
+        super().__init__(parent)
+        outer = QVBoxLayout(self)
+        outer.setContentsMargins(0, 0, 0, 0)
+        outer.setSpacing(0)
+        self._inner = WritingWizard()
+        outer.addWidget(self._inner)
+
+    def set_project(self, project) -> None:
+        pass  # 向导不需要 set_project
 
 
 # ===================================================================== #
@@ -2782,6 +2804,7 @@ PAGE_REGISTRY: dict[str, Type[QWidget]] = {
     "impact-report":     ImpactReportPage,
     "export":            GeneratePage,
     "volume-mgmt":       VolumeMgmtPage,
+    "writing-wizard":    WritingWizardPage,
 }
 
 
@@ -2795,6 +2818,7 @@ def get_all_page_classes() -> list[Type[QWidget]]:
         CharacterMgmtPage,   #  4  角色管理 (独立tab, 卡片展示)
         OutlineMgmtPage,     #  5  大纲管理
         VolumeMgmtPage,      #  5a 卷管理
+        WritingWizardPage,   #  5b 写作向导
         EditSignalsPage,     #  6  改稿信号
         GeneratePage,        #  7  章节生成
         StoryUnitPage,       #  8  故事单元

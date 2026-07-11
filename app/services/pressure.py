@@ -48,7 +48,7 @@ ZONE_COLORS = {
 
 @dataclass
 class Pressure:
-    """单章压力记录 (一行 DB 记录)。"""
+    """单章压力记录 (一行 DB 记录, 4 维)。"""
     id: str
     project_id: str
     chapter_id: str
@@ -59,6 +59,10 @@ class Pressure:
     zone: str = PressureZone.GREEN
     deadline_chapter: Optional[int] = None
     created_at: str = ""
+    # v4.3: 4 维压力
+    reader_pressure: int = 0      # 读者阅读节奏压力 (0-100)
+    character_pressure: int = 0   # 角色目标压力 (0-100)
+    timeline_pressure: int = 0    # 时间线截止压力 (0-100)
 
     @property
     def label(self) -> str:
@@ -77,6 +81,9 @@ class Pressure:
             "zone_label": self.label,
             "deadline_chapter": self.deadline_chapter,
             "created_at": self.created_at,
+            "reader_pressure": self.reader_pressure,
+            "character_pressure": self.character_pressure,
+            "timeline_pressure": self.timeline_pressure,
         }
 
     @classmethod
@@ -92,6 +99,9 @@ class Pressure:
             zone=row["zone"] or PressureZone.GREEN,
             deadline_chapter=row["deadline_chapter"],
             created_at=row["created_at"] or "",
+            reader_pressure=row["reader_pressure"] or 0,
+            character_pressure=row["character_pressure"] or 0,
+            timeline_pressure=row["timeline_pressure"] or 0,
         )
 
 
@@ -150,11 +160,13 @@ def record(
     unresolved_subplots: int = 0,
     deadline_chapter: Optional[int] = None,
     pressure: Optional[int] = None,
+    reader_pressure: int = 0,
+    character_pressure: int = 0,
+    timeline_pressure: int = 0,
 ) -> Pressure:
     """
     记录一章压力 (upsert: 同 chapter 多次写入会覆盖)。
-    - pressure 不传时自动根据 3 个分量计算
-    - zone 自动根据 pressure 计算
+    4 维: narrative + reader + character + timeline
     """
     if not project_id or not chapter_id:
         raise ValueError("project_id / chapter_id 必填")
@@ -174,6 +186,9 @@ def record(
         zone=zone,
         deadline_chapter=deadline_chapter,
         created_at=datetime.now().isoformat(timespec="seconds"),
+        reader_pressure=max(0, min(100, reader_pressure)),
+        character_pressure=max(0, min(100, character_pressure)),
+        timeline_pressure=max(0, min(100, timeline_pressure)),
     )
     with transaction() as conn:
         conn.execute(
@@ -184,13 +199,17 @@ def record(
             """
             INSERT INTO narrative_pressures
                 (id, project_id, chapter_id, pressure, active_hooks, open_promises,
-                 unresolved_subplots, zone, deadline_chapter, created_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                 unresolved_subplots, zone, deadline_chapter, created_at,
+                 reader_pressure, character_pressure, timeline_pressure)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (p.id, p.project_id, p.chapter_id, p.pressure, p.active_hooks,
-             p.open_promises, p.unresolved_subplots, p.zone, p.deadline_chapter, p.created_at),
+             p.open_promises, p.unresolved_subplots, p.zone, p.deadline_chapter, p.created_at,
+             p.reader_pressure, p.character_pressure, p.timeline_pressure),
         )
-    _logger.info("记录压力: %s @ %s → %s (%s)", chapter_id, project_id, p.pressure, p.zone)
+    _logger.info("记录压力: %s @ %s → %s (%s) 4dim=[%d,%d,%d]",
+                 chapter_id, project_id, p.pressure, p.zone,
+                 p.reader_pressure, p.character_pressure, p.timeline_pressure)
     return p
 
 
