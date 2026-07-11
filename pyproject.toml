@@ -33,6 +33,7 @@ dependencies = [
     "scikit-learn",
     "jieba",
     "requests",
+    "zvec>=0.5.0",
 ]
 
 [project.optional-dependencies]

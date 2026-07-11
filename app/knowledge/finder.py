@@ -64,8 +64,8 @@ class HybridHit:
 class HybridFinder:
     """
     混合检索器。
-    - 维护 BM25 + Vector 两个索引
-    - search() 融合两个分数
+    - zvec 模式: FTS + Vector + RRF (默认)
+    - Legacy 模式: BM25 + numpy Vector 手动融合 (fallback)
     """
 
     def __init__(
@@ -73,14 +73,15 @@ class HybridFinder:
         *,
         bm25: Optional[BM25Index] = None,
         vector: Optional[VectorIndex] = None,
+        zvec=None,  # ZvecIndex 实例
         w_bm25: float = 0.5,
         w_vector: float = 0.5,
     ):
         self.bm25 = bm25
         self.vector = vector
+        self.zvec = zvec  # zvec 优先
         self.w_bm25 = w_bm25
         self.w_vector = w_vector
-        # 缓存 doc_meta 合并 (两种索引都有, 优先 vector 因为有 doc_texts)
         self._meta: dict[str, dict] = {}
 
     def _merge_meta(self) -> None:
@@ -106,12 +107,34 @@ class HybridFinder:
     ) -> list[HybridHit]:
         """
         混合检索。
-        for_retrieval=True (且未指定 agent) → 跳过非检索类 (A1.7 拍板, 旧 RAG 行为)
-        agent 给定 → 按 Agent 分区过滤 (绕过旧 category 门控)
-        doc_type 给定 → 按文档类型过滤 (manual/technique/template/dialogue/reference)
+        - zvec 模式: FTS + Vector + RRF (优先)
+        - Legacy 模式: BM25 + numpy Vector 手动融合 (fallback)
         """
         if not query.strip():
             return []
+
+        # ---- zvec 路径 ----
+        if self.zvec is not None:
+            try:
+                hits = self.zvec.search(
+                    query, top_k=top_k,
+                    genre=genre, category=category,
+                    source=source, agent=agent, doc_type=doc_type,
+                )
+                return [
+                    HybridHit(
+                        doc_id=h.doc_id, score=h.score,
+                        bm25_score=0, vector_score=h.score,
+                        snippet=h.snippet, name=h.name,
+                        category=h.category, genre=h.genre,
+                        source=h.source,
+                    )
+                    for h in hits
+                ]
+            except Exception as e:
+                _logger.warning("zvec search 失败, 降级到 legacy: %s", e)
+
+        # ---- Legacy 路径 (BM25 + Vector) ----
         self._merge_meta()
         # 1) BM25
         bm25_hits: dict[str, float] = {}
@@ -384,11 +407,24 @@ def build_finder(
     for_retrieval: bool = True,
     w_bm25: float = 0.5,
     w_vector: float = 0.5,
+    use_zvec: bool = True,
 ) -> HybridFinder:
     """
     从知识库构建混合检索器。
-    - 同时建 BM25 + Vector 索引
+
+    use_zvec=True (默认): 使用 zvec 原生 FTS+Vector+RRF 混合检索
+    use_zvec=False: 使用原有 BM25 + numpy Vector 手动融合 (fallback)
     """
+    if use_zvec:
+        try:
+            from app.knowledge._zvec_index import ZvecIndex
+            zvec_idx = ZvecIndex()
+            _logger.info("Finder: 使用 zvec 混合检索")
+            return HybridFinder(zvec=zvec_idx)
+        except Exception as e:
+            _logger.warning("zvec 初始化失败, 降级到 legacy: %s", e)
+
+    # Fallback: 原有 BM25 + Vector
     bm25_idx = bm25_build(for_retrieval=for_retrieval)
     vec_idx, mode = vector_build(for_retrieval=for_retrieval)
     return HybridFinder(bm25=bm25_idx, vector=vec_idx, w_bm25=w_bm25, w_vector=w_vector)
