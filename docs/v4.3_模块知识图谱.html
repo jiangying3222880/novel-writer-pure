@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Novel Writer Pure v4.3 — 功能模块知识图谱</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0a1a; color: #e2e8f0; overflow: hidden; }
+#graph { width: 100vw; height: 100vh; }
+.node { cursor: pointer; transition: r 0.2s; }
+.node:hover { r: 12; }
+.node-label { font-size: 10px; fill: #94a3b8; pointer-events: none; text-anchor: middle; }
+.link { stroke-opacity: 0.3; fill: none; }
+.link:hover { stroke-opacity: 0.8; }
+#sidebar { position: fixed; right: 0; top: 0; width: 360px; height: 100vh; background: #111827; border-left: 1px solid #1f2937; padding: 20px; overflow-y: auto; transform: translateX(100%); transition: transform 0.3s; z-index: 100; }
+#sidebar.open { transform: translateX(0); }
+#sidebar h2 { font-size: 16px; color: #6366f1; margin-bottom: 8px; }
+#sidebar .file { font-family: Consolas, monospace; font-size: 12px; color: #60a5fa; background: #1e293b; padding: 6px 10px; border-radius: 4px; margin: 6px 0; word-break: break-all; }
+#sidebar .desc { font-size: 13px; color: #cbd5e1; margin: 8px 0; line-height: 1.5; }
+#sidebar .deps { margin-top: 12px; }
+#sidebar .deps h3 { font-size: 13px; color: #f59e0b; margin-bottom: 4px; }
+#sidebar .dep-item { font-size: 12px; color: #94a3b8; padding: 3px 0; cursor: pointer; }
+#sidebar .dep-item:hover { color: #60a5fa; }
+#sidebar .close { position: absolute; top: 12px; right: 12px; background: none; border: none; color: #94a3b8; font-size: 20px; cursor: pointer; }
+#legend { position: fixed; left: 12px; bottom: 12px; background: #111827ee; border: 1px solid #1f2937; border-radius: 8px; padding: 12px; z-index: 50; }
+#legend h3 { font-size: 12px; color: #94a3b8; margin-bottom: 6px; }
+#legend .item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #cbd5e1; margin: 3px 0; }
+#legend .dot { width: 10px; height: 10px; border-radius: 50%; }
+#title { position: fixed; left: 12px; top: 12px; z-index: 50; }
+#title h1 { font-size: 18px; color: #e2e8f0; }
+#title p { font-size: 12px; color: #64748b; }
+#search { position: fixed; left: 12px; top: 60px; z-index: 50; }
+#search input { background: #1e293b; border: 1px solid #334155; color: #e2e8f0; padding: 6px 12px; border-radius: 6px; width: 200px; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<div id="title">
+  <h1>Novel Writer Pure v4.3</h1>
+  <p>功能模块知识图谱 · 点击节点查看详情</p>
+</div>
+
+<div id="search">
+  <input type="text" id="searchInput" placeholder="搜索模块..." oninput="filterNodes(this.value)">
+</div>
+
+<div id="legend">
+  <h3>图例</h3>
+  <div class="item"><div class="dot" style="background:#6366f1"></div>UI 页面</div>
+  <div class="item"><div class="dot" style="background:#22c55e"></div>Service 服务</div>
+  <div class="item"><div class="dot" style="background:#3b82f6"></div>Story Engine</div>
+  <div class="item"><div class="dot" style="background:#ef4444"></div>Agent</div>
+  <div class="item"><div class="dot" style="background:#f59e0b"></div>Knowledge</div>
+  <div class="item"><div class="dot" style="background:#8b5cf6"></div>Core / DB</div>
+</div>
+
+<svg id="graph"></svg>
+
+<div id="sidebar">
+  <button class="close" onclick="closeSidebar()">×</button>
+  <div id="sidebar-content"></div>
+</div>
+
+<script>
+// ============================================================
+// 模块数据
+// ============================================================
+const modules = [
+  // Core / DB
+  {id:"event_bus",label:"EventBus",file:"app/core/event_bus.py",layer:"core",desc:"事件发布/订阅总线。22种内置事件名。线程安全。"},
+  {id:"types",label:"Guide/Types",file:"app/core/types.py",layer:"core",desc:"Guide 数据类 + collect_guides() 统一入口(10源) + Decision 记录。"},
+  {id:"config",label:"Config",file:"app/core/config.py",layer:"core",desc:"应用配置管理。"},
+  {id:"container",label:"DI Container",file:"app/core/container.py",layer:"core",desc:"依赖注入容器。工厂注册 + 懒加载 + Protocol-aware。"},
+  {id:"llm",label:"LLM Client",file:"app/core/llm.py",layer:"core",desc:"LLM 客户端。27厂商预设 + OpenAI兼容。"},
+  {id:"version",label:"Version",file:"app/core/version.py",layer:"core",desc:"版本号 v4.3.0。"},
+  {id:"db",label:"SQLite DB",file:"app/db/_impl.py",layer:"core",desc:"SQLite 连接管理。55个增量迁移。事务支持。"},
+
+  // Service - 项目管理
+  {id:"project_service",label:"ProjectService",file:"app/services/project_service.py",layer:"service",desc:"项目 CRUD + 列表 + 切换。"},
+  {id:"book_service",label:"BookService",file:"app/services/book_service.py",layer:"service",desc:"卷 CRUD + status/word_count/unit_count。"},
+  {id:"chapter_service",label:"ChapterService",file:"app/services/chapter_service.py",layer:"service",desc:"章节 CRUD。"},
+  {id:"setting_service",label:"SettingService",file:"app/services/setting_service.py",layer:"service",desc:"项目级 JSON 设定 (worldbuilding/characters/anti_rules)。"},
+  {id:"project_type",label:"ProjectType",file:"app/services/project_type.py",layer:"service",desc:"检测项目类型 (old/new/mixed) + 自动升级。"},
+  {id:"volume_transition",label:"VolumeTransition",file:"app/services/volume_transition_service.py",layer:"service",desc:"卷间过渡 CRUD (direct/cliffhanger/time_jump/parallel)。"},
+
+  // Service - 写作核心
+  {id:"story_unit_v2",label:"StoryUnitService",file:"app/services/story_unit_service_v2.py",layer:"service",desc:"单元 CRUD + 状态机 (draft→writing→completed)。双时间线。"},
+  {id:"unit_writing",label:"UnitWriting",file:"app/services/unit_writing_service.py",layer:"service",desc:"单元写作流程。"},
+  {id:"unit_paragraph",label:"UnitParagraph",file:"app/services/unit_paragraph_service.py",layer:"service",desc:"段落管理 + replace_full_text()。"},
+  {id:"virtual_unit",label:"VirtualUnitAdapter",file:"app/services/virtual_unit_adapter.py",layer:"service",desc:"Chapter→VirtualUnit 自动包装。幂等映射。"},
+  {id:"unit_pool",label:"UnitPool",file:"app/services/unit_pool_service.py",layer:"service",desc:"单元池 CRUD + bulk_import。独立于 project 的素材库。"},
+  {id:"unit_pool_composer",label:"UnitPoolComposer",file:"app/services/unit_pool_composer.py",layer:"service",desc:"从单元池自动组合故事骨架。节奏分布规划。"},
+  {id:"outline_service",label:"OutlineService",file:"app/services/outline_service.py",layer:"service",desc:"大纲管理。"},
+  {id:"book_outline",label:"BookOutline",file:"app/services/book_outline_service.py",layer:"service",desc:"卷纲 CRUD。"},
+
+  // Service - Guide/Decision
+  {id:"guide_sources",label:"GuideSources(10)",file:"app/services/guide_sources/",layer:"service",desc:"10个 Guide 源适配器: pressure/memory/consistency/voice/hook/style/character_state/character_arc/unit_event/reader_signal。"},
+  {id:"guide_graph",label:"GuideGraph",file:"app/services/guide_graph.py",layer:"service",desc:"Guide 冲突/支持图分析。自动检测 conflicts_with/supports。"},
+  {id:"decision_service",label:"DecisionService",file:"app/services/decision_service.py",layer:"service",desc:"Decision 记录 + 查询。哪些 Guide 被采纳。"},
+  {id:"conflict_log",label:"ConflictLog",file:"app/services/conflict_log.py",layer:"service",desc:"因果冲突持久化。可追溯的 Explainable AI。"},
+  {id:"char_arc",label:"CharacterArc",file:"app/services/character_arc_service.py",layer:"service",desc:"角色弧线 Guide。从 book_outlines.character_arcs 激活。"},
+
+  // Service - 叙事系统
+  {id:"pressure",label:"Pressure(4维)",file:"app/services/pressure.py",layer:"service",desc:"叙事压力 4 维: narrative + reader + character + timeline。4区 (green/yellow/orange/red)。"},
+  {id:"memory",label:"Memory",file:"app/services/memory.py",layer:"service",desc:"L1-L4 记忆系统。故事弧/承诺/世界规则/角色快照。"},
+  {id:"memory_manager",label:"MemoryManager",file:"app/services/memory_manager.py",layer:"service",desc:"记忆拼装 + 13大反AI提示。assemble_for_writing()。"},
+  {id:"hook_service",label:"HookService",file:"app/services/unit_hook_service.py",layer:"service",desc:"伏笔 plant/payoff/reminder/active 生命周期。段落锚定。"},
+  {id:"unit_event",label:"UnitEvent",file:"app/services/unit_event_service.py",layer:"service",desc:"事件持久化 + State Diff 计算 + 段级时间锚点。"},
+  {id:"unit_causal",label:"UnitCausal",file:"app/services/unit_causal_service.py",layer:"service",desc:"因果边/因果组。hook fulfillment 追踪。"},
+  {id:"reader_signal",label:"ReaderSignal",file:"app/services/reader_signal.py",layer:"service",desc:"读者追读率信号。"},
+  {id:"consistency",label:"Consistency",file:"app/services/consistency.py",layer:"service",desc:"5维一致性检查: 角色/地点/时间/物品/逻辑。"},
+  {id:"emotion",label:"EmotionAnalyzer",file:"app/services/emotion_analyzer.py",layer:"service",desc:"情绪曲线 + 断章点检测 (reveal/crisis/choice)。"},
+  {id:"char_state",label:"CharacterState",file:"app/services/character_state.py",layer:"service",desc:"角色状态 Guide。"},
+  {id:"char_tracker",label:"CharacterTracker",file:"app/services/character_tracker.py",layer:"service",desc:"角色5维快照 (位置/状态/力量/装备/关系)。"},
+
+  // Service - 风格/语音/反AI
+  {id:"style_fp",label:"StyleFingerprint",file:"app/services/style_fingerprint.py",layer:"service",desc:"L1 作者指纹(6维) + L2 作品指纹(4维)。Guide 集成。"},
+  {id:"style_learner",label:"StyleLearner",file:"app/services/style_learner.py",layer:"service",desc:"零成本启发式风格学习。"},
+  {id:"voice_profile",label:"VoiceProfile",file:"app/services/voice_profile.py",layer:"service",desc:"角色声线 5 维 + inferrer + validator + Guide。"},
+  {id:"anti_ai",label:"AntiAI",file:"app/services/anti_ai.py",layer:"service",desc:"6类检查 + 三遍系统 + 7门控。Gate A-G。"},
+  {id:"subtext",label:"Subtext",file:"app/services/subtext.py",layer:"service",desc:"13字段潜文本卡。三模式: ai_auto/manual/closed。"},
+
+  // Service - 知识库
+  {id:"finder",label:"Finder",file:"app/knowledge/finder.py",layer:"knowledge",desc:"BM25+Vector 混合检索。唯一入口。extract_for_prompt/agent/capability。"},
+  {id:"bm25",label:"BM25",file:"app/knowledge/_bm25.py",layer:"knowledge",desc:"BM25 倒排索引。jieba 分词。"},
+  {id:"vector_db",label:"VectorDB",file:"app/knowledge/_vector_db.py",layer:"knowledge",desc:"向量索引。TF-IDF/sentence-transformers。"},
+  {id:"knowledge_svc",label:"KnowledgeService",file:"app/services/knowledge_service.py",layer:"knowledge",desc:"知识库管理。4维度检索。"},
+  {id:"capability",label:"Capability",file:"app/knowledge/capability.py",layer:"knowledge",desc:"11类能力索引 + Agent→Capability 映射。"},
+  {id:"domain_lib",label:"DomainLibrary",file:"app/knowledge/domain_library.py",layer:"knowledge",desc:"7个预设领域知识包。"},
+
+  // Service - 其他
+  {id:"dashboard_svc",label:"DashboardService",file:"app/services/dashboard_service.py",layer:"service",desc:"仪表盘数据聚合。"},
+  {id:"exporter",label:"Exporter",file:"app/services/exporter.py",layer:"service",desc:"TXT/DOCX/EPUB 导出。BookExporter + FormatExporter。"},
+  {id:"patch_preview",label:"PatchPreview",file:"app/services/patch_preview.py",layer:"service",desc:"增量补丁 diff 预览。"},
+  {id:"reverse_compile",label:"ReverseCompile",file:"app/services/reverse_compile.py",layer:"service",desc:"AI↔作者版本对比 → 模式提取 → 知识权重更新。"},
+  {id:"index_service",label:"IndexService",file:"app/services/index_service.py",layer:"service",desc:"事件驱动索引。数据变更→自动更新索引。"},
+  {id:"entity_index",label:"EntityIndex",file:"app/services/entity_index.py",layer:"service",desc:"统一实体检索 (character/location/item)。"},
+  {id:"genre_presets",label:"GenrePresets",file:"app/services/genre_presets.py",layer:"service",desc:"16题材 + 80副题材 + 9平台 + 5题材写法指南。"},
+
+  // Story Engine
+  {id:"story_engine",label:"StoryEngine",file:"story/engine/story_engine.py",layer:"story",desc:"完整执行管线 12+ 步: State→Guide→Decision→Prompt→Write→Evaluate→Persist。"},
+  {id:"state_bridge",label:"StateBridge",file:"story/state/state_bridge.py",layer:"story",desc:"StoryUnitV2 ↔ StoryState 转换。DB→运行时。"},
+  {id:"story_state",label:"StoryState",file:"story/state/story_state.py",layer:"story",desc:"不可变状态快照 (frozen dataclass)。全链路核心。"},
+  {id:"apply_event",label:"apply_event",file:"story/state/apply_event.py",layer:"story",desc:"Event→State 纯归约器。不可变。"},
+  {id:"collector",label:"Collector",file:"story/guide/collector.py",layer:"story",desc:"信号收集。包装 collect_guides() → DecisionSignal。"},
+  {id:"decision_engine",label:"DecisionEngine",file:"story/decision/engine.py",layer:"story",desc:"策略选择 (DELAY/EXPLODE/RESOLVE/DETOUR)。"},
+  {id:"dim_matrix",label:"DimMatrix",file:"story/decision/dimension_matrix.py",layer:"story",desc:"6维权重矩阵。"},
+  {id:"strategy",label:"Strategy",file:"story/decision/strategy.py",layer:"story",desc:"4种叙事策略定义。"},
+  {id:"suc_builder",label:"SUCBuilder",file:"story/prompt/suc_builder.py",layer:"story",desc:"SUC 构建 (角色/世界/伏笔/张力 4段)。"},
+  {id:"compiler",label:"Compiler",file:"story/prompt/compiler.py",layer:"story",desc:"SUC→CompiledPrompt。token 预算。"},
+  {id:"token_budget",label:"TokenBudget",file:"story/prompt/token_budget.py",layer:"story",desc:"Token 预算分配。estimate_tokens()。"},
+  {id:"event_store",label:"EventStore",file:"story/events/event_store.py",layer:"story",desc:"事件 append-only 持久化。"},
+  {id:"reducer",label:"Reducer",file:"story/events/reducer.py",layer:"story",desc:"Event→State 归约器 (hook/character/world)。"},
+  {id:"ui_bridge",label:"UIStateBridge",file:"story/ui/bridge/state_bridge.py",layer:"story",desc:"StoryState→UIEvent 桥接。EventBus 发布 story.state_updated。"},
+  {id:"unit_runner",label:"UnitRunner",file:"story/runtime/unit_runner.py",layer:"story",desc:"v4 快速路径。Orchestrator._run_v4_pipeline() 调用。"},
+
+  // Agent
+  {id:"orchestrator",label:"Orchestrator",file:"app/agents/orchestrator.py",layer:"agent",desc:"主编排器 (1161行)。12+ 步管线。legacy + v4 双路径。"},
+  {id:"storyteller",label:"StoryTeller",file:"app/agents/helpers/storyteller.py",layer:"agent",desc:"写手 Agent。调用 LLM 生成正文。"},
+  {id:"editor_agent",label:"Editor",file:"app/agents/helpers/editor.py",layer:"agent",desc:"编辑评估 Agent (6维评分)。"},
+  {id:"critic_agent",label:"Critic",file:"app/agents/helpers/critic.py",layer:"agent",desc:"批评家反馈 Agent。"},
+  {id:"memory_keeper",label:"MemoryKeeper",file:"app/agents/helpers/memory_keeper.py",layer:"agent",desc:"记忆拼装 Agent (L1-L4)。"},
+  {id:"context_builder",label:"ContextBuilder",file:"app/agents/helpers/context_builder.py",layer:"agent",desc:"上下文构建 Agent。"},
+  {id:"researcher",label:"Researcher",file:"app/agents/helpers/researcher.py",layer:"agent",desc:"资料研究 Agent。"},
+  {id:"pressure_watcher",label:"PressureWatcher",file:"app/agents/helpers/pressure_watcher.py",layer:"agent",desc:"压力观察 Agent。"},
+  {id:"retriever",label:"Retriever",file:"app/agents/helpers/retriever.py",layer:"agent",desc:"知识检索 Agent (RAG)。"},
+  {id:"agent_base",label:"AgentBase",file:"app/agents/base.py",layer:"agent",desc:"Agent 基类 + AgentRole(9) + AgentState + AgentMetrics。"},
+
+  // UI Pages
+  {id:"dashboard",label:"Dashboard",file:"app/ui/tabs/dashboard_tab.py",layer:"ui",desc:"综合仪表盘。关键数字+趋势+弱章+StoryState HUD。EventBus订阅自动刷新。"},
+  {id:"generate",label:"Generate",file:"app/ui/tabs/generate_tab.py",layer:"ui",desc:"章节生成。AI写作+diff预览+reverse_compile自动触发。"},
+  {id:"story_unit",label:"StoryUnit",file:"app/ui/tabs/story_unit_tab.py",layer:"ui",desc:"故事单元编辑。diff预览+上移/下移。"},
+  {id:"unit_pool_tab",label:"UnitPool",file:"app/ui/tabs/unit_pool_tab.py",layer:"ui",desc:"单元池管理。自动组合按钮→unit_pool_composer。"},
+  {id:"writing_wizard",label:"WritingWizard",file:"app/ui/tabs/writing_wizard_tab.py",layer:"ui",desc:"4步写作向导: 基础→分卷→大纲→开始。"},
+  {id:"outline_tab",label:"Outline",file:"app/ui/tabs/outline_tab.py",layer:"ui",desc:"大纲管理。卷册→章节树。"},
+  {id:"volume_tab",label:"VolumeTab",file:"app/ui/tabs/volume_tab.py",layer:"ui",desc:"卷管理。分卷列表+卷纲编辑。"},
+  {id:"character_tab",label:"Characters",file:"app/ui/tabs/character_mgmt_tab.py",layer:"ui",desc:"角色管理。卡片展示+Voice Profile。"},
+  {id:"worldview_tab",label:"Worldview",file:"app/ui/tabs/worldview_tab.py",layer:"ui",desc:"世界观。地点/势力/物品/关系。"},
+  {id:"publish_tab",label:"Publish",file:"app/ui/tabs/publish_tab.py",layer:"ui",desc:"发布。TXT/DOCX/EPUB导出。"},
+  {id:"settings_tab",label:"Settings",file:"app/ui/tabs/settings_tab.py",layer:"ui",desc:"设置。小说设定+风格指纹+改稿信号+模型配置。"},
+  {id:"hud_tab",label:"HUD",file:"app/ui/tabs/hud_tab.py",layer:"ui",desc:"StoryState 动态面板。实时显示最新单元状态。"},
+  {id:"subtext_tab",label:"Subtext",file:"app/ui/tabs/subtext_tab.py",layer:"ui",desc:"潜文本卡。13字段编辑。"},
+  {id:"pages",label:"Pages Registry",file:"app/ui/pages.py",layer:"ui",desc:"27个页面注册表 + PAGE_REGISTRY + get_all_page_classes()。"},
+  {id:"tree_nav",label:"TreeNav",file:"app/ui/widgets/tree_nav.py",layer:"ui",desc:"树状导航。5个分组: 项目管理/故事设定/开始写作/仪表盘/设置。"},
+  {id:"patch_diff",label:"PatchDiffDialog",file:"app/ui/widgets/patch_diff_dialog.py",layer:"ui",desc:"保存前 diff 预览对话框。unified_diff 可视化。"},
+];
+
+// 依赖关系 (source → target)
+const edges = [
+  // Orchestrator → Agents
+  ["orchestrator","storyteller"],["orchestrator","editor_agent"],["orchestrator","critic_agent"],
+  ["orchestrator","memory_keeper"],["orchestrator","context_builder"],["orchestrator","researcher"],
+  ["orchestrator","pressure_watcher"],["orchestrator","retriever"],
+  // Orchestrator → Story Engine
+  ["orchestrator","story_engine"],["orchestrator","collector"],["orchestrator","guide_graph"],
+  ["orchestrator","decision_service"],["orchestrator","unit_event"],["orchestrator","unit_causal"],
+  // StoryEngine → 内部
+  ["story_engine","state_bridge"],["story_engine","story_state"],["story_engine","collector"],
+  ["story_engine","decision_engine"],["story_engine","suc_builder"],["story_engine","compiler"],
+  ["story_engine","ui_bridge"],["story_engine","event_store"],
+  // StoryEngine → Services
+  ["story_engine","story_unit_v2"],["story_engine","unit_paragraph"],
+  // Guide Sources → Services
+  ["guide_sources","pressure"],["guide_sources","memory"],["guide_sources","consistency"],
+  ["guide_sources","voice_profile"],["guide_sources","hook_service"],
+  ["guide_sources","style_fp"],["guide_sources","char_state"],["guide_sources","char_arc"],
+  ["guide_sources","unit_event"],["guide_sources","reader_signal"],
+  // collect_guides → GuideGraph
+  ["types","guide_graph"],["types","guide_sources"],
+  // Finder
+  ["finder","bm25"],["finder","vector_db"],["knowledge_svc","finder"],
+  // UI → Services
+  ["generate","orchestrator"],["generate","patch_diff"],["generate","reverse_compile"],
+  ["story_unit","story_unit_v2"],["story_unit","patch_diff"],
+  ["unit_pool_tab","unit_pool"],["unit_pool_tab","unit_pool_composer"],
+  ["dashboard","dashboard_svc"],["dashboard","ui_bridge"],
+  ["character_tab","char_tracker"],["character_tab","voice_profile"],
+  ["publish_tab","exporter"],["outline_tab","outline_service"],
+  ["volume_tab","book_outline"],["volume_tab","volume_transition"],
+  ["writing_wizard","project_service"],
+  // Agent → Services
+  ["storyteller","llm"],["editor_agent","llm"],["critic_agent","llm"],
+  ["memory_keeper","memory_manager"],["context_builder","worldbuilding"],
+  ["retriever","finder"],["pressure_watcher","pressure"],
+  // Core → DB
+  ["types","db"],["event_bus","db"],
+  // Style/Voice
+  ["style_fp","style_learner"],["voice_profile","voice_profile"],
+  // Misc
+  ["project_service","db"],["book_service","db"],["story_unit_v2","db"],
+  ["hook_service","db"],["unit_event","db"],
+];
+
+// ============================================================
+// D3.js 力导向图
+// ============================================================
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+const layerColors = {
+  core: "#8b5cf6",
+  service: "#22c55e",
+  story: "#3b82f6",
+  agent: "#ef4444",
+  knowledge: "#f59e0b",
+  ui: "#6366f1"
+};
+
+const layerY = { core: 80, knowledge: 200, service: 350, story: 500, agent: 650, ui: 800 };
+
+// 初始化节点位置
+modules.forEach(m => {
+  m.x = width / 2 + (Math.random() - 0.5) * 600;
+  m.y = layerY[m.layer] + (Math.random() - 0.5) * 80;
+  m.vx = 0;
+  m.vy = 0;
+});
+
+const nodeMap = {};
+modules.forEach(m => nodeMap[m.id] = m);
+
+const svg = document.getElementById("graph");
+svg.setAttribute("width", width);
+svg.setAttribute("height", height);
+
+// 绘制连线
+const linkGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
+svg.appendChild(linkGroup);
+
+edges.forEach(([src, tgt]) => {
+  if (!nodeMap[src] || !nodeMap[tgt]) return;
+  const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  line.classList.add("link");
+  line.setAttribute("stroke", "#334155");
+  line.setAttribute("stroke-width", "1");
+  line.dataset.source = src;
+  line.dataset.target = tgt;
+  linkGroup.appendChild(line);
+});
+
+// 绘制节点
+const nodeGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
+svg.appendChild(nodeGroup);
+
+modules.forEach(m => {
+  const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+  g.classList.add("node");
+  g.dataset.id = m.id;
+
+  const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  circle.setAttribute("r", "8");
+  circle.setAttribute("fill", layerColors[m.layer]);
+  circle.setAttribute("stroke", "#0a0a1a");
+  circle.setAttribute("stroke-width", "2");
+  g.appendChild(circle);
+
+  const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  text.classList.add("node-label");
+  text.setAttribute("dy", "20");
+  text.textContent = m.label;
+  g.appendChild(text);
+
+  g.addEventListener("click", () => showSidebar(m));
+  nodeGroup.appendChild(g);
+});
+
+// ============================================================
+// 力导向模拟
+// ============================================================
+let running = true;
+function tick() {
+  if (!running) return;
+
+  // 斥力
+  for (let i = 0; i < modules.length; i++) {
+    for (let j = i + 1; j < modules.length; j++) {
+      const a = modules[i], b = modules[j];
+      let dx = b.x - a.x, dy = b.y - a.y;
+      let dist = Math.sqrt(dx * dx + dy * dy) || 1;
+      let force = 800 / (dist * dist);
+      let fx = dx / dist * force, fy = dy / dist * force;
+      a.vx -= fx; a.vy -= fy;
+      b.vx += fx; b.vy += fy;
+    }
+  }
+
+  // 连线引力
+  edges.forEach(([src, tgt]) => {
+    const a = nodeMap[src], b = nodeMap[tgt];
+    if (!a || !b) return;
+    let dx = b.x - a.x, dy = b.y - a.y;
+    let dist = Math.sqrt(dx * dx + dy * dy) || 1;
+    let force = (dist - 120) * 0.005;
+    let fx = dx / dist * force, fy = dy / dist * force;
+    a.vx += fx; a.vy += fy;
+    b.vx -= fx; b.vy -= fy;
+  });
+
+  // 层级引力 (向目标 y 靠拢)
+  modules.forEach(m => {
+    m.vy += (layerY[m.layer] - m.y) * 0.003;
+  });
+
+  // 中心引力
+  modules.forEach(m => {
+    m.vx += (width / 2 - m.x) * 0.0005;
+    m.vy += (height / 2 - m.y) * 0.0005;
+  });
+
+  // 更新位置
+  modules.forEach(m => {
+    m.vx *= 0.85;
+    m.vy *= 0.85;
+    m.x += m.vx;
+    m.y += m.vy;
+    m.x = Math.max(30, Math.min(width - 30, m.x));
+    m.y = Math.max(30, Math.min(height - 30, m.y));
+  });
+
+  // 更新 SVG
+  const groups = nodeGroup.children;
+  for (let i = 0; i < modules.length; i++) {
+    groups[i].setAttribute("transform", `translate(${modules[i].x},${modules[i].y})`);
+  }
+
+  const lines = linkGroup.children;
+  for (let i = 0; i < edges.length; i++) {
+    const [src, tgt] = edges[i];
+    const a = nodeMap[src], b = nodeMap[tgt];
+    if (!a || !b) continue;
+    lines[i].setAttribute("x1", a.x);
+    lines[i].setAttribute("y1", a.y);
+    lines[i].setAttribute("x2", b.x);
+    lines[i].setAttribute("y2", b.y);
+  }
+
+  requestAnimationFrame(tick);
+}
+tick();
+
+// ============================================================
+// 侧边栏
+// ============================================================
+function showSidebar(m) {
+  const sb = document.getElementById("sidebar");
+  const content = document.getElementById("sidebar-content");
+
+  // 找调用方和被调用方
+  const callers = edges.filter(([s, t]) => t === m.id).map(([s]) => nodeMap[s]).filter(Boolean);
+  const callees = edges.filter(([s, t]) => s === m.id).map(([, t]) => nodeMap[t]).filter(Boolean);
+
+  let html = `
+    <h2>${m.label}</h2>
+    <div class="file">${m.file}</div>
+    <div class="desc">${m.desc}</div>
+    <div style="margin-top:8px"><span class="tag tag-${m.layer}">${m.layer.toUpperCase()}</span></div>
+  `;
+
+  if (callers.length > 0) {
+    html += `<div class="deps"><h3>⬆ 调用方 (${callers.length})</h3>`;
+    callers.forEach(c => {
+      html += `<div class="dep-item" onclick="focusNode('${c.id}')">← ${c.label}</div>`;
+    });
+    html += `</div>`;
+  }
+
+  if (callees.length > 0) {
+    html += `<div class="deps"><h3>⬇ 被调用 (${callees.length})</h3>`;
+    callees.forEach(c => {
+      html += `<div class="dep-item" onclick="focusNode('${c.id}')">→ ${c.label}</div>`;
+    });
+    html += `</div>`;
+  }
+
+  content.innerHTML = html;
+  sb.classList.add("open");
+
+  // 高亮相关节点
+  highlightRelated(m.id);
+}
+
+function closeSidebar() {
+  document.getElementById("sidebar").classList.remove("open");
+  clearHighlight();
+}
+
+function focusNode(id) {
+  const m = nodeMap[id];
+  if (m) showSidebar(m);
+}
+
+// ============================================================
+// 高亮
+// ============================================================
+function highlightRelated(id) {
+  const related = new Set([id]);
+  edges.forEach(([s, t]) => {
+    if (s === id) related.add(t);
+    if (t === id) related.add(s);
+  });
+
+  const groups = nodeGroup.children;
+  for (let i = 0; i < modules.length; i++) {
+    const g = groups[i];
+    const m = modules[i];
+    if (related.has(m.id)) {
+      g.style.opacity = "1";
+    } else {
+      g.style.opacity = "0.15";
+    }
+  }
+
+  const lines = linkGroup.children;
+  for (let i = 0; i < edges.length; i++) {
+    const [s, t] = edges[i];
+    if (s === id || t === id) {
+      lines[i].style.stroke = "#6366f1";
+      lines[i].style.strokeOpacity = "0.8";
+      lines[i].style.strokeWidth = "2";
+    } else {
+      lines[i].style.strokeOpacity = "0.05";
+    }
+  }
+}
+
+function clearHighlight() {
+  Array.from(nodeGroup.children).forEach(g => g.style.opacity = "1");
+  Array.from(linkGroup.children).forEach(l => {
+    l.style.stroke = "#334155";
+    l.style.strokeOpacity = "0.3";
+    l.style.strokeWidth = "1";
+  });
+}
+
+// ============================================================
+// 搜索
+// ============================================================
+function filterNodes(query) {
+  if (!query) { clearHighlight(); return; }
+  query = query.toLowerCase();
+  const matched = new Set();
+  modules.forEach(m => {
+    if (m.label.toLowerCase().includes(query) || m.file.toLowerCase().includes(query) || m.desc.toLowerCase().includes(query)) {
+      matched.add(m.id);
+    }
+  });
+
+  const groups = nodeGroup.children;
+  for (let i = 0; i < modules.length; i++) {
+    groups[i].style.opacity = matched.has(modules[i].id) ? "1" : "0.1";
+  }
+}
+
+// 点击空白关闭侧边栏
+svg.addEventListener("click", (e) => {
+  if (e.target === svg) closeSidebar();
+});
+</script>
+</body>
+</html>
