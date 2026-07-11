@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "3b6ba493b27756b1"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "—\n根本停不下来。\n约莫十分钟后，苏以橙"
+    ],
+    "pacing_score": 0.6,
+    "tension_score": 0.39,
+    "summary": "第1章 拜托您……和我结婚呜，好舒服。柔软舒适的大床上，苏以橙闭着眼，轻轻蹭了蹭枕着的东西。",
+    "chapter_index": 1,
+    "book_id": "3b6ba493b27756b1"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "子更加危重。\n还记得苏澄死后一周，陆千野",
+      "家们哪敢怠慢，紧绷着心弦为苏以橙诊治。\n"
+    ],
+    "pacing_score": 0.69,
+    "tension_score": 0.68,
+    "summary": "第2章 他的小橙子世人皆知，陆氏是名门望族。陆氏集团更是汇集了工矿、金融、科技、医疗等众多产",
+    "chapter_index": 2,
+    "book_id": "3b6ba493b27756b1"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，满心都是奶奶的安危。\n眉头紧皱时，手机",
+      "地往下掉。\n不过好在有这通电话，橙子今晚"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.7,
+    "summary": "第3章 再也不想失去她当天晚上。苏澈捧着苏以橙和自己的血缘鉴定书汪汪大哭，饭都多吃了三大碗。",
+    "chapter_index": 3,
+    "book_id": "3b6ba493b27756b1"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "箱子，苏以橙拽着拉杆箱往门的方向走去。\n",
+      "咳，小姑娘自打来就没提过什么要求，这下终"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.74,
+    "summary": "第4章 她逃婚了？饭吃饱了，觉睡足了，人自然精神百倍。比如现在，连睡三天的苏以橙满血复活。她",
+    "chapter_index": 4,
+    "book_id": "3b6ba493b27756b1"
+  }
+]

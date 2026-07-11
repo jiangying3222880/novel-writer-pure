@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "e5d956dd6101a0e5"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第201章 又打算去找你的未婚妻去了？2023-12-26 23:51开始阅读机枪黄我的作品希望你",
+    "chapter_index": 1,
+    "book_id": "e5d956dd6101a0e5"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "不明白眼前这个曾经无比熟悉的女人为什么会"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.55,
+    "summary": "第1章 遇到个牛角少女似乎是盛夏的时节午后的教室内总是出奇的燥热的憋闷得让人喘不过气但是",
+    "chapter_index": 2,
+    "book_id": "e5d956dd6101a0e5"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "..自己怎么会被这种废物给玷污了...\n",
+      "铁门中吗？”\n“...”\n叮——\n电梯门"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.91,
+    "summary": "第2章 就叫你林希雅好了~当你不小心吻到一个女孩儿的唇，但你主观意识上认为并没有亲到，这不作数",
+    "chapter_index": 3,
+    "book_id": "e5d956dd6101a0e5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“那我去哪里住？？”\n“随便。”\n李逸终"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "第3章 贡献出你的巢穴向阳小区李逸家中李逸痛心疾首望了一眼已经变了形，甚至连门把手都被拧下",
+    "chapter_index": 4,
+    "book_id": "e5d956dd6101a0e5"
+  }
+]

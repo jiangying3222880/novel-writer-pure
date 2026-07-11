@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "少爷",
+    "initial_state": "初始状态未明确描述，出现17次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "0764bb7438ab88bf"
+  },
+  {
+    "character_name": "柱子",
+    "initial_state": "初始状态未明确描述，出现19次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "0764bb7438ab88bf"
+  },
+  {
+    "character_name": "张伯",
+    "initial_state": "初始状态未明确描述，出现15次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "0764bb7438ab88bf"
+  },
+  {
+    "character_name": "大唐之超",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "0764bb7438ab88bf"
+  },
+  {
+    "character_name": "级军火商",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "0764bb7438ab88bf"
+  }
+]

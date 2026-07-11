@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "林尘",
+    "initial_state": "初始状态未明确描述，出现47次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "5dcf362cdc8b1e41"
+  },
+  {
+    "character_name": "星核猎手",
+    "initial_state": "初始状态未明确描述，出现9次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "5dcf362cdc8b1e41"
+  },
+  {
+    "character_name": "青雀",
+    "initial_state": "初始状态未明确描述，出现38次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "5dcf362cdc8b1e41"
+  },
+  {
+    "character_name": "星穹铁道",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "5dcf362cdc8b1e41"
+  },
+  {
+    "character_name": "迟到了",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "5dcf362cdc8b1e41"
+  }
+]

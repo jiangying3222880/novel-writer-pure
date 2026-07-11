@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "bdac66726673f31a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第290章 诸位，该回上界了！2023-12-22 12:09开始阅读松林街的小扑街关注一下孩子吧",
+    "chapter_index": 1,
+    "book_id": "bdac66726673f31a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "动。\n楚默惊骇欲绝，他想逃却已经晚了。\n",
+      "什么东西保命，那岂不是太对不起自己？”\n",
+      "，显得非常冷静。\n楚默蹑手蹑脚走到门口，"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 0.89,
+    "summary": "第1章 开局师尊中毒【拜托，吴彦祖和刘亦菲从来不会跳章阅读的好吗！】【新人老扑街，求各位观众",
+    "chapter_index": 2,
+    "book_id": "bdac66726673f31a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 师尊，拜托了“听闻师尊乃无垢之体。”“这种体质乃是修真界少见的奇特体质，可以帮助修士",
+    "chapter_index": 3,
+    "book_id": "bdac66726673f31a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "诶嘿，排出来了……”\n……\n同时。\n楚默"
+    ],
+    "pacing_score": 0.82,
+    "tension_score": 0.49,
+    "summary": "第3章 阴阳相济，奖励混沌体楚默推开门，太阳已经高升。青山翠色，氤氲蒸汽笼罩着整个天空。一",
+    "chapter_index": 4,
+    "book_id": "bdac66726673f31a"
+  }
+]

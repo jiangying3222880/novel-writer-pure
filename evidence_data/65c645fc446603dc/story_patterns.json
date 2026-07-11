@@ -1,0 +1,81 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "65c645fc446603dc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.73,
+    "summary": "第2270章 安魂曲2023-12-10 14:22开始阅读一夕烟雨玄幻大神，抖音：一夕烟雨『传",
+    "chapter_index": 1,
+    "book_id": "65c645fc446603dc"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.72,
+    "summary": "第1章 天资妖孽李子夜“秦仙子要来渝州城了！”大商皇朝，渝州城，不知何方传来的一条消息，瞬间",
+    "chapter_index": 2,
+    "book_id": "65c645fc446603dc"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "张邋遢道。\n“老张，我决定了！”\n李子夜",
+      "痴一样看着李子夜，全都下意识退后一步。\n"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.63,
+    "summary": "第2章 冰清玉洁秦婀娜三日后，渝州城外。剑气东来，浩荡三十丈。随后，漫天梅花飞舞，一抹清丽",
+    "chapter_index": 3,
+    "book_id": "65c645fc446603dc"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.73,
+    "summary": "第3章 天性纯良李幼薇第一关过了，如此轻率，如此耐人寻味。李子夜不会承认他送了礼。秦婀娜也",
+    "chapter_index": 4,
+    "book_id": "65c645fc446603dc"
+  }
+]

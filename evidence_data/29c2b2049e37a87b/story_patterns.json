@@ -1,0 +1,72 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "起伏都连接着心脏，晦暗而迟疑地跳动着。\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.2,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "29c2b2049e37a87b"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "欢都不肯......哎，那人谁啊？”\n她"
+    ],
+    "pacing_score": 0.71,
+    "tension_score": 0.27,
+    "summary": "Chapter1 茉莉寻哥记凌晨一点，武北山十三道。环山寂静，某种轰鸣声风驰电掣瞬间划破天际",
+    "chapter_index": 1,
+    "book_id": "29c2b2049e37a87b"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "妹妹”，她就睁一只眼闭一只眼放过他们。\n"
+    ],
+    "pacing_score": 0.66,
+    "tension_score": 0.29,
+    "summary": "Chapter2 我是她哥！宋茉被萝莉送到家的院门前。家是三层复式别墅，建在郊区外环，有院子",
+    "chapter_index": 2,
+    "book_id": "29c2b2049e37a87b"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "哭腔，她想攥住他的衣角，得到的却是沈斯京"
+    ],
+    "pacing_score": 0.6,
+    "tension_score": 0.22,
+    "summary": "Chapter3 深夜对峙沈斯京的亲妈特别喜欢宋茉，但在沈斯京十七岁那年，她乘坐的大巴车被大货",
+    "chapter_index": 3,
+    "book_id": "29c2b2049e37a87b"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "气凌人高傲自大的气势。\n宋茉走到门口，却"
+    ],
+    "pacing_score": 0.77,
+    "tension_score": 0.37,
+    "summary": "Chapter4 我想和你做个伴门缝微光，照亮了男人裸露的肌肉线条，也同时照映了宋茉眼中的热量",
+    "chapter_index": 4,
+    "book_id": "29c2b2049e37a87b"
+  }
+]

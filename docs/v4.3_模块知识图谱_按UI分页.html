@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Novel Writer Pure v4.3 — 模块知识图谱 (按UI分页)</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',system-ui,sans-serif; background:#f8f9fa; color:#1a1a2e; }
+.container { padding:20px; max-width:1400px; margin:0 auto; }
+h1 { font-size:18px; font-weight:500; margin-bottom:4px; }
+.subtitle { font-size:13px; color:#666; margin-bottom:16px; }
+.legend { display:flex; gap:16px; margin-bottom:16px; flex-wrap:wrap; font-size:12px; }
+.legend-item { display:flex; align-items:center; gap:5px; }
+.legend-color { width:14px; height:14px; border-radius:4px; }
+
+.layer { border-radius:12px; padding:12px 14px; margin-bottom:12px; border:1px solid; }
+.layer-title { font-size:14px; font-weight:500; margin-bottom:8px; }
+.tags { display:flex; flex-wrap:wrap; gap:5px; }
+.tag { display:inline-block; padding:3px 8px; border-radius:6px; font-size:12px; font-family:Consolas,monospace; cursor:pointer; transition:background 0.15s; }
+.tag:hover { filter:brightness(0.92); }
+.tag-ghost { background:#FCEBEB !important; color:#A32D2D !important; border:1px solid #F7C1C1 !important; }
+.tag-ui { background:#EEEDFE !important; color:#534AB7 !important; border:1px solid #CECBF6 !important; }
+
+.group-row { display:flex; gap:10px; margin-bottom:12px; flex-wrap:wrap; }
+.group { flex:1; min-width:180px; border-radius:12px; padding:12px; border:1px solid; }
+.group-head { font-size:14px; font-weight:500; margin-bottom:8px; }
+.tab-box { border-radius:8px; padding:8px 10px; margin-bottom:8px; border:1px solid; }
+.tab-name { font-size:12px; font-weight:500; margin-bottom:5px; color:#333; }
+.tab-box .tag { font-size:11px; }
+
+.infra { background:#F1EFE8; border-color:#D3D1C7; }
+.infra .tag { background:#fff; color:#5F5E5A; border:1px solid #D3D1C7; }
+
+.agent { background:#FAECE7; border-color:#F5C4B3; }
+.agent .tag { background:#fff; color:#993C1D; border:1px solid #F5C4B3; }
+
+.blue { background:#E6F1FB; border-color:#B5D4F4; }
+.blue .tab-box { border-color:#B5D4F4; background:#F0F7FD; }
+.blue .tag { background:#fff; color:#185FA5; border:1px solid #B5D4F4; }
+
+.purple { background:#EEEDFE; border-color:#CECBF6; }
+.purple .tab-box { border-color:#CECBF6; background:#F3F2FE; }
+.purple .tag { background:#fff; color:#534AB7; border:1px solid #CECBF6; }
+
+.teal { background:#E1F5EE; border-color:#9FE1CB; }
+.teal .tab-box { border-color:#9FE1CB; background:#F0FBF6; }
+.teal .tag { background:#fff; color:#0F6E56; border:1px solid #9FE1CB; }
+
+.amber { background:#FAEEDA; border-color:#FAC775; }
+.amber .tab-box { border-color:#FAC775; background:#FFF8EE; }
+.amber .tag { background:#fff; color:#854F0B; border:1px solid #FAC775; }
+
+.gray { background:#F1EFE8; border-color:#D3D1C7; }
+.gray .tab-box { border-color:#D3D1C7; background:#F8F7F4; }
+.gray .tag { background:#fff; color:#5F5E5A; border:1px solid #D3D1C7; }
+
+.ghost-box { background:#FCEBEB; border:1px solid #F7C1C1; border-radius:12px; padding:12px 14px; margin-bottom:12px; }
+.ghost-box .layer-title { color:#A32D2D; }
+
+#sidebar { position:fixed; right:0; top:0; width:380px; height:100vh; background:#fff; border-left:2px solid #e2e8f0; padding:24px; overflow-y:auto; transform:translateX(100%); transition:transform 0.3s; z-index:100; box-shadow:-4px 0 20px rgba(0,0,0,0.08); }
+#sidebar.open { transform:translateX(0); }
+#sidebar h2 { font-size:16px; color:#333; margin-bottom:8px; font-weight:500; }
+#sidebar .file { font-family:Consolas,monospace; font-size:12px; color:#3182ce; background:#f1f5f9; padding:6px 10px; border-radius:6px; margin:6px 0; word-break:break-all; }
+#sidebar .desc { font-size:13px; color:#475569; margin:8px 0; line-height:1.6; }
+#sidebar .deps { margin-top:12px; }
+#sidebar .deps h3 { font-size:13px; font-weight:500; color:#64748b; margin-bottom:6px; }
+#sidebar .deps ul { list-style:none; }
+#sidebar .deps li { font-size:12px; color:#475569; padding:2px 0; font-family:Consolas,monospace; }
+#close-btn { position:absolute; top:16px; right:16px; cursor:pointer; font-size:18px; color:#999; border:none; background:none; }
+.meta { font-size:11px; color:#999; margin-top:8px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Novel Writer Pure v4.3 — 模块知识图谱 (按UI分页)</h1>
+<div class="subtitle">核对日期 2026-07-11 · 署名 大弟子 · 基于 NAV_TREE 导航树分组 · 已修 6 个幽灵节点 + 3 处过时数字</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-color" style="background:#D3D1C7"></div>基础设施</div>
+  <div class="legend-item"><div class="legend-color" style="background:#F5C4B3"></div>Agent 引擎</div>
+  <div class="legend-item"><div class="legend-color" style="background:#B5D4F4"></div>故事设定</div>
+  <div class="legend-item"><div class="legend-color" style="background:#CECBF6"></div>开始写作</div>
+  <div class="legend-item"><div class="legend-color" style="background:#9FE1CB"></div>仪表盘</div>
+  <div class="legend-item"><div class="legend-color" style="background:#FAC775"></div>设置</div>
+  <div class="legend-item"><div class="legend-color" style="background:#F7C1C1"></div>幽灵节点</div>
+  <div class="legend-item"><div class="legend-color" style="background:#CECBF6"></div>UI 组件</div>
+</div>
+
+<div class="layer infra">
+  <div class="layer-title">基础设施层 (跨 Tab 共用)</div>
+  <div class="tags">
+    <span class="tag" data-id="event_bus">event_bus</span>
+    <span class="tag" data-id="types">types</span>
+    <span class="tag" data-id="config">config</span>
+    <span class="tag" data-id="container">container</span>
+    <span class="tag" data-id="llm">llm</span>
+    <span class="tag" data-id="version">version</span>
+    <span class="tag" data-id="db">db (51条迁移)</span>
+  </div>
+</div>
+
+<div class="layer agent">
+  <div class="layer-title">Agent 引擎层 (被「当前创作」Tab 调用)</div>
+  <div style="margin-bottom:6px; font-size:12px; color:#993C1D; font-weight:500;">StoryEngine 核心 (12 步管线, MiMoCode 重构)</div>
+  <div class="tags" style="margin-bottom:8px;">
+    <span class="tag" data-id="story_engine">story_engine</span>
+    <span class="tag" data-id="state_bridge">state_bridge</span>
+    <span class="tag" data-id="story_state">story_state</span>
+    <span class="tag" data-id="apply_event">apply_event</span>
+    <span class="tag" data-id="collector">collector</span>
+    <span class="tag" data-id="decision_engine">decision_engine</span>
+    <span class="tag" data-id="dim_matrix">dim_matrix</span>
+    <span class="tag" data-id="strategy">strategy</span>
+    <span class="tag" data-id="suc_builder">suc_builder</span>
+    <span class="tag" data-id="compiler">compiler</span>
+    <span class="tag" data-id="token_budget">token_budget</span>
+    <span class="tag" data-id="event_store">event_store</span>
+    <span class="tag" data-id="reducer">reducer</span>
+    <span class="tag" data-id="ui_bridge">ui_bridge</span>
+    <span class="tag" data-id="unit_runner">unit_runner</span>
+  </div>
+  <div style="margin-bottom:6px; font-size:12px; color:#993C1D; font-weight:500;">Agent 角色 (10 个)</div>
+  <div class="tags">
+    <span class="tag" data-id="orchestrator">orchestrator (1087行)</span>
+    <span class="tag" data-id="storyteller">storyteller</span>
+    <span class="tag" data-id="editor_agent">editor_agent</span>
+    <span class="tag" data-id="critic_agent">critic_agent</span>
+    <span class="tag" data-id="memory_keeper">memory_keeper</span>
+    <span class="tag" data-id="context_builder">context_builder</span>
+    <span class="tag" data-id="researcher">researcher</span>
+    <span class="tag" data-id="pressure_watcher">pressure_watcher</span>
+    <span class="tag" data-id="retriever">retriever</span>
+    <span class="tag" data-id="agent_base">agent_base</span>
+  </div>
+</div>
+
+<div class="layer" style="background:#F1EFE8; border:1px solid #D3D1C7;">
+  <div class="layer-title">数据服务层 (跨 Tab 共用)</div>
+  <div class="tags">
+    <span class="tag" data-id="project_service">project_service</span>
+    <span class="tag" data-id="book_service">book_service</span>
+    <span class="tag" data-id="chapter_service">chapter_service</span>
+    <span class="tag" data-id="setting_service">setting_service</span>
+    <span class="tag" data-id="subtext">subtext</span>
+    <span class="tag tag-ghost" data-id="app_setting_service">app_setting_service (幽灵)</span>
+    <span class="tag tag-ghost" data-id="worldbuilding">worldbuilding (幽灵)</span>
+  </div>
+</div>
+
+<div class="group-row">
+
+  <div class="group gray" style="max-width:160px;">
+    <div class="group-head">📁 项目管理</div>
+    <div class="tab-box">
+      <div class="tab-name">项目列表</div>
+      <span class="tag" data-id="project_service">project_service</span>
+      <span class="tag" data-id="project_type">project_type</span>
+      <span class="tag tag-ui" data-id="pages">pages (29页)</span>
+      <span class="tag tag-ui" data-id="tree_nav">tree_nav</span>
+    </div>
+  </div>
+
+  <div class="group blue">
+    <div class="group-head">📖 故事设定</div>
+    <div class="tab-box">
+      <div class="tab-name">小说设定</div>
+      <span class="tag" data-id="setting_service">setting_service</span>
+      <span class="tag" data-id="genre_presets">genre_presets</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">大纲管理 (分卷大纲)</div>
+      <span class="tag" data-id="outline_service">outline_service</span>
+      <span class="tag" data-id="book_outline">book_outline</span>
+      <span class="tag" data-id="guide_sources">guide_sources (10源)</span>
+      <span class="tag" data-id="guide_graph">guide_graph</span>
+      <span class="tag" data-id="decision_service">decision_service</span>
+      <span class="tag" data-id="conflict_log">conflict_log</span>
+      <span class="tag tag-ui" data-id="outline_tab">outline_tab</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">卷管理</div>
+      <span class="tag" data-id="book_service">book_service</span>
+      <span class="tag" data-id="volume_transition">volume_transition</span>
+      <span class="tag tag-ui" data-id="volume_tab">volume_tab</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">角色管理</div>
+      <span class="tag" data-id="char_arc">char_arc</span>
+      <span class="tag" data-id="char_state">char_state</span>
+      <span class="tag" data-id="char_tracker">char_tracker</span>
+      <span class="tag" data-id="voice_profile">voice_profile</span>
+      <span class="tag tag-ui" data-id="character_tab">character_tab</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">世界观</div>
+      <span class="tag tag-ghost" data-id="worldbuilding">worldbuilding (幽灵)</span>
+      <span class="tag tag-ui" data-id="worldview_tab">worldview_tab</span>
+    </div>
+  </div>
+
+  <div class="group purple">
+    <div class="group-head">✍ 开始写作</div>
+    <div class="tab-box">
+      <div class="tab-name">写作向导</div>
+      <span class="tag tag-ui" data-id="writing_wizard">writing_wizard</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">当前创作 (核心页)</div>
+      <span class="tag" data-id="pressure">pressure</span>
+      <span class="tag" data-id="memory">memory</span>
+      <span class="tag" data-id="memory_manager">memory_manager</span>
+      <span class="tag" data-id="hook_service">hook_service</span>
+      <span class="tag" data-id="unit_event">unit_event</span>
+      <span class="tag" data-id="unit_causal">unit_causal</span>
+      <span class="tag" data-id="reader_signal">reader_signal</span>
+      <span class="tag" data-id="consistency">consistency</span>
+      <span class="tag" data-id="emotion">emotion</span>
+      <span class="tag" data-id="exporter">exporter</span>
+      <span class="tag" data-id="patch_preview">patch_preview</span>
+      <span class="tag" data-id="reverse_compile">reverse_compile</span>
+      <span class="tag" data-id="patch_diff">patch_diff</span>
+      <span class="tag" data-id="style_fp">style_fp</span>
+      <span class="tag" data-id="style_learner">style_learner</span>
+      <span class="tag" data-id="anti_ai">anti_ai</span>
+      <span class="tag tag-ui" data-id="generate">generate</span>
+      <span class="tag tag-ui" data-id="hud_tab">hud_tab</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">故事单元</div>
+      <span class="tag" data-id="story_unit_v2">story_unit_v2</span>
+      <span class="tag" data-id="unit_writing">unit_writing</span>
+      <span class="tag" data-id="unit_paragraph">unit_paragraph</span>
+      <span class="tag" data-id="virtual_unit">virtual_unit</span>
+      <span class="tag tag-ui" data-id="story_unit">story_unit</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">单元池管理</div>
+      <span class="tag" data-id="unit_pool">unit_pool</span>
+      <span class="tag" data-id="unit_pool_composer">unit_pool_composer</span>
+      <span class="tag tag-ui" data-id="unit_pool_tab">unit_pool_tab</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">章节管理</div>
+      <span class="tag" data-id="chapter_service">chapter_service</span>
+      <span class="tag" data-id="exporter">exporter</span>
+      <span class="tag tag-ui" data-id="publish_tab">publish_tab</span>
+    </div>
+  </div>
+
+  <div class="group teal">
+    <div class="group-head">📊 仪表盘</div>
+    <div class="tab-box">
+      <div class="tab-name">综合仪表盘</div>
+      <span class="tag" data-id="dashboard_svc">dashboard_svc</span>
+      <span class="tag" data-id="index_service">index_service (未实现)</span>
+      <span class="tag" data-id="entity_index">entity_index (未实现)</span>
+      <span class="tag tag-ui" data-id="dashboard">dashboard</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">观察子页面 (注册但未入导航树)</div>
+      <span class="tag tag-ui" data-id="story-health">story-health</span>
+      <span class="tag tag-ui" data-id="decision-history">decision-history</span>
+      <span class="tag tag-ui" data-id="guide-graph">guide-graph</span>
+      <span class="tag tag-ui" data-id="impact-report">impact-report</span>
+      <span class="tag tag-ghost" data-id="usage_analytics">usage_analytics (幽灵)</span>
+      <span class="tag tag-ghost" data-id="world-graph">world-graph (幽灵)</span>
+    </div>
+  </div>
+
+  <div class="group amber" style="max-width:200px;">
+    <div class="group-head">⚙ 设置</div>
+    <div class="tab-box">
+      <div class="tab-name">知识库</div>
+      <span class="tag" data-id="finder">finder</span>
+      <span class="tag" data-id="bm25">_bm25</span>
+      <span class="tag" data-id="vector_db">_vector_db</span>
+      <span class="tag" data-id="knowledge_svc">knowledge_svc</span>
+      <span class="tag" data-id="capability">capability (空)</span>
+      <span class="tag" data-id="domain_lib">domain_lib (空)</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">自动进化</div>
+      <span class="tag" data-id="style_fp">style_fp</span>
+      <span class="tag" data-id="style_learner">style_learner</span>
+      <span class="tag" data-id="voice_profile">voice_profile</span>
+      <span class="tag" data-id="anti_ai">anti_ai</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">AI 模型</div>
+      <span class="tag" style="color:#999">(用基础设施层 llm)</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">项目目录</div>
+      <span class="tag" style="color:#999">setting_io / project_io</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">外观 / 日志 / 关于</div>
+      <span class="tag tag-ui" data-id="settings_tab">settings_tab</span>
+    </div>
+    <div class="tab-box">
+      <div class="tab-name">许可证</div>
+      <span class="tag tag-ghost" data-id="license">license (幽灵)</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="ghost-box">
+  <div class="layer-title">幽灵 / 虚构节点 (需修复)</div>
+  <div style="font-size:12px; color:#A32D2D; line-height:1.8; margin-top:6px;">
+    <b>worldbuilding</b> — app/services/worldbuilding.py 存在 (19KB) 但未定义节点，3 条边引用<br>
+    <b>app_setting_service</b> — app/services/app_setting_service.py 存在，2 条边引用<br>
+    <b>story_compiler</b> — app/services/story_compiler.py 存在，2 条边引用<br>
+    <b>usage_analytics</b> — app/services/usage_analytics.py 存在，1 条边引用<br>
+    <b>license</b> — app/services/license.py 存在 (22KB)，1 条边引用<br>
+    <b>story_recipe</b> — 文件不存在！应删除引用边
+  </div>
+</div>
+
+</div>
+
+<div id="sidebar">
+  <button id="close-btn" onclick="document.getElementById('sidebar').classList.remove('open')">&times;</button>
+  <h2 id="sb-title"></h2>
+  <div class="file" id="sb-file"></div>
+  <div class="desc" id="sb-desc"></div>
+  <div class="deps" id="sb-deps"></div>
+</div>
+
+<script>
+var MODULES = {
+  "event_bus": {file:"app/core/event_bus.py", desc:"全局事件总线，发布/订阅模式。STORY_STATE_UPDATED / STORY_UNIT_COMPLETED 等事件驱动 UI 自动刷新。"},
+  "types": {file:"app/core/types.py", desc:"核心类型定义。包含 collect_guides() 收集 10 个 Guide 源。"},
+  "config": {file:"app/core/config.py", desc:"应用配置管理。"},
+  "container": {file:"app/core/container.py", desc:"依赖注入容器。"},
+  "llm": {file:"app/core/llm.py", desc:"LLM 客户端，支持多 Provider (OpenAI/Anthropic/本地)。"},
+  "version": {file:"app/core/version.py", desc:"版本号 v4.3.0。"},
+  "db": {file:"app/db/", desc:"SQLite 数据库层。51 条增量迁移 (005-055)。最新: 055_pressure_4dim.sql。"},
+  "orchestrator": {file:"app/agents/orchestrator.py", desc:"编排器，1087 行。瘦身后委托 StoryEngine 执行 12 步管线。", deps:["story_engine","llm","context_builder","retriever"]},
+  "story_engine": {file:"story/engine/story_engine.py", desc:"StoryEngine 核心，~350 行。12 步管线: 加载状态 -> 收集 Guide -> 5 Agent 研究 -> 精炼 -> 因果审查 -> 写作 -> 评估循环 -> 持久化 -> UI 通知。", deps:["event_bus","collector","compiler","reducer","unit_runner"]},
+  "storyteller": {file:"app/agents/helpers/storyteller.py", desc:"写作 Agent，注入 writing 分区知识库。"},
+  "pages": {file:"app/ui/pages.py", desc:"页面注册表。29 个 PAGE_ID。v4.0 合并了观察页面。"},
+  "tree_nav": {file:"app/ui/widgets/tree_nav.py", desc:"树状导航组件。5 个分组: 项目管理/故事设定/开始写作/仪表盘/设置。"},
+  "guide_sources": {file:"app/services/guide_sources/__init__.py", desc:"10 个 Guide 适配器 (v4.3 已加第 10 个)。AGENTS.md 仍写 '9源' 已过时。"},
+  "finder": {file:"app/knowledge/finder.py", desc:"知识库统一检索入口。BM25+向量混合检索。extract_for_agent() 注入 Agent 专属知识。"},
+  "unit_pool": {file:"app/services/unit_pool_service.py", desc:"单元池服务。独立 unit_pool 表，1000 字上限。bulk_import() 批量导入。"},
+  "unit_pool_composer": {file:"app/services/unit_pool_composer.py", desc:"单元组合器。零引用，未接入产品路径。"},
+  "patch_preview": {file:"app/services/patch_preview.py", desc:"增量补丁预览。零引用，未接入。"},
+  "reverse_compile": {file:"app/services/reverse_compile.py", desc:"文本反向解析为结构化大纲。仅 generate_tab 调用一次。"},
+  "volume_tab": {file:"app/ui/tabs/volume_tab.py", desc:"卷管理界面。已写但未注册到导航树(已在 NAV_TREE 中但历史上未接入)。"},
+  "index_service": {file:"(未实现)", desc:"v4.2 路线图 Step 2: 事件驱动增量索引。概念定了，代码没动。"},
+  "entity_index": {file:"(未实现)", desc:"v4.2 路线图 Step 3: 角色/单元/Hook/决策/Guide/记忆统一索引。概念定了，代码没动。"},
+  "capability": {file:"(空目录)", desc:"Capability Library。目录没建，内容为零。"},
+  "domain_lib": {file:"(空目录)", desc:"Domain Library 知识包。目录没建，内容为零。"},
+  "worldbuilding": {file:"app/services/worldbuilding.py (19KB)", desc:"幽灵节点: 文件存在但知识图谱未定义模块节点。3 条边引用了它。"},
+  "app_setting_service": {file:"app/services/app_setting_service.py", desc:"幽灵节点: 文件存在但未定义模块节点。2 条边引用。"},
+  "story_compiler": {file:"app/services/story_compiler.py", desc:"幽灵节点: 文件存在但未定义模块节点。2 条边引用。impact-report 页面调用 analyze_impact()。"},
+  "usage_analytics": {file:"app/services/usage_analytics.py", desc:"幽灵节点: 文件存在但未定义模块节点。1 条边引用。"},
+  "license": {file:"app/services/license.py (22KB)", desc:"幽灵节点: 文件存在但未定义模块节点。1 条边引用。"},
+  "story_recipe": {file:"(不存在)", desc:"虚构节点: story_recipe_service.py 文件不存在。应删除引用边。053_story_recipes.sql 迁移存在但无 service。"},
+};
+document.querySelectorAll('.tag[data-id]').forEach(function(t){
+  t.addEventListener('click', function(){
+    var id = t.getAttribute('data-id');
+    var m = MODULES[id];
+    if(!m) return;
+    document.getElementById('sb-title').textContent = id;
+    document.getElementById('sb-file').textContent = m.file;
+    document.getElementById('sb-desc').textContent = m.desc;
+    var depsHtml = '';
+    if(m.deps && m.deps.length){
+      depsHtml = '<h3>依赖</h3><ul>';
+      m.deps.forEach(function(d){ depsHtml += '<li>'+d+'</li>'; });
+      depsHtml += '</ul>';
+    }
+    document.getElementById('sb-deps').innerHTML = depsHtml;
+    document.getElementById('sidebar').classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

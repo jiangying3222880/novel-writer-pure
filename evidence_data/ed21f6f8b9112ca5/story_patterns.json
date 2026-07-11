@@ -1,0 +1,82 @@
+[
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.83,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "ed21f6f8b9112ca5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 重生成傻柱天边一缕斜阳，照耀在秋日的街道上。在落日的余晖下，一名普普通通的中年人，走",
+    "chapter_index": 1,
+    "book_id": "ed21f6f8b9112ca5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.94,
+    "summary": "第2章 生活中的那些事傻柱，大名何雨柱，是红星轧钢厂的一名八级厨师，每个月三十七块五的工资，算",
+    "chapter_index": 2,
+    "book_id": "ed21f6f8b9112ca5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 食堂百味新收的徒弟马华是学徒工，去年刚刚参加工作，就拜了何雨柱做师父，每个月十八块钱的",
+    "chapter_index": 3,
+    "book_id": "ed21f6f8b9112ca5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第4章 厨房日常这个傻柱！今天吃错药了？秦淮茹感到有些诧异，这才过了一夜，傻柱怎么转性了？这",
+    "chapter_index": 4,
+    "book_id": "ed21f6f8b9112ca5"
+  }
+]

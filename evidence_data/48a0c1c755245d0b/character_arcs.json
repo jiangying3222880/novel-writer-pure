@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "傅听寒",
+    "initial_state": "初始状态未明确描述，出现25次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "48a0c1c755245d0b"
+  },
+  {
+    "character_name": "姜珥",
+    "initial_state": "初始状态未明确描述，出现34次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "48a0c1c755245d0b"
+  },
+  {
+    "character_name": "傅听寒没",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "48a0c1c755245d0b"
+  },
+  {
+    "character_name": "傅同学",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "48a0c1c755245d0b"
+  },
+  {
+    "character_name": "可以亲一",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "48a0c1c755245d0b"
+  }
+]

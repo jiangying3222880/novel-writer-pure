@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "69090cab7fb4ba86"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.75,
+    "tension_score": 0.73,
+    "summary": "第318章 是我心眼小，见不得你好2024-02-26 01:14开始阅读尤时hhh，码字不快乐，",
+    "chapter_index": 1,
+    "book_id": "69090cab7fb4ba86"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.82,
+    "tension_score": 1.0,
+    "summary": "第一章 下旨冲喜皇城的天黑压压的，似是酝酿一场暴雨。一道冲喜的圣旨从皇宫送去慕府。“完了，",
+    "chapter_index": 2,
+    "book_id": "69090cab7fb4ba86"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.54,
+    "tension_score": 0.78,
+    "summary": "第二章 糟蹋“没钱你看什么病？滚滚滚，不要耽搁店里做生意。”京城里面最有名的药铺当属慈春堂，",
+    "chapter_index": 3,
+    "book_id": "69090cab7fb4ba86"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "这么走了。也跟着进去。\n“大少爷。”\n她"
+    ],
+    "pacing_score": 0.56,
+    "tension_score": 0.38,
+    "summary": "第三章 太子周璟并非良配慕梓寒因为慕衍的事，本来焦灼不安，一口火气不知怎么发泄。她这会儿沉了",
+    "chapter_index": 4,
+    "book_id": "69090cab7fb4ba86"
+  }
+]

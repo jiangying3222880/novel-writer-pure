@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "a808e66ebbab41be"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "第2001章 魂纹2023-11-07 18:15开始阅读爱吃祝寿蛋糕的法魔梦想诗与远方，拥抱天涯",
+    "chapter_index": 1,
+    "book_id": "a808e66ebbab41be"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "小胖子看到林逸心情不好，他也不好受。\n突",
+      "，等了一段时间，看来今晚可能不会回来了，",
+      "子兴奋十足，说道：“比吃糖还开心，明天我"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 0.7,
+    "summary": "第1章 林逸初阳缓缓升起，新的一天又重复着，村子的每户人家又要为生计而奔波，他们实在太贫穷。",
+    "chapter_index": 2,
+    "book_id": "a808e66ebbab41be"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "深山抓到的吗？”\n“恩，昨天休息的时候，",
+      "不愿带小孩子去镇上，晚上还要在路上过夜，",
+      "林逸也非常高兴，这些年真的太拮据了，家里"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.69,
+    "summary": "第2章 小鹰不知何时，家里开始有吵闹之声，林逸这才睁开惺忪的眼眸，但很快又不争气给闭上了。不",
+    "chapter_index": 3,
+    "book_id": "a808e66ebbab41be"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "看到林逸就在他的视线内，也就没有多管。\n"
+    ],
+    "pacing_score": 0.94,
+    "tension_score": 0.26,
+    "summary": "第3章 上当受骗林逸一群人进入镇中，就各自散开了，和小胖子也就暂时分开，众人约定到时一起返回。",
+    "chapter_index": 4,
+    "book_id": "a808e66ebbab41be"
+  }
+]

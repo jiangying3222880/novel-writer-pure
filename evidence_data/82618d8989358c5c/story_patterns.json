@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "82618d8989358c5c"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第224章 我是符华！2023-12-31 17:36开始阅读爱馒头才是最棒的梦醒不见鹿，也不见你",
+    "chapter_index": 1,
+    "book_id": "82618d8989358c5c"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n西伯利亚平原\n这里是一望无际的雪原，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.91,
+    "summary": "第1章 正经人谁写日记啊脑子寄存处 官方出品 必是精品前面的疑问后面会写，某些人不用：啊写的",
+    "chapter_index": 2,
+    "book_id": "82618d8989358c5c"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 这是崩坏三？西伯利亚平原“……”澈沉默了，大哥我就随便说说，这么玻璃心的吗？【正",
+    "chapter_index": 3,
+    "book_id": "82618d8989358c5c"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "”\n华的记忆体叫着爱莉，华不知道爱莉怎么"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.76,
+    "summary": "第5章 苍玄之书太虚山终焉和澈两人来到太虚山山下后，就没再停留的朝着山上而去，毕竟他们不想在",
+    "chapter_index": 4,
+    "book_id": "82618d8989358c5c"
+  }
+]

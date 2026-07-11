@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "c68496ba139b7452"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第215章 书驰番外（3）2022-10-03 02:10开始阅读南绾绾(๑°⌓°๑)【已完结❗",
+    "chapter_index": 1,
+    "book_id": "c68496ba139b7452"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "般，一口一口喝着烈酒。\n直到一道血迹。\n",
+      "，恨上天让她太迟遇到谢贺章！\n恨上天让她"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.56,
+    "summary": "第1章 玉佩书青瑶死的那天。江城的天气很好。那天她难得精神头不错，医生特许了她的丈夫谢贺章",
+    "chapter_index": 2,
+    "book_id": "c68496ba139b7452"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 0.78,
+    "summary": "第2章 下乡书驰从部队回来，给书青瑶带了许多礼物。两条的确良碎花裙，三双黑凉鞋，一桶麦乳精和",
+    "chapter_index": 3,
+    "book_id": "c68496ba139b7452"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "了二十个小时，牛车又坐了五个小时，知青们"
+    ],
+    "pacing_score": 0.96,
+    "tension_score": 0.38,
+    "summary": "第3章 谢贺章火车坐了二十个小时，牛车又坐了五个小时，知青们终于缓缓进了村。插队到赫连村东方",
+    "chapter_index": 4,
+    "book_id": "c68496ba139b7452"
+  }
+]

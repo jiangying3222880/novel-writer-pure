@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "降谷骁砚",
+    "initial_state": "初始状态未明确描述，出现40次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "db8ffc8b708f13df"
+  },
+  {
+    "character_name": "技能点",
+    "initial_state": "初始状态未明确描述，出现26次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "db8ffc8b708f13df"
+  },
+  {
+    "character_name": "工藤新一",
+    "initial_state": "初始状态未明确描述，出现22次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "db8ffc8b708f13df"
+  },
+  {
+    "character_name": "花费",
+    "initial_state": "初始状态未明确描述，出现15次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "db8ffc8b708f13df"
+  },
+  {
+    "character_name": "升级需要",
+    "initial_state": "初始状态未明确描述，出现12次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "db8ffc8b708f13df"
+  }
+]

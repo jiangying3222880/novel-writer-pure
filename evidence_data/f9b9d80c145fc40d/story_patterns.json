@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "f9b9d80c145fc40d"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "……\n但就在夜长生玩得不亦乐乎的时候，他",
+      "成为了一名反派世子，配合姗姗来迟的系统，",
+      "他突然发现——\n自己竟被人包围了！？\n“"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第64章 不记打的主角张怀聪2024-02-19 21:59开始阅读雾月七请多指教▄︻┻┳═一……",
+    "chapter_index": 1,
+    "book_id": "f9b9d80c145fc40d"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "机躺在床上在刷短视频。\n大拇指划着划着，",
+      "一名平平无奇、没有任何金手指的路人甲。\n",
+      "］\n在系统阴阳怪气好一会儿以后。\n夜长生"
+    ],
+    "pacing_score": 0.89,
+    "tension_score": 0.97,
+    "summary": "第1章 人炸了，然后转生了夜长生摊牌了。他就是传说中的男魅魔（划掉）穿越者。而且，他到现在",
+    "chapter_index": 2,
+    "book_id": "f9b9d80c145fc40d"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "”身影。\n“虽然很淡，但的确是金色！”\n"
+    ],
+    "pacing_score": 0.94,
+    "tension_score": 0.64,
+    "summary": "第2章 气运之子的道德绑架“反派就反派吧！”“总比‘现在夜老师，以后小夜子’好！”在恢复了",
+    "chapter_index": 3,
+    "book_id": "f9b9d80c145fc40d"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "不过。\n就在将要跑出树林的时候。\n唐双突"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.67,
+    "summary": "第3章 打爆“清气人”在流云宗的大殿上。看着唐双缓缓倒下、然后一动不动的身体。所有人都不敢",
+    "chapter_index": 4,
+    "book_id": "f9b9d80c145fc40d"
+  }
+]

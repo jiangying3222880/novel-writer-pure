@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "895dd10b28ac2582"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.75,
+    "tension_score": 0.85,
+    "summary": "第460章 权力的味道2024-02-11 18:00开始阅读焚竹温酒一个认真讲故事的家伙【末日",
+    "chapter_index": 1,
+    "book_id": "895dd10b28ac2582"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.53,
+    "tension_score": 0.67,
+    "summary": "第1章 末世重生，窃取主角机缘琴岛市外，一座荒山山顶破旧道观内。老道带着弟子，盘腿端坐三清殿",
+    "chapter_index": 2,
+    "book_id": "895dd10b28ac2582"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "获得天道传承，相当于拥有万千异能。\n江宇"
+    ],
+    "pacing_score": 0.5,
+    "tension_score": 0.24,
+    "summary": "第2章 天道传承到手，领悟万千道术小道观香客很少，一月也就三五十人，几天都没人上山也是常事。",
+    "chapter_index": 3,
+    "book_id": "895dd10b28ac2582"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "江宇朝着重甲公司里面走去。\n“碰！”\n突"
+    ],
+    "pacing_score": 0.59,
+    "tension_score": 0.35,
+    "summary": "第3章 复仇之路，开启江宇手中还是那枚路边随手捡起的刀片，一截折断的美工刀，锈迹斑驳看不出锋刃",
+    "chapter_index": 4,
+    "book_id": "895dd10b28ac2582"
+  }
+]

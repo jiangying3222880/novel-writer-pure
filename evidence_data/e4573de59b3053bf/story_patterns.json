@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "e4573de59b3053bf"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第237章 等你回来（大结局）2023-11-07 17:44开始阅读蜘蛛馍馍这个人很懒，一天睡十",
+    "chapter_index": 1,
+    "book_id": "e4573de59b3053bf"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "！】\n经过大脑的间歇性几秒死机，苏铭此时"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.7,
+    "summary": "第1章 《爸爸的纸条》NO.1【脑瓜存放处~】（豌豆射手火力全开区域，请放心存放！）【欢迎",
+    "chapter_index": 2,
+    "book_id": "e4573de59b3053bf"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 《爸爸的纸条》NO.2出乎小萝莉意料的是，苏铭并没有搭理她，而是扫视一圈，最终目光停",
+    "chapter_index": 3,
+    "book_id": "e4573de59b3053bf"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "逐渐好转。\n正当她要吃第二口时，\n一只手",
+      "！”\n经历过如此蹂躏，小萝莉双眼含泪，终",
+      "疼！”\n经历过如此蹂躏，小萝莉双眼含泪，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 《爸爸的纸条》NO.3而在直播间看到这一幕的水友们，有一些害怕妹子将手机放进胸口，蒙",
+    "chapter_index": 4,
+    "book_id": "e4573de59b3053bf"
+  }
+]

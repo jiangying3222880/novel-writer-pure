@@ -1,0 +1,102 @@
+[
+  {
+    "character_name": "求求你们",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "f644ed389d47b064"
+  },
+  {
+    "character_name": "万美金",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "f644ed389d47b064"
+  },
+  {
+    "character_name": "出价",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "f644ed389d47b064"
+  },
+  {
+    "character_name": "第一章",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "f644ed389d47b064"
+  },
+  {
+    "character_name": "你是要自",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "f644ed389d47b064"
+  }
+]

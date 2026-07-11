@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "1e362f9d26380edd"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "第42章 竞技场无差别事件 下2023-12-16 22:39开始阅读失格I污浊人是为了救赎自己而",
+    "chapter_index": 1,
+    "book_id": "1e362f9d26380edd"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "有这个愿望，她很认真的听雪妍讲话。\n雪妍",
+      "有多少重力，轻飘飘的，徐徐下坠。。。。\n"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.6,
+    "summary": "第0章 开端铃屋末雪，一个有先天性白化病的女孩，幸运的是，经过治疗，除了外表上的差别，基本上可",
+    "chapter_index": 2,
+    "book_id": "1e362f9d26380edd"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "能离开地面。\n\n正当末雪郁闷的时候，手上"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.53,
+    "summary": "第1章 第一天的日常“好，手续都已经办好了。新一，把妹妹抱好，一起去商场给她买几件衣服去。",
+    "chapter_index": 3,
+    "book_id": "1e362f9d26380edd"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "凶手呢。”老人说话明显有点紧张。\n\n末雪"
+    ],
+    "pacing_score": 0.91,
+    "tension_score": 0.51,
+    "summary": "第2章 光阴似箭，三年后时间过的很快，转眼过了三年，家庭环境的改变，让末雪变得开朗了许多。末雪",
+    "chapter_index": 4,
+    "book_id": "1e362f9d26380edd"
+  }
+]

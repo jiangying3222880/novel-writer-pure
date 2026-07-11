@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "e2c034be96723567"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.82,
+    "summary": "第83章修仙界对立面的炮灰师姐（3）2024-02-05 21:47开始阅读梵音长安我是废物七月见",
+    "chapter_index": 1,
+    "book_id": "e2c034be96723567"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n宋听茶发现有人进来的时候就立刻收敛了",
+      "众的猎奇和磕糖心理。\n\n而最吸人眼球莫过"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.47,
+    "summary": "第1章 万人嫌妈宝女嘉宾1宝子们的脑子寄存处(｡･ω･｡)ﾉ♡（前面世界有点尬，建议宝子们看文",
+    "chapter_index": 2,
+    "book_id": "e2c034be96723567"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "【不是，女一多乖一宝宝，书看得好好的，突",
+      "给二人留下了一个情感交流空间。\n琳娜这时"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.53,
+    "summary": "第2章 万人嫌妈宝女嘉宾2容翡自知礼节已经到位，他不需要再主动开口同她搭话。先不说他上节目只",
+    "chapter_index": 3,
+    "book_id": "e2c034be96723567"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "谁搭档？”许妄有点好奇。\n燕云州也好奇，",
+      "宋听茶无所谓，“我都可以。”\n分配结果终"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.71,
+    "summary": "第3章 万人嫌妈宝女嘉宾3容翡显然注意到了这一点。“天色不早了，我们先解决食宿问题？”众人",
+    "chapter_index": 4,
+    "book_id": "e2c034be96723567"
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "5bdacc2a6f456d33"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.84,
+    "tension_score": 0.6,
+    "summary": "第25章 他们轰轰烈烈的人生还在继续2023-11-12 11:51开始阅读最是橙黄橘绿喜欢尝试新",
+    "chapter_index": 1,
+    "book_id": "5bdacc2a6f456d33"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "目光看向晴儿 晴儿默默地点了点头\n小燕子",
+      "小燕子连忙求饶\n“小燕子，我太开心了， "
+    ],
+    "pacing_score": 0.99,
+    "tension_score": 0.49,
+    "summary": "第1章 旧人相逢 开始新的生活原创作品！！！侵权必究！小燕子拉着永琪往回家的路上走，一路上小",
+    "chapter_index": 2,
+    "book_id": "5bdacc2a6f456d33"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "还有饺子。”\n…………\n众人正吃着早饭呢",
+      "……\n一声婴儿的啼哭从房间里传出来\n尔康"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.57,
+    "summary": "第2章 紫薇生产 永琪小燕子筹备婚礼太阳逐渐升起，阳光普照万物，房间里小燕子睡眼惺忪地看着永琪",
+    "chapter_index": 3,
+    "book_id": "5bdacc2a6f456d33"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "淡操心 啧啧啧”\n“好久没听到小燕子话，"
+    ],
+    "pacing_score": 0.79,
+    "tension_score": 0.23,
+    "summary": "第3章 十全十美还有班杰明未到小燕子快速地看了一圈，大家都微笑地看着小燕子。“柳红、柳青、金",
+    "chapter_index": 4,
+    "book_id": "5bdacc2a6f456d33"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "1512ac176dcd647f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第621章 残破的仙界，幕后黑手执笔者，终章！2023-03-20 12:50开始阅读吾本红尘一过",
+    "chapter_index": 1,
+    "book_id": "1512ac176dcd647f"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "越了！\n还带系统！\n这让叶天高兴坏了。\n",
+      "量，就可以获得至尊体质。\n混沌道体！\n“"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.93,
+    "summary": "第1章 完了！早产儿真武天域。荒古世家，叶家！家主夫人凌素素服下大碗仙液。然后满眼慈爱，",
+    "chapter_index": 2,
+    "book_id": "1512ac176dcd647f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "松了一口气。\n就在这时。\n一股无边的寒冷"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.8,
+    "summary": "第2章 女帝出生，万古冰凰体卧槽！不会吧？我把妹妹给气的成为早产儿了？完了完了。这下罪",
+    "chapter_index": 3,
+    "book_id": "1512ac176dcd647f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.66,
+    "tension_score": 1.0,
+    "summary": "第3章 生命禁区，红毛怪物这是？叶无双放开他的三个兄弟。抬头看天。就见，九天之上，有一缕",
+    "chapter_index": 4,
+    "book_id": "1512ac176dcd647f"
+  }
+]

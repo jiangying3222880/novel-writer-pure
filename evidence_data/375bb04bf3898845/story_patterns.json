@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "375bb04bf3898845"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "比肩神明的隐世高人，甚至趁冰之女皇还小，"
+    ],
+    "pacing_score": 0.91,
+    "tension_score": 0.46,
+    "summary": "第1章 颜值过分第零席至冬国，第零席执行官【主人】的寒舍。蒸汽鸟报社的记者夏洛蒂酝酿了半天才",
+    "chapter_index": 1,
+    "book_id": "375bb04bf3898845"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "咳咳咳。”\n至冬国大殿中，几位执行官好像",
+      "随着大部分用户都进入了通知群，群主老六终"
+    ],
+    "pacing_score": 0.8,
+    "tension_score": 0.63,
+    "summary": "第2章 吾妹十八一枝花璃月七星紧急召开会议讨论这个「超智能·便携式·可手持·移动设备」蒙德城",
+    "chapter_index": 2,
+    "book_id": "375bb04bf3898845"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "想做一个拖油瓶。\n她很纠结，非常纠结。\n"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.39,
+    "summary": "第3章 剑圣是怎么炼成的？十分钟后。公屏上弹出了群主专属的金色字体。【老六:提瓦特离谱大事",
+    "chapter_index": 3,
+    "book_id": "375bb04bf3898845"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "补肾，妙不可言！”\n“治虚补肾！”\n老者",
+      "挺胸抬头，这个台阶，得上！这个B，得装！",
+      "是和她三七分成……啊！不对。】\n【凝光:"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.97,
+    "summary": "第4章 帝君曾言道:“效果杠杠的……”“霸气侧漏。”“侧你妈的头。”老者敲了一下旁边弟子的",
+    "chapter_index": 4,
+    "book_id": "375bb04bf3898845"
+  }
+]

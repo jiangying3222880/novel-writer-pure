@@ -1,0 +1,76 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "0b68b514e09222ce"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.99,
+    "tension_score": 0.88,
+    "summary": "第426章 大结局2022-11-11 00:21开始阅读爱喝水的乌鸦油门焊死，刹车已坏，大家坐稳",
+    "chapter_index": 1,
+    "book_id": "0b68b514e09222ce"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，一个你字念了半天没有下文。\n紧接着像是"
+    ],
+    "pacing_score": 0.69,
+    "tension_score": 0.39,
+    "summary": "第1章 开局逼婚女主，我开启了人生剧本“我说了，这个婚必须要退！”中州，大夏皇朝。京城，白",
+    "chapter_index": 2,
+    "book_id": "0b68b514e09222ce"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "儿响叮当仁不让之势收拢了大夏残余势力。\n"
+    ],
+    "pacing_score": 0.59,
+    "tension_score": 0.29,
+    "summary": "第2章 这背景不出纨绔简直对不起设定“好家伙！”看到白洁人生剧本的苏寻歌直呼好家伙。他的剧",
+    "chapter_index": 3,
+    "book_id": "0b68b514e09222ce"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "是有所求。\n望着那修长滑嫩的美腿，苏寻歌"
+    ],
+    "pacing_score": 0.55,
+    "tension_score": 0.31,
+    "summary": "第3章 美腿女帝，借你的器一用经过一番深入浅出的交流，苏家两个坏种一致决定这场婚礼不但要办，还",
+    "chapter_index": 4,
+    "book_id": "0b68b514e09222ce"
+  }
+]

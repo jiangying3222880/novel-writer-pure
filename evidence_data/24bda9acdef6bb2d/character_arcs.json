@@ -1,0 +1,102 @@
+[
+  {
+    "character_name": "泥猴",
+    "initial_state": "初始状态未明确描述，出现11次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "24bda9acdef6bb2d"
+  },
+  {
+    "character_name": "宝塔仙缘",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "24bda9acdef6bb2d"
+  },
+  {
+    "character_name": "自家孩子",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "24bda9acdef6bb2d"
+  },
+  {
+    "character_name": "突然",
+    "initial_state": "初始状态未明确描述，出现7次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "24bda9acdef6bb2d"
+  },
+  {
+    "character_name": "众孩童闻",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "24bda9acdef6bb2d"
+  }
+]

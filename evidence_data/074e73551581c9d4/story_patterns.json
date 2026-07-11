@@ -1,0 +1,75 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "074e73551581c9d4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "分读者，可能对某一本书有着深深的怨气。\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.2,
+    "summary": "第26章 真天才穿成混吃等死假道士262024-02-29 23:42开始阅读趁风不注意生活已经够",
+    "chapter_index": 1,
+    "book_id": "074e73551581c9d4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "饭的好日子。\n至少，至少不会被磋磨，不会",
+      "的越来越脏，越来越露骨，一旁装死人的秦爹"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.5,
+    "summary": "第1章 穿越【系统333激活】【开始选定宿主】【宿主挑选成功】【发现濒死人类】系统33",
+    "chapter_index": 2,
+    "book_id": "074e73551581c9d4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "？”\n“该不会是烂好心的唬弄我们吧？”\n"
+    ],
+    "pacing_score": 0.84,
+    "tension_score": 0.37,
+    "summary": "第2章 相遇“早该想得到，不是吗。”秦岁竹握着干燥的沙土，自言自语的说道。他没有细想自己被抛",
+    "chapter_index": 3,
+    "book_id": "074e73551581c9d4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "折返下，彻底地罢工了。\n疼痛到痉挛的胃部"
+    ],
+    "pacing_score": 0.82,
+    "tension_score": 0.33,
+    "summary": "第3章 苏醒休息了好一会，秦岁竹才积攒了些力气。他费劲地把那个臭烘烘地尸体翻过来，准备找个树",
+    "chapter_index": 4,
+    "book_id": "074e73551581c9d4"
+  }
+]

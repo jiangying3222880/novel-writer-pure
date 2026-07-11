@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "d70953a27a8e41eb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "凌晨十有八九得坐牢。\n可谁料，凌晨的巴掌",
+      "】\n正在气头上的凌晨神色不禁一喜，金手指"
+    ],
+    "pacing_score": 0.77,
+    "tension_score": 0.72,
+    "summary": "第1章 坐地铁被诬赖偷拍“你是不是在偷拍我？”“是不是！”“你个下头男，本仙女效仿穿衣自由",
+    "chapter_index": 1,
+    "book_id": "d70953a27a8e41eb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "益吗？他肯定是做贼心虚！”\n消息刚发送，"
+    ],
+    "pacing_score": 0.79,
+    "tension_score": 0.48,
+    "summary": "第2章 我被网暴了？“你骂谁是狗呢？偷拍的变态狂也配教育我？你现在给我带来了严重的心里负担，我",
+    "chapter_index": 2,
+    "book_id": "d70953a27a8e41eb"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n直到最后手机没电，凌晨这才作罢。\n他"
+    ],
+    "pacing_score": 0.68,
+    "tension_score": 0.39,
+    "summary": "第3章 倒霉的林慧慧众水友们纷纷来了兴趣，“我去看看。”“嘶~兄弟们快看，这视频里的女生怎么",
+    "chapter_index": 3,
+    "book_id": "d70953a27a8e41eb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.64,
+    "tension_score": 0.81,
+    "summary": "第4章 被踢出班级群聊视频的结尾，她又附带上一句，“不好的评论我会删除。”这番的推波助澜，将",
+    "chapter_index": 4,
+    "book_id": "d70953a27a8e41eb"
+  }
+]

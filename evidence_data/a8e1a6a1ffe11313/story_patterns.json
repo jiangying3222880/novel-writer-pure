@@ -1,0 +1,50 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.66,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "a8e1a6a1ffe11313"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.6,
+    "tension_score": 0.67,
+    "summary": "第一章犯罪天才  多年前的一个秋天，沂蒙山的柿子红了。正是黄昏，远处升起炊烟，弯弯曲曲的山路上",
+    "chapter_index": 2,
+    "book_id": "a8e1a6a1ffe11313"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.63,
+    "tension_score": 0.64,
+    "summary": "第二章天生警察  周兴兴就是那个被抛弃在派出所门口的婴儿。  周兴兴的母亲就是周嫂。",
+    "chapter_index": 4,
+    "book_id": "a8e1a6a1ffe11313"
+  }
+]

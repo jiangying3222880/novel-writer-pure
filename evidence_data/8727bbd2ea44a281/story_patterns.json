@@ -1,0 +1,76 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "了娃娃亲的霸道总裁厌恶她。\n她十分愤怒，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.29,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "8727bbd2ea44a281"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 呵，咱是炮灰江清妤一脸茫然的坐在地上就在刚刚，她下床时扭了脚，啪叽一下摔在地上。谢",
+    "chapter_index": 1,
+    "book_id": "8727bbd2ea44a281"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "四大校草发现这个女孩都在以前救赎过自己！"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.57,
+    "summary": "第2章 嘿呀这本小说叫《假千金的富贵团宠人生》江清妤：？？哪个人才想出来的名字？？内容如下",
+    "chapter_index": 2,
+    "book_id": "8727bbd2ea44a281"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "酷似夫人的面容，吴魏眼眶一红：“小姐！我"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.93,
+    "summary": "第3章 嗨害嗨是夜江清妤来到窗边，背着手眺望远方，一脸深沉……“宿主你在想什么？想怎么做任",
+    "chapter_index": 3,
+    "book_id": "8727bbd2ea44a281"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第4章 呱啦第二天清晨江清妤醒了，是被饿醒的。要知道，她自从力气变大，胃口也变大了。昨天晚上",
+    "chapter_index": 4,
+    "book_id": "8727bbd2ea44a281"
+  }
+]

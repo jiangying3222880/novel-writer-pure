@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "奈奈",
+    "initial_state": "初始状态未明确描述，出现8次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "40a6631a6c7a0803"
+  },
+  {
+    "character_name": "然而",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "40a6631a6c7a0803"
+  },
+  {
+    "character_name": "喵喵",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "40a6631a6c7a0803"
+  },
+  {
+    "character_name": "暴戾大佬",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "40a6631a6c7a0803"
+  },
+  {
+    "character_name": "珈奈",
+    "initial_state": "初始状态未明确描述，出现26次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "40a6631a6c7a0803"
+  }
+]

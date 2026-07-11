@@ -1,0 +1,82 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "2e0c36505e420454"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第228章 核污染！核辐射！2024-02-06 23:00开始阅读一天饿两顿笔耕不辍……努力加油",
+    "chapter_index": 1,
+    "book_id": "2e0c36505e420454"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.9,
+    "tension_score": 1.0,
+    "summary": "第1章 好白好大的塑料瓶！3！2！1……【叮！您的脑子已清空！】【脑子寄存处！】【看",
+    "chapter_index": 2,
+    "book_id": "2e0c36505e420454"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 1.0,
+    "summary": "第2章 三八大盖儿，我捡的！一杆长枪，被苏云稳稳抓在手上。打量枪身，他脑袋发懵。“这……”",
+    "chapter_index": 3,
+    "book_id": "2e0c36505e420454"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.85,
+    "tension_score": 1.0,
+    "summary": "第3章 奖金，宣传大使！不管苏云会不会开枪，要不要开枪。警察职责：一切潜在危险，必须排除！",
+    "chapter_index": 4,
+    "book_id": "2e0c36505e420454"
+  }
+]

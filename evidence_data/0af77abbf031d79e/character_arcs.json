@@ -1,0 +1,102 @@
+[
+  {
+    "character_name": "系统",
+    "initial_state": "初始状态未明确描述，出现13次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "0af77abbf031d79e"
+  },
+  {
+    "character_name": "恭喜宿主",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "0af77abbf031d79e"
+  },
+  {
+    "character_name": "驸马爷",
+    "initial_state": "初始状态未明确描述，出现14次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "0af77abbf031d79e"
+  },
+  {
+    "character_name": "三国英魂",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "0af77abbf031d79e"
+  },
+  {
+    "character_name": "大宇王朝",
+    "initial_state": "初始状态未明确描述，出现14次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "0af77abbf031d79e"
+  }
+]

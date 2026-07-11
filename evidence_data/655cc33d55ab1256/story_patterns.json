@@ -1,0 +1,48 @@
+[
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "满天，让普通读者眼花缭乱，不得其门而入。"
+    ],
+    "pacing_score": 0.97,
+    "tension_score": 0.21,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "655cc33d55ab1256"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.57,
+    "tension_score": 0.64,
+    "summary": "第三章赞美人，情感逐渐升温。但热烈的赞美仍是含蓄的、温厚的，反显得越发动人。野有蔓草 《诗经·",
+    "chapter_index": 2,
+    "book_id": "655cc33d55ab1256"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.45,
+    "tension_score": 0.62,
+    "summary": "第一章相似，却略有变化。这变化中的相似是心中对清丽幽静的自然和美人的反复赞叹；而相似中的变化是感情",
+    "chapter_index": 4,
+    "book_id": "655cc33d55ab1256"
+  }
+]

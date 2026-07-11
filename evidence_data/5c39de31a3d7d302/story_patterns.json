@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "5c39de31a3d7d302"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.67,
+    "tension_score": 0.6,
+    "summary": "第768章 一间客栈，一座城，一生只等一个人（大结局）2019-07-08 19:54开始阅读超级",
+    "chapter_index": 1,
+    "book_id": "5c39de31a3d7d302"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "不顺利的女人,父母死于地震,不到16岁就",
+      "钱,我管着你。”\n为了不伤害她的热情,我"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.5,
+    "summary": "第1章 我说孤独她说梦想我躺在硬邦邦的床上,失眠了。孤独跟随耳机里的音乐,在我的身体里一点点炸",
+    "chapter_index": 2,
+    "book_id": "5c39de31a3d7d302"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "还经常下雨，路面更危险，难怪她家人担心。",
+      "它的旋律和歌词构成了我对汪蕾最后的印象。"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.55,
+    "summary": "第2章 与我同行的姑娘三天之后，我便收到了一个噩耗：汪蕾因为不愿意出台，跟客人起了冲突，混乱中",
+    "chapter_index": 3,
+    "book_id": "5c39de31a3d7d302"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "天认识的陌生男女，就要被逼同居一室了？我",
+      "也不算多，我也拗不过这么一个任性的姑娘，",
+      "，她觉得是管着她，反而不会说实话。”\n我"
+    ],
+    "pacing_score": 0.96,
+    "tension_score": 0.79,
+    "summary": "第3章 3000公里之外上了高速，我给老黄发微信说了情况，老黄转了我八千块的路费。估计知道我消",
+    "chapter_index": 4,
+    "book_id": "5c39de31a3d7d302"
+  }
+]

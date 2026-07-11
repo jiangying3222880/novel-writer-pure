@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "b5fd5ee94a7b9b53"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.77,
+    "tension_score": 0.74,
+    "summary": "第535章 番外【雁南归】322024-02-07 06:00开始阅读洛云霜最近精修，小狐狸有错别",
+    "chapter_index": 1,
+    "book_id": "b5fd5ee94a7b9b53"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.72,
+    "summary": "第1章 身不由己的小奴隶桃花卦仙，一卦通天；可探过往，可窥未来——题记大燕王朝，女子为尊。",
+    "chapter_index": 2,
+    "book_id": "b5fd5ee94a7b9b53"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "机，卷入荃族阴谋，玄灵界谁不想杀了她？\n"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.28,
+    "summary": "第2章 初窥天机，遭雷劈听到这个久违的称呼，暮泽瞳孔骤缩，就连心脏都漏跳了一拍，来自灵魂深处的",
+    "chapter_index": 3,
+    "book_id": "b5fd5ee94a7b9b53"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "冷，却带着上位者的威严。\n穿过九层薄纱，"
+    ],
+    "pacing_score": 0.88,
+    "tension_score": 0.41,
+    "summary": "第3章 殿下杀了我吧祝暮泽满眼苦涩，他就不该对她抱有任何希望，即使他们曾经……无端的希望，只",
+    "chapter_index": 4,
+    "book_id": "b5fd5ee94a7b9b53"
+  }
+]

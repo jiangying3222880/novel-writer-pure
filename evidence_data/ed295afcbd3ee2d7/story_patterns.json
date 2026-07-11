@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "ed295afcbd3ee2d7"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "赋，只要死亡就能获得奖励，纪东风死着死着"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第848章 黑幕变保送？！2024-01-13 21:16开始阅读饮山海来进行一场疯癫的冒险吧！",
+    "chapter_index": 1,
+    "book_id": "ed295afcbd3ee2d7"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "一切，纪东风正准备躺下来冷静冷静，耳边却"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.55,
+    "summary": "第1章 重生！双十星天赋！“咳咳！”华夏滨海城一间出租屋内，纪东风猛地睁开双眼，坐直身子倒吸",
+    "chapter_index": 2,
+    "book_id": "ed295afcbd3ee2d7"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.87,
+    "summary": "第2章 隐藏任务！第一次死亡！“这……这就是纪元？！泰酷辣！简直和真实世界一样！”“让一让！",
+    "chapter_index": 3,
+    "book_id": "ed295afcbd3ee2d7"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 梅开二度！一拳秒了！“该死！给我找出那个叫东风破的！我要问问他！自己想找死为什么要连累",
+    "chapter_index": 4,
+    "book_id": "ed295afcbd3ee2d7"
+  }
+]

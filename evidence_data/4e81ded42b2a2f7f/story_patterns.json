@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "4e81ded42b2a2f7f"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第一百一十九章谁人不识缅北星2023-12-15 09:14开始阅读独孤秋刀心无大志，只求可以整点",
+    "chapter_index": 1,
+    "book_id": "4e81ded42b2a2f7f"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "上却发生了一些争吵。\n“王哥你干嘛，怎么",
+      "一竖，远方传来了汽车行驶的声音！\n嗷呜～"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第一章重生成狼春天到了，又到了万物复苏的季节。蜿蜒的公路旁，一只毛色发灰，瘦骨嶙峋的老狼趴在",
+    "chapter_index": 2,
+    "book_id": "4e81ded42b2a2f7f"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第二章鸡一顿堡一顿【宿主人气值突破一万】【系统激活！】【叶云】【种族：狼】【境界：凡兽",
+    "chapter_index": 3,
+    "book_id": "4e81ded42b2a2f7f"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "万粉丝！你知道我多久才能涨一万新粉吗？\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.92,
+    "summary": "第三章是狼是狗？今日的公路格外热闹虽然是一条旅游公路，但平时也只是偶尔有一些喜欢旅行的年轻人",
+    "chapter_index": 4,
+    "book_id": "4e81ded42b2a2f7f"
+  }
+]

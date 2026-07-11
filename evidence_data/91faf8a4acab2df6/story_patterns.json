@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "91faf8a4acab2df6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第57章 一般路过虚无2024-01-27 21:58开始阅读在西南角抽过阴风啥也不会，啥也不说～",
+    "chapter_index": 1,
+    "book_id": "91faf8a4acab2df6"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "段奶音“我去！”邦！两颗好头相撞，银狼被"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "第1章 刚～满～18～岁“没想到啊！没想到啊！人生处处是惊喜，数十年没出事一出事就是个大事啊！",
+    "chapter_index": 2,
+    "book_id": "91faf8a4acab2df6"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 我光锥呢？三月七面色古怪道：“这是什么新的流行的打招呼方式吗？”星不懂，但星大为震撼",
+    "chapter_index": 3,
+    "book_id": "91faf8a4acab2df6"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“三月，你成长了”\n不等众人到电梯，丹恒"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.76,
+    "summary": "第3章 剧情彻底崩了！丹恒仔细的打量宁北一番：“头一次见如此使用光锥的”三月七有些胆怯：“不",
+    "chapter_index": 4,
+    "book_id": "91faf8a4acab2df6"
+  }
+]

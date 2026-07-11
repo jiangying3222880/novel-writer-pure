@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "df5018caef114b99"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第201章 新婚寡嫂 VS 白切疯纨绔小叔202024-03-17 00:01开始阅读纯情小狗95",
+    "chapter_index": 1,
+    "book_id": "df5018caef114b99"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "：裴敬！】\n滴！\n盛柠柠怔了一下，脑海中"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "第1章 娇软公主 VS 鲜衣怒马少年将军【双洁，非切片！安全带都给我系好了！】大晋 公主府",
+    "chapter_index": 2,
+    "book_id": "df5018caef114b99"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.67,
+    "tension_score": 0.75,
+    "summary": "第2章 娇软公主 VS 鲜衣怒马少年将军2盛柠柠看着攻略目标的资料陷入了沉思。倒也不必这么详",
+    "chapter_index": 3,
+    "book_id": "df5018caef114b99"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "表情有多精彩。\n许是她那个便宜的皇帝老爹"
+    ],
+    "pacing_score": 0.7,
+    "tension_score": 0.28,
+    "summary": "第3章 娇软公主 VS 鲜衣怒马少年将军3轿子在半个时辰后便到了坤宁宫。太监大声传报之后，盛",
+    "chapter_index": 4,
+    "book_id": "df5018caef114b99"
+  }
+]

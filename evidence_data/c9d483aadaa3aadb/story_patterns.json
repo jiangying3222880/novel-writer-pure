@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "c9d483aadaa3aadb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "池珩眼皮子底下过的贼鸡儿滋润。\n后来众人"
+    ],
+    "pacing_score": 0.89,
+    "tension_score": 0.39,
+    "summary": "第384章 求婚（大结局）2020-05-03 01:31开始阅读京酱寿司我的作品希望你喜欢京城",
+    "chapter_index": 1,
+    "book_id": "c9d483aadaa3aadb"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "刹间僵在了半空。\n——因为正在这时，对方",
+      "可箭已离弦，他为了面子也不得不过去……于"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.78,
+    "summary": "第1章 怎不上天呐！郊区，一个废弃的工厂。“呵呵呵，小杂种，敢跟老子抢女人，你怕是真不知道老",
+    "chapter_index": 2,
+    "book_id": "c9d483aadaa3aadb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.68,
+    "tension_score": 0.74,
+    "summary": "第2章 就是搞对象这方面不过现在那个人已经走了。蓦然，洛川的眼珠子转了转，目光轻轻在那中年男",
+    "chapter_index": 3,
+    "book_id": "c9d483aadaa3aadb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "”\n话还没说完，洛川感觉四周有点冒寒气，"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.36,
+    "summary": "第3章 我喜欢你“你这一天不找我就一天不清净。那些名媛贵妇世家小姐天天跑过来缠我问我你喜欢什么",
+    "chapter_index": 4,
+    "book_id": "c9d483aadaa3aadb"
+  }
+]

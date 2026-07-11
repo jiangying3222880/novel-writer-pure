@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "94be1d0046886e6e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1714章 完结感言 2022-07-10 20:11:13 “请问一下苏陌同学，你高考考了",
+    "chapter_index": 1,
+    "book_id": "94be1d0046886e6e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“算了，还是睡觉吧！”\n躺下以后，苏陌突"
+    ],
+    "pacing_score": 0.93,
+    "tension_score": 0.57,
+    "summary": "第1章  我的宝藏女友临海二中，操场边的草坪上。“什么？”苏陌失神地看着眼前女孩，“你妈妈",
+    "chapter_index": 2,
+    "book_id": "94be1d0046886e6e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "了学校以后，苏陌把车一停好就往教室跑去，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.54,
+    "summary": "第2章  班级前十？“妈，早。”苏陌顶着两只熊猫眼，来到了客厅，刚坐下喝了口牛奶，一看时间，",
+    "chapter_index": 3,
+    "book_id": "94be1d0046886e6e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.99,
+    "summary": "卷一到手上，苏陌的脑海中浮现出相对应的知识点，写上大名便开始答题，他下笔速度非常快，可以称得上奋笔",
+    "chapter_index": 4,
+    "book_id": "94be1d0046886e6e"
+  }
+]

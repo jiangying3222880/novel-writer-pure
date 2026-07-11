@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "27b005aa7ead673e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "第83章 上药2024-01-14 08:27开始阅读姜羡鱼鱼啦啦啦啦啦啦啦啦啦啦柔弱坚韧孤女+",
+    "chapter_index": 1,
+    "book_id": "27b005aa7ead673e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "翩翩大喊一声：“嬷嬷！嬷嬷救我！”\n她终"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.33,
+    "summary": "第1章 梦魇魏国公府的东南角，坐落着一幽静的院落——幽竹轩。时值正午，烈日正浓，蝉儿在茂密的",
+    "chapter_index": 2,
+    "book_id": "27b005aa7ead673e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.99,
+    "tension_score": 0.72,
+    "summary": "第2章 秘密翠玉又嘟了嘟嘴：“自柳姨娘病逝后，二夫人便借着修葺院子的名头，将姑娘打发到了府里最",
+    "chapter_index": 3,
+    "book_id": "27b005aa7ead673e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.62,
+    "summary": "第3章 逃离下半夜的时候，她因为口渴而清醒，悚然一惊，爬了起来，又低头看向一边，那个男人居然还",
+    "chapter_index": 4,
+    "book_id": "27b005aa7ead673e"
+  }
+]

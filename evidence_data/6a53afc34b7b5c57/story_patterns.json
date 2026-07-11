@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "6a53afc34b7b5c57"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第52章：非法搜查？那孩子没有恶意2024-01-12 00:27开始阅读古尔乐这个人很懒，什么都",
+    "chapter_index": 1,
+    "book_id": "6a53afc34b7b5c57"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "不是天花板，而是蔚蓝的天空。\n轰！！！\n",
+      "过长达三坤年时间的坚持，每天只睡一坤时，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.83,
+    "summary": "第1章：我穿越了...次元聊天群？（脑子寄存处...）（事先声明，本书内容全部为二创，部分会",
+    "chapter_index": 2,
+    "book_id": "6a53afc34b7b5c57"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "【（群主）那治洋：好，你去忙吧。】\n看着"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.71,
+    "summary": "第2章：第一位群员，异世界的小孩子尝试着打开聊天群。只是有了这个念头，聊天群的界面就打开了，",
+    "chapter_index": 3,
+    "book_id": "6a53afc34b7b5c57"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，一言不发。\n片刻后，不知是想到了什么，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.66,
+    "summary": "第3章：疯狂复制，带自己熟悉一下？看着可莉有些慌乱的模样，那治洋稍微思考了一下。“要不这样吧",
+    "chapter_index": 4,
+    "book_id": "6a53afc34b7b5c57"
+  }
+]

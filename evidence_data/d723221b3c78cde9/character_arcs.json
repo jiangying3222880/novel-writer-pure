@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "小明是怎",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "固执"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d723221b3c78cde9"
+  },
+  {
+    "character_name": "么死的",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "固执"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d723221b3c78cde9"
+  },
+  {
+    "character_name": "电话",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "固执"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d723221b3c78cde9"
+  },
+  {
+    "character_name": "没劲",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "固执"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d723221b3c78cde9"
+  },
+  {
+    "character_name": "高考结束",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "固执"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d723221b3c78cde9"
+  }
+]

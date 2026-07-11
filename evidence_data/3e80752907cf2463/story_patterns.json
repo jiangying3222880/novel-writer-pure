@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "3e80752907cf2463"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "是，彼时还未化作宇宙意志存在的太空校长，"
+    ],
+    "pacing_score": 0.93,
+    "tension_score": 0.51,
+    "summary": "第30章 到此为止吧小熙！（主角涅槃番外）2023-07-31 23:21开始阅读飞翔的小企鹅目标",
+    "chapter_index": 1,
+    "book_id": "3e80752907cf2463"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "恶魔果实的最终归属时，四皇之一的百兽凯多",
+      "下去，全然忘记了自己是个旱鸭子这件事。\n",
+      "渐渐合拢。\n情绪也慢慢平稳了下来。\n看着"
+    ],
+    "pacing_score": 0.59,
+    "tension_score": 0.76,
+    "summary": "第1章 苏醒茫茫的宇宙之中，有着无数颗诞生了智慧的星球。随着历史车轮的滚动向前，那些生存在这",
+    "chapter_index": 2,
+    "book_id": "3e80752907cf2463"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "到了方浩的祈求。\n方浩陡然间只感觉身体中"
+    ],
+    "pacing_score": 0.6,
+    "tension_score": 0.37,
+    "summary": "第2章 朱雀果实漆黑的空间中伸手不见五指，完全看不到一丝人烟。“这什么鬼地方？”方浩皱着眉目",
+    "chapter_index": 3,
+    "book_id": "3e80752907cf2463"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "低头不见抬头见的，时间一长能不熟悉么？\n",
+      "房，方浩如释重负的松了口气。\n你大爷的，"
+    ],
+    "pacing_score": 0.56,
+    "tension_score": 0.6,
+    "summary": "第3章 见闻温柔的风拂过了方浩那红润的脸。看着背后的病房，方浩如释重负的松了口气。你大爷的",
+    "chapter_index": 4,
+    "book_id": "3e80752907cf2463"
+  }
+]

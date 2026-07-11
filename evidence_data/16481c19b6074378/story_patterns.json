@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "16481c19b6074378"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第79章 牵手（下）2024-02-10 23:31开始阅读彳亍禾火我大概也许是真的扑街了。“早",
+    "chapter_index": 1,
+    "book_id": "16481c19b6074378"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“灰原！”就在灰原思考的时候，博士家的门"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.48,
+    "summary": "第1章 对方的日常（上）“小哀啊，为什么你早上去了一趟帝丹国中之后，心情一直不好的样子。”阿",
+    "chapter_index": 2,
+    "book_id": "16481c19b6074378"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "南只感觉像是背后被人敲了一闷棍一般，这种",
+      "了过去。\n“不过很遗憾，猜错了哦。”灰原"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 0.79,
+    "summary": "第2章 对方的日常（下）“咕嘟！”柯南吞了口唾沫，看着灰原的神情异常紧张。“不可能！灰原应该",
+    "chapter_index": 3,
+    "book_id": "16481c19b6074378"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "个人我也不想到处瞎逛啊......”灰原"
+    ],
+    "pacing_score": 0.92,
+    "tension_score": 0.6,
+    "summary": "第3章 丢罐子“嗯——明天就要开学了呢，接下来就不能整天待在实验室了。”走在街上，灰原拿着柯南",
+    "chapter_index": 4,
+    "book_id": "16481c19b6074378"
+  }
+]

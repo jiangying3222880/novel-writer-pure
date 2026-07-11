@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "c53d546c5a6ca127"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第40章 仪式2022-06-10 18:12开始阅读不正经野生哲学家宝子们感谢支持号外号外~业",
+    "chapter_index": 1,
+    "book_id": "c53d546c5a6ca127"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "你不知道上个月呀，我去山里抓小羊的时候，",
+      "，已经不记得是多少个夜里出现在她梦里的人"
+    ],
+    "pacing_score": 0.98,
+    "tension_score": 0.57,
+    "summary": "第1章 相逢大理—一个山光水色的天国福境。湛蓝的天空中漂浮着朵朵白云，天地间一片静谧。远处的",
+    "chapter_index": 2,
+    "book_id": "c53d546c5a6ca127"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "是和你一起去牧场了吗？”\n此时小燕子仿佛",
+      "要的东西，宝贝的不得了。历经磨难现在你们"
+    ],
+    "pacing_score": 0.85,
+    "tension_score": 0.61,
+    "summary": "第2章 分飞萧家大宅。“哥、晴儿、斑鸠，你们快过来，快来看看是谁回来啦？”“小燕子什么事儿",
+    "chapter_index": 3,
+    "book_id": "c53d546c5a6ca127"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "随即二人会心的笑了笑。\n桂嬷嬷神情惊慌突",
+      "佛爷的赏赐与恩宠，如今的欣荣是得意洋洋，"
+    ],
+    "pacing_score": 0.85,
+    "tension_score": 0.52,
+    "summary": "第3章 别离永和宫。欣荣在桂嬷嬷的搀扶下不紧不慢的前往景仁宫给老佛爷请安。前不久刚过完绵忆",
+    "chapter_index": 4,
+    "book_id": "c53d546c5a6ca127"
+  }
+]

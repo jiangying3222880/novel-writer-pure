@@ -1,0 +1,102 @@
+[
+  {
+    "character_name": "空秩",
+    "initial_state": "初始状态未明确描述，出现47次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "591494d161f12395"
+  },
+  {
+    "character_name": "陈小橙",
+    "initial_state": "初始状态未明确描述，出现62次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "591494d161f12395"
+  },
+  {
+    "character_name": "陈小橙的",
+    "initial_state": "初始状态未明确描述，出现7次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "591494d161f12395"
+  },
+  {
+    "character_name": "的陈小橙",
+    "initial_state": "初始状态未明确描述，出现11次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "591494d161f12395"
+  },
+  {
+    "character_name": "声音",
+    "initial_state": "初始状态未明确描述，出现8次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "591494d161f12395"
+  }
+]

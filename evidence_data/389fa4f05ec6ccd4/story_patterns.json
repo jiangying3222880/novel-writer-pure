@@ -1,0 +1,75 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.96,
+    "summary": "九世反派，女主集体黑化了！作者：浮在陀简介：江辰穿越玄幻小白文世界，成为反派大师兄。没有任何金",
+    "chapter_index": 0,
+    "book_id": "389fa4f05ec6ccd4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "一分。\n　　直至第十世，也就是这一世，他"
+    ],
+    "pacing_score": 0.79,
+    "tension_score": 0.51,
+    "summary": "第1章 天要我当反派，何必逆天而行？　　“咚——”　　九衍宗九峰，峰钟大鸣，如洪钟大吕，声波散",
+    "chapter_index": 1,
+    "book_id": "389fa4f05ec6ccd4"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "师徒缘分，已然缘尽！\n　　良久后，萧红衣"
+    ],
+    "pacing_score": 0.79,
+    "tension_score": 0.48,
+    "summary": "第2章 这大师兄，没救了　　破元丹？　　江辰一愣。　　他虽说是摆烂，但也未真正摆烂。　　因",
+    "chapter_index": 2,
+    "book_id": "389fa4f05ec6ccd4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，屋内灵气便已汇集起来。本想睁眼查看，却"
+    ],
+    "pacing_score": 0.85,
+    "tension_score": 0.55,
+    "summary": "第3章 他，绝不是我记忆中的大师兄　　夜色弥漫，皓月高悬。　　姜怜月独自返回住处，眉宇间带着浓",
+    "chapter_index": 3,
+    "book_id": "389fa4f05ec6ccd4"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "能祈祷，江辰能尽快赶来，拯救自己。\n　　",
+      "，告诉我……\n　　直至数月后……\n　　“"
+    ],
+    "pacing_score": 0.96,
+    "tension_score": 0.89,
+    "summary": "第4章 大师兄，告诉我……　　直至数月后……　　“终于炼成了！”丹房内的江辰，极其激动。",
+    "chapter_index": 4,
+    "book_id": "389fa4f05ec6ccd4"
+  }
+]

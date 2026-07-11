@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.78,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "dc78c1c9dda9605a"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“开始了，开始了”\n“期待了几个月，节目"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.43,
+    "summary": "第1章，参加节目S市最豪华的宴月居豪华别墅内，还在熟睡的秦宴被手机铃声吵醒，他迷迷糊糊睁开眼",
+    "chapter_index": 1,
+    "book_id": "dc78c1c9dda9605a"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.81,
+    "summary": "第10章 你的食材还没到是准备吃夜宵么镜头里，秦宴神色自然地坐到白露旁边，又保持了一些距离",
+    "chapter_index": 2,
+    "book_id": "dc78c1c9dda9605a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.85,
+    "summary": "第15章，惊呆！黄金鱼子酱秦宴几人回过头，就看到哗少在旁边笑话田希微“你一大口塞进去啊，太暴",
+    "chapter_index": 3,
+    "book_id": "dc78c1c9dda9605a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.89,
+    "summary": "第18章 什么？我卡里就剩两亿？很快，就有人敲响秦宴的门，打开一看，白露站在外面，笑得眉眼弯弯",
+    "chapter_index": 4,
+    "book_id": "dc78c1c9dda9605a"
+  }
+]

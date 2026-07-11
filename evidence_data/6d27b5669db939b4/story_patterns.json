@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "6d27b5669db939b4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第119章 软骨头2024-02-19 18:05开始阅读望天无敌手入行七年，擅长写娱乐文小说(",
+    "chapter_index": 1,
+    "book_id": "6d27b5669db939b4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "为了飞升成仙，逍遥真人再次苦修八十年，终"
+    ],
+    "pacing_score": 0.74,
+    "tension_score": 0.38,
+    "summary": "第1章 一梦百年我是逍遥真人？不，我是陈昊宇！康安医院的一间高档病房，陈昊宇缓缓地睁开眼睛",
+    "chapter_index": 2,
+    "book_id": "6d27b5669db939b4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "就在苏雨瑶和陈昊宇对峙的时候，走廊里突然",
+      "宇轻咦一声，感觉老爷子的状态有些不对。\n"
+    ],
+    "pacing_score": 0.71,
+    "tension_score": 0.61,
+    "summary": "第2章 他还活着就在苏雨瑶和陈昊宇对峙的时候，走廊里突然响起了一阵凄厉的哭声。“爸，你怎么就",
+    "chapter_index": 3,
+    "book_id": "6d27b5669db939b4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "..\n秦青青非常感激陈昊宇帮她解决问题，"
+    ],
+    "pacing_score": 0.58,
+    "tension_score": 0.35,
+    "summary": "第3章 敢欠术法师的钱？陈昊宇一愣，看了一下董华的面相。眼间距窄，鼻头带钩，嘴角向下，很明显",
+    "chapter_index": 4,
+    "book_id": "6d27b5669db939b4"
+  }
+]

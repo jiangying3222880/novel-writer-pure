@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.85,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "8919b7aede1c261f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.7,
+    "tension_score": 0.64,
+    "summary": "第1章 愿，周祈星一生平安我每每想在暗处守望你时，你却总是乱我心弦，将我拉入煦煦暖阳之下。那",
+    "chapter_index": 1,
+    "book_id": "8919b7aede1c261f"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "：“疼啊，怎么可能不疼。”\n下一秒，许愿",
+      "在了后面，生怕记错了似的。\n就在许愿以为"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.71,
+    "summary": "第2章 报答恩人“不要！”“周祈星不要！”噩梦初醒，女孩额前沁满细汗，目光呆滞了好一瞬。",
+    "chapter_index": 2,
+    "book_id": "8919b7aede1c261f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "”\n“你才.......”\n许愿刚开口，"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.33,
+    "summary": "第3章 怎么会是他....翌日晌午。艳阳高照，好在酷暑已经过了一大半，徐徐的风里也不再热烘烘",
+    "chapter_index": 3,
+    "book_id": "8919b7aede1c261f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 0.8,
+    "summary": "第4章 排骨警告！*三日后的早晨。晨光熹微，黎明的曙光揭去了夜幕的轻纱，从层层交叠的绵云渗",
+    "chapter_index": 4,
+    "book_id": "8919b7aede1c261f"
+  }
+]

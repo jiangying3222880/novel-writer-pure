@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.73,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "0218eecd6c7a5e80"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.99,
+    "summary": "第四百九十七章、大结局！ 2023-11-29 18:56:32 【女主比男主会撩+单女主+日",
+    "chapter_index": 1,
+    "book_id": "0218eecd6c7a5e80"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "字......顾晚秋？校花？\n死去的记忆",
+      "劲，凹凸不平的。”\n顾晚秋大喜过望。\n她"
+    ],
+    "pacing_score": 0.62,
+    "tension_score": 0.73,
+    "summary": "第一章、同桌好色，校花也是！2017年9月，南溪一中,高三《3》班。林牧重生到了18岁那一年",
+    "chapter_index": 2,
+    "book_id": "0218eecd6c7a5e80"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "看得清留下来的文字。\n花了几分钟，顾晚秋"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.68,
+    "summary": "第二章、情书被校花看到了！在极薄的信纸上写字。如果力气大，下面垫着的白纸就会留下印记。再用",
+    "chapter_index": 3,
+    "book_id": "0218eecd6c7a5e80"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第三章、跨服聊天！顾晚秋又想到了早上的事情。哼！不好好自习，整天就知道盯着她看！想到这，",
+    "chapter_index": 4,
+    "book_id": "0218eecd6c7a5e80"
+  }
+]

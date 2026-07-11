@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "8d2e314ef8fe2036"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.81,
+    "tension_score": 0.83,
+    "summary": "第五千九百一十章 不好的感觉2023-12-31 18:31开始阅读平凡魔术师我的作品希望你喜欢",
+    "chapter_index": 1,
+    "book_id": "8d2e314ef8fe2036"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "的混乱思绪，发出一声痛哼。\n\n“尘儿，你"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.35,
+    "summary": "第1章 丹帝记忆“我是谁？我是龙尘”“我是傲视天下，睥睨九霄的绝世丹帝——龙尘？我是人见人",
+    "chapter_index": 2,
+    "book_id": "8d2e314ef8fe2036"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "毛孔，强行引动天地灵气之力，贯穿经络，等",
+      "缓被自己吸收着。\n“很好，经络被打通了，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.45,
+    "summary": "第2章 卑鄙小人药液融入腹中，龙尘急忙用意念引导，将药液散开，融入四肢百骸。通常武者吸收药物，",
+    "chapter_index": 3,
+    "book_id": "8d2e314ef8fe2036"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "第3章 锋芒初现凤鸣帝国，武风盛行，争斗在所难免，所以在帝都外，有一座生死台，那里是解决私人恩",
+    "chapter_index": 4,
+    "book_id": "8d2e314ef8fe2036"
+  }
+]

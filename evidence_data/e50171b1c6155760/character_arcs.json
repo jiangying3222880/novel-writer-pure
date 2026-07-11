@@ -1,0 +1,117 @@
+[
+  {
+    "character_name": "刑法学总",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "e50171b1c6155760"
+  },
+  {
+    "character_name": "如果需要",
+    "initial_state": "初始状态未明确描述，出现1次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "e50171b1c6155760"
+  },
+  {
+    "character_name": "小说更新",
+    "initial_state": "初始状态未明确描述，出现1次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "e50171b1c6155760"
+  },
+  {
+    "character_name": "请勿修改",
+    "initial_state": "初始状态未明确描述，出现1次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "e50171b1c6155760"
+  },
+  {
+    "character_name": "文件名",
+    "initial_state": "初始状态未明确描述，出现1次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "e50171b1c6155760"
+  }
+]

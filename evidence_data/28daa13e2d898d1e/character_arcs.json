@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "皇袍老人",
+    "initial_state": "初始状态未明确描述，出现10次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "28daa13e2d898d1e"
+  },
+  {
+    "character_name": "道凌",
+    "initial_state": "初始状态未明确描述，出现38次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "28daa13e2d898d1e"
+  },
+  {
+    "character_name": "我的学生",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "28daa13e2d898d1e"
+  },
+  {
+    "character_name": "然后",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "28daa13e2d898d1e"
+  },
+  {
+    "character_name": "世界",
+    "initial_state": "初始状态未明确描述，出现14次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "28daa13e2d898d1e"
+  }
+]

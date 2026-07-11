@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "ad120aeb78e83bcc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第177章 提前转正！（大结局）2023-04-12 21:36开始阅读长安安好所求皆如愿，所梦皆",
+    "chapter_index": 1,
+    "book_id": "ad120aeb78e83bcc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "！\n而且林逸都没有表明身份，任谁看到有人"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.87,
+    "summary": "第1章 神级警官系统！地铁上。林逸猛地从睡梦中惊醒。看到周围陌生的环境，一时有些迷茫！自",
+    "chapter_index": 2,
+    "book_id": "ad120aeb78e83bcc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "这搁谁都扛不住啊！\n这时，其中一名警员突"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.76,
+    "summary": "第2章 这警察好像不太正经啊！虽然乘客们逐渐相信了林逸是警察的身份，但是对他还有些许忌惮，觉得",
+    "chapter_index": 3,
+    "book_id": "ad120aeb78e83bcc"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 天大的惊喜！此时，地铁站里抓捕到一名A级通缉犯的消息也汇报到了江城警察局。市局当即就",
+    "chapter_index": 4,
+    "book_id": "ad120aeb78e83bcc"
+  }
+]

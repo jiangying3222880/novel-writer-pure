@@ -1,0 +1,46 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.61,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "90d8105010205523"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "道自己每天有多少时间用在了自己的手机上，"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.21,
+    "summary": "第1章  行为上瘾的兴起  几年前，应用软件开发人员凯文·霍尔什（Kevin Holesh）",
+    "chapter_index": 2,
+    "book_id": "90d8105010205523"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "脚跟，大兵们只想给自己找点乐子。\n\n  "
+    ],
+    "pacing_score": 0.77,
+    "tension_score": 0.21,
+    "summary": "第2章  我们所有人的心瘾  大多数战争片都会忽略掉一场场作战行动当中漫长的无聊乏味间隔期。",
+    "chapter_index": 4,
+    "book_id": "90d8105010205523"
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "2bf2dea71411cf5b"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.53,
+    "tension_score": 0.75,
+    "summary": "第230章 大结局2024-02-29 00:02开始阅读鱼又夏路漫漫其修远兮萧逸穿越到大夏王朝",
+    "chapter_index": 1,
+    "book_id": "2bf2dea71411cf5b"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.8,
+    "tension_score": 0.88,
+    "summary": "第1章 发老婆啦“发老婆啦！发老婆啦！”“逸娃子，赶快跑，官府发老婆啦！”“什么？发老婆？",
+    "chapter_index": 2,
+    "book_id": "2bf2dea71411cf5b"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "伟举。\n萧逸正准备拉女孩走。\n身旁的女孩"
+    ],
+    "pacing_score": 0.64,
+    "tension_score": 0.36,
+    "summary": "第2章 齐人之福萧逸开口道，“我收了她们吧！二叔二婶，你们不必担心，我既然娶了她，自然会好好待",
+    "chapter_index": 3,
+    "book_id": "2bf2dea71411cf5b"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.74,
+    "tension_score": 0.85,
+    "summary": "第3章 扒皮三上门他走到院里，深吸了一口新鲜空气，这才看向屋内。两姐妹早已挽好了发，一个拿着",
+    "chapter_index": 4,
+    "book_id": "2bf2dea71411cf5b"
+  }
+]

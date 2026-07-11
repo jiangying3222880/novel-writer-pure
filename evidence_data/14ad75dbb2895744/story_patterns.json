@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.88,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "14ad75dbb2895744"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.98,
+    "summary": "第152章 我们来聊聊以太灵战斗吧2024-01-28 23:00开始阅读爱鸽的春花雪月身为一名作",
+    "chapter_index": 1,
+    "book_id": "14ad75dbb2895744"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "友一起摸着鱼。\n而等她摸牌的时候，脑海中",
+      "知道吗？\n这可是个好苗子，可不能出事！\n"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.69,
+    "summary": "第1章 重生为青雀，开局遇上符玄！（脑子寄存处）（PS：因为是同人，有些时候并不会按照设定来",
+    "chapter_index": 2,
+    "book_id": "14ad75dbb2895744"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.81,
+    "summary": "第2章 符玄大人……喜欢我吗？青雀此言一出，现场一片寂静。太卜司其他人都是一脸震惊地看着青雀",
+    "chapter_index": 3,
+    "book_id": "14ad75dbb2895744"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "头。\n“⊙﹏⊙我……我也不知道啊，我就是",
+      "来的！\n没想到……本座的魅力那么大……\n"
+    ],
+    "pacing_score": 0.75,
+    "tension_score": 0.59,
+    "summary": "第3章 当然是因为太卜大人啊！“本座……身为太卜，平时日理万机惯了，因此对男女之事也并不是很了",
+    "chapter_index": 4,
+    "book_id": "14ad75dbb2895744"
+  }
+]

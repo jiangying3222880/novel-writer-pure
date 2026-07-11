@@ -1,0 +1,82 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.65,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "8a687231652effaf"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.58,
+    "tension_score": 0.75,
+    "summary": "第三章：第一次配合共同逃出博人与光的身影，在幽暗的森林快速的穿梭着。宇智波的族人也很快便发现",
+    "chapter_index": 1,
+    "book_id": "8a687231652effaf"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.58,
+    "tension_score": 0.79,
+    "summary": "第四章：来到博人的时代博人看着光说道：“我们第一次配合就很不错。”博人伸出手掌，想要击掌。",
+    "chapter_index": 2,
+    "book_id": "8a687231652effaf"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.6,
+    "tension_score": 0.83,
+    "summary": "第五章世界没有变化，却一直有变化。博人与舍人来到摆放，衣服的房间。“喂，舍人叔叔我问你？”",
+    "chapter_index": 3,
+    "book_id": "8a687231652effaf"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→高潮",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.62,
+    "tension_score": 0.81,
+    "summary": "第六章温暖的晚餐舍人将博人与光，传送至木叶大门的不远处。博人拉起光的手，慢慢的朝着大门走去。",
+    "chapter_index": 4,
+    "book_id": "8a687231652effaf"
+  }
+]

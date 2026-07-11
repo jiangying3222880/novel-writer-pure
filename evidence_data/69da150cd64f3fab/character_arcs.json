@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "星河宗",
+    "initial_state": "初始状态未明确描述，出现13次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "69da150cd64f3fab"
+  },
+  {
+    "character_name": "大会",
+    "initial_state": "初始状态未明确描述，出现7次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "69da150cd64f3fab"
+  },
+  {
+    "character_name": "升仙大会",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "69da150cd64f3fab"
+  },
+  {
+    "character_name": "万花峰峰",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "69da150cd64f3fab"
+  },
+  {
+    "character_name": "陈长青面",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "69da150cd64f3fab"
+  }
+]

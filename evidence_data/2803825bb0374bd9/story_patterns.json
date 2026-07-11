@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "2803825bb0374bd9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第490章 羊肉汤？杀人还要诛心？！2023-12-05 19:02开始阅读古明月夜我的作品希望你",
+    "chapter_index": 1,
+    "book_id": "2803825bb0374bd9"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "至看到杨林的目光，从她身上移开时……\n她"
+    ],
+    "pacing_score": 0.84,
+    "tension_score": 0.55,
+    "summary": "第1章 挑一个老婆“杨林，你今天必须领个老婆！”“你十八了，按咱大乾律法，若不成婚，赋税加倍",
+    "chapter_index": 2,
+    "book_id": "2803825bb0374bd9"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "林身边的莺莺燕燕时，他的脸色差到极点。\n"
+    ],
+    "pacing_score": 0.82,
+    "tension_score": 0.69,
+    "summary": "第2章 人口红利就在李玉瑶绝望的下一秒，那个清爽的声音接着说道。“小孩子才做选择。”“我全",
+    "chapter_index": 3,
+    "book_id": "2803825bb0374bd9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n“从现在开始，所有人听我指挥。”杨林",
+      "那便携手砥砺前行！\n短暂的愣神之后，大家"
+    ],
+    "pacing_score": 0.75,
+    "tension_score": 0.83,
+    "summary": "第3章 宝山“够了吧。”“你的老婆现在归我了！”刘亮高傲地扬起脑袋，目中透着轻蔑和狂妄。",
+    "chapter_index": 4,
+    "book_id": "2803825bb0374bd9"
+  }
+]

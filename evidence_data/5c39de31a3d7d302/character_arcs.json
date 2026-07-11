@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "米高",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "5c39de31a3d7d302"
+  },
+  {
+    "character_name": "我想",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "5c39de31a3d7d302"
+  },
+  {
+    "character_name": "我的房客",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "5c39de31a3d7d302"
+  },
+  {
+    "character_name": "去大理开",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "5c39de31a3d7d302"
+  },
+  {
+    "character_name": "我知道",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "5c39de31a3d7d302"
+  }
+]

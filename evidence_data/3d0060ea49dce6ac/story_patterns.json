@@ -1,0 +1,75 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "3d0060ea49dce6ac"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "下凡。\n“嘶……啊……”\n就在这时，叶修"
+    ],
+    "pacing_score": 0.64,
+    "tension_score": 0.33,
+    "summary": "第一章 少年叶修星辰大陆，天元圣宫。清晨。今日是天元圣宫三年一度的开门招募之日。此时，浩",
+    "chapter_index": 1,
+    "book_id": "3d0060ea49dce6ac"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "星辰之力有任何的亲和力才是。\n可为什么会"
+    ],
+    "pacing_score": 0.75,
+    "tension_score": 0.37,
+    "summary": "第二章 九星连珠一语出，天地惊。但紧接着的是一声声嘲笑讥讽的音潮。“想找回场子？也太没有自",
+    "chapter_index": 2,
+    "book_id": "3d0060ea49dce6ac"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "憬的看着那些大佬。\n“哎呀，好爽啊。”\n",
+      "考核长老差点涕泗横流，天官赐福啊，而他也"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "第三章震撼天元天昏地暗，九星当空。之前嘲笑讥讽叶修的少年郎们个个目瞪口呆，呼吸都要停止了下来",
+    "chapter_index": 3,
+    "book_id": "3d0060ea49dce6ac"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "虚无的空间内穿梭，叶修还没反应过来，眸子"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.52,
+    "summary": "第四章 逆天领悟天元圣宫的苍穹之上，一道道惨绝人寰的惨叫声缕缕不绝。“大哥，我晕机啊！”叶修",
+    "chapter_index": 4,
+    "book_id": "3d0060ea49dce6ac"
+  }
+]

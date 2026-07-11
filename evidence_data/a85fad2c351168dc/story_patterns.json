@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "a85fad2c351168dc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第129章 干着杀头的活，赚着温饱的钱2023-12-27 22:45开始阅读叫我大官人欲买桂花同",
+    "chapter_index": 1,
+    "book_id": "a85fad2c351168dc"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "最近有没有什么新游戏玩？”\n【呦老女人，"
+    ],
+    "pacing_score": 0.91,
+    "tension_score": 0.73,
+    "summary": "第1章 神级游戏设计师，两句话破防呆小妹大脑寄存处大脑一抛，直接开爽———————————",
+    "chapter_index": 2,
+    "book_id": "a85fad2c351168dc"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "的？】\n【不是，大家都是黑粉，都白嫖，你",
+      "BusyWorld平台。\n空荡荡的商城中"
+    ],
+    "pacing_score": 0.85,
+    "tension_score": 0.85,
+    "summary": "第2章 盗贼模拟器，开局清空弹夹楚生点开自己的BusyWorld平台。空荡荡的商城中终于有了",
+    "chapter_index": 3,
+    "book_id": "a85fad2c351168dc"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "妹毫不犹豫的行动。\n查看门窗全部被锁。\n",
+      "钟，游戏内已经过去三小时。\n此时琼斯夫人"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 这游戏设计师，是行走的五十万呆小妹一脸懵逼的看着屏幕。“我……死了？”【哈哈哈哈，",
+    "chapter_index": 4,
+    "book_id": "a85fad2c351168dc"
+  }
+]

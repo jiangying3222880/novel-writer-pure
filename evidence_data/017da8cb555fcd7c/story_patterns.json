@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n“对我刚才的报告有什么评价？”\n老师",
+      "“孙处！你别瞎说，没有的事儿！”\n说完，"
+    ],
+    "pacing_score": 0.75,
+    "tension_score": 0.49,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "017da8cb555fcd7c"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "问，得到了肯定答复。\n鹿凡自然无所谓，但",
+      "糕不需要了，我们这儿没人过生日。”\n音乐"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.65,
+    "summary": "第一回吃饭就让弟弟妹妹买单？”下午三点钟，下了中班，鹿凡和陈伽源干脆就在休息室里消磨时间，等候楚",
+    "chapter_index": 1,
+    "book_id": "017da8cb555fcd7c"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "跟着自己继续往外走。\n走出半步，魏瑛却又",
+      "汤冬语一方那定向六病区的特殊要求，就相当",
+      "的份内工作，我就多说几句……”\n魏瑛书记"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.79,
+    "summary": "第一回认识时，姐就看出来了，你肯定将来是一个很有出息，很有成就的人！这事儿你有啥思路，就放心大胆",
+    "chapter_index": 2,
+    "book_id": "017da8cb555fcd7c"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "静的远远鼓励着跪在地上的鹿凡……\n人群，"
+    ],
+    "pacing_score": 0.9,
+    "tension_score": 0.38,
+    "summary": "第三回是燕丹宁也跟着。宋凯有一回是陪着邬丹一起来的，鹿凡照样礼节性的接待。再有，走动相对频繁的",
+    "chapter_index": 3,
+    "book_id": "017da8cb555fcd7c"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "个女的还出来磕头请戏了……”\n鹿凡一愣，",
+      "真是活该了去！\n我倒是现在十分开心，小丹"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.55,
+    "summary": "第227章 汤冬语的醒酒话话题显得更加沉重，氛围愈加的安静了下来。韩梦渝都有点眼圈红了，估计",
+    "chapter_index": 4,
+    "book_id": "017da8cb555fcd7c"
+  }
+]

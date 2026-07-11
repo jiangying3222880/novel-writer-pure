@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.75,
+    "summary": "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓　精校小说尽在河洛中文社区：http:/",
+    "chapter_index": 0,
+    "book_id": "ffb8dfb3b0ed37ec"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.63,
+    "summary": "第1章 林轩　　“唉！”　　失望的叹息传来，一个相貌平凡的少年，满脸木然的表情，又失败了，这已",
+    "chapter_index": 1,
+    "book_id": "ffb8dfb3b0ed37ec"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "小心翼翼的盘膝坐下。\n　　轰！\n　　地表",
+      "行。\n　　……\n　　数天过去了，他的灵力"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.44,
+    "summary": "第2章 炼心路　　这三年来，林轩没少吃经脉受损的苦，每一次养伤都要消耗很长时间，而做为一个没有灵",
+    "chapter_index": 2,
+    "book_id": "ffb8dfb3b0ed37ec"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.65,
+    "summary": "第3章 幻境苦修　　稚鹰阁，是一栋气势恢宏的建筑，其中光是练气堂就占地数千平方米，乃灵动期弟子的",
+    "chapter_index": 3,
+    "book_id": "ffb8dfb3b0ed37ec"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "会儿，然后继续……\n　　功夫不负有心人，",
+      "体积缩小，但颜色却越来越浓。\n　　最后，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.42,
+    "summary": "第4章 驱物术　　冰刀割在身上，疼痛无比，林轩头上的冷汗，也很快被冻住，忍着常人难以忍受的痛苦，",
+    "chapter_index": 4,
+    "book_id": "ffb8dfb3b0ed37ec"
+  }
+]

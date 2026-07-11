@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "2f6b24ae12fd4087"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.43,
+    "tension_score": 0.6,
+    "summary": "第181章 夭寿啊，感谢系统2023-12-25 17:29开始阅读应天墨客你是作家助手不可或缺的",
+    "chapter_index": 1,
+    "book_id": "2f6b24ae12fd4087"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "羽呆滞的原地久久没有动作的，还是他脑海中",
+      "，却是发现车外的少年郎看她已经入了迷。\n"
+    ],
+    "pacing_score": 0.64,
+    "tension_score": 0.61,
+    "summary": "第001章 截胡蔡琰，多子多福<div data-fanqie-type=\"image\" so",
+    "chapter_index": 2,
+    "book_id": "2f6b24ae12fd4087"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.61,
+    "tension_score": 0.8,
+    "summary": "第002章 海王必备，系统光环“谢公子。”蔡琰面色微红，声若蚊蝇，实在是秦羽为她披上大衣之后",
+    "chapter_index": 3,
+    "book_id": "2f6b24ae12fd4087"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "云闻言挠了挠头：“也不知怎么的，今天早上"
+    ],
+    "pacing_score": 0.58,
+    "tension_score": 0.36,
+    "summary": "第003章 越战越勇，赵云认主日上四杆，蔡琰如烂泥一般躺在秦羽的怀中。秦羽没有再动，而是翻看",
+    "chapter_index": 4,
+    "book_id": "2f6b24ae12fd4087"
+  }
+]

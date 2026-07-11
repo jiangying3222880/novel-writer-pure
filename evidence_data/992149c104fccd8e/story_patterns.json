@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "992149c104fccd8e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第147章 我们的大明2024-02-16 14:51开始阅读河套大圣爷人们在寻找金子，我在寻找能",
+    "chapter_index": 1,
+    "book_id": "992149c104fccd8e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "里该多空多冷啊！\n咱还不敢相信，你就这么",
+      "控制的从脑海中闪出！\n过了许久，\n朱雄英"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 我死了？我活了！洪武十五年应天府（南京）钟山如瓢泼一般的大雨，似乎在宣泄着天地间",
+    "chapter_index": 2,
+    "book_id": "992149c104fccd8e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "年，懿文太子朱标薨！\n朱标死后，朱元璋才"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 朱家有子，雄武仙才这一世朱雄英的回忆，凶猛的灌入到脑中，朱雄英在【雄武仙才】天赋的",
+    "chapter_index": 3,
+    "book_id": "992149c104fccd8e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "五十大板！！！”\n“陛下！不好了！\n娘娘"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.82,
+    "summary": "第3章 瞎眼皇孙逃出棺椁！【您的眼睛已经失明，便不能继续享有该天赋。】朱雄英愣了下，随后苦笑",
+    "chapter_index": 4,
+    "book_id": "992149c104fccd8e"
+  }
+]

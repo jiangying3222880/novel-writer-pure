@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "660d55cc104703fc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第231章：敬枫丹！2023-12-16 22:36开始阅读星落michael哇库哇库本作不百合",
+    "chapter_index": 1,
+    "book_id": "660d55cc104703fc"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "？”就在许多多四处寻找手机的时候，许多多",
+      "个神经病一样的四处发疯，底下的那维莱特终",
+      "像个神经病一样的四处发疯，底下的那维莱特"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.86,
+    "summary": "第一章：第一天就成为了全枫丹的乐子“这里是哪里啊……”不过是一转眼，许多多就到了一个陌生的地方",
+    "chapter_index": 2,
+    "book_id": "660d55cc104703fc"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“水神大人，您要为我们做主啊！”眼见枢机"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.43,
+    "summary": "第二章：正义之神伸张正义“喂，那头那个家伙，你叫什么来着，培根是吧？这里可是正义的国度，在我的",
+    "chapter_index": 3,
+    "book_id": "660d55cc104703fc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.73,
+    "summary": "第三章：驭水官“好了，审判官大人，人也走的差不多了，说说吧，把我留下有什么事情吗？”随着人走的",
+    "chapter_index": 4,
+    "book_id": "660d55cc104703fc"
+  }
+]

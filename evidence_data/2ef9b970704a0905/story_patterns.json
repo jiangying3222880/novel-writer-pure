@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "2ef9b970704a0905"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.36,
+    "tension_score": 0.6,
+    "summary": "第541章 名动天下（大结局）2023-07-31 07:00开始阅读付二贷潇洒飘逸、帅气逼人。。",
+    "chapter_index": 1,
+    "book_id": "2ef9b970704a0905"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "钱树苗，拿一棵来尝试一番，也无伤大雅。\n",
+      "真特么神奇了！”\n多次尝试无果之后，杨浩"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.59,
+    "summary": "第1章 天启辅助（新书求支持）华国，深市。忙完一天工作的杨浩带着一身的疲惫，回到了自己狭小的",
+    "chapter_index": 2,
+    "book_id": "2ef9b970704a0905"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.79,
+    "summary": "第2章 大惊喜摇钱树苗的种植方式有很多，有三水二水一水的，有两肥两水两虫的，有一水一虫的，这",
+    "chapter_index": 3,
+    "book_id": "2ef9b970704a0905"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“……”\n和小白龙聊了一会儿，摇钱树苗终",
+      "“……”\n和小白龙聊了一会儿，摇钱树苗终"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.76,
+    "summary": "第3章 发财的节奏【小白龙】：“#80#80#80#7#7#7！”小白龙这次的回复不仅是鄙视",
+    "chapter_index": 4,
+    "book_id": "2ef9b970704a0905"
+  }
+]

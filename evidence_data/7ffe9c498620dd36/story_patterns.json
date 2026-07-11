@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.85,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "7ffe9c498620dd36"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.77,
+    "summary": "第001章 百亿到账倒计时【双男主，双洁，双强，作者是抽空时间写的，要是觉得不好看可以退出，没",
+    "chapter_index": 1,
+    "book_id": "7ffe9c498620dd36"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.78,
+    "summary": "第002章 我飙演技“那天发生了什么事情？都说一下吧，好做公关。”好不容易压下心口的那股气，",
+    "chapter_index": 2,
+    "book_id": "7ffe9c498620dd36"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n因为这样的环境，造就了他扭曲的性格，",
+      "这是算在主角受面前ooc了？\n“晟哥，你"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.57,
+    "summary": "第003章 穿书了的男频大男主“扑通——”他找准位置扎进湖水，不费吹功夫就把人给捞了出来，没",
+    "chapter_index": 3,
+    "book_id": "7ffe9c498620dd36"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "属于白幼瘦的体质，但经过他的不断磨炼，终",
+      "就属于白幼瘦的体质，但经过他的不断磨炼，"
+    ],
+    "pacing_score": 0.99,
+    "tension_score": 0.45,
+    "summary": "第004章 老公，你回来了～陆老爷子对他这个孙媳妇那是真的好，把这么一栋类似于古堡装修的大别墅",
+    "chapter_index": 4,
+    "book_id": "7ffe9c498620dd36"
+  }
+]

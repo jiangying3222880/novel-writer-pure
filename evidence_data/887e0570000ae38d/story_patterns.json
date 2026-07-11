@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "887e0570000ae38d"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.68,
+    "summary": "第125章 震惊！摩拉克斯暗杀盐之魔神2024-01-23 18:38开始阅读人间几春秋趣味写小说",
+    "chapter_index": 1,
+    "book_id": "887e0570000ae38d"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "束了须弥的旅程，今天，正准备前往枫丹。\n"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.39,
+    "summary": "第1章 天降屏幕旅行者空，结束了须弥的旅程，今天，正准备前往枫丹。突然一声巨响，天上突然出现",
+    "chapter_index": 2,
+    "book_id": "887e0570000ae38d"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n【知道钟离真实身份的人都笑了。】\n【"
+    ],
+    "pacing_score": 0.8,
+    "tension_score": 0.57,
+    "summary": "第2章 停下你的脑补【莫娜: 不敢相信，视频涉及未来，这是真的吗？】【凝光：未来不可测吧？】",
+    "chapter_index": 3,
+    "book_id": "887e0570000ae38d"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.93,
+    "tension_score": 1.0,
+    "summary": "第3章 水神芙宁娜出场，众神风评被害【系统:盘点开始】【播放《水神欢迎旅行者》名场面】【芙",
+    "chapter_index": 4,
+    "book_id": "887e0570000ae38d"
+  }
+]

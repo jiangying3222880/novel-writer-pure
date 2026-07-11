@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "155861fb9a918fbb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.86,
+    "tension_score": 0.75,
+    "summary": "第136章 太阳（二十四）2024-03-14 22:17开始阅读奶茶猫狗我要让所有人衷心说出：这",
+    "chapter_index": 1,
+    "book_id": "155861fb9a918fbb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "思想和法制观念偏向成熟，不易冲动。\n即便"
+    ],
+    "pacing_score": 0.74,
+    "tension_score": 0.41,
+    "summary": "第1章 真理觉醒【很久很久以前有一个羊村，里面居住一位牧羊人，他因经常欺骗、愚弄他人而被逐出青",
+    "chapter_index": 2,
+    "book_id": "155861fb9a918fbb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.68,
+    "tension_score": 0.78,
+    "summary": "第2章 魔道协会噗嗤！刘星的真理一出来，下面就有不少人笑出声。也别怪人家缺德，毕竟这个真理",
+    "chapter_index": 3,
+    "book_id": "155861fb9a918fbb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "分仍是普通百姓。\n“下一个，周科。”\n“"
+    ],
+    "pacing_score": 0.66,
+    "tension_score": 0.31,
+    "summary": "第3章 罪与罚以太，一种存在于大气的魔能粒子，是除水、火、气、地外的构筑世界的第五大基本元素，",
+    "chapter_index": 4,
+    "book_id": "155861fb9a918fbb"
+  }
+]

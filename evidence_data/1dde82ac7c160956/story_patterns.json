@@ -1,0 +1,46 @@
+[
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "了。”\n\n  我说：“好的。”\n\n  她"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.21,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "1dde82ac7c160956"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.69,
+    "summary": "第一章  你舍得吗  <h2 class=\"sectionTitle\" id=\"headin",
+    "chapter_index": 2,
+    "book_id": "1dde82ac7c160956"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "道对我来说，专升本有多难吗？”\n\n  我"
+    ],
+    "pacing_score": 0.7,
+    "tension_score": 0.3,
+    "summary": "第二章  悲伤有迹可循  <h2 class=\"sectionTitle\" id=\"head",
+    "chapter_index": 4,
+    "book_id": "1dde82ac7c160956"
+  }
+]

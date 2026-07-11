@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.64,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "68a52e4b80de1266"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，心里猛地钝痛，心中维系着她生命的那根线",
+      "她忽又觉得轻松了许多，于洛儿死了，她也终"
+    ],
+    "pacing_score": 0.93,
+    "tension_score": 0.6,
+    "summary": "第1章 坐牢顶罪沈月初红着眼，指着乔婉歌斥骂。“乔婉歌，你还是人吗？我哥为你做了那么多，现在",
+    "chapter_index": 1,
+    "book_id": "68a52e4b80de1266"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "都无动于衷，见到乔婉歌以后，内心的防线却"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.47,
+    "summary": "第2章 沈煜白认罪林警官：“听说沈先生有个爱人。”沈煜白：“没有，我没有爱人。”婉婉从未承",
+    "chapter_index": 2,
+    "book_id": "68a52e4b80de1266"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.96,
+    "tension_score": 0.91,
+    "summary": "第3章 反正——婉婉希望他去死女警官将人带了下去，林警官站在沈煜白面前，他再三劝道：“煜白，你",
+    "chapter_index": 3,
+    "book_id": "68a52e4b80de1266"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "第4章\n 乔婉歌重生\n\n乔婉歌突然想起来",
+      "沈月初她看到乔婉歌坐在地上哭得歇斯底里，"
+    ],
+    "pacing_score": 0.98,
+    "tension_score": 0.65,
+    "summary": "第4章 乔婉歌重生乔婉歌突然想起来，自己不久前的确说过让沈煜白去死之类的话……那时秦空时亲手",
+    "chapter_index": 4,
+    "book_id": "68a52e4b80de1266"
+  }
+]

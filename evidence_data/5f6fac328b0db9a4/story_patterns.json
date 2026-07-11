@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "5f6fac328b0db9a4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.97,
+    "summary": "第1870章 谜团重重2023-11-17 23:49开始阅读若水流深新人作者，请多多关照。楚阳",
+    "chapter_index": 1,
+    "book_id": "5f6fac328b0db9a4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "到了离开的时候了。”\n被众人注视着，楚阳"
+    ],
+    "pacing_score": 0.68,
+    "tension_score": 0.33,
+    "summary": "第1章 穿越异界，位面大反派看着眼前站着不少人的大堂，楚阳感觉有些蛋疼。他一觉醒来，发现自己",
+    "chapter_index": 2,
+    "book_id": "5f6fac328b0db9a4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "顺便看看这个世界的风景。\n这么飞着，楚阳",
+      "。\n到那时候，他自然会得到剑灵的认同。\n"
+    ],
+    "pacing_score": 0.66,
+    "tension_score": 0.53,
+    "summary": "第2章 你的金手指是我的了就在林逸还未反应过来的时候，楚阳就已经来到了他的身前。被他恐怖的气",
+    "chapter_index": 3,
+    "book_id": "5f6fac328b0db9a4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n这个世界，还有谁会在乎我的想法吗？\n"
+    ],
+    "pacing_score": 0.54,
+    "tension_score": 0.27,
+    "summary": "第3章 经典逼婚，英雄救美传出声音的地方并不算太远，楚阳不到一会儿就快到了。听着前方越来越近",
+    "chapter_index": 4,
+    "book_id": "5f6fac328b0db9a4"
+  }
+]

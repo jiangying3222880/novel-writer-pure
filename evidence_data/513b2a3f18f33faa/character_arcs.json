@@ -1,0 +1,117 @@
+[
+  {
+    "character_name": "世界美食",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "513b2a3f18f33faa"
+  },
+  {
+    "character_name": "不白吃漫",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "513b2a3f18f33faa"
+  },
+  {
+    "character_name": "画这就是",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "513b2a3f18f33faa"
+  },
+  {
+    "character_name": "松露",
+    "initial_state": "初始状态未明确描述，出现30次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "513b2a3f18f33faa"
+  },
+  {
+    "character_name": "我是不白",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "513b2a3f18f33faa"
+  }
+]

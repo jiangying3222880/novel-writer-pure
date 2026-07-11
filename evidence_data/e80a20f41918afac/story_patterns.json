@@ -1,0 +1,75 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "e80a20f41918afac"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "队的驴③腰酸腿痛，歇了，兄弟们\n好消息："
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.5,
+    "summary": "第788章 出口青霉素2024-01-07 03:56开始阅读生产队的驴③腰酸腿痛，歇了，兄弟们",
+    "chapter_index": 1,
+    "book_id": "e80a20f41918afac"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "手把打制的半成品扔回铁砧上。\n“嗯？”\n"
+    ],
+    "pacing_score": 0.74,
+    "tension_score": 0.59,
+    "summary": "第1章 摊牌了，其实我是穿越者始皇帝三十二年，代郡。时值正午，街面上熙熙攘攘，热闹非常。叮",
+    "chapter_index": 2,
+    "book_id": "e80a20f41918afac"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "峨壮阔的建筑群出现在地平线的尽头。\n陈庆",
+      "起来。\n赵崇抬头望去，露出轻松的神色。\n"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.8,
+    "summary": "第2章 此子断不可留车辚辚，马萧萧。渭水河畔，一望无际的农田生机盎然。陈庆昂首挺立，眺望着",
+    "chapter_index": 3,
+    "book_id": "e80a20f41918afac"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "头致意。\n“呵呵。”\n“哈哈哈！”\n嬴政"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.51,
+    "summary": "第3章 我没打算造大秦的反赵崇是黑冰台的心腹，也是嬴政最信任的人。他的办事能力绝对是不需要担",
+    "chapter_index": 4,
+    "book_id": "e80a20f41918afac"
+  }
+]

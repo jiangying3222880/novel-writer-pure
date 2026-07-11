@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "6cec9cfbaa621c1e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.86,
+    "tension_score": 0.6,
+    "summary": "第567章 这就是，最后…一章了。2024-01-26 21:21开始阅读癞蛤蟆想吃炖大鹅社会废人",
+    "chapter_index": 1,
+    "book_id": "6cec9cfbaa621c1e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "应急食品告别蒙德，踏上了前往璃月的道路。",
+      "暂的安静后，人们发现光幕上的发言按钮。\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.65,
+    "summary": "第一章 问答系统提瓦特大陆，璃月一位金发少女（爷）和她的应急食品告别蒙德，踏上了前往璃月的道",
+    "chapter_index": 2,
+    "book_id": "6cec9cfbaa621c1e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，请回答】\n【荒泷一斗：哈哈哈哈，本大爷"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.36,
+    "summary": "第2章 咕噜咕噜滚下山真君【系统分析中......，恭喜甘雨回答错误，接下来播放甘雨的黑历史】",
+    "chapter_index": 3,
+    "book_id": "6cec9cfbaa621c1e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "信息以及七国。旅行者将手放在七天神像上，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.26,
+    "summary": "第3章 派蒙才不是小东西【恭喜八重神子回答正确】【八重神子获得异世界轻小说300w字小说7本",
+    "chapter_index": 4,
+    "book_id": "6cec9cfbaa621c1e"
+  }
+]

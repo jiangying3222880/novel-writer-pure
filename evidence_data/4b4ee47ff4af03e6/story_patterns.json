@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.85,
+    "tension_score": 0.64,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "4b4ee47ff4af03e6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "”的人，因为从来不朽之笔，须传不朽之人，",
+      "——究竟谁靠谁传，渐渐的不甚了然起来，而"
+    ],
+    "pacing_score": 0.91,
+    "tension_score": 0.5,
+    "summary": "第一章 序  我要给阿Q 做正传，已经不止一两年了。但一面要做，一面又往回想，这足见我不是一个",
+    "chapter_index": 1,
+    "book_id": "4b4ee47ff4af03e6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "知怎么一回事，总还是阿Q 吃亏的时候多。",
+      "，渐渐的输入别个汗流满面的人物的腰间。他"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.58,
+    "summary": "第二章 优胜记略  阿Q 不独是姓名籍贯有些渺茫，连他先前的“行状”也渺茫。因为未庄的人们之于",
+    "chapter_index": 2,
+    "book_id": "4b4ee47ff4af03e6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      ":“现在的世界太不成话，儿子打老子……”"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.34,
+    "summary": "第三章 续优胜记略  然而阿Q 虽然常优胜，却直待蒙赵太爷打他嘴巴之后，这才出了名。  他",
+    "chapter_index": 3,
+    "book_id": "4b4ee47ff4af03e6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "全不睬，低了头只是走。阿Q 走近伊身旁，",
+      "见伊也一定要唾骂，而况在屈辱之后呢? 他"
+    ],
+    "pacing_score": 0.86,
+    "tension_score": 0.66,
+    "summary": "第四回井，也不是好女人。  这“假洋鬼子”近来了。  “秃儿。驴……”阿Q 历来本只在肚子",
+    "chapter_index": 4,
+    "book_id": "4b4ee47ff4af03e6"
+  }
+]

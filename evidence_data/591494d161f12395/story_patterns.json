@@ -1,0 +1,48 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "591494d161f12395"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "们看书\n陈小橙准备向学校里的男神告白时，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.2,
+    "summary": "第一百三十二章2023-12-16 11:14开始阅读爱吃甜糖写作小白，爱写无脑小甜文，来甜你的心",
+    "chapter_index": 2,
+    "book_id": "591494d161f12395"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第一章校园内刚刚下晚自习的陈小橙，着急的一边拨打电话，一边下楼梯。陈小橙：“真是奇了怪了，怎",
+    "chapter_index": 4,
+    "book_id": "591494d161f12395"
+  }
+]

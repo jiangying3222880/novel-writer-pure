@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "人生的路",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "aad3b8ea7e707af1"
+  },
+  {
+    "character_name": "每一步都",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "aad3b8ea7e707af1"
+  },
+  {
+    "character_name": "算数",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "aad3b8ea7e707af1"
+  },
+  {
+    "character_name": "每一天梦",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "aad3b8ea7e707af1"
+  },
+  {
+    "character_name": "高中老师",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "aad3b8ea7e707af1"
+  }
+]

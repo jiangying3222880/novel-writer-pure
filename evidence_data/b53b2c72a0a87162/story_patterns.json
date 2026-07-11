@@ -1,0 +1,76 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.87,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "b53b2c72a0a87162"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n\n　　在林清郁儿时的一个雪夜里，爸妈"
+    ],
+    "pacing_score": 0.79,
+    "tension_score": 0.28,
+    "summary": "第113章 夕山2024-02-24 06:00开始阅读郁郁子瑜只是希望我笔下的人物都有灵魂。【",
+    "chapter_index": 1,
+    "book_id": "b53b2c72a0a87162"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "一次来自己家，既怕生又紧张，不太敢说话，"
+    ],
+    "pacing_score": 0.76,
+    "tension_score": 0.26,
+    "summary": "第1章 初遇雪夜，琥珀色的街灯在洁白的雪花映衬下，犹如点点明珠，点缀在静谧的街道上，楼宇的轮廓",
+    "chapter_index": 2,
+    "book_id": "b53b2c72a0a87162"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，也不是饭点，能跑哪去，奇怪。”\n路绍元",
+      "常在我家吃饭嘛。”\n林清郁也是拿她没辙，"
+    ],
+    "pacing_score": 0.97,
+    "tension_score": 0.57,
+    "summary": "第2章 重遇在这九月的京都，天气仍留有一抹暑意，尽管秋天已近，但日头依旧灿烂，仿佛是在诉说着夏",
+    "chapter_index": 3,
+    "book_id": "b53b2c72a0a87162"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "心情激动的刚拿出手机，还没输完解锁密码，",
+      "时内心高兴又慌张。\n高兴的是时隔这么久，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.63,
+    "summary": "第3章 论坛炸锅一别五年多，这期间，无论是林清郁还是林家爸妈，都没有收到林清音的任何消息，他们",
+    "chapter_index": 4,
+    "book_id": "b53b2c72a0a87162"
+  }
+]

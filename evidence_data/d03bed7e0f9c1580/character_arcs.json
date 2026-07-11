@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "中年男子",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d03bed7e0f9c1580"
+  },
+  {
+    "character_name": "男孩",
+    "initial_state": "初始状态未明确描述，出现27次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d03bed7e0f9c1580"
+  },
+  {
+    "character_name": "二叔",
+    "initial_state": "初始状态未明确描述，出现9次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d03bed7e0f9c1580"
+  },
+  {
+    "character_name": "太平",
+    "initial_state": "初始状态未明确描述，出现40次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d03bed7e0f9c1580"
+  },
+  {
+    "character_name": "爷爷",
+    "initial_state": "初始状态未明确描述，出现18次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d03bed7e0f9c1580"
+  }
+]

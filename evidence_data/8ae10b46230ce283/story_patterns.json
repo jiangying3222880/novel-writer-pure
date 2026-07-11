@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "8ae10b46230ce283"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.57,
+    "tension_score": 0.6,
+    "summary": "第205章 返校2024-03-05 12:00开始阅读诸己行有不得，反求诸己。1814年，天降",
+    "chapter_index": 1,
+    "book_id": "8ae10b46230ce283"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "是很快，老板就笑不出来了，因为黎璨的表情"
+    ],
+    "pacing_score": 0.77,
+    "tension_score": 0.38,
+    "summary": "第1章 乐极生悲（平行世界，世界观不同，一夫多妻合法。道德圣人勿入。）（早恋会对未成年造成不",
+    "chapter_index": 2,
+    "book_id": "8ae10b46230ce283"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "确实。”\n在床上装模作样摆弄着玩具的黎璨",
+      "小的事情，但是在二人眼里都是比天还要大。",
+      "。\n之后的时间，黎璨一有时间就练习翻身，"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.75,
+    "summary": "第2章 15年后正在翻滚中的黎璨也发现了黎晴，顿时心虚了起来。而黎晴则在短暂的惊诧之后开心的跑",
+    "chapter_index": 3,
+    "book_id": "8ae10b46230ce283"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.67,
+    "tension_score": 0.7,
+    "summary": "第3章 打工回到房间里，黎璨顺手关上门。只要关门，黎晴和夏淑月都不会进入二人的卧室。这一点她们",
+    "chapter_index": 4,
+    "book_id": "8ae10b46230ce283"
+  }
+]

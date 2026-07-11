@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "ceba715d6bc57588"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.71,
+    "summary": "第16章 番外，秦如霜（完）2024-01-31 17:19开始阅读肆意狂澜噜噜噜啦啦噜啦啦噜噜",
+    "chapter_index": 1,
+    "book_id": "ceba715d6bc57588"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "也想不明白，他刚回家二十分钟，为什么就会",
+      "很偶然的情况下，楚沫沫发现了陈安的才华，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.53,
+    "summary": "第1章 火海重生某小区七楼。此刻的陈安已经被熊熊烈火逼至阳台，他右手紧紧按着窗户边，整个人被",
+    "chapter_index": 2,
+    "book_id": "ceba715d6bc57588"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "热搜。\n\n而天华也没想到这个刚签的新人会",
+      "觉得这首歌要比自己写的好千百倍不止。\n\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.43,
+    "summary": "第2章 天华娱乐只不过楚沫沫条件这么好，日后肯定要出道，怕影响以后的发展，楚沫沫提出这段关系不",
+    "chapter_index": 3,
+    "book_id": "ceba715d6bc57588"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "没有听够，还想再放一遍的时候，陈安脑海中"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 0.34,
+    "summary": "第3章 系统开启，平行蓝星陈安压根没理楚沫沫，直接一个人上了楼，仿佛没看到楚沫沫脸上的慌张一般",
+    "chapter_index": 4,
+    "book_id": "ceba715d6bc57588"
+  }
+]

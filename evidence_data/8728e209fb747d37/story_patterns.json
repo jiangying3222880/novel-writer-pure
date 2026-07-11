@@ -1,0 +1,81 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "8728e209fb747d37"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.71,
+    "summary": "第635章 救赎之光（大结局）2023-07-26 19:00开始阅读超级大坦克科比以写实风格被誉",
+    "chapter_index": 1,
+    "book_id": "8728e209fb747d37"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "第1章 夜店男女26岁了，也渴望为自己的人生来一场翻天覆地的革命，可是只要夜晚到来，我还是会不",
+    "chapter_index": 2,
+    "book_id": "8728e209fb747d37"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "自由的曙光。\n……\n我太冷，也太绝望了，",
+      "，生怕惊动了房间里的那个女人；这一刻，我"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.57,
+    "summary": "第2章 荒唐的夜晚我又缩回到那个隐蔽的角落里，不敢发生任何声响，生怕惊动了房间里的那个女人；这",
+    "chapter_index": 3,
+    "book_id": "8728e209fb747d37"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "赛里木湖”，有那拉提草原，还有一条近几年",
+      "宣传片。\n凌晨两点的商场附近，极其安静；",
+      "滑雪只是其中一项，在经历了二十年的培养，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "第3章 你怕是走不了了任然姐毫无察觉，她开着车转瞬就绕过了商场，眼前就是另一个路口，这个路口穿",
+    "chapter_index": 4,
+    "book_id": "8728e209fb747d37"
+  }
+]

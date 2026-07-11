@@ -1,0 +1,102 @@
+[
+  {
+    "character_name": "败家点",
+    "initial_state": "初始状态未明确描述，出现10次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "f2c33c8a4740a9c4"
+  },
+  {
+    "character_name": "叶枫",
+    "initial_state": "初始状态未明确描述，出现31次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "f2c33c8a4740a9c4"
+  },
+  {
+    "character_name": "系统",
+    "initial_state": "初始状态未明确描述，出现15次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "f2c33c8a4740a9c4"
+  },
+  {
+    "character_name": "无敌败家",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "f2c33c8a4740a9c4"
+  },
+  {
+    "character_name": "星魂宗",
+    "initial_state": "初始状态未明确描述，出现11次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "f2c33c8a4740a9c4"
+  }
+]

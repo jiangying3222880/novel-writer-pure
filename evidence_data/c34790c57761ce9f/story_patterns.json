@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "c34790c57761ce9f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.58,
+    "tension_score": 0.6,
+    "summary": "第五十九章 我等你很久了，鲁鲁修2024-02-23 00:09开始阅读白帝垣持之以恒，每个故事都",
+    "chapter_index": 1,
+    "book_id": "c34790c57761ce9f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "在我隐隐提起兴致，走出教室门的一刻，一道",
+      "但出于好奇，我还是忍不住点开了下一章。\n"
+    ],
+    "pacing_score": 0.58,
+    "tension_score": 0.5,
+    "summary": "第一章 转生B班，从十万点数开始序幕A班有天才的坂柳，C班有暴君的龙园，D班有真神的绫小路。",
+    "chapter_index": 2,
+    "book_id": "c34790c57761ce9f"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "堀北会长比起来，谁更厉害一点？”\n南云雅",
+      "信息。\n绫小路此行的目的恐怕就是如此。\n"
+    ],
+    "pacing_score": 0.55,
+    "tension_score": 0.6,
+    "summary": "第二章 开局加入学生会，与南云副会的心理博弈绫小路清隆？我旋即朝他的背影追了出去。没想到两",
+    "chapter_index": 3,
+    "book_id": "c34790c57761ce9f"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "不太好看了。\n可是，一之濑却拒绝了。\n她",
+      "后，这一天便正式开始进入了授课环节。\n由",
+      "我轻轻地回到教室最后一排，班上的氛围也终"
+    ],
+    "pacing_score": 0.58,
+    "tension_score": 0.75,
+    "summary": "第三章 第一次约会3兵法、情报、被封印的鲁鲁修大脑，是我目前手中的三张底牌。在接下来的时间里",
+    "chapter_index": 4,
+    "book_id": "c34790c57761ce9f"
+  }
+]

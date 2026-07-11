@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.75,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "0027b2ef9766e843"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "秘社记者：格林先生，我找了您很久！今天终"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.65,
+    "summary": "第276章 帕里克出手2023-12-14 22:09开始阅读佚名nothing to say【",
+    "chapter_index": 1,
+    "book_id": "0027b2ef9766e843"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“？？？？？”\n说到兴头上的利亚尔表情突",
+      "可以很高兴的告诉大家，这段令人不快的日子"
+    ],
+    "pacing_score": 0.69,
+    "tension_score": 0.69,
+    "summary": "第1章 钟表店“各位听众们早上好，这里是国家星象台报道。在刚刚过去的一周里，我们经历了一场可怕",
+    "chapter_index": 2,
+    "book_id": "0027b2ef9766e843"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.6,
+    "tension_score": 0.74,
+    "summary": "第2章 暴雨大雨磅礴。格兰威尔的街道上，伊琳娜喘着气，不敢有丝毫懈怠的朝着街道口奔跑着。浓",
+    "chapter_index": 3,
+    "book_id": "0027b2ef9766e843"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "起来。\n伊琳娜感觉自己的头有点晕晕的。\n",
+      "现自己穿越以后，格林甚至还有些开心。\n他"
+    ],
+    "pacing_score": 0.79,
+    "tension_score": 0.84,
+    "summary": "第3章 恶魔之书格林并不是这个世界的人。虽然事到如今已经过去很久了，但直到现在，格林还清晰的",
+    "chapter_index": 4,
+    "book_id": "0027b2ef9766e843"
+  }
+]

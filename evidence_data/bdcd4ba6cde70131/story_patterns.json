@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.65,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "bdcd4ba6cde70131"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "鄂尔泰听后也激动了起来，他心心念念的孙女"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.32,
+    "summary": "第1章 春风吹，云儿追乾隆七年四月，春风和煦。大街上人人都将厚厚的被褥与棉袄收了起来，换上了",
+    "chapter_index": 1,
+    "book_id": "bdcd4ba6cde70131"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.72,
+    "summary": "第2章 玉坠子一个月后，筱云的满月宴风云灭须臾，草木但春夏。有了一个筱风，女娃自然就叫筱云",
+    "chapter_index": 2,
+    "book_id": "bdcd4ba6cde70131"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "得一声惨叫声，门外的妇人着急的走来走去，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.46,
+    "summary": "第3章 紫薇花暖香依旧同年八月初一在济南的一处宅子里，只听得一声惨叫声，门外的妇人着急的走来",
+    "chapter_index": 3,
+    "book_id": "bdcd4ba6cde70131"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.83,
+    "summary": "第4章 鄂尔泰病逝乾隆十年西林觉罗府鄂尔泰一脸憔悴的坐在椅子上享受着阳光的照耀一个身穿粉",
+    "chapter_index": 4,
+    "book_id": "bdcd4ba6cde70131"
+  }
+]

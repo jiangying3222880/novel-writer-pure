@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "24d13de034ed7c8e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.95,
+    "summary": "第106章 旷世婚礼（终章）2023-08-14 13:05开始阅读飞翔的咖啡新人作者，请多多光照",
+    "chapter_index": 1,
+    "book_id": "24d13de034ed7c8e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "「有几次，我甚至想要和系统翻脸。」\n「于"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.65,
+    "summary": "第1章 咸鱼十万年【叮！】【宿主好啊~( - . - )~】【今日又是咸鱼满满的一天哦！】",
+    "chapter_index": 2,
+    "book_id": "24d13de034ed7c8e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "第十七章以后，主角基本也就没有隐藏了，前面隐藏一下身份，也只是为了逗女主玩玩，仅此而已。修炼境界",
+    "chapter_index": 3,
+    "book_id": "24d13de034ed7c8e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.88,
+    "summary": "第2章 二哈回归顾玄卿走出了屋子，眺望四方。这么多年来，此地倒也大变样了。曾经的旮旯角落，",
+    "chapter_index": 4,
+    "book_id": "24d13de034ed7c8e"
+  }
+]

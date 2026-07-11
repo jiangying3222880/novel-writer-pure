@@ -1,0 +1,102 @@
+[
+  {
+    "character_name": "恶魔城",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "7fee3667453f5a90"
+  },
+  {
+    "character_name": "游戏强国",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "7fee3667453f5a90"
+  },
+  {
+    "character_name": "生化危机",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "7fee3667453f5a90"
+  },
+  {
+    "character_name": "月下夜想",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "7fee3667453f5a90"
+  },
+  {
+    "character_name": "我没想砸",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "7fee3667453f5a90"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "89c09986531c2836"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "拼尽全力，最终在外界压迫的力量消失后，他"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.26,
+    "summary": "第1章 伊始“普奇，该做个了断了”白一冷冷的看着面前的普奇神父，扶正承太郎同款帽子，身后蓝色的",
+    "chapter_index": 1,
+    "book_id": "89c09986531c2836"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "社 沙勒”\n“沙勒啊，介绍下，凛酱”白一",
+      "是这样吗，会长已经失踪很久了，本来还以为"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.49,
+    "summary": "第2章 我啊，一个普通人而已“欢迎来到基沃托斯，老师”七神凛手指着窗外，微笑道。见她还要介绍",
+    "chapter_index": 2,
+    "book_id": "89c09986531c2836"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "他的身体内。\n“好神奇的能力”莲见叹到，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.22,
+    "summary": "第3章 初战“虽然很不想说，但是解决的办法就是老师进入沙勒才可以实现”凛无奈道“而老师的办公室",
+    "chapter_index": 3,
+    "book_id": "89c09986531c2836"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.69,
+    "summary": "第4章 给基沃托斯带来一点小小的JOJO震撼好巧不巧，就在几人刚刚起身之时，凛的投影打了进来。",
+    "chapter_index": 4,
+    "book_id": "89c09986531c2836"
+  }
+]

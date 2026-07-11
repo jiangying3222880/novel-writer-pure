@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "49a81d86daa9fc34"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.86,
+    "tension_score": 0.77,
+    "summary": "第1章 你就是九爷养的金丝雀?【你看我一眼，我炽热恣狂的灵魂为你燃烧】夜色如墨。灯光昏暗",
+    "chapter_index": 1,
+    "book_id": "49a81d86daa9fc34"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.76,
+    "tension_score": 0.71,
+    "summary": "第2章 沈清芜真的爱惨了他半年前，欲色。一行身材高大的男人从包间出来，他们全都是京都太子党，",
+    "chapter_index": 2,
+    "book_id": "49a81d86daa9fc34"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "了双眼，“你骗谁呢？”\n沈清芜的助手小陶"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.43,
+    "summary": "第3章 你跟贺妄很熟?沈清芜驱车来到HEALER总部，下车后就直奔香水研发室去了。HEALE",
+    "chapter_index": 3,
+    "book_id": "49a81d86daa9fc34"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.77,
+    "summary": "第4章 疯狗聂颖颖意味深长道，“我跟九爷不太熟，但是有人熟。”周时屿脸上的笑微敛，看了她一眼",
+    "chapter_index": 4,
+    "book_id": "49a81d86daa9fc34"
+  }
+]

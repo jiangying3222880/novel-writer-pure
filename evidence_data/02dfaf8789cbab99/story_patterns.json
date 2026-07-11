@@ -1,0 +1,61 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "一个很温柔乖巧漂亮的女朋友是什么体验？\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "02dfaf8789cbab99"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "？你之前说的话都是放屁的吗！”\n她的语气",
+      "可能在一个地方乱搞的，否则迟早会被刀。\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.75,
+    "summary": "第8章 理智？你让我拿什么理智萧然之所以支开慕容澜，就是想好好处理这件事，毕竟她知道得越多，以",
+    "chapter_index": 1,
+    "book_id": "02dfaf8789cbab99"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "服吗？你知道我……”\n“别说了！！”白璐"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.78,
+    "summary": "第10章 体面“然然…我…给我一次机会，我以后会记住的！”白璐抓住了他的手臂，哀求道。“可以",
+    "chapter_index": 2,
+    "book_id": "02dfaf8789cbab99"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第一回来，否则以后不理你了！”天大的压力降临到了叶璇儿头上！说什么也得拿下第一！这关乎性福生",
+    "chapter_index": 3,
+    "book_id": "02dfaf8789cbab99"
+  }
+]

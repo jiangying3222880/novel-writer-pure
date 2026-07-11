@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "9be64654e3bad4a6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.34,
+    "tension_score": 0.6,
+    "summary": "第0104章 慷慨赴死士2024-02-10 18:24开始阅读落子11一个非常非常努力的作者【",
+    "chapter_index": 1,
+    "book_id": "9be64654e3bad4a6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.4,
+    "tension_score": 0.76,
+    "summary": "第0001章 初入清平镇清平镇。一辆马车从远方驶来。赶车的是一位老人，他看起来年事已高。",
+    "chapter_index": 2,
+    "book_id": "9be64654e3bad4a6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "要杀人灭口。\n“呵呵。”\n男子轻蔑一笑，"
+    ],
+    "pacing_score": 0.44,
+    "tension_score": 0.39,
+    "summary": "第0002章 夜半江湖客“先生，今天打了野兔，肥的很。”王虎提着两只兔子往里走。一转眼数日",
+    "chapter_index": 3,
+    "book_id": "9be64654e3bad4a6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "时他的眉宇间，却透着忧愁。\n“大人。”\n"
+    ],
+    "pacing_score": 0.44,
+    "tension_score": 0.34,
+    "summary": "第0003章 世上苦命人清平镇的衙门位于城南。王县令此时正坐在书房中翻阅书信。他年纪四旬，",
+    "chapter_index": 4,
+    "book_id": "9be64654e3bad4a6"
+  }
+]

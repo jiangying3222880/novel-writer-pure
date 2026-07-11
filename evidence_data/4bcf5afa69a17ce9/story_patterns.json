@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "了？\n  本来以为轻松惬意的大学生活居然"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "4bcf5afa69a17ce9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "直接就朝着厕所冲了过去。\n来到厕所晓晨星",
+      "废物哥哥起床了！”\n第一遍……没动静。\n",
+      "是一顿揉搓。\n“妈，我是晓晨星！”晓晨星"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 1.0,
+    "summary": "第1章 一觉醒来居然变成了银毛萝莉？“都找了这么久了，怎么就是没有银毛萝莉啊！！！”晓晨星拿",
+    "chapter_index": 1,
+    "book_id": "4bcf5afa69a17ce9"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "脸一黑，自己不会被拉去做科学实验吧，毕竟",
+      "随着老妈的解释，晓月眼神越来越亮，自己终"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 0.93,
+    "summary": "第2章 这年头说实话都没人信“地位？”晓月一脸疑惑的看着星妈。“你看啊，她现在既变成了女生",
+    "chapter_index": 2,
+    "book_id": "4bcf5afa69a17ce9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "了，这个话题改天再说。”\n星妈看着晓晨星",
+      "了看自己现在的这幅身躯也想不出话来辩解，"
+    ],
+    "pacing_score": 0.99,
+    "tension_score": 0.97,
+    "summary": "第3章 自己是不是亲生的“呵呵……”晓晨星只能无奈的发了句呵呵过去。“那行吧，既然你不愿意",
+    "chapter_index": 3,
+    "book_id": "4bcf5afa69a17ce9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "星对这游戏嗤之以鼻。\n半个小时后晓晨星终",
+      "晨星对这游戏嗤之以鼻。\n半个小时后晓晨星"
+    ],
+    "pacing_score": 0.67,
+    "tension_score": 0.64,
+    "summary": "第4章 第二世界中午十二点。卑微的晓晨星踩着板凳在厨房洗着碗，看着老妈和老妹都戴上头盔进入游",
+    "chapter_index": 4,
+    "book_id": "4bcf5afa69a17ce9"
+  }
+]

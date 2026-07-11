@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "@outlook.com\n\n天降后妈，我"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.2,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "f51210d3e7f55345"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.49,
+    "tension_score": 0.6,
+    "summary": "第174章 电梯遭遇2023-11-10 12:18开始阅读悠然采菊采菊东篱下 悠然见南山李沐的",
+    "chapter_index": 1,
+    "book_id": "f51210d3e7f55345"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "带林雨欣去欢乐谷玩的，只是没有想到林雨欣",
+      "，但是没有想到她竟然这么物质！\n今天，他"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 天降姐姐“李沐，我们根本就不合适，所以分手吧！”面前一个长相白皙的女孩，抬着高傲的脖",
+    "chapter_index": 2,
+    "book_id": "f51210d3e7f55345"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "姨视察旗下房产开发的进度 ，当时你萧阿姨",
+      "你爸说你在魔都财经学院上大学，不成想今天"
+    ],
+    "pacing_score": 0.97,
+    "tension_score": 0.68,
+    "summary": "第2章 老爹傍上女首富跑车上，此时的李沐还是懵逼的！“知道你有很多问题，不过一会儿，答案就会",
+    "chapter_index": 3,
+    "book_id": "f51210d3e7f55345"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 救治后妈一番交谈下来，李沐对于萧轻红也算熟络起来。在李沐面前，萧轻红没有任何大老板的",
+    "chapter_index": 4,
+    "book_id": "f51210d3e7f55345"
+  }
+]

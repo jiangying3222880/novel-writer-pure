@@ -1,0 +1,117 @@
+[
+  {
+    "character_name": "音音",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "固执",
+      "温柔",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "1bb0a74b108a141d"
+  },
+  {
+    "character_name": "难哄",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "固执",
+      "温柔",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "1bb0a74b108a141d"
+  },
+  {
+    "character_name": "病娇老公",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "固执",
+      "温柔",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "1bb0a74b108a141d"
+  },
+  {
+    "character_name": "一听离婚",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "固执",
+      "温柔",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "1bb0a74b108a141d"
+  },
+  {
+    "character_name": "又哭又闹",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "固执",
+      "温柔",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "1bb0a74b108a141d"
+  }
+]

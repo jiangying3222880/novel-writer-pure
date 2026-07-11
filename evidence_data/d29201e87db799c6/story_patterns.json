@@ -1,0 +1,74 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "d29201e87db799c6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "收集信息，开发基因...\n直到今天，我们"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.4,
+    "summary": "第135章 你真的伤透了他的心！2024-03-09 01:57开始阅读清水醉龙家人们谁懂啊，这个",
+    "chapter_index": 1,
+    "book_id": "d29201e87db799c6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "收集信息，开发基因...\n直到今天，我们"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "第1章 铸星圣子：奥瑞利安·尘心呐，其实我也不知道我是谁...自从苏醒以来，我就在一颗荒无人",
+    "chapter_index": 2,
+    "book_id": "d29201e87db799c6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "分攻击\n“我靠，黑科技？”\n涛兽看着眼前"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.63,
+    "summary": "第2章 给我炸了他！“凯莎女王，我是天使冷，邪神涛兽违背正义秩序，正义遭受践踏，请求发动天刃审",
+    "chapter_index": 3,
+    "book_id": "d29201e87db799c6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“喂，你怎么了？你没事吧？”\n看着眼前突"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.76,
+    "summary": "第3章 今年三岁？正在直播的天使们看到眼前这一幕一时间都有些愣住了因为无论怎么看，刚刚尘心使",
+    "chapter_index": 4,
+    "book_id": "d29201e87db799c6"
+  }
+]

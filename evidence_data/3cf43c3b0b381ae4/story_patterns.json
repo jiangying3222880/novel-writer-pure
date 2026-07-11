@@ -1,0 +1,47 @@
+[
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "id_2\">日本的社会结构\n\n  虽然很"
+    ],
+    "pacing_score": 0.91,
+    "tension_score": 0.4,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "3cf43c3b0b381ae4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.59,
+    "tension_score": 0.76,
+    "summary": "第二回合比赛，人气第一的栉田在第四水道，朝着声援的男生们笑着挥手。  “哦哦哦哦哦！”",
+    "chapter_index": 1,
+    "book_id": "3cf43c3b0b381ae4"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "”\n\n  正当我发呆等着决赛开始时，栉田",
+      "”\n\n  堀北很难得叫住了栉田。她该不会"
+    ],
+    "pacing_score": 0.65,
+    "tension_score": 0.59,
+    "summary": "第三回合，备受瞩目的果然还是高圆寺。开始前精雕细琢的准备姿势，看起来就像运动选手。事实上不只是姿势",
+    "chapter_index": 2,
+    "book_id": "3cf43c3b0b381ae4"
+  }
+]

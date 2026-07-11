@@ -1,0 +1,75 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "最顶尖的功法、灵技、知识统统来自上古；\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.2,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "dc81dbff9131a6cd"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "的表情，心情顿时好了不少。\n“嗯，昨天你",
+      "他，再次陷入昏睡。\n过了不知道多久，钟文"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 0.65,
+    "summary": "第一章 飘花宫里不留男客钟文做了一个梦，梦里的他遇见落水少女，奋不顾身地跳入湖中想要英雄救美。",
+    "chapter_index": 1,
+    "book_id": "dc81dbff9131a6cd"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.93,
+    "tension_score": 0.85,
+    "summary": "第一回灵根育孕源流出心性修持大道生诗曰：混沌未分天地乱，茫茫渺渺无人见。自从盘古破鸿蒙，开辟从兹",
+    "chapter_index": 2,
+    "book_id": "dc81dbff9131a6cd"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "眼神里却还是流露出一丝寂寞的神色。\n钟文"
+    ],
+    "pacing_score": 0.88,
+    "tension_score": 0.37,
+    "summary": "第二章 这、这是上古神文？在“小夫子”林小蝶的监督下，钟文一笔一划地临摹着大乾文字，而小萝莉则",
+    "chapter_index": 3,
+    "book_id": "dc81dbff9131a6cd"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "绿衣少女步步后退，看上去有些力气不济。\n"
+    ],
+    "pacing_score": 0.81,
+    "tension_score": 0.28,
+    "summary": "第三章 药王谷在……太阳已经爬过最顶峰，开始有了下落的趋势。钟文在小萝莉的带领下回到房间，院",
+    "chapter_index": 4,
+    "book_id": "dc81dbff9131a6cd"
+  }
+]

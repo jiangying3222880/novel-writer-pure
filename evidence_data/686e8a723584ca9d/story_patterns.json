@@ -1,0 +1,76 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "686e8a723584ca9d"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第131章 我所爱的2024-01-14 23:04开始阅读雨暮晨光忽有狂徒夜磨刀，帝星嘌呤荧惑高",
+    "chapter_index": 1,
+    "book_id": "686e8a723584ca9d"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "撇了撇嘴有些生气的问道。\n维伊沉默片刻后"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.81,
+    "summary": "第1章 少年的新生“㗏！㗏！醒醒！”维伊听到呼唤之声后缓缓睁开了沉重的眼皮。“你……”他",
+    "chapter_index": 2,
+    "book_id": "686e8a723584ca9d"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "丫头？”\n“奥列格大叔……”\n旁边的希儿"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.64,
+    "summary": "第2章 无私的医者？“感谢您！维伊先生！您真是一位大善人！”一个的铁卫恭敬的向眼前这位不满十",
+    "chapter_index": 3,
+    "book_id": "686e8a723584ca9d"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "的嗯了一声。不敢看他的眼睛。\n维伊笑了笑"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "第3章 绝望的降临……“您好，娜塔莎院长。”娜塔莎看着眼前英俊的少年不由得发出了感叹。同为",
+    "chapter_index": 4,
+    "book_id": "686e8a723584ca9d"
+  }
+]

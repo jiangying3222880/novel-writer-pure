@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "40a6631a6c7a0803"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第175章番外2024-01-31 23:01开始阅读昏睡的柠檬挞zzzzzzzzzz【双强+万",
+    "chapter_index": 1,
+    "book_id": "40a6631a6c7a0803"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "然后一把扯开自己脖颈后面的抑制环。\n珈奈"
+    ],
+    "pacing_score": 0.71,
+    "tension_score": 0.36,
+    "summary": "第001章 睡一觉就都过去了灯火通明的海景别墅，橘黄色的暖光从巨大吊灯上倾洒而下，照出蜷缩在地",
+    "chapter_index": 2,
+    "book_id": "40a6631a6c7a0803"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n抗摔抗击打之类的属性自然被牺牲掉。\n",
+      "得自己就要不行了的时候。\n半梦半醒间，他"
+    ],
+    "pacing_score": 0.63,
+    "tension_score": 0.55,
+    "summary": "第002章 趴在殿下身上的……一只猫？疼。浑身骨头断了似的疼。珈奈试图移动，下一秒被钻心的",
+    "chapter_index": 3,
+    "book_id": "40a6631a6c7a0803"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.97,
+    "tension_score": 0.97,
+    "summary": "第003章 总不能把救命恩猫丢了吧众人面面相觑，一时不知道拿这莫名其妙出现在殿下身上的弱小生物",
+    "chapter_index": 4,
+    "book_id": "40a6631a6c7a0803"
+  }
+]

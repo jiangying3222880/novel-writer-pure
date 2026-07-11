@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "0abd4a0ace4c0c9e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第400章 结束了!2023-01-09 21:58开始阅读鱼籽酱我的作品希望你喜欢【百万字完本",
+    "chapter_index": 1,
+    "book_id": "0abd4a0ace4c0c9e"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "可爱的女生！”\n“竟然是转到我们班的？我"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.75,
+    "summary": "第1章 最重要的,和她保持距离!“陈池同学，昨天的语文作业该交了……”柳市一中，清晨早读时间",
+    "chapter_index": 2,
+    "book_id": "0abd4a0ace4c0c9e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "昊自讨没趣的离开。\n而这个时候，舒欣柔却",
+      "更不会知道张昊比他跟舒欣柔都要大一些。\n"
+    ],
+    "pacing_score": 0.97,
+    "tension_score": 0.86,
+    "summary": "第2章 偷偷告诉你一个秘密所有人，几乎都在期盼舒欣柔能够成为自己同桌。但唯独陈池例外。为什",
+    "chapter_index": 3,
+    "book_id": "0abd4a0ace4c0c9e"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "是通过重生回到了这个年代……\n“噗！”\n",
+      "放的意思，下课后，自己必须得万分小心！\n",
+      "……”\n所幸，等老师走进教室后，舒欣柔也"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 做我男朋友,你能少奋斗二十年!陈池睁大眼睛看向舒欣柔。而舒欣柔的眼神也是一动不动，非",
+    "chapter_index": 4,
+    "book_id": "0abd4a0ace4c0c9e"
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "c0690d3d7bb4dad7"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第779章 别逼我扇你！真正的“嚣张”，无敌是多么寂寞！2023-12-16 01:11开始阅读白",
+    "chapter_index": 1,
+    "book_id": "c0690d3d7bb4dad7"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "！”\n洛凡尘内心正爆发着强烈的求生欲。\n",
+      "它馋这个妖精身子，馋了太久太久了。\n今天"
+    ],
+    "pacing_score": 0.88,
+    "tension_score": 0.77,
+    "summary": "第1章 特殊选择，九尾女帝！金雷降世病房内，娇滴滴的美女们哭声一片。我叫洛凡尘，身体出了一点",
+    "chapter_index": 2,
+    "book_id": "c0690d3d7bb4dad7"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "一眼。\n“男婴么……好吧。”\n苏玖儿冷颜",
+      "上眼的。\n就在洛凡尘差点被闷死的时候，他"
+    ],
+    "pacing_score": 0.62,
+    "tension_score": 0.53,
+    "summary": "第2章 妖帝收养，要叫老婆“不！”“不要！！”魔龙神情惶恐，恐怖雷霆就在头上砸落。他面露",
+    "chapter_index": 3,
+    "book_id": "c0690d3d7bb4dad7"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "个风华绝代的宫装贵妇正带着妙龄少女历练，"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.52,
+    "summary": "第3章 气运金龙，小姨惊喜，女教皇关注都有什么奖励？洛凡尘心念一动，眼前出现透明面板。【奖励",
+    "chapter_index": 4,
+    "book_id": "c0690d3d7bb4dad7"
+  }
+]

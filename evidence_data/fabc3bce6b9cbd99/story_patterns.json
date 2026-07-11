@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "fabc3bce6b9cbd99"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.91,
+    "tension_score": 0.86,
+    "summary": "第399章 清心咒2023-12-31 15:08开始阅读我要浪大神作家，粉丝过百万，行文天马行空",
+    "chapter_index": 1,
+    "book_id": "fabc3bce6b9cbd99"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "车身震颤的时候，还是看得我两眼发直……\n"
+    ],
+    "pacing_score": 0.93,
+    "tension_score": 0.67,
+    "summary": "第1章 同学的妻子我原先是炼钢厂的专车司机。后来单位裁员。我花八千块淘了辆快报废的营运车，",
+    "chapter_index": 2,
+    "book_id": "fabc3bce6b9cbd99"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 第二次跟踪冥币？我低头一看，当时就吓了一跳！天地银行！面额100亿！中间印着玉",
+    "chapter_index": 3,
+    "book_id": "fabc3bce6b9cbd99"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "无奈，我只能换一家。\n如此一直换了三家，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "第3章 卖车WTF？这一紧张，我差点叫出声来！“孙……孙娇！”“怎么回事？”一阵风吹来",
+    "chapter_index": 4,
+    "book_id": "fabc3bce6b9cbd99"
+  }
+]

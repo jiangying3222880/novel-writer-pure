@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "8763c9e56622a126"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "行卡，答应了他最后的意愿。\n没过几天，他"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.42,
+    "summary": "第1章 去世竟然穿越“咳咳咳，咳咳，”叶晚风躺在医院的病床上，木木的看着医院的天花板，心里想着",
+    "chapter_index": 1,
+    "book_id": "8763c9e56622a126"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.64,
+    "summary": "第2章 还以为复活能好起来叶晚风的脑袋目前处于宕机状态，只感觉自己还迷迷糊糊的不太适应自己的身",
+    "chapter_index": 2,
+    "book_id": "8763c9e56622a126"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.8,
+    "summary": "第3章 原主可真够惨的啊陈荷雨说完，叶晚风没有表情的轻轻的嗯了一声表示知道了。好像一切尽在掌",
+    "chapter_index": 3,
+    "book_id": "8763c9e56622a126"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.68,
+    "summary": "第4章 准备回国东日国，一家公寓里一个女生正站在镜子跟前她便是叶晚风的姐姐叶浅柠此时正在镜",
+    "chapter_index": 4,
+    "book_id": "8763c9e56622a126"
+  }
+]

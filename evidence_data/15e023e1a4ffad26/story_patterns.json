@@ -1,0 +1,76 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.79,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "15e023e1a4ffad26"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "小年轻正簇在一起，叼着烟等待着红绿灯。\n"
+    ],
+    "pacing_score": 0.97,
+    "tension_score": 0.45,
+    "summary": "第1章 黑缎缠目炎炎八月。滴滴滴——！刺耳的蝉鸣混杂着此起彼伏的鸣笛声，回荡在人流湍急的街",
+    "chapter_index": 1,
+    "book_id": "15e023e1a4ffad26"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "说，他看到了月球上的炽天使？不然怎么解释"
+    ],
+    "pacing_score": 0.85,
+    "tension_score": 0.42,
+    "summary": "第2章 月亮上的天使房间陷入了短暂安静。几秒之后，李医生回过神来，“炽天使？”“对。”“",
+    "chapter_index": 2,
+    "book_id": "15e023e1a4ffad26"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "前，走到了那座大铁门的正前方。\n五年前，",
+      "，他是不会疲倦的，不然身子早就累垮了。\n",
+      "秒，两秒，三秒……\n他的身体颤抖了许久，"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.66,
+    "summary": "第3章 敲门回到房间，林七夜关上了房门。他没有开灯。已是深夜，窗外点点的星光洒落在地上，黑",
+    "chapter_index": 3,
+    "book_id": "15e023e1a4ffad26"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "级的瞬间，原本喧闹声音顿时戛然而止，空气"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.32,
+    "summary": "第4章 生还日一周后，沧南市第二中学。“诶，你看，那人是我们学校的吗？怎么眼睛上蒙了一层布啊",
+    "chapter_index": 4,
+    "book_id": "15e023e1a4ffad26"
+  }
+]

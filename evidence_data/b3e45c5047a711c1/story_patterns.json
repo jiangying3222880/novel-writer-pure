@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.75,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "b3e45c5047a711c1"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第693章 苏白的任务？臣服，亦或是死？！2023-11-04 18:45开始阅读咸鱼翻身路没有什",
+    "chapter_index": 1,
+    "book_id": "b3e45c5047a711c1"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "不要钱？不知道发个斗信？”\n苏白想到这里",
+      "？！\n不...这不是真的！\n这一刻，苏白"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.71,
+    "summary": "第1章 我真是充话费送的？华夏，云海，一座公寓内。一位样貌俊逸的少年站在空荡荡的客厅中，看着",
+    "chapter_index": 2,
+    "book_id": "b3e45c5047a711c1"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.81,
+    "tension_score": 0.81,
+    "summary": "第2章 改头换面，顾客上门“系统？”这道空灵声，听在苏白耳中，宛若天籁。作为一名资深小说爱好",
+    "chapter_index": 3,
+    "book_id": "b3e45c5047a711c1"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "一些，不相信也是正常。\n在这样的情况下，"
+    ],
+    "pacing_score": 0.88,
+    "tension_score": 0.38,
+    "summary": "第3章 几乎报废的机甲，孙涵一最后的希望！当她进入维修店后，孙涵一更加笃定了自己的想法。这家",
+    "chapter_index": 4,
+    "book_id": "b3e45c5047a711c1"
+  }
+]

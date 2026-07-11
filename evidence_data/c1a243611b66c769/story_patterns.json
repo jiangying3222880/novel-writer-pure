@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "c1a243611b66c769"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第122章 潜在的情敌2023-12-09 10:35开始阅读飞流直上关注作者，作品主页能加速粉丝",
+    "chapter_index": 1,
+    "book_id": "c1a243611b66c769"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "长得知周航表白，被他锲而不舍的精神打动，",
+      "周航，他恨不得代替周航发言。\n“胖子？你"
+    ],
+    "pacing_score": 0.93,
+    "tension_score": 0.8,
+    "summary": "第1章 抱歉，我们不合适“出车祸了！”“快打120！”“先生，坚持住！”翻个底朝天的车内",
+    "chapter_index": 2,
+    "book_id": "c1a243611b66c769"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "女生中，有不少上一秒还有说有笑，下一秒就"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.66,
+    "summary": "第2章 青梅竹马李初夏是多少男生求而不得的梦中情人，大家始终想不明白，周航为什么会拒绝。他脑",
+    "chapter_index": 3,
+    "book_id": "c1a243611b66c769"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，不帮忙就算了，还提要求绝对是大忌，相当"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.5,
+    "summary": "第3章 老爸，吐点金币吃过晚饭。父子俩翘着二郎腿坐在沙发上，电视上正在播放周星驰的喜剧，两人",
+    "chapter_index": 4,
+    "book_id": "c1a243611b66c769"
+  }
+]

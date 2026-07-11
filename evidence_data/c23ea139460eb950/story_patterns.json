@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "c23ea139460eb950"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "第53章 创世神威2023-02-14 08:56开始阅读小又橙目前更新《强帝传说》中~~~天不",
+    "chapter_index": 1,
+    "book_id": "c23ea139460eb950"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，暂时获得霸体大成的力量，看着牛大亨实力"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.2,
+    "summary": "第1章 灵气枯竭强历350年，天地灵气几近枯竭。随着修炼环境日渐崩坏，大帝不出，成圣机会更是",
+    "chapter_index": 2,
+    "book_id": "c23ea139460eb950"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "第2章 天机阁主李老板牛大亨联合甜甜威，入侵狗熊岭失败后，为推算如何打败光头强，两人找到天机阁",
+    "chapter_index": 3,
+    "book_id": "c23ea139460eb950"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，那你也别想活着\n就当李老板准备出手时，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.21,
+    "summary": "第3章 上古奇毒强历350年为从天机阁阁主李老板手中，救出狗熊岭圣女赵琳，强哥被迫入世当地",
+    "chapter_index": 4,
+    "book_id": "c23ea139460eb950"
+  }
+]

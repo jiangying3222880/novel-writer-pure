@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "d791144fc6ddae7c"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.76,
+    "summary": "第1章 美好的愿望云南.大理傍晚时分,夕阳西下,橙红色的余晖染红了整片草原,牛羊一群一群地归",
+    "chapter_index": 1,
+    "book_id": "d791144fc6ddae7c"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "漱芳斋大闹一场她还是觉得向皇上坦白的好，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.36,
+    "summary": "第2章 学规矩礼仪“我才没有打倒呢，永琪 斑鸠 你们俩可以陪我去找皇阿玛吗 我想去跟皇阿玛认错",
+    "chapter_index": 2,
+    "book_id": "d791144fc6ddae7c"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "么身份进宫呢？”尔泰问到\n大家都在沉思\n",
+      "嘛”\n俩个姑娘抱头痛哭了一会儿后，小燕子"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.54,
+    "summary": "第3章 再见紫薇学士府“五阿哥吉祥 还珠格格吉祥”“福大人 福晋 你们是知道我身份的不用对",
+    "chapter_index": 3,
+    "book_id": "d791144fc6ddae7c"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "得等到令妃娘娘问完话才能带紫薇和金锁走，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.35,
+    "summary": "第4章 紫薇进宫“小姐 你真的要放弃吗？我们这一路走到北京城好苦，我们好不容易有机会认回爹，你",
+    "chapter_index": 4,
+    "book_id": "d791144fc6ddae7c"
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.95,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "6cfa45ea6af5b3b8"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "”\n\n“地球灾变倒计时，7天。”\n\n这道"
+    ],
+    "pacing_score": 0.38,
+    "tension_score": 0.34,
+    "summary": "第一章 3级宇宙文明【警报！丧尸已突破我国防线，请全国群众第一时间进入地下避难所！】【警报",
+    "chapter_index": 1,
+    "book_id": "6cfa45ea6af5b3b8"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "随着李晨的靠近。\n\n尘封了无数年的大门终"
+    ],
+    "pacing_score": 0.36,
+    "tension_score": 0.24,
+    "summary": "第二章 入侵世界网络，疯狂采购一时间。李晨这句话刚刚落下。脑海中瞬间响起了诺亚的声音。",
+    "chapter_index": 2,
+    "book_id": "6cfa45ea6af5b3b8"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.41,
+    "tension_score": 0.7,
+    "summary": "第三章 末日降临“好，宿主。”在诺亚的操控下。李晨所在的电梯继续下行。十几秒过后。",
+    "chapter_index": 3,
+    "book_id": "6cfa45ea6af5b3b8"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "李晨围住，一步一步向核心实验室靠近。\n\n"
+    ],
+    "pacing_score": 0.59,
+    "tension_score": 0.47,
+    "summary": "第四章 保存人类火种没人比李晨更加清楚末日的残酷。外有山崩海啸、丧尸侵袭。内则失去秩序",
+    "chapter_index": 4,
+    "book_id": "6cfa45ea6af5b3b8"
+  }
+]

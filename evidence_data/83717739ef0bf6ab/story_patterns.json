@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "83717739ef0bf6ab"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "第71章 婉宝后悔了2023-12-24 00:00开始阅读王小渔这是一个非常有毅力的作者，开书绝",
+    "chapter_index": 1,
+    "book_id": "83717739ef0bf6ab"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "衣人二号说着就要把颜清婉拉过去用刑，只是",
+      "，等孙翠兰再次差点疼晕过去的时候，刘老太"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.7,
+    "summary": "第1章 许你年薪五百万“轰！”一声轰隆声传来，整个基地一片狼藉。半空中一架直升飞机上，穿着白",
+    "chapter_index": 2,
+    "book_id": "83717739ef0bf6ab"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n刘满志没发现此时原本没音了的小女娃，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.57,
+    "summary": "第2章 又被抛弃了“媳妇，娘说了，这孩子现在不能扔，等回村再说。”第二日，刘满志就拉着破板车",
+    "chapter_index": 3,
+    "book_id": "83717739ef0bf6ab"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "刘奶奶专门上山是扔什么东西的。”\n颜清文"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.42,
+    "summary": "第3章 捡了个妹妹刘老太瞪了刚刚说话的妇人一眼，“我自己家的孩子想扔就扔，关你叼毛事？”那",
+    "chapter_index": 4,
+    "book_id": "83717739ef0bf6ab"
+  }
+]

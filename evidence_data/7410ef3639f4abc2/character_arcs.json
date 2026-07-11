@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "蜜忒丽丝",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "命运抗争"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "7410ef3639f4abc2"
+  },
+  {
+    "character_name": "野原新之",
+    "initial_state": "初始状态未明确描述，出现9次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "命运抗争"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "7410ef3639f4abc2"
+  },
+  {
+    "character_name": "齐小新眼",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "命运抗争"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "7410ef3639f4abc2"
+  },
+  {
+    "character_name": "说了多少",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "命运抗争"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "7410ef3639f4abc2"
+  },
+  {
+    "character_name": "别管我叫",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "命运抗争"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "7410ef3639f4abc2"
+  }
+]

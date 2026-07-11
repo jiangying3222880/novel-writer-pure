@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "4ec190cb8b1558af"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第432章 番外 知书明理（四）2023-02-28 08:20开始阅读迷途不迷途哦，哦？哦！哦。",
+    "chapter_index": 1,
+    "book_id": "4ec190cb8b1558af"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事处的主任，不是谁都能欺负到头上来的。\n",
+      "块石头落地了，沈筑姝和沈筱娅也松了口气，"
+    ],
+    "pacing_score": 0.94,
+    "tension_score": 0.66,
+    "summary": "第1章 莫名其妙的来了沈筱娅紧皱着眉头，努力将自己和周边的环境隔离开来。但是耳边传来的那些刺",
+    "chapter_index": 2,
+    "book_id": "4ec190cb8b1558af"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "小子在干嘛？”沈筱娅往屋子里打量了半天，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.84,
+    "summary": "第2章 发现问题解决问题“娅娅！你都不知道，奶奶在大伯家的门口骂了足足两个小时，那周围围观的人",
+    "chapter_index": 3,
+    "book_id": "4ec190cb8b1558af"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "直延伸到全身。\n原本不太想吃东西的胃好像"
+    ],
+    "pacing_score": 0.88,
+    "tension_score": 0.55,
+    "summary": "第3章 吃的心安理得看着眼前的晚饭，沈筱娅楞了好一会。玉米面做的稀饭，家里做的馒头，应该还是",
+    "chapter_index": 4,
+    "book_id": "4ec190cb8b1558af"
+  }
+]

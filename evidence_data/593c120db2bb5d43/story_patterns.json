@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "593c120db2bb5d43"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第390章 首长别急，精彩的还在后面！2024-01-13 23:54开始阅读一抹橄榄绿嘀嘀，我要",
+    "chapter_index": 1,
+    "book_id": "593c120db2bb5d43"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 我预判了连长的预判！“分列式！”“开始！”【炎夏的武装力量由炎国现役部队、预备役部",
+    "chapter_index": 2,
+    "book_id": "593c120db2bb5d43"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "个有些楞头、名叫刘俊的新兵整理好背包，\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.85,
+    "summary": "第2章 群众里出叛徒了！哒哒哒...班长们蹑手蹑脚的站在走廊上。他们的动作很轻，轻到没有",
+    "chapter_index": 3,
+    "book_id": "593c120db2bb5d43"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "弟！\n“班长，我告诉他的！”\n“你？”\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.94,
+    "summary": "第3章 下连分到什么单位好？王飞虎看不惯江小龙。为何？这小子太能偷懒了！记得刚入伍叠被子",
+    "chapter_index": 4,
+    "book_id": "593c120db2bb5d43"
+  }
+]

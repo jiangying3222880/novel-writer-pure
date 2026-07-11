@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "3b8798b8258f4dce"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "第122章 张氏子公司的邀请2023-11-19 18:21开始阅读三岁不爱吃糖我是一个辛勤的打工",
+    "chapter_index": 1,
+    "book_id": "3b8798b8258f4dce"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "完款，李墨韵和老板说好，过一会儿再来拿，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.51,
+    "summary": "第1章 我这是...被抓了？（本书致老师宇文墨韵）当阳光升起时，一缕微光透过窗帘照入了屋内，",
+    "chapter_index": 2,
+    "book_id": "3b8798b8258f4dce"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 我这是...没大龙了？（至于为什么墨韵认出他俩就是三岁和小竹，因为他俩是榜一榜二，有墨",
+    "chapter_index": 3,
+    "book_id": "3b8798b8258f4dce"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "”\n就这样，这句话在病房中回荡了半个月，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.66,
+    "summary": "第3章 萌妹萝莉养成系统在恢复期的半个月内，李墨韵无时无刻没有在想念自己的大龙“可恶的三岁和",
+    "chapter_index": 4,
+    "book_id": "3b8798b8258f4dce"
+  }
+]

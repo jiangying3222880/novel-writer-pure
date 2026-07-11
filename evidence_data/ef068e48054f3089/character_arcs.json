@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "诡异空间",
+    "initial_state": "初始状态未明确描述，出现9次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "ef068e48054f3089"
+  },
+  {
+    "character_name": "无限推演",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "ef068e48054f3089"
+  },
+  {
+    "character_name": "不可言说",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "ef068e48054f3089"
+  },
+  {
+    "character_name": "诡异世界",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "ef068e48054f3089"
+  },
+  {
+    "character_name": "请随时保",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "ef068e48054f3089"
+  }
+]

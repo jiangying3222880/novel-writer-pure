@@ -1,0 +1,74 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "48a0c1c755245d0b"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "傅听寒日日向神明祈祷，期盼再见她一面。\n"
+    ],
+    "pacing_score": 0.65,
+    "tension_score": 0.24,
+    "summary": "第169章 甜甜的番外·养崽这件事·下2024-01-19 15:01开始阅读甜甜的瓜梦想是写出一",
+    "chapter_index": 1,
+    "book_id": "48a0c1c755245d0b"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "他低眸凝着，身子控制不住的晃了晃，脸上终"
+    ],
+    "pacing_score": 0.6,
+    "tension_score": 0.35,
+    "summary": "第1章 救命，真的有人徒手扒坟啊？？“至少给我一个检查遗容遗表的机会吧。”寒风阵阵，姜珥望",
+    "chapter_index": 2,
+    "book_id": "48a0c1c755245d0b"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "话？\n\n眼皮好似有千斤重，姜珥努力良久，"
+    ],
+    "pacing_score": 0.99,
+    "tension_score": 0.62,
+    "summary": "第2章 这样下去会赶不上吃席的吧？姜珥分不清自己在黑暗中走了多久。耳边时不时响起模模糊糊的",
+    "chapter_index": 3,
+    "book_id": "48a0c1c755245d0b"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "各一方，再无相见之时。\n\n想到这里，姜珥"
+    ],
+    "pacing_score": 0.67,
+    "tension_score": 0.33,
+    "summary": "第3章 她可以拿着他的遗产去夜店点男模诶脸上湿漉漉的，有点痒。姜珥伸手拂了拂，翻个身想要继",
+    "chapter_index": 4,
+    "book_id": "48a0c1c755245d0b"
+  }
+]

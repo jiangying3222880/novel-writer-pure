@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.98,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "d8b6203b28e91bbb"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 史上最暴力唐僧……额，卧底系统西游记！天庭！安天大会！龙旗鸾辂祥光蔼，宝节幢幡瑞",
+    "chapter_index": 1,
+    "book_id": "d8b6203b28e91bbb"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "安天大会就此结束！”\n就在这个时候，玉帝"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.87,
+    "summary": "第2章 系统，你有人性，盘古精血哪来的？如来：人性？我就呵呵了！谁没有人性？是你们系统的",
+    "chapter_index": 2,
+    "book_id": "d8b6203b28e91bbb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，不就是在他们眼皮底下了么？”\n黎山老母"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.75,
+    "summary": "第3章 找黎山老母帮忙“观音！”如来看向了观音菩萨，开口道。“世尊有何吩咐？”观音双手合十",
+    "chapter_index": 3,
+    "book_id": "d8b6203b28e91bbb"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第4章 通天：你日子苦，怎么白白胖胖的？如来摇了摇头，“没有，我的善尸没了。为了斩出自我尸，我",
+    "chapter_index": 4,
+    "book_id": "d8b6203b28e91bbb"
+  }
+]

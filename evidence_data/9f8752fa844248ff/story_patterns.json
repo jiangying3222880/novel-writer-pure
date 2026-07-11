@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "9f8752fa844248ff"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.75,
+    "tension_score": 0.6,
+    "summary": "第26章 我知道你也为我疯狂2023-08-27 19:01开始阅读三只松子《我的命，都给你》已上",
+    "chapter_index": 1,
+    "book_id": "9f8752fa844248ff"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "子便已经一拳挥向他的脸，男子没料到女子会"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.85,
+    "summary": "第1章 你是谁“你放屁！”寂寞的房间里，空荡着。“啪！”清脆的巴掌声在屁声里响起，伴随着",
+    "chapter_index": 2,
+    "book_id": "9f8752fa844248ff"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.99,
+    "tension_score": 1.0,
+    "summary": "第2章 都该死男子声音好听，带着一丝魅惑的意味，可女子不为所动。因为他的一双眼珠阴沉可怕，像",
+    "chapter_index": 3,
+    "book_id": "9f8752fa844248ff"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.81,
+    "tension_score": 0.83,
+    "summary": "第3章 怎么，很痛吗就在这千钧一发之际，忽然一阵风刮过来。她，隗小咖，头发被风吹散，露出了白",
+    "chapter_index": 4,
+    "book_id": "9f8752fa844248ff"
+  }
+]

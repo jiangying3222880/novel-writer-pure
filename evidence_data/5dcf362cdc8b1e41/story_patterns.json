@@ -1,0 +1,48 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "5dcf362cdc8b1e41"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.67,
+    "summary": "第119章 符玄的妥协2023-12-02 21:24开始阅读朝不知暮魑魅魍魉，而终兴尽意阑。只有",
+    "chapter_index": 1,
+    "book_id": "5dcf362cdc8b1e41"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "楼，他亲眼看见了的！！”\n符玄敏锐的目光"
+    ],
+    "pacing_score": 0.65,
+    "tension_score": 0.54,
+    "summary": "第1章 摸鱼宗的掌门和宗主<div data-fanqie-type=\"image\" sourc",
+    "chapter_index": 2,
+    "book_id": "5dcf362cdc8b1e41"
+  }
+]

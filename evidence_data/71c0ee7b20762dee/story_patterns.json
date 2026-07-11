@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "71c0ee7b20762dee"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第446章 被吓傻的秦寿2024-02-11 22:56开始阅读牣小十有目标，人生不迷茫！！！王",
+    "chapter_index": 1,
+    "book_id": "71c0ee7b20762dee"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "频，通过各路美女，段子来安抚受伤的心灵，",
+      "瞬间想到自己也可以通过直播来获得客户啊，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.62,
+    "summary": "第1章 这位有缘人，你有大凶罩啊“这破系统加载了两年，还一直卡在99.99%，难道只能放弃了？",
+    "chapter_index": 2,
+    "book_id": "71c0ee7b20762dee"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "人数越来越多，没想到连个主播还有这效果，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.53,
+    "summary": "第2章 你这身材前凸后翘，从小肯定是吃包子长大的此话一出，爱跳舞的大乃喵直播间里的水友更加欢乐",
+    "chapter_index": 3,
+    "book_id": "71c0ee7b20762dee"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "并未陪你们。”\n“在你玩的正开心的时候，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.61,
+    "summary": "第3章 别急，听我说完你就明白了为了让王跃赶紧接着说，水友们跑到王跃的直播间刷起礼物，小心心，",
+    "chapter_index": 4,
+    "book_id": "71c0ee7b20762dee"
+  }
+]

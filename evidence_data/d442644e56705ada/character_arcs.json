@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "祈绥",
+    "initial_state": "初始状态未明确描述，出现40次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d442644e56705ada"
+  },
+  {
+    "character_name": "小少爷",
+    "initial_state": "初始状态未明确描述，出现15次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d442644e56705ada"
+  },
+  {
+    "character_name": "反派大佬",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d442644e56705ada"
+  },
+  {
+    "character_name": "傅峥",
+    "initial_state": "初始状态未明确描述，出现27次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d442644e56705ada"
+  },
+  {
+    "character_name": "五百万",
+    "initial_state": "初始状态未明确描述，出现8次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "追求自由",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "d442644e56705ada"
+  }
+]

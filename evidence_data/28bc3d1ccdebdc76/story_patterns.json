@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "28bc3d1ccdebdc76"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.53,
+    "tension_score": 0.64,
+    "summary": "第1226章 第二个梦境轮回之地，毗伽罗的候选者2024-03-14 23:58开始阅读天有流火书",
+    "chapter_index": 1,
+    "book_id": "28bc3d1ccdebdc76"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.74,
+    "tension_score": 0.84,
+    "summary": "第1章 传奇之始，落地成盒清晨，提瓦特七点。睡在地上的姜逸皱了皱眉，闭着眼睛翻了个身。迷迷",
+    "chapter_index": 2,
+    "book_id": "28bc3d1ccdebdc76"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，丘丘人没有紧追不舍。\n十几分钟后，姜逸"
+    ],
+    "pacing_score": 0.7,
+    "tension_score": 0.43,
+    "summary": "第2章 语言交流，荒野求生情况危急！眼看陡坡下的退路也要被其他丘丘人包围，姜逸脑筋急转，侧头",
+    "chapter_index": 3,
+    "book_id": "28bc3d1ccdebdc76"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "震撼。\n“蒙德龙灾！”\n结合所见所闻，他"
+    ],
+    "pacing_score": 0.64,
+    "tension_score": 0.42,
+    "summary": "第3章 废弃营地，天空之龙“唉～虚假的星空！”“也不知道这是什么时间段，森林里到处都是丘丘人",
+    "chapter_index": 4,
+    "book_id": "28bc3d1ccdebdc76"
+  }
+]

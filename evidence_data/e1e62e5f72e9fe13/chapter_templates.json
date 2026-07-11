@@ -1,0 +1,42 @@
+[
+  {
+    "template_name": "悬念设置",
+    "structure": [
+      {
+        "section": "开场",
+        "purpose": "场景铺垫",
+        "length_ratio": 0.15
+      },
+      {
+        "section": "发展",
+        "purpose": "情节推进",
+        "length_ratio": 0.4
+      },
+      {
+        "section": "高潮",
+        "purpose": "关键转折",
+        "length_ratio": 0.3
+      },
+      {
+        "section": "收尾",
+        "purpose": "结果展示",
+        "length_ratio": 0.15
+      }
+    ],
+    "key_elements": [
+      "对话"
+    ],
+    "emotional_beat": [
+      "高潮",
+      "疑问",
+      "平静"
+    ],
+    "dialogue_ratio": 0.17,
+    "description_ratio": 0.83,
+    "recommended_genres": [
+      "通用"
+    ],
+    "chapter_index": 0,
+    "book_id": "e1e62e5f72e9fe13"
+  }
+]

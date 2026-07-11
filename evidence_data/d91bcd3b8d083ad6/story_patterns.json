@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "d91bcd3b8d083ad6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.6,
+    "summary": "第一千八百三十九章 第三件事（全书完）2022-08-25 17:39开始阅读不压文学爱好者,《岁",
+    "chapter_index": 1,
+    "book_id": "d91bcd3b8d083ad6"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "是正躁动的年纪。\n淌着有些凉的河水，吴文"
+    ],
+    "pacing_score": 0.91,
+    "tension_score": 0.32,
+    "summary": "第一章 山下少年清晨，天边溢出的第一缕光，撒在小安山葱葱郁郁之山体，披满露珠的草木，把这小安山",
+    "chapter_index": 2,
+    "book_id": "d91bcd3b8d083ad6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "这架势，要是被咬一口可不是开玩笑的！\n于"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.34,
+    "summary": "第二章 恶狗前院中众人哗然，遂即纷纷拍手称赞，惊赞之语不绝于耳。段青看得有些目瞪口呆，这等本",
+    "chapter_index": 3,
+    "book_id": "d91bcd3b8d083ad6"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.94,
+    "tension_score": 0.68,
+    "summary": "第三章 土包子和冤大头“小二，把你们的拿手菜都给我家少爷来一份，再来壶酒。”“好叻，客官您稍",
+    "chapter_index": 4,
+    "book_id": "d91bcd3b8d083ad6"
+  }
+]

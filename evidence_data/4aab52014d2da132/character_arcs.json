@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "流氓赘婿",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "4aab52014d2da132"
+  },
+  {
+    "character_name": "女帝裙下",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "4aab52014d2da132"
+  },
+  {
+    "character_name": "于是",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "4aab52014d2da132"
+  },
+  {
+    "character_name": "周元",
+    "initial_state": "初始状态未明确描述，出现32次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "4aab52014d2da132"
+  },
+  {
+    "character_name": "进来",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "4aab52014d2da132"
+  }
+]

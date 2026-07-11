@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "1f633c96355e38f8"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.79,
+    "summary": "第140章 终局2023-12-30 19:45开始阅读爱吃香菜的鹭九事在人为，码就完事了【星穹",
+    "chapter_index": 1,
+    "book_id": "1f633c96355e38f8"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "机缘巧合下让姜欢的令使之力再次上涨。\n\n"
+    ],
+    "pacing_score": 0.94,
+    "tension_score": 0.39,
+    "summary": "第1章 幻胧小姐，你也不想被别人知道......【脑子存放处】“真的必须这样做吗？现在？就",
+    "chapter_index": 2,
+    "book_id": "1f633c96355e38f8"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "是官方玩梗吗?姜欢在心里打趣。\n\n这时他",
+      "atgpt？这激起了姜欢的浓厚的好奇心，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.73,
+    "summary": "第2章 误入星神聊天群姜欢被阿哈捞到星穹铁道的世界，完全是一个巧合。“哎，卡妈什么时候上线",
+    "chapter_index": 3,
+    "book_id": "1f633c96355e38f8"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "？”\n\n“啊哈哈，又一个，又一个。”阿哈",
+      "为，在悲剧与痛苦中反而能看到生命的价值，"
+    ],
+    "pacing_score": 0.9,
+    "tension_score": 0.59,
+    "summary": "第3章 成为我敬爱的主的令使“自我介绍一下，我叫阿哈，被信徒们称为诡计之神，不过世人更喜欢叫我",
+    "chapter_index": 4,
+    "book_id": "1f633c96355e38f8"
+  }
+]

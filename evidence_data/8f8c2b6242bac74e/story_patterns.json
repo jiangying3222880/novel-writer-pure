@@ -1,0 +1,74 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "8f8c2b6242bac74e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "当哥尔赞降临霓虹市时，他的系统激活了！\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.85,
+    "summary": "第507章 你有个系统也能无敌？ 2021-09-01 11:03开始阅读落叶知秋过我的作品希望你",
+    "chapter_index": 1,
+    "book_id": "8f8c2b6242bac74e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "到秘密结婚领证，不过几天的时间！\n这让她"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 开局娶了居间惠“第一，分房睡，不能对我有非分之想！”“第二，不要干扰我的工作！”“",
+    "chapter_index": 2,
+    "book_id": "8f8c2b6242bac74e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "可是对剧情烂熟于心的啊！\n然而，他脑海里"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 实锤预言家了！“废话少说，快点！”额头划过一缕黑线的居间惠冷冷说道！江慕白笑了笑，",
+    "chapter_index": 3,
+    "book_id": "8f8c2b6242bac74e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "情！\n她还没有告诉大家，实在是这个事情太"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 赛迦奥特曼体验卡！这时在金字塔附近的丛林里，跟无头苍蝇一样的宗方几人四处乱转着！找了",
+    "chapter_index": 4,
+    "book_id": "8f8c2b6242bac74e"
+  }
+]

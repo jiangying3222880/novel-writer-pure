@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "青炎女帝",
+    "initial_state": "初始状态未明确描述，出现22次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "8a6f2b1ee2fa6aa7"
+  },
+  {
+    "character_name": "绿荷跳蛙",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "8a6f2b1ee2fa6aa7"
+  },
+  {
+    "character_name": "滴滴",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "8a6f2b1ee2fa6aa7"
+  },
+  {
+    "character_name": "开局抽女",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "8a6f2b1ee2fa6aa7"
+  },
+  {
+    "character_name": "把把抽女",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "8a6f2b1ee2fa6aa7"
+  }
+]

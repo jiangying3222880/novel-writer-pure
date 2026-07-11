@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "60fbc45d3009c47b"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第318章：鬼帝阴天子（3）2023-11-04 16:59开始阅读睡不醒的企鹅西伯利亚企鹅，四开",
+    "chapter_index": 1,
+    "book_id": "60fbc45d3009c47b"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "前！就剩个坤坤了！\n“嘭——！”房间门被"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.63,
+    "summary": "第1章：道士与狐狸“桀桀桀！小娘子别走哇！我一眼就看出来你不是人！”崎岖的山道上，一名道士正",
+    "chapter_index": 2,
+    "book_id": "60fbc45d3009c47b"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.85,
+    "summary": "第2章：极品天赋还是废天赋？“是极阳之体啊......品级F级。”周老虎一脸晦气。F级是所",
+    "chapter_index": 3,
+    "book_id": "60fbc45d3009c47b"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "风略过，只见刚刚还在身边慢悠悠走路的老太",
+      "自己身为茅山道士，一定要让她开心起来。\n"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 0.71,
+    "summary": "第3章：进来吧你！“苏年，我们不要从那边过了，那边爆发魔兽裂隙了！”马国生神情紧张：“魔兽裂",
+    "chapter_index": 4,
+    "book_id": "60fbc45d3009c47b"
+  }
+]

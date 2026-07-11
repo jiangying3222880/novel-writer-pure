@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "c2cb9a7e5d4a08e7"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "第79章 我爱你。2024-01-09 19:27开始阅读一天鱼一名写作小白 有很多写的不好的地方",
+    "chapter_index": 1,
+    "book_id": "c2cb9a7e5d4a08e7"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "放松，眼神有些落寞。\n就在这时，一位少年",
+      "寄存处】\n六月九日下午。\n今天，考生们也"
+    ],
+    "pacing_score": 0.86,
+    "tension_score": 0.52,
+    "summary": "第1章 压力有点大（女压男，女推男，后面多色色，大家多多支持，多多推荐，谢谢读者老爷们。男主",
+    "chapter_index": 2,
+    "book_id": "c2cb9a7e5d4a08e7"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“好了，不闹了，不闹了。”\n这时，刘雯雯",
+      "一直想吃这附近的豆腐脑，结果没时间，现在"
+    ],
+    "pacing_score": 0.79,
+    "tension_score": 0.5,
+    "summary": "第2章 你想坐着就能月入7500吗这时，柳雨魅的闺蜜沈南乔说话了：“行了，都别傻站着了，快坐",
+    "chapter_index": 3,
+    "book_id": "c2cb9a7e5d4a08e7"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.77,
+    "summary": "第3章 靠，同是保安，我们的差距到底在哪啊？！江北然听此，顿时眼前一亮：“看您满嘴骚话一看就",
+    "chapter_index": 4,
+    "book_id": "c2cb9a7e5d4a08e7"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "d6458cf4dd2aef25"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 拾金不昧者，夜皇“叮！系统任务：【黑吃黑】任务奖励：【探知之眼】恶力值+10！”",
+    "chapter_index": 1,
+    "book_id": "d6458cf4dd2aef25"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 艰难的任务“秦小姐，这是您的包，请查一下是否有丢失的东西。”燕芷期盼的目光，盯着桌对",
+    "chapter_index": 2,
+    "book_id": "d6458cf4dd2aef25"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "了！\n然后，两人都沉默了。\n一同看向了，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.66,
+    "summary": "第3章 系统达标的美女“继续喊啊，妈的，要不是因为抢你这小娘们儿的包，我哥怎么会被执法者逮进去",
+    "chapter_index": 3,
+    "book_id": "d6458cf4dd2aef25"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "！”\n瞅见针锋相对唇枪舌剑的两个人，安逸",
+      "求什么？”\n秦瑶懒得搭理林辰，越说越气，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.92,
+    "summary": "第4章 主线任务「逆天夺命」豪车下来的青年，名叫林辰。昨天还在枪林弹雨中执行任务，今天就被遣",
+    "chapter_index": 4,
+    "book_id": "d6458cf4dd2aef25"
+  }
+]

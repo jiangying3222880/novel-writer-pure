@@ -1,0 +1,30 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n\n  它继续飘着，仿佛在寻找着什么，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.28,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "bcfd4de673b0c7d4"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "和动作中看到了难以掩饰的兴奋，像一个孩子"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.36,
+    "summary": "第一节课的内容是人生导向，我问他长大想干什么，这个小傻瓜说什么？他说想当科学家，他那小小的大脑已经",
+    "chapter_index": 1,
+    "book_id": "bcfd4de673b0c7d4"
+  }
+]

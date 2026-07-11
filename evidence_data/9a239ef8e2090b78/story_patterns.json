@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "9a239ef8e2090b78"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "第12章 晚宴2023-04-13 12:34开始阅读星川舞子莫西莫西 请多多指教吧主写永燕 其",
+    "chapter_index": 1,
+    "book_id": "9a239ef8e2090b78"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "过，知道吗?”\n“啊，什么事啊?”小燕子",
+      "自语道“是班杰明，是班杰明在拉小提琴！”",
+      "，告诉他们不用再送了，便驾马而去。紫薇也"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.72,
+    "summary": "第1章 永燕终相聚夜晚乾清宫-“皇阿玛，儿臣不孝，儿臣必须去履行和小燕子的约定，我和小燕子有一",
+    "chapter_index": 2,
+    "book_id": "9a239ef8e2090b78"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "马，总之你想去哪，我们就去哪”\n听完紫薇"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.34,
+    "summary": "第2章 恨意加深吃完晚饭后-永琪将紫薇亲手为他们绣的荷包拿了出来，递给了小燕子和晴儿说道“这",
+    "chapter_index": 3,
+    "book_id": "9a239ef8e2090b78"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.85,
+    "summary": "第3章 上工隔日小燕子早早地起床，做好早饭，去敲开永琪的房门，她生怕昨天的一切是自己的一场梦",
+    "chapter_index": 4,
+    "book_id": "9a239ef8e2090b78"
+  }
+]

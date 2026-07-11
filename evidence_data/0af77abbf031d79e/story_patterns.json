@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "0af77abbf031d79e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1511章 大汉盛世，大汉传奇2023-01-16 20:38开始阅读轩轾新书已发布，求五星好评",
+    "chapter_index": 1,
+    "book_id": "0af77abbf031d79e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 穿越成第一赘婿“天当棋盘星作子，谁人敢下！”“快，快把这幅对联送到文学院，让他们赶紧",
+    "chapter_index": 2,
+    "book_id": "0af77abbf031d79e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 为了赚金子“堂堂大宇王朝，难不成竟无一人能对此联？这可就未免有些太过可惜了！”“这可",
+    "chapter_index": 3,
+    "book_id": "0af77abbf031d79e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，你看着朕做什么？”\n季平安笑道：“只是"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.9,
+    "summary": "第3章 绝对出这是一个拆字联，思字拆掉正好就是十口心三个字，但季平安却是差点没笑出声来，就这？",
+    "chapter_index": 4,
+    "book_id": "0af77abbf031d79e"
+  }
+]

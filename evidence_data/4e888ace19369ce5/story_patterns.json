@@ -1,0 +1,74 @@
+[
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.84,
+    "tension_score": 0.72,
+    "summary": "﻿枕边热恋作者：廿廿呀简介：　　📖哦？听说你逃婚逃到未婚妻怀里了📖　　‎　　🏆第9681名",
+    "chapter_index": 0,
+    "book_id": "4e888ace19369ce5"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "易她熬到三年级，尤烬被少年班提前录取，她"
+    ],
+    "pacing_score": 0.85,
+    "tension_score": 0.29,
+    "summary": "第1章 第 1 章　　度清亭十二个小时的飞机，刚到家把外套脱下来没来得及休息，就听着她妹滔滔不绝",
+    "chapter_index": 1,
+    "book_id": "4e888ace19369ce5"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "都毛骨悚然。\n　　在度清亭准备转身时，门"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.28,
+    "summary": "第2章 第 2 章　　飞机场这么大，航班这么多，度清亭只是抱着试试看的心态，并没有想过真能遇到她",
+    "chapter_index": 2,
+    "book_id": "4e888ace19369ce5"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "然后眉头皱了皱，好像有洁癖。\n　　度清亭"
+    ],
+    "pacing_score": 0.81,
+    "tension_score": 0.32,
+    "summary": "第3章 第 3 章　　这话快贴着面颊说。　　度清亭被下了钩子，她成了鱼想咬钩。　　“怎么都可",
+    "chapter_index": 3,
+    "book_id": "4e888ace19369ce5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "后来见过尤烬不，还能认出尤烬吗？”江明月"
+    ],
+    "pacing_score": 0.77,
+    "tension_score": 0.3,
+    "summary": "第4章 第 4 章　　这一觉睡到下午两点醒，昨儿兴奋到不知道天地为何物，她翻身，屁股上传来的痛让",
+    "chapter_index": 4,
+    "book_id": "4e888ace19369ce5"
+  }
+]

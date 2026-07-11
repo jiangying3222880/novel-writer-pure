@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "b6e6e137c0c9d5f2"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第102章 有种你试试，连你一块打2024-03-09 23:47开始阅读神豪赘婿战神无敌每日故事",
+    "chapter_index": 1,
+    "book_id": "b6e6e137c0c9d5f2"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "手机里传来的入账信息，脸上闪过狂喜。\n“"
+    ],
+    "pacing_score": 0.8,
+    "tension_score": 0.46,
+    "summary": "第1章 唯一没有脱贫的贫困户“秦华，听我一句劝，拿着这些扶贫补贴，养头猪，或者养头羊，再种点山",
+    "chapter_index": 2,
+    "book_id": "b6e6e137c0c9d5f2"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 有什么资格和白哥比？“白哥果然是自带人气，自带流量啊！这是我们扶贫成果采访人气最高的一",
+    "chapter_index": 3,
+    "book_id": "b6e6e137c0c9d5f2"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.88,
+    "tension_score": 1.0,
+    "summary": "第3章 这都没反应？白凡看到评论区的热度，嘴角一勾，知道自己做对了！如果能在训斥几句，坐实这",
+    "chapter_index": 4,
+    "book_id": "b6e6e137c0c9d5f2"
+  }
+]

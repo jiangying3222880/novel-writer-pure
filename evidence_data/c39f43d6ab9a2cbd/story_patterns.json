@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "c39f43d6ab9a2cbd"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.88,
+    "tension_score": 0.9,
+    "summary": "第351章 浪潮（完）2023-11-08 23:39开始阅读梅林啊梅林人活一世总得留下点什么。",
+    "chapter_index": 1,
+    "book_id": "c39f43d6ab9a2cbd"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "正当齐格飞想要自己提出条件的时候，脑海中"
+    ],
+    "pacing_score": 0.91,
+    "tension_score": 0.43,
+    "summary": "第1章 请与我签订契约【漫游者先生，请停止无谓的拖延，尽快与我签订契约完成任务！】“不可能！",
+    "chapter_index": 2,
+    "book_id": "c39f43d6ab9a2cbd"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "”\n可能是这位齐格飞哥哥给了她勇气，女孩",
+      "出来。”\n齐格飞啐了一口，不远处的二人也"
+    ],
+    "pacing_score": 0.77,
+    "tension_score": 0.52,
+    "summary": "第2章 高端的猎人农舍外，黄毛士兵正拽着一个七八岁的小女孩的胳膊，她大概是藏在地窖里被发现了",
+    "chapter_index": 3,
+    "book_id": "c39f43d6ab9a2cbd"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "一次。\n“卡塔丽娜大人！”\n齐格飞的侧方",
+      "舌地站在那里。\n他之前忘了确认一些事情，",
+      "在那双深不见底的瞳孔中消失的无影无踪。\n"
+    ],
+    "pacing_score": 0.84,
+    "tension_score": 0.86,
+    "summary": "第3章 他是勇者？眼前的男人挥舞着长剑直冲自己的脖颈而来。女骑士只觉得头皮发麻，慌忙侧举骑士",
+    "chapter_index": 4,
+    "book_id": "c39f43d6ab9a2cbd"
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "八荒",
+    "initial_state": "初始状态未明确描述，出现12次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "复仇",
+    "conflicts": [
+      "人际矛盾",
+      "命运抗争"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "818b21dc1df2fd63"
+  },
+  {
+    "character_name": "林霁尘",
+    "initial_state": "初始状态未明确描述，出现40次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "复仇",
+    "conflicts": [
+      "人际矛盾",
+      "命运抗争"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "818b21dc1df2fd63"
+  },
+  {
+    "character_name": "工作人员",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "复仇",
+    "conflicts": [
+      "人际矛盾",
+      "命运抗争"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "818b21dc1df2fd63"
+  },
+  {
+    "character_name": "全职剑修",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "复仇",
+    "conflicts": [
+      "人际矛盾",
+      "命运抗争"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "818b21dc1df2fd63"
+  },
+  {
+    "character_name": "天下第一",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "复仇",
+    "conflicts": [
+      "人际矛盾",
+      "命运抗争"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "818b21dc1df2fd63"
+  }
+]

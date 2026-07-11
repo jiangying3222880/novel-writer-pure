@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "8ed365b1d89f1222"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.76,
+    "summary": "第1696章 童颜VS陆霆骁完结篇2022-08-10 14:07开始阅读月下灼灼夜长不得眠，明月",
+    "chapter_index": 1,
+    "book_id": "8ed365b1d89f1222"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.66,
+    "tension_score": 0.65,
+    "summary": "第1章 有人要娶她“小姐，银行的人来了。”童颜坐在华丽的水晶灯下，看着住了二十年的房子，僵硬",
+    "chapter_index": 2,
+    "book_id": "8ed365b1d89f1222"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.77,
+    "summary": "第2章 拿她冲喜？陆家别墅。看着和童家有着相似规格，却比童家大一倍的房子，童颜眨了眨眼，按下",
+    "chapter_index": 3,
+    "book_id": "8ed365b1d89f1222"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "来了，刚才在里面没说，怕是给她留的面子，"
+    ],
+    "pacing_score": 0.89,
+    "tension_score": 0.33,
+    "summary": "第3章 谁敢保她？陆家！商量好了婚事，童颜从陆家出来，拉着行李箱往学校走去。萧南说的没错，童",
+    "chapter_index": 4,
+    "book_id": "8ed365b1d89f1222"
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "ffde66d9a56f16d9"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "却被男主PUA，被绿茶女二压一头。\n　　"
+    ],
+    "pacing_score": 0.92,
+    "tension_score": 0.4,
+    "summary": "第208章 有女朋友真好！2023-12-16 21:00开始阅读挠生不易新人，很内向，爱发疯，吃",
+    "chapter_index": 1,
+    "book_id": "ffde66d9a56f16d9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "个行走江湖的女流氓”。\n母胎单身二十年，"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.54,
+    "summary": "第1章 闭嘴，男人最好的医美VIP病房。脑科。女人躺在病床上，双目紧闭，冷茶色的卷发散在床",
+    "chapter_index": 2,
+    "book_id": "ffde66d9a56f16d9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "前两天，女主养了好几年的红面蛋龟死了。\n"
+    ],
+    "pacing_score": 0.96,
+    "tension_score": 0.79,
+    "summary": "第2章 小东西的嘴，马桶里的水陆倾川瞳孔地震：？！！她疯了吗！怎么敢的啊！不想分手也不至于",
+    "chapter_index": 3,
+    "book_id": "ffde66d9a56f16d9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "…”\n慕云铮翻着白眼拿起笔，思索两秒。\n",
+      "八竭诚为您服务】\n慕云铮激动：“西八，你"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.77,
+    "summary": "第3章 心中常念姐的好，姐的精神永不倒陆倾川被担架抬出病房的瞬间。只有慕云铮能听到的机械音，",
+    "chapter_index": 4,
+    "book_id": "ffde66d9a56f16d9"
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "08d91566ee756ebb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "生第一天就应了我的劫，抱着我刚出了村口就"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.34,
+    "summary": "第2076章 是我师叔2024-02-25 23:53开始阅读紫梦游龙学霸、村里人的希望。暗号：z",
+    "chapter_index": 1,
+    "book_id": "08d91566ee756ebb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "还了。”\n说完，外面就响起了雷声，那女人"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.23,
+    "summary": "第1章 妖胎我出生那天，在我家院子周围落下了十九道雷，没有一道雷落在我家房顶上。只有第十九道",
+    "chapter_index": 2,
+    "book_id": "08d91566ee756ebb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "那吴半仙说的话也不知道是真是假，吴半仙的",
+      "下，觉得活着总比死了强，起码还有个念想，"
+    ],
+    "pacing_score": 0.96,
+    "tension_score": 0.43,
+    "summary": "第2章 白狐送饭这吴半仙说我是应劫之命，在我们家根本养不活，必须给他当徒弟，方才有一线生机。",
+    "chapter_index": 3,
+    "book_id": "08d91566ee756ebb"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "人在院子里玩，正当我撒尿浇蚂蚁窝的时候，"
+    ],
+    "pacing_score": 0.96,
+    "tension_score": 0.26,
+    "summary": "第3章 一碗野鸡血我三岁那一年，正逢大旱，我三岁生日那一天，村子里的大人基本上全都去浇地去了，",
+    "chapter_index": 4,
+    "book_id": "08d91566ee756ebb"
+  }
+]

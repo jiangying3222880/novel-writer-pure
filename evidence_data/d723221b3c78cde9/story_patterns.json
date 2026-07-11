@@ -1,0 +1,81 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "d723221b3c78cde9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.6,
+    "tension_score": 0.69,
+    "summary": "第170章 【番外3】520萌朕吧？2023-01-20 17:46开始阅读卷角完结作品《小明是怎",
+    "chapter_index": 1,
+    "book_id": "d723221b3c78cde9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "？”\n“啊...”\n我看着同桌淡漠的脸，",
+      "等生，身体也很优等生的。——肾虚的很。\n"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.77,
+    "summary": "第1章 小明是怎么死的高考结束，盛夏。冲澡的时候接了个电话，我同学打来的。“搁哪儿呢？”电",
+    "chapter_index": 2,
+    "book_id": "d723221b3c78cde9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "报纸叠吧叠吧，让它粘在我脖子上好看一点。",
+      "图压抑的恐惧感却不自控地勒紧我的胸口。\n",
+      "勒紧我的胸口。\n于是，我停下了脚步。\n我"
+    ],
+    "pacing_score": 0.75,
+    "tension_score": 0.94,
+    "summary": "第2章 小明是怎么死的2我在长廊上站了很久，光打在白雪上，晃了我的眼。“发什么愣呢？”“啊",
+    "chapter_index": 3,
+    "book_id": "d723221b3c78cde9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "”\n“应该...”同桌话说一半停了下来，",
+      "肩膀上说我晕，血条不足。\n同桌说回家。\n",
+      "我晕，血条不足。\n同桌说回家。\n于是我们"
+    ],
+    "pacing_score": 0.76,
+    "tension_score": 0.93,
+    "summary": "第3章 小明是怎么死的3一进实验楼，我便迫不及待地下楼。令我不解的是，其他四个人看起来神定气闲",
+    "chapter_index": 4,
+    "book_id": "d723221b3c78cde9"
+  }
+]

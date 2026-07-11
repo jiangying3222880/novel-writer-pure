@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "31672a763ad219ed"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.73,
+    "summary": "第132章 黄毛离2023-12-06 00:00开始阅读湘闲无论在什么时候，我都该是最好的。我就",
+    "chapter_index": 1,
+    "book_id": "31672a763ad219ed"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "长很长的梦。\n梦里的自己，在未来的某一天"
+    ],
+    "pacing_score": 0.71,
+    "tension_score": 0.58,
+    "summary": "第1章 起点“顾离！快起床！上学要迟到了！”大清早，一阵响亮的声音打破了少年的梦。顾离坐起",
+    "chapter_index": 2,
+    "book_id": "31672a763ad219ed"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "语考试。\n顾离正在思索最后的英语作文。\n",
+      "像充盈的湖水似的，慢慢地波动着，闪若光，"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 1.0,
+    "summary": "第2章 分班记得当时是英语考试。顾离正在思索最后的英语作文。突然，有个人丢了张纸团在他面前",
+    "chapter_index": 3,
+    "book_id": "31672a763ad219ed"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "“嗨，哥们。怎么一个人坐在这里啊？”\n突"
+    ],
+    "pacing_score": 0.67,
+    "tension_score": 0.54,
+    "summary": "第3章 座位“请各班同学找好自己的班级，找完就快点儿进班。”一道吼声在走廊上不断的回响着。",
+    "chapter_index": 4,
+    "book_id": "31672a763ad219ed"
+  }
+]

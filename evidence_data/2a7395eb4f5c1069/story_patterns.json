@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "2a7395eb4f5c1069"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.82,
+    "summary": "第1790章 薪火永传（大结局）2022-01-19 15:13开始阅读卧巢我的作品希望你喜欢什",
+    "chapter_index": 1,
+    "book_id": "2a7395eb4f5c1069"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，系统更新成功，正式激活开启。”\n脑海中"
+    ],
+    "pacing_score": 0.79,
+    "tension_score": 0.29,
+    "summary": "第001章 最倒霉的穿越者玄元大陆楚国王宫，九公主楚嫣然居住的养颜殿。“大力点，本宫没给你",
+    "chapter_index": 2,
+    "book_id": "2a7395eb4f5c1069"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.88,
+    "tension_score": 0.81,
+    "summary": "第002章 一拳爆头“一……一百万技能点？！”苏辰大惊，大愕，随之狂喜。“哈哈哈哈，我这是",
+    "chapter_index": 3,
+    "book_id": "2a7395eb4f5c1069"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "不知为何实力大涨，方才我带他来的路上，他"
+    ],
+    "pacing_score": 0.92,
+    "tension_score": 0.35,
+    "summary": "第003章 炼药师黄湛“什么，苏辰杀了魏公公，还打伤我的护卫逃走了！”养颜殿内，楚嫣然正怒火",
+    "chapter_index": 4,
+    "book_id": "2a7395eb4f5c1069"
+  }
+]

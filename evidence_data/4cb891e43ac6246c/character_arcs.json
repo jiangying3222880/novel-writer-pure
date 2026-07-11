@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "喻苏",
+    "initial_state": "初始状态未明确描述，出现39次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "4cb891e43ac6246c"
+  },
+  {
+    "character_name": "陆安",
+    "initial_state": "初始状态未明确描述，出现26次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "4cb891e43ac6246c"
+  },
+  {
+    "character_name": "苏苏",
+    "initial_state": "初始状态未明确描述，出现11次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "4cb891e43ac6246c"
+  },
+  {
+    "character_name": "大佬我爱",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "4cb891e43ac6246c"
+  },
+  {
+    "character_name": "狗贼我装",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "探索真相",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "4cb891e43ac6246c"
+  }
+]

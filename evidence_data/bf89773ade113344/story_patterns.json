@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "bf89773ade113344"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第390章 刘羽一统天下，真正的帝国2022-09-15 00:00开始阅读追梦少年情123我的作",
+    "chapter_index": 1,
+    "book_id": "bf89773ade113344"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "在刘羽说罢，却见那一直搀扶着蔡邕的蔡琰，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.54,
+    "summary": "第1章 废太子刘羽，发配边关184年，黄巾贼刚刚席卷天下！皇宫之中，却传出了天子刘宏愤怒的",
+    "chapter_index": 2,
+    "book_id": "bf89773ade113344"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "给他换了一身衣服。\n\n整理好之后，众虎贲",
+      "“保护太子！”\n\n“带太子突围！”\n\n于",
+      "口气，选择了负重前行。\n跋涉两天后，刘羽"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第2章 神选任务，融合杀神传承皇宫，今天的何皇后略显繁忙。“皇后，大将军在外求见。”“",
+    "chapter_index": 3,
+    "book_id": "bf89773ade113344"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 三千大雪龙骑，叩见殿下白衣白马，银枪如雪！这来的，就是刘羽的三千大雪龙骑！在何",
+    "chapter_index": 4,
+    "book_id": "bf89773ade113344"
+  }
+]

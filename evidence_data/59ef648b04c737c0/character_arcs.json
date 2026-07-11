@@ -1,0 +1,117 @@
+[
+  {
+    "character_name": "国运之女",
+    "initial_state": "初始状态未明确描述，出现15次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "59ef648b04c737c0"
+  },
+  {
+    "character_name": "被退婚后",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "59ef648b04c737c0"
+  },
+  {
+    "character_name": "渺渺",
+    "initial_state": "初始状态未明确描述，出现7次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "59ef648b04c737c0"
+  },
+  {
+    "character_name": "师父说",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "59ef648b04c737c0"
+  },
+  {
+    "character_name": "我是国运",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "59ef648b04c737c0"
+  }
+]

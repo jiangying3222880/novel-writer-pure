@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "坐拥后宫三千佳丽妃嫔碰不得。\n重活一世，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.46,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "48a0168f1743ec2e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "了。\n“少夫人，锦鲤都被你喂死了。”王妍",
+      "的，我马上给莫少的管家打电话。”\n少夫人"
+    ],
+    "pacing_score": 0.81,
+    "tension_score": 0.69,
+    "summary": "第1章 女帝重生到豪门少夫人身上沈璃意识逐渐苏醒，但头痛欲裂，浑身冰凉发冷。她感觉，有很多只",
+    "chapter_index": 1,
+    "book_id": "48a0168f1743ec2e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.7,
+    "tension_score": 0.75,
+    "summary": "第2章 离婚吧，我会补偿你陈幻继续吩咐：“赶快把少爷的发型重新弄一下，西装呢，熨好了没？必须一",
+    "chapter_index": 2,
+    "book_id": "48a0168f1743ec2e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.8,
+    "tension_score": 0.68,
+    "summary": "第3章 逆袭，从展示朕的威武雄风开始从梨园离开，莫云酌心里始终存有疑惑。虽然他以前对沈璃也了",
+    "chapter_index": 3,
+    "book_id": "48a0168f1743ec2e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.76,
+    "summary": "第72章【军帐情事】。一边看一边心不在焉的应道：“嗯，已经好了！”方蓉又问：“那心理问题也好了",
+    "chapter_index": 4,
+    "book_id": "48a0168f1743ec2e"
+  }
+]

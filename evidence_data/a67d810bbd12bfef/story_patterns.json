@@ -1,0 +1,30 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "句，随后转身就要走。\n\n“啪！”\n\n林军"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.51,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "a67d810bbd12bfef"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "就得骂我八辈祖宗，因为这钱他不敢不拿，等"
+    ],
+    "pacing_score": 0.93,
+    "tension_score": 0.61,
+    "summary": "第四回，那你就是臭要饭的了。你说一个臭要饭的身份，谁会扯你啊？”贺相霖站起来，摸着林伟的脑袋问道：",
+    "chapter_index": 4,
+    "book_id": "a67d810bbd12bfef"
+  }
+]

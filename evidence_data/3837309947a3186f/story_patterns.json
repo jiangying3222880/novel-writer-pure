@@ -1,0 +1,76 @@
+[
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "3837309947a3186f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.93,
+    "summary": "第二百九十六章 走，回家2023-11-11 20:17开始阅读于瑾思来903554142的粉丝最",
+    "chapter_index": 1,
+    "book_id": "3837309947a3186f"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "..\n居然是红色？\n当走到红色门前时。\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.84,
+    "summary": "第一章 婚配游戏？！桀桀桀！（新书开坑，不俗套，多元素，期待好评）（注：每个角色都配有插图，",
+    "chapter_index": 2,
+    "book_id": "3837309947a3186f"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "分的美好且神秘。\n“这里应该没事吧？”\n"
+    ],
+    "pacing_score": 0.81,
+    "tension_score": 0.73,
+    "summary": "第二章 D级武器：黑岩长剑国运婚配游戏。降临不久。龙国民众刚刚从震惊恐慌中脱离出来...",
+    "chapter_index": 3,
+    "book_id": "3837309947a3186f"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "扯的声音传来。\n原本美丽的女人，整个头颅"
+    ],
+    "pacing_score": 0.77,
+    "tension_score": 0.69,
+    "summary": "第三章 黑发长腿御姐的异形要不要？“咣！”红色的房门缓缓打开。一片青色的田野，安静祥和。",
+    "chapter_index": 4,
+    "book_id": "3837309947a3186f"
+  }
+]

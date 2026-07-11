@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "傅伯父",
+    "initial_state": "初始状态未明确描述，出现10次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "503bbd502a75af47"
+  },
+  {
+    "character_name": "北京",
+    "initial_state": "初始状态未明确描述，出现19次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "503bbd502a75af47"
+  },
+  {
+    "character_name": "新还珠格",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "503bbd502a75af47"
+  },
+  {
+    "character_name": "小姐",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "503bbd502a75af47"
+  },
+  {
+    "character_name": "小燕子",
+    "initial_state": "初始状态未明确描述，出现37次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "503bbd502a75af47"
+  }
+]

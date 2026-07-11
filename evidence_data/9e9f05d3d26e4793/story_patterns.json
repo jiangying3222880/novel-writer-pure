@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "9e9f05d3d26e4793"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.75,
+    "summary": "第67章 “宝宝我认真问你一个问题啊。”2023-12-12 19:04开始阅读今天牙不痛小蝴蝶",
+    "chapter_index": 1,
+    "book_id": "9e9f05d3d26e4793"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n原来出国已经四年了啊。\n掌心中的手机",
+      "里。\n十几个小时的飞行时间，于她而言无异",
+      "际航班在经历长达十几个小时的空中飞行后，"
+    ],
+    "pacing_score": 0.64,
+    "tension_score": 0.74,
+    "summary": "第1章 梦境又是雨夜天。伏鸢侧身躺在床上，房间漆黑潮湿，窗外的雨淅淅沥沥地下着，裹挟着风吹进",
+    "chapter_index": 2,
+    "book_id": "9e9f05d3d26e4793"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "上半点关系。\n几人对她耍了好一阵流氓，才"
+    ],
+    "pacing_score": 0.95,
+    "tension_score": 0.4,
+    "summary": "第2章 “耍我好玩么？”办理好入住，伏鸢将行李简单收拾了一番，只一会儿的功夫，额头鼻尖便被一层",
+    "chapter_index": 3,
+    "book_id": "9e9f05d3d26e4793"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "都在家吗？”\n简蔓刚“嗯”了一声，屏幕里",
+      "拒绝。\n“那好吧。”赵芸锦闻言不好强留，"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.5,
+    "summary": "第3章 冰可乐那是2016年的夏天。－京北市，月湖公馆。天色渐晚，云霞映着落日，将天际染",
+    "chapter_index": 4,
+    "book_id": "9e9f05d3d26e4793"
+  }
+]

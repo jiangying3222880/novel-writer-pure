@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "503961353bb58b79"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.54,
+    "tension_score": 0.6,
+    "summary": "第401章 热情似火风无祈，宅心仁厚老赤阳（一）2024-01-21 18:00开始阅读前尘莫忘十",
+    "chapter_index": 1,
+    "book_id": "503961353bb58b79"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "震动声，秦逍望着江陵山河正自惬意，下一刻"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.54,
+    "summary": "第1章 春雷锦缎惊蛰雨 世间再无九千岁各位看官老爷，正文前说两点：（喜欢看无脑爽文的、开局无",
+    "chapter_index": 2,
+    "book_id": "503961353bb58b79"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.37,
+    "tension_score": 0.6,
+    "summary": "第439章开始都会有解答。这本书光大纲就做了一万多字，一切都是设定好的。我不想给读者脑袋里灌屎，我",
+    "chapter_index": 3,
+    "book_id": "503961353bb58b79"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.71,
+    "tension_score": 0.74,
+    "summary": "第2章 双生观里双拐子 改天换地又一春相国世子命陨摘星楼一事，很快便不胫而走。正如孙连海所言",
+    "chapter_index": 4,
+    "book_id": "503961353bb58b79"
+  }
+]

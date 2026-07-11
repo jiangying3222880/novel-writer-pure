@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.83,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "b5e291199fb447b0"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "身却要嫁入魔界\n\n三千年才开情智的女魔头"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.29,
+    "summary": "第1章 男儿之身却要嫁入魔界三千年才开情智的女魔头终于成亲了，这可是轰动三界的头等大消息。传",
+    "chapter_index": 1,
+    "book_id": "b5e291199fb447b0"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "前，还要被这女魔头羞辱一番。\n玄焱当他是"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.4,
+    "summary": "第2章 新婚夜，抢来的夫君寻死觅活这女人除了脸，哪里都不像个女人！他冷脸侧首摆脱玄焱粗糙的手",
+    "chapter_index": 2,
+    "book_id": "b5e291199fb447b0"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "了，一点音讯也无。\n更可气的是修界最近还",
+      "怜兮兮的丧家犬，开始痛哭流涕。\n狂妄之徒"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.92,
+    "summary": "第3章 新婚夜，抢来的夫君宁死不从“来人！宣魔医！”玄焱大声喝道，随后便有几十名大夫在魔医的带",
+    "chapter_index": 3,
+    "book_id": "b5e291199fb447b0"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.84,
+    "summary": "第4章 转世俏君郎还想逃他身着青衣，墨发高束，面覆黑纱，手执长笛，悠悠涤魂十八谱，曲音婉转却夺",
+    "chapter_index": 4,
+    "book_id": "b5e291199fb447b0"
+  }
+]

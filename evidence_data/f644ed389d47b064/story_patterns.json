@@ -1,0 +1,32 @@
+[
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.63,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "f644ed389d47b064"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "只是徒劳。\n\n    \n接着，脚下的地面"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.47,
+    "summary": "第一章 你是要自己洗？还是我给你洗？    “夏茉，你路过夜市的时候可不可以给我带份炒饭？”",
+    "chapter_index": 3,
+    "book_id": "f644ed389d47b064"
+  }
+]

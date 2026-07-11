@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "df3258de9b05e502"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第462章 第五场游戏降临2024-01-06 16:01开始阅读三秒之后再说吧万物皆有裂痕，那是",
+    "chapter_index": 1,
+    "book_id": "df3258de9b05e502"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "烟圈，有的结伴唠嗑，有的低头刷着手机。\n"
+    ],
+    "pacing_score": 0.81,
+    "tension_score": 0.58,
+    "summary": "第1章 末世游戏降临，满载死亡的列车！“K231列车，这里是武都火车站，收到请回复！”“滋滋",
+    "chapter_index": 2,
+    "book_id": "df3258de9b05e502"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "还不等林凡缓过神来。\n一道冰冷的机械音，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.73,
+    "summary": "第2章 预测未来的诡异视频，我想活着！看到绿色乱码消失，林凡心里这才松了口气。手指点到右上角",
+    "chapter_index": 3,
+    "book_id": "df3258de9b05e502"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "可就在这时，一双满是鲜血，稚嫩的小手。\n",
+      "个时候。\n一直处于神经高度紧绷的林凡，才"
+    ],
+    "pacing_score": 0.92,
+    "tension_score": 0.93,
+    "summary": "第3章 无法阻止的尸变！管理员大礼包？一名满脸胡渣，脖子挂着大金链，像头公牛般魁梧的壮汉，注意",
+    "chapter_index": 4,
+    "book_id": "df3258de9b05e502"
+  }
+]

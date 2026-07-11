@@ -1,0 +1,117 @@
+[
+  {
+    "character_name": "无赖",
+    "initial_state": "初始状态未明确描述，出现9次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "追求力量",
+    "conflicts": [
+      "人际矛盾",
+      "命运抗争"
+    ],
+    "character_traits": [
+      "善良",
+      "温柔",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "1512ac176dcd647f"
+  },
+  {
+    "character_name": "混沌道体",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "追求力量",
+    "conflicts": [
+      "人际矛盾",
+      "命运抗争"
+    ],
+    "character_traits": [
+      "善良",
+      "温柔",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "1512ac176dcd647f"
+  },
+  {
+    "character_name": "女帝",
+    "initial_state": "初始状态未明确描述，出现15次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "追求力量",
+    "conflicts": [
+      "人际矛盾",
+      "命运抗争"
+    ],
+    "character_traits": [
+      "善良",
+      "温柔",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "1512ac176dcd647f"
+  },
+  {
+    "character_name": "小胳膊小",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "追求力量",
+    "conflicts": [
+      "人际矛盾",
+      "命运抗争"
+    ],
+    "character_traits": [
+      "善良",
+      "温柔",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "1512ac176dcd647f"
+  },
+  {
+    "character_name": "任务",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "追求力量",
+    "conflicts": [
+      "人际矛盾",
+      "命运抗争"
+    ],
+    "character_traits": [
+      "善良",
+      "温柔",
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "1512ac176dcd647f"
+  }
+]

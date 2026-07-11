@@ -1,0 +1,107 @@
+[
+  {
+    "character_name": "娴妃",
+    "initial_state": "初始状态未明确描述，出现46次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "3e5e259be3c6639e"
+  },
+  {
+    "character_name": "全家反派",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "3e5e259be3c6639e"
+  },
+  {
+    "character_name": "读我心后",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "3e5e259be3c6639e"
+  },
+  {
+    "character_name": "人设都崩",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "3e5e259be3c6639e"
+  },
+  {
+    "character_name": "暴君",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "3e5e259be3c6639e"
+  }
+]

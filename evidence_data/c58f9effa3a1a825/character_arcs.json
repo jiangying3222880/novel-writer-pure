@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "长生仙人",
+    "initial_state": "初始状态未明确描述，出现13次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "c58f9effa3a1a825"
+  },
+  {
+    "character_name": "仙人恕罪",
+    "initial_state": "初始状态未明确描述，出现4次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "c58f9effa3a1a825"
+  },
+  {
+    "character_name": "我长生仙",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "c58f9effa3a1a825"
+  },
+  {
+    "character_name": "被凡人吊",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "c58f9effa3a1a825"
+  },
+  {
+    "character_name": "打很合理",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎",
+      "人际矛盾"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "c58f9effa3a1a825"
+  }
+]

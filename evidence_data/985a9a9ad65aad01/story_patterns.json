@@ -1,0 +1,50 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "985a9a9ad65aad01"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "第二十八章 天罗地网2021-03-22 13:23开始阅读蜘蛛我的作品希望你喜欢十宗罪作者蜘蛛",
+    "chapter_index": 1,
+    "book_id": "985a9a9ad65aad01"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.6,
+    "tension_score": 0.67,
+    "summary": "第一章  犯罪天才  多年前的一个秋天，沂蒙山的柿子红了。正是黄昏，远处升起炊烟，弯弯曲曲的",
+    "chapter_index": 3,
+    "book_id": "985a9a9ad65aad01"
+  }
+]

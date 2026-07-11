@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "b068a7dd7efb09fd"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      ":26:15 \n\n《王牌对王牌》推荐！\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1918章 沾血的铜钱 2023-12-03 00:26:15 《王牌对王牌》推荐！突然穿",
+    "chapter_index": 1,
+    "book_id": "b068a7dd7efb09fd"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.74,
+    "tension_score": 0.73,
+    "summary": "第1章  大康王朝在木桩上坐了半个多小时，金锋不得不接受现实。他穿越了。从现代化的21世纪",
+    "chapter_index": 2,
+    "book_id": "b068a7dd7efb09fd"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "饭都很难维持。\n更不凑巧的是，她妹妹去年"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.35,
+    "summary": "第2章  赔钱货“赔钱货？”金锋脑中浮现相关信息。康朝女多男少的问题已经持续了多年，不是送",
+    "chapter_index": 3,
+    "book_id": "b068a7dd7efb09fd"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "不懂什么意思，却能够猜出来金锋在骂他。\n",
+      "一顿训斥，还要罚薪。\n现在好了，这个累赘"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.62,
+    "summary": "第3章  我选她！“我选她！”金锋没有任何迟疑，伸手指向关晓柔。周围一下子安静下来。竟然",
+    "chapter_index": 4,
+    "book_id": "b068a7dd7efb09fd"
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "4cb891e43ac6246c"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "爱而不得，被人骗得裤衩子都没了的滋味！\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.99,
+    "summary": "第143章 这两人该不会面基住在一起了吧？2023-11-27 23:57开始阅读碎碎如年一个小扑",
+    "chapter_index": 1,
+    "book_id": "4cb891e43ac6246c"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.9,
+    "tension_score": 0.9,
+    "summary": "第1章 惊！天道一缆众月榜一大佬劈腿多位女玩家，有图有真相！“哎，陆安，快看贴吧，有大瓜！那谁",
+    "chapter_index": 2,
+    "book_id": "4cb891e43ac6246c"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.84,
+    "tension_score": 0.87,
+    "summary": "第2章 抱歉，还有，怎么不叫哥哥了？“你就宠着他吧。”陶澈扫了一眼激动地上蹿下跳地的死党，一脸",
+    "chapter_index": 3,
+    "book_id": "4cb891e43ac6246c"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.86,
+    "summary": "第3章 死对头号哪一口，他能不知道？他低头看了眼，是他们小群里的消息，一会没看，已经99+了。",
+    "chapter_index": 4,
+    "book_id": "4cb891e43ac6246c"
+  }
+]

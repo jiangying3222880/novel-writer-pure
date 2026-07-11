@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "爸爸妈妈",
+    "initial_state": "初始状态未明确描述，出现12次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "b53b2c72a0a87162"
+  },
+  {
+    "character_name": "清郁",
+    "initial_state": "初始状态未明确描述，出现31次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "b53b2c72a0a87162"
+  },
+  {
+    "character_name": "妈妈",
+    "initial_state": "初始状态未明确描述，出现23次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "b53b2c72a0a87162"
+  },
+  {
+    "character_name": "清音妹妹",
+    "initial_state": "初始状态未明确描述，出现9次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "b53b2c72a0a87162"
+  },
+  {
+    "character_name": "林清音",
+    "initial_state": "初始状态未明确描述，出现10次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "追求力量",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "温柔"
+    ],
+    "voice_pattern": "话多、善于表达",
+    "book_id": "b53b2c72a0a87162"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "十宗罪前",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "985a9a9ad65aad01"
+  },
+  {
+    "character_name": "犯罪天才",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "985a9a9ad65aad01"
+  },
+  {
+    "character_name": "前言",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "985a9a9ad65aad01"
+  },
+  {
+    "character_name": "里的苹果",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "985a9a9ad65aad01"
+  },
+  {
+    "character_name": "第一章",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "堕落",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "善良",
+      "坚持"
+    ],
+    "voice_pattern": "适度表达、有分寸",
+    "book_id": "985a9a9ad65aad01"
+  }
+]

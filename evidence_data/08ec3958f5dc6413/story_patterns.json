@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "08ec3958f5dc6413"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.78,
+    "tension_score": 0.6,
+    "summary": "第118章：大结局2023-02-14 09:40开始阅读沙里星11111111111111111",
+    "chapter_index": 1,
+    "book_id": "08ec3958f5dc6413"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.8,
+    "tension_score": 0.74,
+    "summary": "第一章：我有五个美女徒弟清晨，天刚亮，白泽就被一阵动静吵醒。当他睁开眼睛，竟看到一个身穿女仆",
+    "chapter_index": 2,
+    "book_id": "08ec3958f5dc6413"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "将其击败。\n就在她准备迎接众人的欢呼时，",
+      "第二章\n：内门测试\n\n终于，成功找到弱点"
+    ],
+    "pacing_score": 0.77,
+    "tension_score": 0.65,
+    "summary": "第二章：内门测试终于，成功找到弱点的莫紫璇一剑刺了过去，不慎被刺中弱点的男子连忙退开，这让莫紫",
+    "chapter_index": 3,
+    "book_id": "08ec3958f5dc6413"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "殿里，紫月长老一身紫衣正在闭目修炼着。\n"
+    ],
+    "pacing_score": 0.84,
+    "tension_score": 0.39,
+    "summary": "第三章：举杯对月“你就是莫紫璇吧，我是白灵儿，白泽尊上的大弟子，以后也就是你的大师姐。”看着",
+    "chapter_index": 4,
+    "book_id": "08ec3958f5dc6413"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "大小姐",
+    "initial_state": "初始状态未明确描述，出现6次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "探索真相",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "40d4d5004508b2ae"
+  },
+  {
+    "character_name": "这不是我",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "探索真相",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "40d4d5004508b2ae"
+  },
+  {
+    "character_name": "她马甲一",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "探索真相",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "40d4d5004508b2ae"
+  },
+  {
+    "character_name": "全球都轰",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "探索真相",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "40d4d5004508b2ae"
+  },
+  {
+    "character_name": "是她",
+    "initial_state": "初始状态未明确描述，出现5次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "平凡生活",
+    "motivation": "探索真相",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "勇敢",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "40d4d5004508b2ae"
+  }
+]

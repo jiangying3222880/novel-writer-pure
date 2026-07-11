@@ -1,0 +1,81 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.74,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "5c87f0ef998f98e8"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.86,
+    "summary": "第190章 大结局！2023-05-25 00:24开始阅读一知唐我的作品希望你喜欢【重生，创业",
+    "chapter_index": 1,
+    "book_id": "5c87f0ef998f98e8"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "醒！！醒醒！！”\n“天哥，你怎么了？怎么",
+      "，清澈明亮的双眸扑闪着，睫毛微微颤抖。\n",
+      "无力的闭上了，声音也越来越弱。\n“你.."
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 或许这个人就是我呢医院病房内。刺鼻的消毒水气味，惨白色的灯光灯下，床上的男人戴着呼吸",
+    "chapter_index": 2,
+    "book_id": "5c87f0ef998f98e8"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。”\n“然后就是人工呼吸...”\n“事出",
+      "必也是一时的头脑发热，才做出这番举动。\n",
+      "死命的抓住施救者，最后两人都凶多吉少。\n"
+    ],
+    "pacing_score": 0.84,
+    "tension_score": 1.0,
+    "summary": "第2章 误会啊“你胡说...”“才..才不会是你呢...”林婉清羞红了脸蛋，结结巴巴的道。",
+    "chapter_index": 3,
+    "book_id": "5c87f0ef998f98e8"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "家属来投诉她看管不严，那可够喝一壶的。\n",
+      "....\n“没事就好了。”\n叶天现在才算"
+    ],
+    "pacing_score": 0.74,
+    "tension_score": 0.61,
+    "summary": "第3章 时代的风口“这...”“当然是救了你呀。”“都是同学，不用感谢我，这是我应该做的！",
+    "chapter_index": 4,
+    "book_id": "5c87f0ef998f98e8"
+  }
+]

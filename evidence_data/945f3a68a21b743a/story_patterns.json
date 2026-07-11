@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "945f3a68a21b743a"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.7,
+    "summary": "第85章 完结2022-08-30 12:33开始阅读蓝色柚子杠精，职业杠精！【柯学世界】【领养",
+    "chapter_index": 1,
+    "book_id": "945f3a68a21b743a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.99,
+    "summary": "第1章 帝丹高中“枫源，作为近藤家的独子，你也应该慢慢的接手一些家族产业了！”近藤家别墅大厅",
+    "chapter_index": 2,
+    "book_id": "945f3a68a21b743a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "么却只是小问题而已。”\n“近藤家？”园子"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.69,
+    "summary": "第2章 拜访“您好，您就是名侦探毛利叔叔吧，我是小兰的同学，初次拜访，一些小礼品请您收下！”",
+    "chapter_index": 3,
+    "book_id": "945f3a68a21b743a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "成了功能区和居住区了。\n枫源看着视网膜上",
+      "以排进前二十吧！\n“哇~这么有钱！这下子"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.52,
+    "summary": "第3章 完成任务奖励“好了，时间也不早了，麻烦小弟弟你去叫一下毛利大叔好不好呢？”近藤枫源笑眯",
+    "chapter_index": 4,
+    "book_id": "945f3a68a21b743a"
+  }
+]

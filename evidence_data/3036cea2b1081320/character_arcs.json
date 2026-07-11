@@ -1,0 +1,102 @@
+[
+  {
+    "character_name": "陈子佩",
+    "initial_state": "初始状态未明确描述，出现43次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "3036cea2b1081320"
+  },
+  {
+    "character_name": "子佩",
+    "initial_state": "初始状态未明确描述，出现46次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "3036cea2b1081320"
+  },
+  {
+    "character_name": "李东方",
+    "initial_state": "初始状态未明确描述，出现57次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "3036cea2b1081320"
+  },
+  {
+    "character_name": "我回来了",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "3036cea2b1081320"
+  },
+  {
+    "character_name": "年的七夕",
+    "initial_state": "初始状态未明确描述，出现3次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "救赎",
+    "motivation": "保护家人",
+    "conflicts": [
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "冷酷"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "3036cea2b1081320"
+  }
+]

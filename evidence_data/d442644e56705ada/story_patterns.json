@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.67,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "d442644e56705ada"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.85,
+    "tension_score": 1.0,
+    "summary": "第1章 嘘，禁止顶撞豪门小少爷（1）【叮！您已抵达第一个位面！】【叮！解锁拯救目标信息：傅峥",
+    "chapter_index": 1,
+    "book_id": "d442644e56705ada"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.77,
+    "tension_score": 0.95,
+    "summary": "第2章 嘘，禁止顶撞豪门小少爷（2）原主为爱做0，他可不。堂堂战神怎么可能屈居人下。郑越生",
+    "chapter_index": 2,
+    "book_id": "d442644e56705ada"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "打扰老子休息了。”\n祈绥正欲关门。\n段誉"
+    ],
+    "pacing_score": 0.73,
+    "tension_score": 0.43,
+    "summary": "第3章 嘘，禁止顶撞豪门小少爷（3）祈绥冷眼一扫，681立刻被扇了两耳光。他露出一个阴恻恻的",
+    "chapter_index": 3,
+    "book_id": "d442644e56705ada"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "班我来接你。”\n祈绥起身，准备走。\n后厨",
+      "不知道闯了多大的祸！”\n祈暖：“哥哥，你"
+    ],
+    "pacing_score": 0.8,
+    "tension_score": 0.79,
+    "summary": "第4章 嘘，禁止顶撞豪门小少爷（4）“……”那又怎样？祈绥眼神意兴阑珊地眯了眯。这家伙又在",
+    "chapter_index": 4,
+    "book_id": "d442644e56705ada"
+  }
+]

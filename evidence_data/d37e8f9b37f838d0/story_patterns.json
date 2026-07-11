@@ -1,0 +1,74 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "敷衍的态度，依然喋喋不休：“但也不能这么"
+    ],
+    "pacing_score": 0.96,
+    "tension_score": 0.25,
+    "summary": "白昼流星作者：渡冷汀简介：　　? 晴空白日，流星过境　　?　　标签：都市情缘,破镜重圆,天",
+    "chapter_index": 0,
+    "book_id": "d37e8f9b37f838d0"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "甥要抽我，不管管？”\n　　江羡妤听清了，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.36,
+    "summary": "第一节课前。　　到了校门口，夏慕青没着急进去，她隔着校门打量着一眼就能望到边的学校。　　她目光",
+    "chapter_index": 1,
+    "book_id": "d37e8f9b37f838d0"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "食指蹭了蹭鼻尖，讪笑了两声：“老师，这么"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.41,
+    "summary": "第一节课是英语。　　继上午见识到数学老师的态度后，当英语老师自顾自站在讲台上念经，全然没有要管台",
+    "chapter_index": 2,
+    "book_id": "d37e8f9b37f838d0"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.73,
+    "summary": "卷一共有二十套题，十点晚自习结束的时候，苏倩头昏脑胀，却也只是做完了五套，这还不包括听力和作文。",
+    "chapter_index": 3,
+    "book_id": "d37e8f9b37f838d0"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "时间的意义了。\n　　张丽掐着速度往前赶，"
+    ],
+    "pacing_score": 0.9,
+    "tension_score": 0.28,
+    "summary": "第一节课平静度过，下课后，苏倩拿上手机去到了顶楼重点班对面的楼道里——那条楼道的教室是空的，因为在",
+    "chapter_index": 4,
+    "book_id": "d37e8f9b37f838d0"
+  }
+]

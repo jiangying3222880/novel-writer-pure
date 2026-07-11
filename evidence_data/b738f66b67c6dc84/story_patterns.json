@@ -1,0 +1,82 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "b738f66b67c6dc84"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "第34章 婚礼2022-05-30 21:39开始阅读白鹿兮愿神明偏爱 一切从欢老爷因为想念从北",
+    "chapter_index": 1,
+    "book_id": "b738f66b67c6dc84"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.9,
+    "tension_score": 0.66,
+    "summary": "第1章 回家一场杀格格的闹剧，十全十美开始了漫长的逃亡之路……在南阳皇阿玛因为想念小燕子紫薇",
+    "chapter_index": 2,
+    "book_id": "b738f66b67c6dc84"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.92,
+    "tension_score": 0.69,
+    "summary": "第2章 团聚在皇宫里，老佛爷抱着令妃的十五阿哥永琰欢喜的不得了。“皇上去南阳接那几个孩子，也",
+    "chapter_index": 3,
+    "book_id": "b738f66b67c6dc84"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.76,
+    "summary": "第3章 为自己而活永和宫:“娘娘，福晋，五阿哥回来了……”迎儿眉儿开心的跑进永和宫告诉愉妃和",
+    "chapter_index": 4,
+    "book_id": "b738f66b67c6dc84"
+  }
+]

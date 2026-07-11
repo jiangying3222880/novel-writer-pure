@@ -1,0 +1,60 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "6c73056375739c8e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，今日你们不是休息吗？”司静渊打量这一群"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.56,
+    "summary": "第一章 枫生（1）楔子下雨了。*有什么能比在寒天北风中烤肉更幸福？没有！红亮的炭火上",
+    "chapter_index": 2,
+    "book_id": "6c73056375739c8e"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "河啊！”\n“闪开！”桃夭一把甩开他的手，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.69,
+    "summary": "第二章 枫生（2）“哎呀，澜澜你也是，小丫头嘴馋，何必如此为难她。”司静渊一边吃肉一边劝，吃太",
+    "chapter_index": 3,
+    "book_id": "6c73056375739c8e"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "，又看看磨牙，嬉皮笑脸地凑到司狂澜面前，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.45,
+    "summary": "第三章 枫生（3）房间里静默了好一阵子。司静渊跟苗管家面面相觑，显然在他们有限的人生里，从没",
+    "chapter_index": 4,
+    "book_id": "6c73056375739c8e"
+  }
+]

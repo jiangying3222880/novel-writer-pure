@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "719ea9ea06fbc75a"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.92,
+    "summary": "第8269章 灰飞烟灭2023-10-23 20:33开始阅读步千帆我的作品希望你喜欢他是雇佣兵",
+    "chapter_index": 1,
+    "book_id": "719ea9ea06fbc75a"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.83,
+    "tension_score": 0.74,
+    "summary": "第1章 劫机（上）近乡情怯，用这个词来形容叶谦现在的心情再恰当不过了。坐在飞往华夏的飞机上，透",
+    "chapter_index": 2,
+    "book_id": "719ea9ea06fbc75a"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "矮个匪徒不容置疑的说道。\n“可是……我们"
+    ],
+    "pacing_score": 0.79,
+    "tension_score": 0.23,
+    "summary": "第2章 劫机（下）杀人，对于叶谦来说早就已经麻木了，死在他手里的人没有一千也有八百。作为狼牙雇",
+    "chapter_index": 3,
+    "book_id": "719ea9ea06fbc75a"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "走了过去。敲了敲门，却并没有人应声，叶谦",
+      "误的孩子，既想回家，却又害怕回家。\n车子"
+    ],
+    "pacing_score": 0.88,
+    "tension_score": 0.5,
+    "summary": "第3章 回家看到这样的情形，叶谦微微的点了点头，不过他也很清楚，这件事情虽然不会被媒体曝光，但",
+    "chapter_index": 4,
+    "book_id": "719ea9ea06fbc75a"
+  }
+]

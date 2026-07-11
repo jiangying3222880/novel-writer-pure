@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "531cc20cefd474c9"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.4,
+    "tension_score": 0.6,
+    "summary": "第127章 终章（终）2023-04-23 12:49开始阅读娑罗树下水映月QwQ   TwT",
+    "chapter_index": 1,
+    "book_id": "531cc20cefd474c9"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.76,
+    "tension_score": 0.86,
+    "summary": "第1章 苏醒“呜，怎么回事？”“我应该已经？”“为什么我的意识还存在？”“为什么我还能感",
+    "chapter_index": 2,
+    "book_id": "531cc20cefd474c9"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.71,
+    "tension_score": 0.76,
+    "summary": "第2章 虚数之树，世界之树“因为，我还在这里。”奥托这么说道。“恩，很简单的逻辑，你还存在就",
+    "chapter_index": 3,
+    "book_id": "531cc20cefd474c9"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "间中不知道飞了多久，也不知道飞了多远。\n"
+    ],
+    "pacing_score": 0.76,
+    "tension_score": 0.36,
+    "summary": "第3章 准备工作“准备好了吗？”奥托（伪）问道。“在我看来，将计划制定到每一个细节、任何情况",
+    "chapter_index": 4,
+    "book_id": "531cc20cefd474c9"
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:https://github.com",
+    "chapter_index": 0,
+    "book_id": "e333dc39ae3486fc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "的！”\n\n　　“干脆壁咚算了！”\n\n　　"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.68,
+    "summary": "第209章 番外 二2023-07-07 18:20开始阅读汐豆聪明勇敢有力气，我真的羡慕我自己！",
+    "chapter_index": 1,
+    "book_id": "e333dc39ae3486fc"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "句“如果真的喜欢，就表白100次吧！”\n",
+      "网。\n妈妈很高兴。\n二老省吃俭用一辈子，"
+    ],
+    "pacing_score": 0.76,
+    "tension_score": 0.79,
+    "summary": "第001章 哥，门外有变态，快下楼救我！“我艹！”“你们把老房子……都卖了交医药费？……咳咳",
+    "chapter_index": 2,
+    "book_id": "e333dc39ae3486fc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "一世，她想起来了。\n这一世，或许是自己的"
+    ],
+    "pacing_score": 0.69,
+    "tension_score": 0.42,
+    "summary": "第002章 这要回答得不好，不得遭老罪了？“那个变态，是我。”季礼迟疑了一下，横跨几步，走到",
+    "chapter_index": 3,
+    "book_id": "e333dc39ae3486fc"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "出的肩膀。\n夏野心里松了一口气。\n可是，"
+    ],
+    "pacing_score": 0.85,
+    "tension_score": 0.7,
+    "summary": "第003章 小时候亲亲，和长大了能一样吗？“这个所谓的校花就是个婊子！”夏野坚定立场，维护季",
+    "chapter_index": 4,
+    "book_id": "e333dc39ae3486fc"
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "f4a3fce561d33c0a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "高潮",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "——第十二次崩坏爆发，凯文\n如今崩坏终于"
+    ],
+    "pacing_score": 0.53,
+    "tension_score": 0.27,
+    "summary": "第95章 直播进行时2023-12-15 12:00开始阅读夕下灯用拙劣的文笔去尝试描绘心中的唯美",
+    "chapter_index": 1,
+    "book_id": "f4a3fce561d33c0a"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "必感到遗憾，这也是我的愿望。”\n“现在我"
+    ],
+    "pacing_score": 0.76,
+    "tension_score": 0.53,
+    "summary": "第1章 崩坏终焉之时在深紫色终焉之茧面前的平台上，双麻花辫女生转过身对同样白色头发的男人说道。",
+    "chapter_index": 2,
+    "book_id": "f4a3fce561d33c0a"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "个扮演凯文的。\n凯文：“……”\n此时少年"
+    ],
+    "pacing_score": 0.68,
+    "tension_score": 0.35,
+    "summary": "第2章 初临新的世界那么…准备好哦，要开始了！“嗯…”凯文闭上双眼沉声道。画面于此定格。",
+    "chapter_index": 3,
+    "book_id": "f4a3fce561d33c0a"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "罩，在床头柜上摆放着他和梅的Q版人偶。\n",
+      "地板，混着其他的液体。\n凯文…\n你的泪水"
+    ],
+    "pacing_score": 0.64,
+    "tension_score": 0.58,
+    "summary": "第3章 泪水最后凯文面不改色穿着他的作战服抵达了小区。该说不愧是社牛吗…对了，这是刚才跟那位",
+    "chapter_index": 4,
+    "book_id": "f4a3fce561d33c0a"
+  }
+]

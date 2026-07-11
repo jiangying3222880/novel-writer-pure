@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.65,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "184d45d697ef68c5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "上受徒儿一拜！”\n经过两年的学习，凌青风"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.71,
+    "summary": "第1章 不重要存脑店铺！开业大酬宾！存一个脑子，可以拿回一个脑子！请自己挂好号牌，不要拿错！",
+    "chapter_index": 1,
+    "book_id": "184d45d697ef68c5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "透的吗？就在两个月前某天吃完饭正在剔牙，",
+      "方也是被逼的……emmm还是可怜人多呀！"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.68,
+    "summary": "第2章 五年师傅白云飞留的那个盒子，里面也没啥好东西，也就几个金器外加一块特殊的挂坠，为啥说特",
+    "chapter_index": 2,
+    "book_id": "184d45d697ef68c5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "总是感觉自己心被揪着，好难受……\n凌青风",
+      "的就是一个完美！打开电脑看了一下时间还早",
+      "没电了，给电脑充个电！”\n一阵手忙脚乱，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 灵能与柯学凌青风趴在床上，看着手里的电脑，上面正在播放着《灵能百分百》嘴里不断的啧啧啧",
+    "chapter_index": 3,
+    "book_id": "184d45d697ef68c5"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "上遇到的人都悄悄地说“好可爱的小孩子！”"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第4章 身份卡与世界的线索看着面板缓缓的消散以及卡使用成功的提示还有最后的那一句祝福。凌青风心",
+    "chapter_index": 4,
+    "book_id": "184d45d697ef68c5"
+  }
+]

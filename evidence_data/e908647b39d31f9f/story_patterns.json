@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.62,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "e908647b39d31f9f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "又增加了几分散漫不羁的神秘感。\n林淮安又",
+      "林淮安误以为是默认。\n“不是吧，阿礼，你"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.53,
+    "summary": "第1章 那晚（双洁，但男主有逢场作戏）月落吻星河，我只想吻你，碧荷落泥潭，与你白日缠欢——题",
+    "chapter_index": 1,
+    "book_id": "e908647b39d31f9f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.94,
+    "tension_score": 0.77,
+    "summary": "第2章 “给我安分点……”林淮安自然也听到了，不屑地轻哼，“合着隔壁那女孩不愿意，神他妈女朋友",
+    "chapter_index": 2,
+    "book_id": "e908647b39d31f9f"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "悼的不是已故的人，而是自己坎坷的过去。\n"
+    ],
+    "pacing_score": 0.87,
+    "tension_score": 0.25,
+    "summary": "第3章 忍着女孩细白的身体在他眼前晃，谢聿礼看得心烦意乱。他拽着黑衬衫的衣襟猛地一收，拢的严",
+    "chapter_index": 3,
+    "book_id": "e908647b39d31f9f"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.75,
+    "tension_score": 0.64,
+    "summary": "第4章 “眼泪留着，一会儿有用”叶柠刚刚挤出的眼泪还没完全干，带着湿意的大眼睛懵懂地看着他，有",
+    "chapter_index": 4,
+    "book_id": "e908647b39d31f9f"
+  }
+]

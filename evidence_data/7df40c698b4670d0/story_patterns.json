@@ -1,0 +1,77 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "7df40c698b4670d0"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.7,
+    "tension_score": 0.76,
+    "summary": "第3050章 又见面了2024-02-28 05:10开始阅读叶公子我的作品希望你喜欢叶家在燕京",
+    "chapter_index": 1,
+    "book_id": "7df40c698b4670d0"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "叶辰处事淡然，任别人怎么侮辱也不为所动，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.51,
+    "summary": "第1章 受尽屈辱豪华的萧家别墅，一片灯火通明。今晚，是萧家的家主萧老太太七十岁的寿宴。",
+    "chapter_index": 2,
+    "book_id": "7df40c698b4670d0"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "办？\n\n所以，还是先低调一些比较好。\n\n",
+      "李阿姨一生行善积德，帮助过那么多人，现在"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.76,
+    "summary": "第2章 我有现金一百亿一百亿？！叶辰听得目瞪口呆。他知道爷爷家里很有钱，但那时候他还小",
+    "chapter_index": 3,
+    "book_id": "7df40c698b4670d0"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "好讽刺挖苦他一番，见王云飞竟然先开始了，"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.47,
+    "summary": "第3章 接手帝豪集团次日一早。叶辰做完饭后，便骑着自己的小电驴，来到帝豪集团。把小电驴",
+    "chapter_index": 4,
+    "book_id": "7df40c698b4670d0"
+  }
+]

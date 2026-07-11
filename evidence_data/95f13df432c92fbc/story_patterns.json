@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "95f13df432c92fbc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "始阅读清酒半壶我的作品希望你喜欢\n江司明"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.88,
+    "summary": "第2785章 终章2022-12-25 11:04开始阅读清酒半壶我的作品希望你喜欢江司明突然发",
+    "chapter_index": 1,
+    "book_id": "95f13df432c92fbc"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "在江司明选择使用碎片的那一刻，他的脑海突"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.5,
+    "summary": "第1章 别人看不见的碎片001.别人看不见的碎片“小江，快跑毒啊！你还在那儿愣着干嘛？”“",
+    "chapter_index": 2,
+    "book_id": "95f13df432c92fbc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.9,
+    "tension_score": 0.89,
+    "summary": "第2章 瞬狙！002.瞬狙！而另一边被王军他们伏击的队伍里，却传来轻松的调笑声。“这队人好",
+    "chapter_index": 3,
+    "book_id": "95f13df432c92fbc"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.97,
+    "tension_score": 0.79,
+    "summary": "第3章 被团灭的4am战队！003.被团灭的4am战队！可让人绝望的是，对方的头颅再次出现，",
+    "chapter_index": 4,
+    "book_id": "95f13df432c92fbc"
+  }
+]

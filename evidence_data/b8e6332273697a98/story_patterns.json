@@ -1,0 +1,80 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "b8e6332273697a98"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "单一场景",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "第19章 紫薇，晴儿，知画怀孕2022-12-05 17:35开始阅读星月宫的范闲活泼开朗，爱好：",
+    "chapter_index": 1,
+    "book_id": "b8e6332273697a98"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "不害臊。”杜雪吟：“永琪紫薇乖。”\n然后"
+    ],
+    "pacing_score": 0.56,
+    "tension_score": 0.3,
+    "summary": "第1章 萧国公主出生萧国皇后是大清太后的侄女，所以两国关系特别好。他们两国也给孩子没定得有娃娃",
+    "chapter_index": 2,
+    "book_id": "b8e6332273697a98"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.54,
+    "tension_score": 0.69,
+    "summary": "第2章 永琪和涵儿订婚3日后老佛爷皇上和愉妃来看雪吟和小公主。老佛爷抱着涵儿说道：“对了，之航",
+    "chapter_index": 3,
+    "book_id": "b8e6332273697a98"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.39,
+    "tension_score": 0.67,
+    "summary": "第3章 涵儿和永琪长大后初次见面四年之后，萧国。杜雪吟：“之航，涵儿也长大了，我们带涵儿和风儿",
+    "chapter_index": 4,
+    "book_id": "b8e6332273697a98"
+  }
+]

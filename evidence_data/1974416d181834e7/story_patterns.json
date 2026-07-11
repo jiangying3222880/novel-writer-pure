@@ -1,0 +1,78 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.63,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "1974416d181834e7"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.55,
+    "tension_score": 0.88,
+    "summary": "第1章 意外重逢午休时间，大家坐在工位上各自休息、闲聊。“靠！居然卡了！”忽然一道女声大喊道",
+    "chapter_index": 1,
+    "book_id": "1974416d181834e7"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "功。\n她拍着心口缓了会儿气，上了电梯。\n"
+    ],
+    "pacing_score": 0.68,
+    "tension_score": 0.58,
+    "summary": "第2章 小狼小鹿温念坐在地铁上，至今还有些恍惚。在她印象里，大学时候的段星泽是个不爱说话，很",
+    "chapter_index": 2,
+    "book_id": "1974416d181834e7"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 0.53,
+    "tension_score": 0.8,
+    "summary": "第3章 不住靠近段星泽近期确实在准备下一张专辑。这次飞到三亚，就是为了完成MV和写真拍摄。",
+    "chapter_index": 3,
+    "book_id": "1974416d181834e7"
+  },
+  {
+    "conflict_type": "人际冲突",
+    "emotion_arc": "平静→释放",
+    "rhythm_pattern": "中速",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "不停。\n当感觉到脚开始隐隐作痛时候，两人"
+    ],
+    "pacing_score": 0.6,
+    "tension_score": 0.55,
+    "summary": "第4章 下次带你转眼，到了周末。温念早起，坐到梳妆台前，哼着歌化妆。她不追星，但很喜欢听歌",
+    "chapter_index": 4,
+    "book_id": "1974416d181834e7"
+  }
+]

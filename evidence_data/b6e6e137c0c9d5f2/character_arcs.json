@@ -1,0 +1,112 @@
+[
+  {
+    "character_name": "为了脱贫",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "b6e6e137c0c9d5f2"
+  },
+  {
+    "character_name": "造机甲",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "b6e6e137c0c9d5f2"
+  },
+  {
+    "character_name": "狗大户们",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "b6e6e137c0c9d5f2"
+  },
+  {
+    "character_name": "不到",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "b6e6e137c0c9d5f2"
+  },
+  {
+    "character_name": "扶贫补贴",
+    "initial_state": "初始状态未明确描述，出现2次",
+    "key_changes": [
+      "经历事件",
+      "获得成长",
+      "改变态度"
+    ],
+    "final_state": "最终状态待观察",
+    "growth_type": "英雄之旅",
+    "motivation": "保护家人",
+    "conflicts": [
+      "与敌人的冲突",
+      "内心挣扎"
+    ],
+    "character_traits": [
+      "善良",
+      "聪明"
+    ],
+    "voice_pattern": "沉默寡言、行动派",
+    "book_id": "b6e6e137c0c9d5f2"
+  }
+]

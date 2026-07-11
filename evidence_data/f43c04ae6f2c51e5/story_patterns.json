@@ -1,0 +1,79 @@
+[
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "起承转合",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.6,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "f43c04ae6f2c51e5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第133章 圣祖2022-03-05 17:35开始阅读蜗牛骑大象乌龟可以追上兔子，蜗牛也可以！",
+    "chapter_index": 1,
+    "book_id": "f43c04ae6f2c51e5"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "动！\n蓦然间！\n少年那紧闭已经死寂的眼眸",
+      "来，强烈建议宿主服用。\n楚扬眼睛一亮，\n"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第1章 盲盒系统洛天城西南方。乱葬岗处！凌乱的坟头四立，残缺的墓碑东倒西歪。即便是青天白",
+    "chapter_index": 2,
+    "book_id": "f43c04ae6f2c51e5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "幼崽。\n归根结底，凶兽和灵兽唯一的区别在"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.72,
+    "summary": "第2章 冥荒圣龙死而后生！楚扬松了一口气，活动一番身体，感觉到前所未有的轻松。这枚丹药不",
+    "chapter_index": 3,
+    "book_id": "f43c04ae6f2c51e5"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 1.0,
+    "summary": "第3章 魂器圣灵塔躺在床上，楚扬思索各种方法。最终决定还是“引蛇出洞”！以自身为饵，引",
+    "chapter_index": 4,
+    "book_id": "f43c04ae6f2c51e5"
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→紧张→高潮→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "事件发生",
+      "冲突升级",
+      "解决方案"
+    ],
+    "pacing_score": 1.0,
+    "tension_score": 0.86,
+    "summary": "如果需要小说更新，请勿修改文件名使用 @星隅(xing-yv) 所作开源工具下载开源仓库地址:h",
+    "chapter_index": 0,
+    "book_id": "aa18611c9ea154e0"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "。\n郎艳独绝，世无其二。\n此时此刻，白芫"
+    ],
+    "pacing_score": 0.92,
+    "tension_score": 0.41,
+    "summary": "第1章 校霸VS学霸1“快走！”紫发女子浑身浴血，焦急地朝着后方的黑发少年嘶吼，不等对方回应",
+    "chapter_index": 1,
+    "book_id": "aa18611c9ea154e0"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "平静→高潮",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "得他的内心逐渐疯狂，迫切想要扳倒阮星辰，"
+    ],
+    "pacing_score": 0.72,
+    "tension_score": 0.23,
+    "summary": "第2章 校霸VS学霸2受青春期影响，情窦初开的原主喜欢上了抽条成功、面容俊朗的陶尚宇，提出交往",
+    "chapter_index": 2,
+    "book_id": "aa18611c9ea154e0"
+  },
+  {
+    "conflict_type": "外部冲突",
+    "emotion_arc": "平静→紧张→释放",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "这种养尊处优的大小姐能比的？\n底气足了，",
+      "校霸VS学霸3\n\n而在众人窃笑着，以为终"
+    ],
+    "pacing_score": 0.92,
+    "tension_score": 0.55,
+    "summary": "第3章 校霸VS学霸3而在众人窃笑着，以为终于可以观摩大姐大饿虎扑食的英姿时，却见她猛然回头，",
+    "chapter_index": 3,
+    "book_id": "aa18611c9ea154e0"
+  },
+  {
+    "conflict_type": "内部冲突",
+    "emotion_arc": "紧张",
+    "rhythm_pattern": "慢节奏",
+    "scene_structure": "多幕式",
+    "key_events": [
+      "悦。\n面色温和地从沙发上站起身道：“怎么",
+      "一眼就忍不住想捧在手心里呵护的小星星。\n"
+    ],
+    "pacing_score": 0.96,
+    "tension_score": 0.56,
+    "summary": "第4章 校霸VS学霸4以往陶尚宇总是在她们之间充当和事佬，但今天却因白芫命令的语气心有不爽，所",
+    "chapter_index": 4,
+    "book_id": "aa18611c9ea154e0"
+  }
+]
