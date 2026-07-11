@@ -265,6 +265,17 @@ docs/               # 设计文档+归档
 7. ~~分卷过渡管理~~ ✅ 已完成 (v4.3, volume_transition_service.py)
 8. ~~Book 表扩展~~ ✅ 已完成 (v4.3, book_service 支持新列)
 9. ~~单元测试框架~~ ✅ 已完成 (v4.3, tests/ 4个文件全部通过)
+10. ~~Pressure 4 维~~ ✅ 已完成 (v4.3, migration 055 + 数据类扩展)
+11. ~~写作流程向导~~ ✅ 已完成 (v4.3, WritingWizard 4步向导)
+12. ~~IndexService~~ ✅ 已完成 (v4.3, 事件驱动索引)
+13. ~~Entity Index~~ ✅ 已完成 (v4.3, 统一实体检索)
+14. ~~Capability Library~~ ✅ 已有基础设施 (capability.py + builtin/)
+15. ~~Domain Library~~ ✅ 已完成 (v4.3, 7个预设领域)
+16. ~~双模式视图~~ ✅ 已完成 (main_window._detect_and_set_project_mode)
+17. ~~smoke_v4_publish~~ ✅ 已完成 (v4.3)
+18. ~~event_store 独立持久化~~ ✅ 已完成 (v4.3, story/events/event_store.py)
+19. ~~story/events/ 归约器~~ ✅ 已完成 (v4.3, story/events/reducer.py)
+20. ~~token_budget~~ ✅ 已完成 (v4.3, story/prompt/token_budget.py)
 
 ## 测试
 
