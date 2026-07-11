@@ -218,3 +218,4 @@ class Events:
     # ── v4.3 StoryEngine 状态同步 ──
     STORY_STATE_UPDATED = "story.state_updated"
     STORY_UNIT_COMPLETED = "story.unit_completed"
+    STORY_STEP_COMPLETED = "story.step.completed"

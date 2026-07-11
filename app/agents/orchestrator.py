@@ -178,12 +178,21 @@ class Orchestrator:
         t0 = time.time()
         reports: list[Report] = []
 
-        def _emit(step: int, label: str) -> None:
+        def _emit(step: int, label: str, detail: str = "") -> None:
             if on_step:
                 try:
                     on_step(step, label)
                 except Exception:
                     pass
+            # v4.3: 同时发布到 EventBus，供 UI 订阅
+            try:
+                from app.core.event_bus import get_bus, Events
+                get_bus().publish(Events.STORY_STEP_COMPLETED, {
+                    "step": step, "label": label, "detail": detail,
+                    "unit_id": unit_id, "project_id": project_id,
+                }, source="orchestrator")
+            except Exception:
+                pass
 
         try:
             # ---- Step 1: Memory 拼装 ----
@@ -570,6 +579,15 @@ class Orchestrator:
 
         def _engine_step(step: int, label: str) -> None:
             on_step(step, f"v4: {label}")
+            # v4.3: 同时发布到 EventBus
+            try:
+                from app.core.event_bus import get_bus, Events
+                get_bus().publish(Events.STORY_STEP_COMPLETED, {
+                    "step": step, "label": label, "detail": "",
+                    "unit_id": unit_id, "project_id": project_id,
+                }, source="orchestrator")
+            except Exception:
+                pass
 
         engine_result = engine.run_unit(
             project_id, unit_id,
