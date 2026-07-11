@@ -53,8 +53,9 @@ def get(book_id: str) -> dict:
 
 
 def update(book_id: str, **fields) -> dict:
-    """Update a subset of: volume_no, title, synopsis, target_chapters."""
-    allowed = {"volume_no", "title", "synopsis", "target_chapters"}
+    """Update a subset of: volume_no, title, synopsis, target_chapters, outline_id, status, word_count, unit_count."""
+    allowed = {"volume_no", "title", "synopsis", "target_chapters",
+               "outline_id", "status", "word_count", "unit_count"}
     updates = {k: v for k, v in fields.items() if k in allowed and v is not None}
     if not updates:
         return get(book_id)
