@@ -261,6 +261,10 @@ docs/               # 设计文档+归档
 3. ~~死代码清理~~ ✅ 已完成 (v4.3, 删除 13 个文件 ~935 行)
 4. ~~story/ 与 app/ 连通性~~ ✅ 已完成 (v4.3, StoryEngine 接管完整管线 + UIStateBridge 响应式刷新)
 5. ~~遗留功能接通~~ ✅ 已完成 (v4.3, volume_tab/patch_preview/reverse_compile/unit_pool_composer/knowledge_service 全部接入)
+6. ~~smoke 测试修复~~ ✅ 已完成 (v4.3, smoke_v4_isolation.py 重写)
+7. ~~分卷过渡管理~~ ✅ 已完成 (v4.3, volume_transition_service.py)
+8. ~~Book 表扩展~~ ✅ 已完成 (v4.3, book_service 支持新列)
+9. ~~单元测试框架~~ ✅ 已完成 (v4.3, tests/ 4个文件全部通过)
 
 ## 测试
 
