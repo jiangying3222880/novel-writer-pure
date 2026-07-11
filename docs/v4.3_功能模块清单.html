@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novel Writer Pure v4.3 — 功能模块清单</title>
+<style>
+:root { --bg: #0f0f1a; --card: #1a1a2e; --border: #2a2a3e; --accent: #6366f1; --text: #e2e8f0; --muted: #94a3b8; --green: #22c55e; --yellow: #eab308; --red: #ef4444; --blue: #3b82f6; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; }
+h1 { font-size: 28px; margin-bottom: 8px; }
+h2 { font-size: 20px; color: var(--accent); margin: 24px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+h3 { font-size: 16px; color: var(--blue); margin: 16px 0 8px; }
+.subtitle { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 8px 0; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin: 2px; }
+.tag-ui { background: #6366f120; color: #818cf8; }
+.tag-service { background: #22c55e20; color: #4ade80; }
+.tag-story { background: #3b82f620; color: #60a5fa; }
+.tag-knowledge { background: #f59e0b20; color: #fbbf24; }
+.tag-agent { background: #ef444420; color: #f87171; }
+.tag-core { background: #8b5cf620; color: #a78bfa; }
+.tag-smoke { background: #6b728020; color: #9ca3af; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 13px; }
+th { background: #1e293b; padding: 8px 12px; text-align: left; font-weight: 600; border-bottom: 2px solid var(--border); }
+td { padding: 6px 12px; border-bottom: 1px solid var(--border); }
+tr:hover { background: #1e293b40; }
+.chain { font-family: 'Consolas', monospace; font-size: 12px; color: var(--muted); background: #1e293b; padding: 4px 8px; border-radius: 4px; display: inline-block; margin: 2px 0; }
+.status-ok { color: var(--green); }
+.status-wip { color: var(--yellow); }
+.status-new { color: var(--blue); }
+.arch { background: #1e293b; border: 1px solid var(--border); border-radius: 8px; padding: 16px; font-family: 'Consolas', monospace; font-size: 13px; white-space: pre; overflow-x: auto; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0; }
+.summary-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px; text-align: center; }
+.summary-num { font-size: 32px; font-weight: 700; color: var(--accent); }
+.summary-label { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<h1>Novel Writer Pure v4.3 — 功能模块清单</h1>
+<p class="subtitle">自动生成 · 2026-07-10 · 基于 codegraph 索引 (324 文件, 7580 节点)</p>
+
+<div class="summary">
+  <div class="summary-card"><div class="summary-num">85+</div><div class="summary-label">服务模块</div></div>
+  <div class="summary-card"><div class="summary-num">27</div><div class="summary-label">UI 页面</div></div>
+  <div class="summary-card"><div class="summary-num">15</div><div class="summary-label">Guide 源</div></div>
+  <div class="summary-card"><div class="summary-num">6/6</div><div class="summary-label">Smoke Tests</div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>一、架构总览</h2>
+<!-- ============================================================ -->
+
+<div class="arch">
+┌─────────────────────────────────────────────────────────────────┐
+│                         UI LAYER (27 pages)                      │
+│  Dashboard │ Projects │ Settings │ Generate │ StoryUnit │ Pool  │
+│  Outline │ Volume │ Wizard │ Publish │ Character │ Worldview   │
+│  Knowledge │ Model │ Logs │ About │ ...                         │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+┌────────────────────────────▼────────────────────────────────────┐
+│                    AGENT LAYER (Orchestrator)                     │
+│  Orchestrator → StoryTeller / Editor / Critic / PressureWatcher │
+│  → MemoryKeeper / ContextBuilder / Researcher / Retriever       │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+┌────────────────────────────▼────────────────────────────────────┐
+│                    STORY ENGINE (StoryEngine)                     │
+│  State → Guide(10 sources) → Decision → SUC → Prompt → Write   │
+│  + UIStateBridge → EventBus → UI refresh                        │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+┌────────────────────────────▼────────────────────────────────────┐
+│                    SERVICE LAYER (85+ modules)                    │
+│  Project / Book / Chapter / Unit / Hook / Memory / Pressure     │
+│  Voice / Style / Consistency / Knowledge / Export / ...         │
+└────────────────────────────┬────────────────────────────────────┘
+                             │
+┌────────────────────────────▼────────────────────────────────────┐
+│                    CORE / DB LAYER                                │
+│  EventBus │ Guide │ Types │ Config │ Container │ SQLite + 55 migrations │
+└─────────────────────────────────────────────────────────────────┘
+</div>
+
+<!-- ============================================================ -->
+<h2>二、UI 页面清单 (27 pages)</h2>
+<!-- ============================================================ -->
+
+<table>
+<tr><th>导航分组</th><th>页面ID</th><th>标题</th><th>关联 Tab</th><th>主要功能</th></tr>
+<tr><td rowspan="2">📁 项目管理</td><td>projects</td><td>项目管理</td><td>—</td><td>项目 CRUD、列表、切换</td></tr>
+<tr><td>novel-settings</td><td>小说设定</td><td>settings_tab.py</td><td>基础信息 + 反规则 + 风格指纹 + 改稿信号</td></tr>
+<tr><td rowspan="5">📖 故事设定</td><td>novel-settings</td><td>小说设定</td><td>settings_tab.py</td><td>项目基础信息 + 题材 + 字数目标</td></tr>
+<tr><td>outline-mgmt</td><td>大纲管理</td><td>outline_tab.py</td><td>卷册→章节树 + 大纲编辑 + 潜文本卡</td></tr>
+<tr><td>volume-mgmt</td><td>卷管理</td><td>volume_tab.py</td><td>分卷列表 + 卷纲编辑</td></tr>
+<tr><td>character-mgmt</td><td>角色管理</td><td>character_mgmt_tab.py</td><td>角色卡片 CRUD + Voice Profile</td></tr>
+<tr><td>worldview</td><td>世界观</td><td>worldview_tab.py</td><td>地点/势力/物品/关系</td></tr>
+<tr><td rowspan="5">✍ 开始写作</td><td>writing-wizard</td><td>写作向导</td><td>writing_wizard_tab.py</td><td>4步引导: 基础→分卷→大纲→开始</td></tr>
+<tr><td>generate</td><td>章节生成</td><td>generate_tab.py</td><td>AI 写作 + diff 预览 + reverse_compile</td></tr>
+<tr><td>story-unit</td><td>故事单元</td><td>story_unit_tab.py</td><td>单元编辑 + diff 预览 + 上移/下移</td></tr>
+<tr><td>unit-pool</td><td>单元池</td><td>unit_pool_tab.py</td><td>素材库 + 自动组合</td></tr>
+<tr><td>publish</td><td>发布</td><td>publish_tab.py</td><td>导出 TXT/DOCX/EPUB</td></tr>
+<tr><td rowspan="3">📊 仪表盘</td><td>dashboard</td><td>综合仪表盘</td><td>dashboard_tab.py</td><td>关键数字 + 趋势 + 弱章 + StoryState HUD</td></tr>
+<tr><td>story-health</td><td>故事健康</td><td>—</td><td>5维健康度: 压力/钩子/读者/情绪/一致性</td></tr>
+<tr><td>world-graph</td><td>世界图谱</td><td>—</td><td>关系图可视化</td></tr>
+<tr><td rowspan="7">⚙ 设置</td><td>knowledge</td><td>知识库</td><td>—</td><td>BM25+Vector 混合检索</td></tr>
+<tr><td>model</td><td>模型配置</td><td>settings_tab.py</td><td>LLM Provider 管理</td></tr>
+<tr><td>edit-signals</td><td>自动进化</td><td>settings_tab.py</td><td>改稿信号学习 + Skill 沉淀</td></tr>
+<tr><td>storage-backup</td><td>存储备份</td><td>—</td><td>数据目录 + 备份</td></tr>
+<tr><td>appearance</td><td>外观</td><td>—</td><td>主题 + 字体</td></tr>
+<tr><td>logs</td><td>日志</td><td>—</td><td>运行日志查看</td></tr>
+<tr><td>about</td><td>关于</td><td>—</td><td>版本信息 + 授权</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>三、Service 层模块 (85+)</h2>
+<!-- ============================================================ -->
+
+<h3>3.1 项目管理</h3>
+<table>
+<tr><th>模块</th><th>文件</th><th>功能</th><th>UI 关联</th></tr>
+<tr><td>project_service</td><td>app/services/project_service.py</td><td>项目 CRUD + 列表 + 切换</td><td>ProjectsPage</td></tr>
+<tr><td>book_service</td><td>app/services/book_service.py</td><td>卷 CRUD + status/word_count/unit_count</td><td>VolumeMgmtPage</td></tr>
+<tr><td>chapter_service</td><td>app/services/chapter_service.py</td><td>章节 CRUD</td><td>GeneratePage, PublishPage</td></tr>
+<tr><td>setting_service</td><td>app/services/setting_service.py</td><td>项目级 JSON 设定 (worldbuilding/characters)</td><td>NovelSettingsPage</td></tr>
+<tr><td>app_setting_service</td><td>app/services/app_setting_service.py</td><td>全局设置 (LLM provider 等)</td><td>ModelPage</td></tr>
+<tr><td>project_type</td><td>app/services/project_type.py</td><td>检测项目类型 (old/new/mixed)</td><td>MainWindow 自动切换</td></tr>
+<tr><td>project_event_bus</td><td>app/services/project_event_bus.py</td><td>项目级事件总线 (跨页同步)</td><td>ProjectsPage, NovelSettingsPage</td></tr>
+<tr><td>project_io</td><td>app/services/project_io.py</td><td>项目导入/导出</td><td>StorageBackupPage</td></tr>
+<tr><td>volume_transition_service</td><td>app/services/volume_transition_service.py</td><td>卷间过渡 CRUD</td><td>VolumeMgmtPage</td></tr>
+<tr><td>book_outline_service</td><td>app/services/book_outline_service.py</td><td>卷纲 CRUD</td><td>OutlineMgmtPage</td></tr>
+</table>
+
+<h3>3.2 写作核心</h3>
+<table>
+<tr><th>模块</th><th>文件</th><th>功能</th><th>调用链</th></tr>
+<tr><td>story_unit_service_v2</td><td>app/services/story_unit_service_v2.py</td><td>单元 CRUD + 状态机 (draft→writing→completed)</td><td>GeneratePage → Orchestrator</td></tr>
+<tr><td>unit_writing_service</td><td>app/services/unit_writing_service.py</td><td>单元写作流程</td><td>GeneratePage</td></tr>
+<tr><td>unit_paragraph_service</td><td>app/services/unit_paragraph_service.py</td><td>段落管理 + 全文替换</td><td>StoryEngine._persist()</td></tr>
+<tr><td>virtual_unit_adapter</td><td>app/services/virtual_unit_adapter.py</td><td>Chapter→VirtualUnit 包装</td><td>Orchestrator.run_chapter()</td></tr>
+<tr><td>manuscript_assembly</td><td>app/services/manuscript_assembly.py</td><td>单元→章节组装</td><td>PublishPage</td></tr>
+<tr><td>unit_chapter_mapper</td><td>app/services/unit_chapter_mapper.py</td><td>单元↔章节映射</td><td>PublishPage</td></tr>
+<tr><td>unit_splitter</td><td>app/services/unit_splitter.py</td><td>单元拆分</td><td>StoryUnitPage</td></tr>
+<tr><td>unit_pool_service</td><td>app/services/unit_pool_service.py</td><td>单元池 CRUD + 批量导入</td><td>UnitPoolPage</td></tr>
+<tr><td>unit_pool_composer</td><td>app/services/unit_pool_composer.py</td><td>从池自动组合故事骨架</td><td>UnitPoolPage "自动组合"</td></tr>
+<tr><td>outline_service</td><td>app/services/outline_service.py</td><td>大纲管理</td><td>OutlineMgmtPage</td></tr>
+</table>
+
+<h3>3.3 Guide / Decision 系统</h3>
+<table>
+<tr><th>模块</th><th>文件</th><th>功能</th><th>调用链</th></tr>
+<tr><td>collect_guides()</td><td>app/core/types.py</td><td>统一 Guide 收集入口 (10 源)</td><td>Orchestrator → collect_guides() → 10 adapters</td></tr>
+<tr><td>guide_graph</td><td>app/services/guide_graph.py</td><td>Guide 冲突/支持图分析</td><td>collect_guides() → analyze()</td></tr>
+<tr><td>guide_sources/*</td><td>app/services/guide_sources/</td><td>10 个 Guide 源适配器</td><td>collect_guides() → each adapter.collect()</td></tr>
+<tr><td>decision_service</td><td>app/services/decision_service.py</td><td>Decision 记录 + 查询</td><td>Orchestrator → record_batch()</td></tr>
+<tr><td>conflict_log</td><td>app/services/conflict_log.py</td><td>因果冲突持久化</td><td>guide_graph.analyze() → log_conflict()</td></tr>
+<tr><td>character_arc_service</td><td>app/services/character_arc_service.py</td><td>角色弧线 Guide</td><td>collect_guides() → get_guides()</td></tr>
+</table>
+
+<h3>3.4 叙事系统</h3>
+<table>
+<tr><th>模块</th><th>文件</th><th>功能</th><th>UI 关联</th></tr>
+<tr><td>pressure</td><td>app/services/pressure.py</td><td>叙事压力 4 维 (narrative/reader/character/timeline)</td><td>DashboardTab, StoryHealthPage</td></tr>
+<tr><td>memory</td><td>app/services/memory.py</td><td>L1-L4 记忆系统</td><td>—</td></tr>
+<tr><td>memory_manager</td><td>app/services/memory_manager.py</td><td>记忆拼装 + 反AI提示</td><td>Orchestrator Step 1</td></tr>
+<tr><td>unit_hook_service</td><td>app/services/unit_hook_service.py</td><td>伏笔 plant/payoff 生命周期</td><td>StoryUnitPage, OutlineTab</td></tr>
+<tr><td>unit_event_service</td><td>app/services/unit_event_service.py</td><td>事件持久化 + Diff 计算</td><td>Orchestrator</td></tr>
+<tr><td>unit_causal_service</td><td>app/services/unit_causal_service.py</td><td>因果边/因果组</td><td>Orchestrator.update_causal_graph()</td></tr>
+<tr><td>reader_signal</td><td>app/services/reader_signal.py</td><td>读者追读率信号</td><td>DashboardTab</td></tr>
+<tr><td>consistency</td><td>app/services/consistency.py</td><td>5维一致性检查</td><td>StoryHealthPage</td></tr>
+<tr><td>emotion_analyzer</td><td>app/services/emotion_analyzer.py</td><td>情绪曲线 + 断章点检测</td><td>PublishPage</td></tr>
+<tr><td>character_state</td><td>app/services/character_state.py</td><td>角色状态 Guide</td><td>collect_guides() → get_guides()</td></tr>
+<tr><td>character_tracker</td><td>app/services/character_tracker.py</td><td>角色5维快照 (位置/状态/力量/装备/关系)</td><td>CharacterMgmtPage</td></tr>
+</table>
+
+<h3>3.5 风格 / 语音 / 反AI</h3>
+<table>
+<tr><th>模块</th><th>文件</th><th>功能</th><th>UI 关联</th></tr>
+<tr><td>style_fingerprint</td><td>app/services/style_fingerprint.py</td><td>L1 作者指纹(6维) + L2 作品指纹(4维)</td><td>NovelSettingsPage "风格指纹"</td></tr>
+<tr><td>style_learner</td><td>app/services/style_learner.py</td><td>零成本启发式风格学习</td><td>StyleFingerprintWidget "AI学习"</td></tr>
+<tr><td>style_variant</td><td>app/services/style_variant.py</td><td>多轮风格变体生成</td><td>—</td></tr>
+<tr><td>voice_profile</td><td>app/services/voice_profile.py</td><td>角色声线 5 维 + Guide</td><td>CharacterMgmtPage, collect_guides()</td></tr>
+<tr><td>voice_inferrer</td><td>app/services/voice_inferrer.py</td><td>零成本声线推断</td><td>CharacterMgmtPage "AI推断"</td></tr>
+<tr><td>anti_ai</td><td>app/services/anti_ai.py</td><td>6类检查 + 三遍系统 + 7门控</td><td>Orchestrator Step 6</td></tr>
+<tr><td>subtext</td><td>app/services/subtext.py</td><td>13字段潜文本卡</td><td>SubtextPage</td></tr>
+</table>
+
+<h3>3.6 知识库</h3>
+<table>
+<tr><th>模块</th><th>文件</th><th>功能</th><th>UI 关联</th></tr>
+<tr><td>finder</td><td>app/knowledge/finder.py</td><td>BM25+Vector 混合检索 (唯一入口)</td><td>KnowledgePage</td></tr>
+<tr><td>_bm25</td><td>app/knowledge/_bm25.py</td><td>BM25 倒排索引</td><td>finder 内部</td></tr>
+<tr><td>_vector_db</td><td>app/knowledge/_vector_db.py</td><td>向量索引 (TF-IDF/st)</td><td>finder 内部</td></tr>
+<tr><td>knowledge_service</td><td>app/services/knowledge_service.py</td><td>知识库管理 (4维度检索)</td><td>KnowledgePage</td></tr>
+<tr><td>capability</td><td>app/knowledge/capability.py</td><td>11类能力索引 + Agent映射</td><td>Orchestrator → extract_by_capability()</td></tr>
+<tr><td>domain_library</td><td>app/knowledge/domain_library.py</td><td>7个预设领域知识包</td><td>KnowledgePage</td></tr>
+<tr><td>importer</td><td>app/knowledge/importer.py</td><td>知识文档导入 + AI分类</td><td>KnowledgePage</td></tr>
+</table>
+
+<h3>3.7 AI / LLM</h3>
+<table>
+<tr><th>模块</th><th>文件</th><th>功能</th></tr>
+<tr><td>llm</td><td>app/core/llm.py</td><td>LLM 客户端 + 27厂商预设</td></tr>
+<tr><td>engine</td><td>app/ai/engine.py</td><td>LLM 调用引擎</td></tr>
+<tr><td>router</td><td>app/services/router/</td><td>模型路由 + 降级链</td></tr>
+<tr><td>tts_edge</td><td>app/services/tts_edge.py</td><td>Edge TTS 语音合成</td></tr>
+<tr><td>pricing</td><td>app/services/pricing.py</td><td>模型定价查询</td></tr>
+</table>
+
+<h3>3.8 其他服务</h3>
+<table>
+<tr><th>模块</th><th>文件</th><th>功能</th></tr>
+<tr><td>dashboard_service</td><td>app/services/dashboard_service.py</td><td>仪表盘数据聚合</td></tr>
+<tr><td>usage_analytics</td><td>app/services/usage_analytics.py</td><td>用量统计</td></tr>
+<tr><td>worldbuilding</td><td>app/services/worldbuilding.py</td><td>世界观 CRUD</td></tr>
+<tr><td>world_sync</td><td>app/services/world_sync.py</td><td>D4 世界观同步</td></tr>
+<tr><td>world_observer</td><td>app/services/world_observer.py</td><td>世界观变更观察</td></tr>
+<tr><td>exporter</td><td>app/services/exporter.py</td><td>TXT/DOCX/EPUB 导出</td></tr>
+<tr><td>patch_preview</td><td>app/services/patch_preview.py</td><td>增量补丁 diff 预览</td></tr>
+<tr><td>reverse_compile</td><td>app/services/reverse_compile.py</td><td>AI↔作者版本对比 → 模式提取</td></tr>
+<tr><td>story_compiler</td><td>app/services/story_compiler.py</td><td>影响分析</td></tr>
+<tr><td>setting_io</td><td>app/services/setting_io.py</td><td>大纲导入/导出</td></tr>
+<tr><td>conversation_service</td><td>app/services/conversation_service.py</td><td>对话式项目创建</td></tr>
+<tr><td>index_service</td><td>app/services/index_service.py</td><td>事件驱动索引</td></tr>
+<tr><td>entity_index</td><td>app/services/entity_index.py</td><td>统一实体检索</td></tr>
+<tr><td>feature_gate</td><td>app/services/feature_gate.py</td><td>功能门控</td></tr>
+<tr><td>license</td><td>app/services/license.py</td><td>授权管理</td></tr>
+<tr><td>story_recipe</td><td>app/services/story_recipe.py</td><td>创作模式 Recipe</td></tr>
+<tr><td>ai_body_gen</td><td>app/services/ai_body_gen.py</td><td>AI 正文生成</td></tr>
+<tr><td>writing/*</td><td>app/services/writing/</td><td>段落重写 + 实体管理 + 提示组装 + 钩子分析 + 扫描</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>四、Story Engine 层</h2>
+<!-- ============================================================ -->
+
+<table>
+<tr><th>模块</th><th>文件</th><th>功能</th><th>调用链</th></tr>
+<tr><td>StoryEngine</td><td>story/engine/story_engine.py</td><td>完整执行管线 (12+ 步)</td><td>Orchestrator._run_v4_pipeline() → StoryEngine.run_unit()</td></tr>
+<tr><td>StateBridge</td><td>story/state/state_bridge.py</td><td>StoryUnitV2 → StoryState 转换</td><td>StoryEngine._load_state()</td></tr>
+<tr><td>StoryState</td><td>story/state/story_state.py</td><td>不可变状态快照 (frozen dataclass)</td><td>全链路核心数据结构</td></tr>
+<tr><td>apply_event</td><td>story/state/apply_event.py</td><td>Event → State 纯归约器</td><td>StoryEngine.apply_event()</td></tr>
+<tr><td>collector</td><td>story/guide/collector.py</td><td>信号收集 (包装 collect_guides)</td><td>StoryEngine → collect_signals()</td></tr>
+<tr><td>engine (decision)</td><td>story/decision/engine.py</td><td>策略选择 (4策略)</td><td>StoryEngine → decide()</td></tr>
+<tr><td>dimension_matrix</td><td>story/decision/dimension_matrix.py</td><td>6维权重矩阵</td><td>decide() 内部</td></tr>
+<tr><td>strategy</td><td>story/decision/strategy.py</td><td>DELAY/EXPLODE/RESOLVE/DETOUR</td><td>decide() 输出</td></tr>
+<tr><td>suc_builder</td><td>story/prompt/suc_builder.py</td><td>SUC 构建 (4段)</td><td>StoryEngine → build_suc()</td></tr>
+<tr><td>compiler</td><td>story/prompt/compiler.py</td><td>SUC → CompiledPrompt</td><td>StoryEngine → compile()</td></tr>
+<tr><td>token_budget</td><td>story/prompt/token_budget.py</td><td>Token 预算分配</td><td>compiler 内部</td></tr>
+<tr><td>event_store</td><td>story/events/event_store.py</td><td>事件 append-only 持久化</td><td>StoryEngine._notify_ui()</td></tr>
+<tr><td>reducer</td><td>story/events/reducer.py</td><td>Event → State 归约器</td><td>event_store 内部</td></tr>
+<tr><td>UIStateBridge</td><td>story/ui/bridge/state_bridge.py</td><td>StoryState → UIEvent 桥接</td><td>StoryEngine._notify_ui() → EventBus</td></tr>
+<tr><td>UnitRunner</td><td>story/runtime/unit_runner.py</td><td>v4 快速路径运行器</td><td>Orchestrator._run_v4_pipeline()</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>五、Agent 层</h2>
+<!-- ============================================================ -->
+
+<table>
+<tr><th>模块</th><th>文件</th><th>功能</th></tr>
+<tr><td>Orchestrator</td><td>app/agents/orchestrator.py</td><td>主编排器 (1161行) — 12+ 步管线</td></tr>
+<tr><td>StoryTeller</td><td>app/agents/helpers/storyteller.py</td><td>写手 Agent</td></tr>
+<tr><td>Editor</td><td>app/agents/helpers/editor.py</td><td>编辑评估 Agent (6维)</td></tr>
+<tr><td>Critic</td><td>app/agents/helpers/critic.py</td><td>批评家反馈 Agent</td></tr>
+<tr><td>MemoryKeeper</td><td>app/agents/helpers/memory_keeper.py</td><td>记忆拼装 Agent (L1-L4)</td></tr>
+<tr><td>ContextBuilder</td><td>app/agents/helpers/context_builder.py</td><td>上下文构建 Agent</td></tr>
+<tr><td>Researcher</td><td>app/agents/helpers/researcher.py</td><td>资料研究 Agent</td></tr>
+<tr><td>PressureWatcher</td><td>app/agents/helpers/pressure_watcher.py</td><td>压力观察 Agent</td></tr>
+<tr><td>Retriever</td><td>app/agents/helpers/retriever.py</td><td>知识检索 Agent</td></tr>
+<tr><td>base</td><td>app/agents/base.py</td><td>AgentBase + AgentRole + AgentState + AgentMetrics</td></tr>
+<tr><td>report</td><td>app/agents/report.py</td><td>Report 数据类 (12种 ReportKind)</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>六、Guide 10 源清单</h2>
+<!-- ============================================================ -->
+
+<table>
+<tr><th>#</th><th>源</th><th>文件</th><th>数据来源</th><th>输出维度</th></tr>
+<tr><td>1</td><td>character_arc</td><td>guide_sources/character_arc.py</td><td>book_outlines.character_arcs</td><td>角色弧线阶段</td></tr>
+<tr><td>2</td><td>character_state</td><td>guide_sources/character_state.py</td><td>character_trackers</td><td>角色状态偏差</td></tr>
+<tr><td>3</td><td>consistency</td><td>guide_sources/consistency.py</td><td>consistency.py 5维检查</td><td>一致性问题</td></tr>
+<tr><td>4</td><td>hook</td><td>guide_sources/hook.py</td><td>unit_hook_service</td><td>未兑现伏笔</td></tr>
+<tr><td>5</td><td>memory</td><td>guide_sources/memory.py</td><td>memory_manager</td><td>记忆压力</td></tr>
+<tr><td>6</td><td>pressure</td><td>guide_sources/pressure.py</td><td>pressure.py 4维</td><td>叙事压力区</td></tr>
+<tr><td>7</td><td>reader_signal</td><td>guide_sources/reader_signal.py</td><td>reader_signal.py</td><td>读者追读率</td></tr>
+<tr><td>8</td><td>style</td><td>guide_sources/style.py</td><td>style_fingerprint.py</td><td>风格偏差</td></tr>
+<tr><td>9</td><td>unit_event</td><td>guide_sources/unit_event.py</td><td>unit_event_service</td><td>事件流信号</td></tr>
+<tr><td>10</td><td>voice</td><td>guide_sources/voice.py</td><td>voice_profile.py</td><td>声线一致性</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>七、数据流 (完整链路)</h2>
+<!-- ============================================================ -->
+
+<div class="arch">
+用户点击 "生成"
+  │
+  ▼
+GenerateTab._on_generate()
+  │
+  ▼
+Orchestrator.run_unit(project_id, unit_id)
+  │
+  ├─ Step 0: collect_guides() → 10 个 GuideSource → list[Guide]
+  │           → guide_graph.analyze() → 冲突图 + conflict_log
+  │
+  ├─ Step 1: MemoryKeeper → 拼装 L1-L4 记忆
+  ├─ Step 2: ContextBuilder → 世界观/角色/伏笔/风格
+  ├─ Step 3: Researcher → 历史/题材资料
+  ├─ Step 4: PressureWatcher → 压力区 + 反规则
+  ├─ Step 5: Retriever → 知识库 RAG
+  │
+  ├─ Step 6: _refine() → 合并 11 源为精炼提示
+  │           + review_causality() → 因果审查
+  │
+  ├─ Step 7: StoryTeller (Writer) → AI 生成正文
+  ├─ Step 8: Editor + Critic → 评估 + 改稿循环
+  │
+  ├─ Step 9: _dispatch_persist() → 段落写入 DB
+  │           + decision_service.record_batch()
+  │           + story_compiler.analyze_impact()
+  │           + update_causal_graph()
+  │
+  └─ Step J: UIStateBridge.on_state_change() → EventBus
+              → StoryHUD / DashboardTab 自动刷新
+</div>
+
+<!-- ============================================================ -->
+<h2>八、Smoke Tests (6/6)</h2>
+<!-- ============================================================ -->
+
+<table>
+<tr><th>测试文件</th><th>覆盖范围</th><th>状态</th></tr>
+<tr><td>smoke_v4_state.py</td><td>StoryState 创建/修改/事件应用/不可变性</td><td class="status-ok">✅ PASSED</td></tr>
+<tr><td>smoke_v4_guide_decision.py</td><td>Guide 收集 → Decision 策略选择</td><td class="status-ok">✅ PASSED</td></tr>
+<tr><td>smoke_v4_prompt.py</td><td>SUC 构建 → Prompt 编译</td><td class="status-ok">✅ PASSED</td></tr>
+<tr><td>smoke_v4_runtime.py</td><td>完整运行循环</td><td class="status-ok">✅ PASSED</td></tr>
+<tr><td>smoke_v4_isolation.py</td><td>Agent 基类/Report/Orchestrator</td><td class="status-ok">✅ PASSED</td></tr>
+<tr><td>smoke_v4_publish.py</td><td>发布导出 (TXT/DOCX/EPUB)</td><td class="status-ok">✅ PASSED</td></tr>
+</table>
+
+<h3>Unit Tests (4/4)</h3>
+<table>
+<tr><th>测试文件</th><th>覆盖范围</th><th>状态</th></tr>
+<tr><td>tests/test_state.py</td><td>StoryState + StateBridge (6 项)</td><td class="status-ok">✅ PASSED</td></tr>
+<tr><td>tests/test_guide.py</td><td>Guide 创建/格式化/冲突 (4 项)</td><td class="status-ok">✅ PASSED</td></tr>
+<tr><td>tests/test_prompt.py</td><td>SUC Builder + Compiler (4 项)</td><td class="status-ok">✅ PASSED</td></tr>
+<tr><td>tests/test_services.py</td><td>Pressure/GuideGraph/CharacterArc/PatchPreview (6 项)</td><td class="status-ok">✅ PASSED</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>九、版本历史</h2>
+<!-- ============================================================ -->
+
+<table>
+<tr><th>版本</th><th>日期</th><th>主要内容</th></tr>
+<tr><td>v4.0.0</td><td>2026-07-06</td><td>Story OS 核心 + UI 10页面 + 5 Agent + smoke tests</td></tr>
+<tr><td>v4.1.0</td><td>2026-07-07</td><td>收口方案 + 冲突日志/补丁预览/反向编译</td></tr>
+<tr><td>v4.2.0</td><td>2026-07-08</td><td>Finder 收口 + 分卷编排 + 单元池 + Capability + Agent 装配</td></tr>
+<tr><td>v4.3.0</td><td>2026-07-09~10</td><td>全量补齐: 20项功能 + 适配器重构 + StoryEngine 接管 + 测试框架</td></tr>
+</table>
+
+<hr>
+<p style="color:var(--muted);font-size:12px;text-align:center;">
+  Generated by MiMoCode · Novel Writer Pure v4.3 · 2026-07-10
+</p>
+
+</body>
+</html>
