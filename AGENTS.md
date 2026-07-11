@@ -260,7 +260,7 @@ docs/               # 设计文档+归档
 2. ~~collect_guides() 适配器模式重构~~ ✅ 已完成 (v4.3, guide_sources/)
 3. ~~死代码清理~~ ✅ 已完成 (v4.3, 删除 13 个文件 ~935 行)
 4. ~~story/ 与 app/ 连通性~~ ✅ 已完成 (v4.3, StoryEngine 接管完整管线 + UIStateBridge 响应式刷新)
-5. **遗留功能接通**：详见 `docs/v4.3_遗留功能清单_代码审计`（volume_tab/patch_preview/reverse_compile/unit_pool_composer 接入 UI）
+5. ~~遗留功能接通~~ ✅ 已完成 (v4.3, volume_tab/patch_preview/reverse_compile/unit_pool_composer/knowledge_service 全部接入)
 
 ## 测试
 
