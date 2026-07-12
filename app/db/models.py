@@ -497,6 +497,9 @@ class StoryUnitV2:
     target_chapter_count: int = 2
     current_step: int = 0
     total_steps: int = 0
+    # v4.3: 复合单元支持 (方案D)
+    sequence_id: str = ""      # 所属复合单元 (空=顶层)
+    seq_order: int = 0          # 在复合单元内的排序
     created_at: str = field(default_factory=lambda: datetime.now().isoformat())
     updated_at: str = field(default_factory=lambda: datetime.now().isoformat())
 

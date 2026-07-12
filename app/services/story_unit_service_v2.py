@@ -84,6 +84,8 @@ def _row_to_unit(row) -> StoryUnitV2:
         target_chapter_count=row["target_chapter_count"] or 0,
         current_step=row["current_step"] or 0,
         total_steps=row["total_steps"] or 0,
+        sequence_id=(row["sequence_id"] if "sequence_id" in row.keys() else "") or "",
+        seq_order=(row["seq_order"] if "seq_order" in row.keys() else 0) or 0,
         created_at=row["created_at"] or "",
         updated_at=row["updated_at"] or "",
     )
