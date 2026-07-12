@@ -698,3 +698,75 @@ def check_coherence(unit_id: str) -> dict:
         "issues": issues,
         "is_ok": len([i for i in issues if i["level"] == "error"]) == 0,
     }
+
+
+# ============================================================
+# v4.3: 复合单元管理 (方案D)
+# ============================================================
+
+def create_composite(
+    project_id: str,
+    title: str,
+    *,
+    book_id: str = "",
+    synopsis: str = "",
+) -> StoryUnitV2:
+    """创建复合单元 (type=sequence, 只存大纲不存正文)."""
+    return create(
+        project_id=project_id,
+        title=title,
+        book_id=book_id,
+        unit_type="sequence",
+        synopsis=synopsis,
+    )
+
+
+def add_to_composite(
+    composite_id: str,
+    child_ids: list[str],
+) -> int:
+    """将子单元添加到复合单元."""
+    count = 0
+    for i, child_id in enumerate(child_ids):
+        try:
+            child = get(child_id)
+            # 验证不是嵌套复合单元
+            if child.unit_type == "sequence":
+                _logger.warning("不能将复合单元嵌套到另一个复合单元: %s", child_id)
+                continue
+            update(
+                child_id,
+                sequence_id=composite_id,
+                seq_order=i,
+            )
+            count += 1
+        except Exception as e:
+            _logger.warning("添加子单元失败 %s: %s", child_id, e)
+    return count
+
+
+def get_children(composite_id: str) -> list[StoryUnitV2]:
+    """获取复合单元的所有子单元 (按 seq_order 排序)."""
+    db = get_conn()
+    rows = db.execute(
+        "SELECT * FROM story_units WHERE sequence_id = ? ORDER BY seq_order ASC",
+        (composite_id,),
+    ).fetchall()
+    return [_row_to_unit(r) for r in rows]
+
+
+def remove_from_composite(child_id: str) -> bool:
+    """将子单元从复合单元中移除 (变为顶层)."""
+    return update(child_id, sequence_id="", seq_order=0) is not None
+
+
+def reorder_children(composite_id: str, child_ids: list[str]) -> int:
+    """重新排序复合单元内的子单元."""
+    count = 0
+    for i, child_id in enumerate(child_ids):
+        try:
+            update(child_id, seq_order=i)
+            count += 1
+        except Exception:
+            pass
+    return count
