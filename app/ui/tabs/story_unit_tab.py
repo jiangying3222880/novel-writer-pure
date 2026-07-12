@@ -198,10 +198,18 @@ class StoryUnitTab(QWidget):
         btn_add.clicked.connect(self._on_add_unit)
         toolbar.addWidget(btn_add)
 
+        btn_composite = QPushButton("📦 复合单元")
+        btn_composite.setToolTip("创建复合单元，将多个子单元组织在一起")
+        btn_composite.clicked.connect(self._on_create_composite)
+        toolbar.addWidget(btn_composite)
+
         left_layout.addLayout(toolbar)
 
-        # 单元列表
-        self.unit_list = QListWidget()
+        # 单元列表 (QTreeWidget 支持复合单元折叠)
+        self.unit_list = QTreeWidget()
+        self.unit_list.setHeaderHidden(True)
+        self.unit_list.setDragDropMode(QTreeWidget.DragDropMode.InternalMove)
+        self.unit_list.setDefaultDropAction(Qt.DropAction.MoveAction)
         self.unit_list.itemClicked.connect(self._on_unit_clicked)
         left_layout.addWidget(self.unit_list, 1)
 
@@ -452,29 +460,70 @@ class StoryUnitTab(QWidget):
             return
 
         order_label = "故事" if order_by == "story" else "呈现"
+
+        # 分离复合单元和原子单元
+        composites = {}
+        top_level = []
         for unit in self._units:
+            if unit.sequence_id:
+                composites.setdefault(unit.sequence_id, []).append(unit)
+            else:
+                top_level.append(unit)
+
+        for unit in top_level:
             type_label = UNIT_TYPE_LABELS.get(unit.unit_type, unit.unit_type)
             status_label = STATUS_LABELS.get(unit.status, unit.status)
             title = unit.title or "（无标题）"
             wc = f" ({unit.word_count}字)" if unit.word_count else ""
-            item_text = f"{type_label}  {title}{wc}\n    {status_label}  {order_label}序:{getattr(unit, order_by + '_order', unit.story_order)}"
 
-            item = QListWidgetItem(item_text)
-            item.setData(Qt.ItemDataRole.UserRole, unit.id)
-            self.unit_list.addItem(item)
+            children = composites.get(unit.id, [])
+            child_count = len(children)
 
-    def _on_unit_clicked(self, item: QListWidgetItem):
-        unit_id = item.data(Qt.ItemDataRole.UserRole)
-        self._load_unit_details(unit_id)
+            if unit.unit_type == "sequence" and child_count > 0:
+                # 复合单元: 折叠显示
+                item_text = f"📦 {title} [{child_count}个子单元]{wc}"
+                item = QTreeWidgetItem(self.unit_list)
+                item.setText(0, item_text)
+                item.setData(0, Qt.ItemDataRole.UserRole, unit.id)
+                item.setExpanded(False)
+
+                for child in children:
+                    child_type = UNIT_TYPE_LABELS.get(child.unit_type, child.unit_type)
+                    child_status = STATUS_LABELS.get(child.status, child.status)
+                    child_title = child.title or "（无标题）"
+                    child_wc = f" ({child.word_count}字)" if child.word_count else ""
+                    child_text = f"  {child_type}  {child_title}{child_wc}  {child_status}"
+                    child_item = QTreeWidgetItem(item)
+                    child_item.setText(0, child_text)
+                    child_item.setData(0, Qt.ItemDataRole.UserRole, child.id)
+            else:
+                # 普通单元
+                item_text = f"{type_label}  {title}{wc}  {status_label}  {order_label}序:{getattr(unit, order_by + '_order', unit.story_order)}"
+                item = QTreeWidgetItem(self.unit_list)
+                item.setText(0, item_text)
+                item.setData(0, Qt.ItemDataRole.UserRole, unit.id)
+
+    def _on_unit_clicked(self, item: QTreeWidgetItem, col: int = 0):
+        unit_id = item.data(0, Qt.ItemDataRole.UserRole)
+        if unit_id:
+            self._load_unit_details(unit_id)
 
     def _select_unit_by_id(self, unit_id: str):
         """按 ID 选中单元。"""
-        for i in range(self.unit_list.count()):
-            item = self.unit_list.item(i)
-            if item.data(Qt.ItemDataRole.UserRole) == unit_id:
-                self.unit_list.setCurrentRow(i)
+        for i in range(self.unit_list.topLevelItemCount()):
+            item = self.unit_list.topLevelItem(i)
+            if item.data(0, Qt.ItemDataRole.UserRole) == unit_id:
+                self.unit_list.setCurrentItem(item)
                 self._load_unit_details(unit_id)
                 return
+            # 检查子项
+            for j in range(item.childCount()):
+                child = item.child(j)
+                if child.data(0, Qt.ItemDataRole.UserRole) == unit_id:
+                    self.unit_list.setCurrentItem(child)
+                    item.setExpanded(True)
+                    self._load_unit_details(unit_id)
+                    return
 
     # ── 详情操作 ──
 
@@ -647,6 +696,26 @@ class StoryUnitTab(QWidget):
                 self._project_id,
                 title.strip(),
                 unit_type="other",
+            )
+            self._refresh_list()
+            self._select_unit_by_id(unit.id)
+        except ServiceError as e:
+            Dialogs.error("创建失败", str(e))
+
+    def _on_create_composite(self):
+        """创建复合单元."""
+        if not self._project_id:
+            Dialogs.info("提示", "请先创建或打开项目")
+            return
+
+        title, ok = QInputDialog.getText(self, "创建复合单元", "复合单元标题（如：宗门大比）：")
+        if not ok or not title.strip():
+            return
+
+        try:
+            unit = story_unit_service.create_composite(
+                self._project_id,
+                title.strip(),
             )
             self._refresh_list()
             self._select_unit_by_id(unit.id)
