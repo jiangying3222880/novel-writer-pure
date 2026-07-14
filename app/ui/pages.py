@@ -27,8 +27,11 @@ V4.0-P4-新: 二级 tab 全部展平到一级.
  15. about             关于
 
 公共 API:
-  - PAGE_REGISTRY  字典: page_id -> PageWidget 类
-  - get_all_page_classes() -> list[type]
+  - _PAGE_TUPLES    list[tuple]: 唯一事实源 (page_id, title, class, module, nav_group, nav_order)
+  - PAGE_BY_ID      dict: page_id -> class (供实例化)
+  - NAV_GROUPS      dict: nav_group -> [(page_id, title)] (供 tree_nav)
+  - MODULE_PAGES    dict: module -> [page_id] (替代旧 MODULE_PAGE_MAP)
+  - get_page_title(page_id) -> str (供 topbar 显示)
 """
 from __future__ import annotations
 import logging
@@ -2774,75 +2777,72 @@ class ImpactReportPage(QWidget):
 
 
 # ===================================================================== #
-# 注册表
+# 注册表 — 唯一事实源 (SSOT)
 # ===================================================================== #
+# 每个条目: (page_id, title, class, module, nav_group, nav_order)
+#   page_id    页面唯一ID
+#   title      页面标题 (topbar显示)
+#   class      QWidget子类
+#   module     所属模块 (story/create/observe/publish)
+#   nav_group  导航分组 (project/story/write/dashboard/settings/observe)
+#   nav_order  在导航组内的排序
 
-PAGE_REGISTRY: dict[str, Type[QWidget]] = {
-    "dashboard":         DashboardPage,
-    "projects":          ProjectsPage,
-    "novel-settings":    NovelSettingsPage,
-    "worldview":         WorldviewPage,
-    "character-mgmt":    CharacterMgmtPage,
-    "outline-mgmt":      OutlineMgmtPage,
-    "edit-signals":      EditSignalsPage,
-    "generate":          GeneratePage,
-    "story-unit":        StoryUnitPage,
-    "unit-pool":         UnitPoolPage,
-    "publish":           PublishPage,
-    "world-graph":       WorldGraphPage,
-    "usage-analytics":   UsageAnalyticsPage,
-    "knowledge":         KnowledgePage,
-    "logs":              LogsPage,
-    "appearance":        AppearancePage,
-    "model":             ModelPage,
-    "storage-backup":    StorageBackupPage,
-    "license":           LicensePage,
-    "about":             AboutPage,
-    "story-health":      StoryHealthPage,
-    "decision-history":  DecisionHistoryPage,
-    "guide-graph":       GuideGraphPage,
-    "impact-report":     ImpactReportPage,
-    "export":            GeneratePage,
-    "volume-mgmt":       VolumeMgmtPage,
-    "writing-wizard":    WritingWizardPage,
-}
+_PAGE_TUPLES: list[tuple[str, str, type, str, str, int]] = [
+    # -- 📁 项目管理 --
+    ("dashboard",         "综合仪表盘",   DashboardPage,         "publish", "dashboard", 0),
+    ("projects",          "项目列表",     ProjectsPage,          "publish", "project",   0),
+    # -- 📖 故事设定 --
+    ("novel-settings",    "小说设定",     NovelSettingsPage,     "story",   "story",     0),
+    ("outline-mgmt",      "大纲管理",     OutlineMgmtPage,       "story",   "story",     1),
+    ("volume-mgmt",       "卷管理",       VolumeMgmtPage,        "story",   "story",     2),
+    ("character-mgmt",    "角色管理",     CharacterMgmtPage,     "story",   "story",     3),
+    ("worldview",         "世界观",       WorldviewPage,         "story",   "story",     4),
+    # -- ✍ 开始写作 --
+    ("writing-wizard",    "写作向导",     WritingWizardPage,     "create",  "write",     0),
+    ("generate",          "当前创作",     GeneratePage,          "create",  "write",     1),
+    ("story-unit",        "故事单元",     StoryUnitPage,         "create",  "write",     2),
+    ("edit-signals",      "自动进化",     EditSignalsPage,       "create",  "write",     3),
+    ("unit-pool",         "单元池",       UnitPoolPage,          "create",  "write",     4),
+    ("publish",           "章节管理",     PublishPage,           "publish", "write",     5),
+    ("export",            "导出",         GeneratePage,          "publish", "write",     6),
+    # -- 🔍 观察 --
+    ("story-health",      "故事健康",     StoryHealthPage,       "observe", "observe",   0),
+    ("guide-graph",       "引导图谱",     GuideGraphPage,        "observe", "observe",   1),
+    ("decision-history",  "决策历史",     DecisionHistoryPage,   "observe", "observe",   2),
+    ("impact-report",     "影响分析",     ImpactReportPage,      "observe", "observe",   3),
+    ("world-graph",       "世界图谱",     WorldGraphPage,        "observe", "observe",   4),
+    ("usage-analytics",   "用量分析",     UsageAnalyticsPage,    "observe", "observe",   5),
+    # -- ⚙ 设置 --
+    ("knowledge",         "知识库",       KnowledgePage,         "observe", "settings",  0),
+    ("model",             "AI 模型",      ModelPage,             "publish", "settings",  1),
+    ("appearance",        "外观",         AppearancePage,        "publish", "settings",  2),
+    ("storage-backup",    "存储备份",     StorageBackupPage,     "publish", "settings",  3),
+    ("logs",              "日志",         LogsPage,              "publish", "settings",  4),
+    ("license",           "授权",         LicensePage,           "publish", "settings",  5),
+    ("about",             "关于",         AboutPage,             "publish", "settings",  6),
+]
 
+# --- 派生数据 (从 _PAGE_TUPLES 自动生成, 禁止手动维护) --- #
 
-def get_all_page_classes() -> list[Type[QWidget]]:
-    """按 mockup 顺序返回所有 page class (供 MainWindow 一次性实例化)."""
-    return [
-        DashboardPage,       #  0  仪表盘
-        ProjectsPage,        #  1  项目管理
-        NovelSettingsPage,   #  2  小说设定 (项目基础信息)
-        WorldviewPage,       #  3  世界观 (独立tab)
-        CharacterMgmtPage,   #  4  角色管理 (独立tab, 卡片展示)
-        OutlineMgmtPage,     #  5  大纲管理
-        VolumeMgmtPage,      #  5a 卷管理
-        WritingWizardPage,   #  5b 写作向导
-        EditSignalsPage,     #  6  改稿信号
-        GeneratePage,        #  7  章节生成
-        StoryUnitPage,       #  8  故事单元
-        UnitPoolPage,        #  8a 单元池 (M5)
-        PublishPage,         #  8b 发布模块 (章节树/编辑/情绪曲线/断章)
-        WorldGraphPage,      #  9  世界图谱
-        UsageAnalyticsPage,  # 10  用量分析
-        KnowledgePage,       # 11  知识库
-        LogsPage,            # 12  日志
-        AppearancePage,      # 13  外观
-        ModelPage,           # 14  模型配置
-        StorageBackupPage,   # 15  存储备份
-        LicensePage,         # 16  授权
-        AboutPage,           # 17  关于
-        StoryHealthPage,     # 18  故事健康
-        DecisionHistoryPage, # 19  决策历史
-        GuideGraphPage,      # 20  引导图谱
-        ImpactReportPage,    # 21  影响分析
-    ]
+PAGE_BY_ID: dict[str, type] = {pid: cls for pid, _t, cls, *_ in _PAGE_TUPLES}
+
+# 导航分组 (tree_nav 读取): nav_group → [(page_id, title), ...]
+NAV_GROUPS: dict[str, list[tuple[str, str]]] = {}
+for pid, title, _cls, _mod, group, order in _PAGE_TUPLES:
+    NAV_GROUPS.setdefault(group, []).append((pid, title))
+
+# 模块分组 (替代旧 MODULE_PAGE_MAP): module → [page_id, ...]
+MODULE_PAGES: dict[str, list[str]] = {}
+for pid, _t, _cls, mod, _g, _o in _PAGE_TUPLES:
+    MODULE_PAGES.setdefault(mod, []).append(pid)
+
+# 旧接口兼容
+PAGE_REGISTRY = PAGE_BY_ID
 
 
 def get_page_title(page_id: str) -> str:
     """根据 page_id 取标题 (供 topbar 显示)."""
-    cls = PAGE_REGISTRY.get(page_id)
-    if cls is None:
-        return page_id
-    return getattr(cls, "PAGE_TITLE", page_id)
+    for pid, title, _cls, *_ in _PAGE_TUPLES:
+        if pid == page_id:
+            return title
+    return page_id

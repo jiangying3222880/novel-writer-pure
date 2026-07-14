@@ -19,53 +19,24 @@ from PySide6.QtWidgets import (
 )
 
 
-# 导航结构定义
-NAV_TREE = {
-    "project": {
-        "label": "📁 项目管理",
-        "pages": [
-            ("projects", "项目列表"),
-        ],
-    },
-    "story": {
-        "label": "📖 故事设定",
-        "pages": [
-            ("novel-settings", "小说设定"),
-            ("outline-mgmt", "大纲管理"),  # 分卷大纲
-            ("volume-mgmt", "卷管理"),     # 分卷编排
-            ("character-mgmt", "角色管理"),
-            ("worldview", "世界观"),
-        ],
-    },
-    "write": {
-        "label": "✍ 开始写作",
-        "pages": [
-            ("writing-wizard", "写作向导"),
-            ("generate", "当前创作"),
-            ("story-unit", "故事单元"),  # 可调整分卷内单元顺序
-            ("unit-pool", "单元池管理"),
-            ("publish", "章节管理"),  # 原发布总览+导出预览
-        ],
-    },
-    "dashboard": {
-        "label": "📊 仪表盘",
-        "pages": [
-            ("dashboard", "综合仪表盘"),  # 合并故事健康/世界图谱/用量分析
-        ],
-    },
-    "settings": {
-        "label": "⚙ 设置",
-        "pages": [
-            ("knowledge", "知识库"),
-            ("model", "AI 模型"),
-            ("edit-signals", "自动进化"),
-            ("storage-backup", "项目目录"),
-            ("appearance", "外观"),
-            ("logs", "日志"),
-            ("about", "关于"),
-        ],
-    },
+# 导航结构 — 从 pages.py NAV_GROUPS 派生 (SSOT)
+from app.ui.pages import NAV_GROUPS as _NAV_GROUPS
+
+_GROUP_LABELS = {
+    "project": "📁 项目管理",
+    "story": "📖 故事设定",
+    "write": "✍ 开始写作",
+    "dashboard": "📊 仪表盘",
+    "settings": "⚙ 设置",
+    "observe": "🔍 观察",
 }
+
+NAV_TREE = {}
+for _gid, _pages in _NAV_GROUPS.items():
+    NAV_TREE[_gid] = {
+        "label": _GROUP_LABELS.get(_gid, _gid),
+        "pages": _pages,
+    }
 
 
 class TreeNav(QWidget):

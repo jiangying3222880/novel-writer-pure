@@ -51,8 +51,8 @@ from app.services import project_service, app_setting_service, ServiceError
 from app.ui.theme import get_theme, text_indigo, text_warn, text_warn_ok, text_danger, text_primary, text_secondary, text_muted, surface_bg, mock_mode_bg, mock_mode_fg
 from app.ui.screen_adapter import ScreenAdapter
 from app.ui.pages import (
-    PAGE_REGISTRY,
-    get_all_page_classes,
+    PAGE_BY_ID,
+    _PAGE_TUPLES,
     get_page_title,
 )
 from app.ui.welcome import show_welcome_if_first_time
@@ -62,34 +62,7 @@ from app.core.project_context import ProjectContext
 log = logging.getLogger(__name__)
 
 
-# v4.0: 模块→页面映射 (替代旧 NAV_GROUPS)
-MODULE_PAGE_MAP = {
-    "story": {
-        "book": ("novel-settings", "\u5c0f\u8bf4\u8bbe\u5b9a"),
-        "outline": ("outline-mgmt", "\u5927\u7eb2\u7ba1\u7406"),
-        "characters": ("character-mgmt", "\u89d2\u8272\u7ba1\u7406"),
-        "world": ("worldview", "\u4e16\u754c\u89c2"),
-    },
-    "create": {
-        "current": ("generate", "\u5f53\u524d\u521b\u4f5c"),
-        "unit": ("story-unit", "\u6545\u4e8b\u5355\u5143"),
-        "editor": ("projects", "\u5355\u5143\u5e93"),
-        "signals": ("edit-signals", "\u81ea\u52a8\u8fdb\u5316"),
-    },
-    "observe": {
-        "health": ("story-health", "\u6545\u4e8b\u5065\u5eb7"),
-        "graph": ("guide-graph", "\u5f15\u5bfc\u56fe\u8c31"),
-        "analytics": ("usage-analytics", "\u7528\u91cf\u5206\u6790"),
-        "knowledge": ("knowledge", "\u77e5\u8bc6\u5e93"),
-    },
-    "publish": {
-        "overview": ("publish", "\u53d1\u5e03\u603b\u89c8"),
-        "export": ("generate", "\u5bfc\u51fa"),
-        "model": ("model", "AI \u6a21\u578b"),
-        "appearance": ("appearance", "\u5916\u89c2"),
-        "logs": ("logs", "\u65e5\u5fd7"),
-    },
-}
+
 
 
 class MainWindow(QMainWindow):
@@ -106,8 +79,8 @@ class MainWindow(QMainWindow):
         # 全局唯一项目状态上下文（注入到所有 Page）
         self.context = ProjectContext()
 
-        # 10 page 实例化
-        for page_id, cls in PAGE_REGISTRY.items():
+        # page 实例化 (按 _PAGE_TUPLES 顺序)
+        for page_id, title, cls, _mod, _grp, _ord in _PAGE_TUPLES:
             page = cls()
             page.context = self.context  # 注入 ProjectContext 引用
             self._pages[page_id] = page
@@ -271,13 +244,6 @@ class MainWindow(QMainWindow):
         # 刷新当前页面
         self._reload_projects()
 
-    def _on_sub_page_selected(self, module_id: str, sub_id: str) -> None:
-        pages = MODULE_PAGE_MAP.get(module_id, {})
-        entry = pages.get(sub_id)
-        if entry:
-            page_id, _title = entry
-            if page_id in self._pages:
-                self._select_page(page_id)
 
     def _on_open_settings(self) -> None:
         from app.ui.widgets.settings_popup import SettingsPopup
@@ -309,11 +275,11 @@ class MainWindow(QMainWindow):
         tb.addStretch(1)
         lay.addWidget(topbar)
 
-        # 10 page StackedWidget
+        # page StackedWidget (按 _PAGE_TUPLES 顺序)
         self.tabs = QStackedWidget()
         self.tabs.setObjectName("contentStack")
-        for cls in get_all_page_classes():
-            self.tabs.addWidget(self._pages[getattr(cls, "PAGE_ID")])
+        for page_id, _title, _cls, _mod, _grp, _ord in _PAGE_TUPLES:
+            self.tabs.addWidget(self._pages[page_id])
         lay.addWidget(self.tabs, 1)
 
         # 兼容占位 (旧 API 仍可用, 不显示)
@@ -332,13 +298,13 @@ class MainWindow(QMainWindow):
         - F1            关于
         """
         sc_1 = QShortcut(QKeySequence("Ctrl+1"), self)
-        sc_1.activated.connect(lambda: self.module_nav.select_module("story"))
+        sc_1.activated.connect(lambda: self._select_page("novel-settings"))
         sc_2 = QShortcut(QKeySequence("Ctrl+2"), self)
-        sc_2.activated.connect(lambda: self.module_nav.select_module("create"))
+        sc_2.activated.connect(lambda: self._select_page("generate"))
         sc_3 = QShortcut(QKeySequence("Ctrl+3"), self)
-        sc_3.activated.connect(lambda: self.module_nav.select_module("observe"))
+        sc_3.activated.connect(lambda: self._select_page("story-health"))
         sc_4 = QShortcut(QKeySequence("Ctrl+4"), self)
-        sc_4.activated.connect(lambda: self.module_nav.select_module("publish"))
+        sc_4.activated.connect(lambda: self._select_page("publish"))
         sc_comma = QShortcut(QKeySequence("Ctrl+,"), self)
         sc_comma.activated.connect(self._on_open_settings)
         sc_theme = QShortcut(QKeySequence("Ctrl+T"), self)
@@ -709,9 +675,8 @@ class MainWindow(QMainWindow):
             # 根据项目类型切换到对应视图
             if default_view == "unit":
                 # 新项目 / 已升级: 切换到单元视图
-                self.module_nav.select_module("create")
                 try:
-                    self._on_sub_page_selected("create", "unit")
+                    self._select_page("story-unit")
                 except Exception:
                     pass
             # 老项目且未升级: 保持章节视图 (默认), 不切换
