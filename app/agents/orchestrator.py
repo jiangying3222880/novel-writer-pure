@@ -309,7 +309,7 @@ class Orchestrator:
         on_step: Optional[Any] = None,
         retention: Optional[float] = None,
         use_guide_system: bool = True,
-        use_v4_pipeline: bool = False,
+        use_v4_pipeline: bool = True,
     ) -> OrchestratorResult:
         """v3.5.1 主入口: 单元驱动编排.
 

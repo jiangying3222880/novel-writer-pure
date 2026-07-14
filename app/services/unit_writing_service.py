@@ -166,16 +166,13 @@ def rollback_to_snapshot(unit_id: str, snapshot_id: str) -> bool:
 
         # 2. Delete auto memories generated after this step
         #    agent_memories uses unit_step column (added in migration 038)
-        for tbl in ("agent_memories", "agent_memory"):
-            try:
-                cur = tx.execute(
-                    f"DELETE FROM {tbl} WHERE project_id = ? AND unit_id = ? AND unit_step > ? AND manual_locked = 0",
-                    (unit.project_id, unit_id, step),
-                )
-                if hasattr(cur, "rowcount") and cur.rowcount > 0:
-                    pass
-            except Exception:
-                pass
+        try:
+            cur = tx.execute(
+                "DELETE FROM agent_memories WHERE project_id = ? AND unit_id = ? AND unit_step > ? AND manual_locked = 0",
+                (unit.project_id, unit_id, step),
+            )
+        except Exception:
+            pass
 
         # 3. Delete snapshots after this step
         tx.execute(

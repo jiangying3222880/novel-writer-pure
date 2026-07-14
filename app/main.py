@@ -64,7 +64,20 @@ def main() -> int:
     )
 
     logging.info("Initialising SQLite at %s", sqlite_path())
-    _db_connection.init_db(sqlite_path())
+    try:
+        _db_connection.init_db(sqlite_path())
+    except Exception as e:
+        logging.error("数据库初始化失败: %s — 尝试备份后重建", e)
+        try:
+            import shutil
+            db_path = sqlite_path()
+            backup = str(db_path) + ".corrupt.bak"
+            shutil.copy2(str(db_path), backup)
+            logging.info("已备份损坏数据库到 %s", backup)
+            _db_connection.init_db(str(db_path))
+        except Exception as e2:
+            logging.critical("数据库重建也失败: %s", e2)
+            raise
 
     _app_config.load()
     _app_config.validate()

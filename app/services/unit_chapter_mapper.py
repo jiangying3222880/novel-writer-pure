@@ -704,29 +704,23 @@ def migrate_memories(unit_id: str, chapter_ids: list[str]) -> dict:
 
 
 def _store_chapter_memories(chapter_id: str, memories: list[dict]) -> int:
-    """存储章节记忆到 agent_memory 表.
+    """存储章节记忆到 agent_memories 表.
 
-    实际表列: id/chapter_id/tier/entity_type/content/...
-    映射 memory.level (l1/l2/world/arc/commitment/hook) -> tier (L1/L2).
+    实际表列: id/project_id/chapter_id/level/category/content/...
+    映射 memory.level (l1/l2/world/arc/commitment/hook) -> level.
     返回实际插入条数 (PK 冲突忽略).
     """
     from app.db._impl import get_conn
-
-    _LEVEL_TO_TIER = {
-        "l1": "L1", "world": "L1", "arc": "L1",
-        "l2": "L2", "commitment": "L2", "hook": "L2",
-    }
 
     db = get_conn()
     inserted = 0
     for idx, mem in enumerate(memories):
         level = mem.get("level", "l1")
-        tier = _LEVEL_TO_TIER.get(level, "L1")
         content = mem.get("content", "")
         try:
             db.execute(
-                """INSERT INTO agent_memory (id, chapter_id, tier, entity_type, content, created_at)
-                   VALUES (?, ?, ?, ?, ?, datetime('now'))""",
+                """INSERT INTO agent_memories (id, project_id, chapter_id, level, category, content, created_at)
+                   VALUES (?, '', ?, ?, 'chapter', ?, datetime('now'))""",
                 (
                     f"mem_{chapter_id[:8]}_{idx}",
                     chapter_id,

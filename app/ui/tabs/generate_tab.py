@@ -123,7 +123,10 @@ class GenerateWorker(QObject):
             result = orch.run_chapter(
                 self.project_id,
                 self.chapter_id,
-                on_step=lambda s, lbl: self.step.emit(s, lbl, {}),
+                on_step=lambda s, lbl: (
+                    self.step.emit(s, lbl, {}),
+                    self.thinking.emit(lbl),
+                ),
             )
 
             if result.ok:
@@ -175,7 +178,10 @@ class OrchWorker(QObject):
             result = orch.run_chapter(
                 self.project_id,
                 self.chapter_id,
-                on_step=lambda s, lbl: self.step.emit(s, lbl, {}),
+                on_step=lambda s, lbl: (
+                    self.step.emit(s, lbl, {}),
+                    self.thinking.emit(lbl),
+                ),
             )
 
             self.done.emit(result.to_dict())
@@ -206,9 +212,11 @@ class _OrchUnitWorker(QObject):
 
     def run(self) -> None:
         try:
+            self.progress.emit(0, False)
             result = self._orch.run_unit(
                 self._project_id, self._unit_id,
                 use_v4_pipeline=self._use_v4,
+                on_step=lambda s, lbl, _: self.progress.emit(max(1, int(s * 10)), False),
             )
             if result.ok:
                 text = ""
@@ -873,7 +881,11 @@ class GenerateTab(QWidget):
 
     def _on_unit_error(self, msg: str) -> None:
         self.unit_editor.set_progress(0, False)
+        self.status_label.setText(f" ❌ {msg}")
+        self.step_progress.pipeline_finished.emit()
         self._cleanup_thread()
+        from PySide6.QtWidgets import QMessageBox
+        QMessageBox.warning(self, "单元生成失败", f"错误信息：\n{msg}")
 
     def _on_unit_export(self, unit_id: str) -> None:
         try:
@@ -1342,8 +1354,10 @@ class GenerateTab(QWidget):
         log.info(f"[Tab] done score={critic_score} cost=${cost:.4f}")
 
     def _on_error(self, msg: str) -> None:
-        self.status_label.setText(f" {msg}")
+        self.status_label.setText(f" ❌ {msg}")
         log.warning(f"[Tab] error: {msg}")
+        from PySide6.QtWidgets import QMessageBox
+        QMessageBox.warning(self, "生成失败", f"错误信息：\n{msg}")
 
     def _on_finished(self) -> None:
         has_chapter = self.current_chapter_id is not None

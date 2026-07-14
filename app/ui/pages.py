@@ -2793,7 +2793,8 @@ _PAGE_TUPLES: list[tuple[str, str, type, str, str, int]] = [
     ("projects",          "项目列表",     ProjectsPage,          "publish", "project",   0),
     # -- 📖 故事设定 --
     ("novel-settings",    "小说设定",     NovelSettingsPage,     "story",   "story",     0),
-    ("outline-mgmt",      "大纲管理",     OutlineMgmtPage,       "story",   "story",     1),
+    ("subtext",           "潜文本卡",     SubtextPage,           "story",   "story",     1),
+    ("outline-mgmt",      "大纲管理",     OutlineMgmtPage,       "story",   "story",     2),
     ("volume-mgmt",       "卷管理",       VolumeMgmtPage,        "story",   "story",     2),
     ("character-mgmt",    "角色管理",     CharacterMgmtPage,     "story",   "story",     3),
     ("worldview",         "世界观",       WorldviewPage,         "story",   "story",     4),
@@ -2804,7 +2805,6 @@ _PAGE_TUPLES: list[tuple[str, str, type, str, str, int]] = [
     ("edit-signals",      "自动进化",     EditSignalsPage,       "create",  "write",     3),
     ("unit-pool",         "单元池",       UnitPoolPage,          "create",  "write",     4),
     ("publish",           "章节管理",     PublishPage,           "publish", "write",     5),
-    ("export",            "导出",         GeneratePage,          "publish", "write",     6),
     # -- 🔍 观察 --
     ("story-health",      "故事健康",     StoryHealthPage,       "observe", "observe",   0),
     ("guide-graph",       "引导图谱",     GuideGraphPage,        "observe", "observe",   1),

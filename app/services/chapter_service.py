@@ -184,14 +184,14 @@ def list_memory(chapter_id: str, tier: Optional[str] = None) -> dict:
     with _db_conn.connection() as db:
         if tier:
             rows = db.execute(
-                "SELECT * FROM agent_memory WHERE chapter_id = ? AND tier = ? "
+                "SELECT * FROM agent_memories WHERE chapter_id = ? AND level = ? "
                 "ORDER BY created_at",
                 (chapter_id, tier),
             ).fetchall()
         else:
             rows = db.execute(
-                "SELECT * FROM agent_memory WHERE chapter_id = ? "
-                "ORDER BY tier, created_at",
+                "SELECT * FROM agent_memories WHERE chapter_id = ? "
+                "ORDER BY level, created_at",
                 (chapter_id,),
             ).fetchall()
     return {"memories": [dict(r) for r in rows], "total": len(rows)}
@@ -209,16 +209,16 @@ def add_memory(chapter_id: str, tier: str, content: str,
     now = _now()
     with _db_conn.transaction() as db:
         db.execute(
-            """INSERT INTO agent_memory
-               (id, chapter_id, tier, entity_type, entity_name,
+            """INSERT INTO agent_memories
+               (id, project_id, chapter_id, level, category,
                 content, token_count, created_at, updated_at)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-            (mem_id, chapter_id, tier, entity_type, entity_name,
+            (mem_id, "", chapter_id, tier, entity_type or "general",
              content, token_count, now, now),
         )
     with _db_conn.connection() as db:
         row = db.execute(
-            "SELECT * FROM agent_memory WHERE id = ?", (mem_id,)
+            "SELECT * FROM agent_memories WHERE id = ?", (mem_id,)
         ).fetchone()
     return dict(row)
 

@@ -103,7 +103,7 @@ def export_project(project_id: str, output_path: Path) -> Path:
         "books": [],
         "chapters": [],
         "chapter_briefs": [],
-        "agent_memory": [],
+        "agent_memories": [],
         "scene_subtext_cards": [],
         "world_state_snapshots": [],
         "project_files": {},  # JSON 键 -> 内容
@@ -136,10 +136,10 @@ def export_project(project_id: str, output_path: Path) -> Path:
                 payload["chapter_briefs"] = [dict(r) for r in rows]
 
                 rows = db.execute(
-                    f"SELECT * FROM agent_memory WHERE chapter_id IN ({placeholders})",
+                    f"SELECT * FROM agent_memories WHERE chapter_id IN ({placeholders})",
                     chapter_ids,
                 ).fetchall()
-                payload["agent_memory"] = [dict(r) for r in rows]
+                payload["agent_memories"] = [dict(r) for r in rows]
 
                 rows = db.execute(
                     f"SELECT * FROM scene_subtext_cards WHERE chapter_id IN ({placeholders})",
@@ -188,7 +188,7 @@ def export_project(project_id: str, output_path: Path) -> Path:
         f"Project     : {project.get('name')!r} (id={project_id[:8]}...)\n"
         f"Books       : {len(payload['books'])}\n"
         f"Chapters    : {len(payload['chapters'])}\n"
-        f"Memory      : {len(payload['agent_memory'])}\n"
+        f"Memory      : {len(payload['agent_memories'])}\n"
         f"Subtext     : {len(payload['scene_subtext_cards'])}\n"
         f"----------------------------------------\n"
         f"Re-import via: Novel Writer Pure v4 → 项目管理 → 导入项目\n"
@@ -358,22 +358,21 @@ def import_project(input_path: Path) -> str:
                 ),
             )
 
-    # 5) agent_memory
-    for row in payload.get("agent_memory", []):
+    # 5) agent_memories
+    for row in payload.get("agent_memory", payload.get("agent_memories", [])):
         new_cid = chapter_id_map.get(row.get("chapter_id"))
         if not new_cid:
             continue
         with _db_conn.transaction() as db:
             db.execute(
-                """INSERT INTO agent_memory
-                   (id, chapter_id, tier, entity_type, entity_name, content,
+                """INSERT INTO agent_memories
+                   (id, project_id, chapter_id, level, category, content,
                     token_count, created_at, updated_at)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                   VALUES (?, '', ?, ?, ?, ?, ?, ?, ?)""",
                 (
                     str(uuid.uuid4()), new_cid,
-                    row.get("tier"),
-                    row.get("entity_type"),
-                    row.get("entity_name"),
+                    row.get("tier") or row.get("level", "L1"),
+                    row.get("entity_type") or row.get("category", "general"),
                     row.get("content") or "",
                     row.get("token_count") or 0,
                     row.get("created_at") or _now(),
