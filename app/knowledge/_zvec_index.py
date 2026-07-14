@@ -104,39 +104,40 @@ class ZvecIndex:
             self._populate_from_knowledge()
 
     def _populate_from_knowledge(self):
-        """从知识库文档填充 zvec collection."""
+        """从知识库文档填充 zvec collection (builtin + local)."""
         try:
-            from app.knowledge import scan_category, PRESET_CATEGORIES, SOURCE_BUILTIN
+            from app.knowledge import scan_category, PRESET_CATEGORIES, SOURCE_BUILTIN, SOURCE_LOCAL
 
             count = 0
             for cat in PRESET_CATEGORIES:
-                docs = scan_category(cat, SOURCE_BUILTIN, for_retrieval=True)
-                for doc in docs:
-                    # 去掉 frontmatter
-                    content = doc.content
-                    if content.startswith("---"):
-                        end = content.find("\n---\n", 3)
-                        if end != -1:
-                            content = content[end + 5:]
-                    content = content.strip()[:2000]
+                for source in (SOURCE_BUILTIN, SOURCE_LOCAL):
+                    docs = scan_category(cat, source, for_retrieval=True)
+                    for doc in docs:
+                        # 去掉 frontmatter
+                        content = doc.content
+                        if content.startswith("---"):
+                            end = content.find("\n---\n", 3)
+                            if end != -1:
+                                content = content[end + 5:]
+                        content = content.strip()[:2000]
 
-                    if not content:
-                        continue
+                        if not content:
+                            continue
 
-                    # 清洗 doc_id: zvec 不接受中文和特殊字符, 用 MD5
-                    import hashlib
-                    raw_id = f"{doc.source}_{doc.category}_{doc.name}"
-                    doc_id = "d_" + hashlib.md5(raw_id.encode()).hexdigest()[:16]
+                        # 清洗 doc_id: zvec 不接受中文和特殊字符, 用 MD5
+                        import hashlib
+                        raw_id = f"{doc.source}_{doc.category}_{doc.name}"
+                        doc_id = "d_" + hashlib.md5(raw_id.encode()).hexdigest()[:16]
 
-                    self.add(doc_id, content, {
-                        "name": doc.name,
-                        "category": doc.category,
-                        "genre": doc.genre or "",
-                        "source": doc.source,
-                        "agent": doc.agent or "",
-                        "doc_type": doc.doc_type or "",
-                    })
-                    count += 1
+                        self.add(doc_id, content, {
+                            "name": doc.name,
+                            "category": doc.category,
+                            "genre": doc.genre or "",
+                            "source": doc.source,
+                            "agent": doc.agent or "",
+                            "doc_type": doc.doc_type or "",
+                        })
+                        count += 1
 
             _logger.info("zvec: 从知识库填充 %d 篇文档", count)
         except Exception as e:
@@ -293,13 +294,13 @@ class ZvecIndex:
             return False
 
     def _text_to_vector(self, text: str):
-        """简单的 TF-IDF 风格向量生成 (384 维)."""
+        """确定性 TF-IDF 风格向量生成 (384 维)."""
         try:
             import numpy as np
-            # 简单哈希向量 (生产环境应换用 sentence-transformers)
+            import zlib
             vec = np.zeros(384, dtype=np.float32)
             for i, char in enumerate(text[:500]):
-                idx = hash(char) % 384
+                idx = zlib.crc32(char.encode("utf-8")) % 384
                 vec[idx] += 1.0
             # L2 normalize
             norm = np.linalg.norm(vec)

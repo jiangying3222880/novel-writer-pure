@@ -28,14 +28,16 @@ log = logging.getLogger(__name__)
 SETTING_KEYS = {
     "worldbuilding",
     "characters",
+    "hooks",
     "anti_rules",
     "style_fingerprint",
     "plot_outline",
     "chapter_outline",
     "volume_outline",
     "foreshadowing",
-    "voice_profile",
+    "voice_profiles",
     "notes",
+    "creation_conversation",
 }
 
 
@@ -184,7 +186,7 @@ def _md_text_to_setting_data(text: str, key: str) -> Any:
     """
     sections = _parse_md_sections(text)
     if key in ("worldbuilding", "plot_outline", "style_fingerprint",
-               "voice_profile", "foreshadowing", "notes", "volume_outline"):
+               "voice_profiles", "foreshadowing", "notes", "volume_outline"):
         # 整体作为单段文本返回
         if not sections:
             return text.strip()
@@ -506,7 +508,7 @@ _FILENAME_HINTS: dict[str, list[str]] = {
     "chapter_outline":  ["章节大纲", "章纲", "chapter_outline"],
     "volume_outline":   ["分卷", "卷纲", "卷大纲", "volume"],
     "foreshadowing":    ["伏笔", "foreshadow", "hook", "悬念"],
-    "voice_profile":    ["声音", "声纹", "voice", "口吻", "语调"],
+    "voice_profiles":   ["声音", "声纹", "voice", "口吻", "语调"],
     "notes":            ["笔记", "备注", "note", "memo"],
 }
 
@@ -520,7 +522,7 @@ _JSON_KEY_HINTS: dict[str, list[str]] = {
     "chapter_outline": ["chapters", "chapter_outline", "章纲"],
     "volume_outline":  ["volumes", "volume_outline", "卷"],
     "foreshadowing": ["foreshadowing", "hooks", "伏笔", "悬念"],
-    "voice_profile": ["voice_profile", "voice", "voices", "声音", "声纹"],
+    "voice_profiles": ["voice_profiles", "voice", "voices", "声音", "声纹"],
 }
 
 

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "novel-writer"
-version = "4.0.0"
+version = "4.3.0"
 description = "AI 辅助长篇小说创作工具 — Story OS 架构"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -33,6 +33,7 @@ dependencies = [
     "scikit-learn",
     "jieba",
     "requests",
+    "httpx",
     "zvec>=0.5.0",
 ]
 
