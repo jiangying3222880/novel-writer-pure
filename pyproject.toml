@@ -32,7 +32,6 @@ dependencies = [
     "numpy",
     "scikit-learn",
     "jieba",
-    "requests",
     "httpx",
     "zvec>=0.5.0",
 ]
@@ -63,6 +62,11 @@ app = ["resources/*.json", "resources/*.qss", "db/migrations/*.sql", "db/*.sql"]
 [tool.pyinstaller]
 # zvec 打包配置: C 扩展 + jieba 词典
 hiddenimports = ["zvec", "zvec._zvec", "zvec.common", "zvec.executor", "zvec.extension", "zvec.model", "zvec.tool", "zvec.typing"]
+# jieba 词典 + zvec 数据文件
+datas = [
+    ["Lib/site-packages/jieba/dict.txt", "jieba"],
+    ["Lib/site-packages/zvec/data", "zvec/data"],
+]
 
 [tool.black]
 line-length = 100

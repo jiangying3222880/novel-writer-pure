@@ -205,17 +205,13 @@ class ZvecIndex:
             return []
 
         # 执行混合查询
-        try:
-            results = self._collection.query(
-                queries=queries,
-                topk=top_k,
-                filter=filter_expr,
-                reranker=zvec.RrfReRanker(),
-                output_fields=["doc_id", "content", "name", "category", "genre", "source", "agent", "doc_type"],
-            )
-        except Exception as e:
-            _logger.warning("zvec query 失败: %s", e)
-            return []
+        results = self._collection.query(
+            queries=queries,
+            topk=top_k,
+            filter=filter_expr,
+            reranker=zvec.RrfReRanker(),
+            output_fields=["doc_id", "content", "name", "category", "genre", "source", "agent", "doc_type"],
+        )
 
         # 转换结果 (zvec Doc 对象, 用 .field() 或 .fields 访问)
         hits = []
