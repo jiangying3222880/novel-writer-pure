@@ -1,8 +1,9 @@
 -- Migration 054: Add 'virtual' to story_units.unit_type CHECK constraint
 -- SQLite requires table rebuild to modify CHECK constraints.
+-- Idempotent: safe to re-run (checks if already applied).
 
--- 1. Create new table with updated CHECK
-CREATE TABLE story_units_new (
+-- Guard: skip if new table already exists (partial previous run)
+CREATE TABLE IF NOT EXISTS story_units_new (
     id TEXT PRIMARY KEY,
     project_id TEXT NOT NULL,
     book_id TEXT DEFAULT '',
@@ -35,8 +36,8 @@ CREATE TABLE story_units_new (
     updated_at TEXT
 );
 
--- 2. Copy data
-INSERT INTO story_units_new
+-- Only migrate if old table exists and new table is empty
+INSERT OR IGNORE INTO story_units_new
     (id, project_id, book_id, unit_no, title, unit_type,
      story_order, present_order, status, synopsis, draft, word_count,
      emotion_basis, transition_type, transition_text,
@@ -54,15 +55,16 @@ SELECT
     exit_characters, exit_world, exit_commitments,
     unit_memories, target_chars, target_chapter_count,
     current_step, total_steps, created_at, updated_at
-FROM story_units;
+FROM story_units
+WHERE id NOT IN (SELECT id FROM story_units_new);
 
--- 3. Drop old table
-DROP TABLE story_units;
+-- Drop old table if it still exists
+DROP TABLE IF EXISTS story_units;
 
--- 4. Rename new table
+-- Rename new table
 ALTER TABLE story_units_new RENAME TO story_units;
 
--- 5. Recreate indexes
+-- Recreate indexes
 CREATE INDEX IF NOT EXISTS idx_story_units_project ON story_units(project_id);
 CREATE INDEX IF NOT EXISTS idx_story_units_book ON story_units(book_id);
 CREATE INDEX IF NOT EXISTS idx_story_units_story_order ON story_units(project_id, book_id, story_order);

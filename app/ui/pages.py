@@ -816,6 +816,7 @@ class ProjectsPage(QWidget):
         from PySide6.QtWidgets import QFileDialog
         from pathlib import Path
         from app.services import project_io, ServiceError
+        from PySide6.QtCore import QThread, Signal as QSignal
 
         # 优先级: 1) 左 list 选中项; 2) current_project; 3) 唯一 1 个项目 → 自动选.
         project = self._get_target_project()
@@ -854,21 +855,35 @@ class ProjectsPage(QWidget):
             # 用户选了 .zip 但没 .novel → 改成 .novel.zip
             path = path[:-4] + ".novel.zip"
 
-        try:
-            written = project_io.export_project(pid, Path(path))
-        except ServiceError as e:
-            Dialogs.warning("导出失败", str(e), parent=self)
-            return
-        except Exception as e:
-            log.error(f"[ProjectsPage] export failed: {e}")
-            Dialogs.warning("导出失败", f"导出过程出错: {e}", parent=self)
-            return
-        size_kb = max(1, written.stat().st_size // 1024)
-        Dialogs.info(
-            "已导出",
-            f"项目「{project.get('name')}」已导出到:\n{written}\n\n大小: {size_kb} KB",
-            parent=self,
+        # 异步导出: 不阻塞 UI
+        class _ExportWorker(QThread):
+            done = QSignal(object)
+            error = QSignal(str)
+
+            def __init__(self, pid, path):
+                super().__init__()
+                self.pid = pid
+                self.path = path
+
+            def run(self):
+                try:
+                    result = project_io.export_project(self.pid, Path(self.path))
+                    self.done.emit(result)
+                except Exception as e:
+                    self.error.emit(str(e))
+
+        self._export_worker = _ExportWorker(pid, path)
+        self._export_worker.done.connect(
+            lambda written: Dialogs.info(
+                "已导出",
+                f"项目「{project.get('name')}」已导出到:\n{written}\n\n大小: {max(1, written.stat().st_size // 1024)} KB",
+                parent=self,
+            )
         )
+        self._export_worker.error.connect(
+            lambda msg: Dialogs.warning("导出失败", msg, parent=self)
+        )
+        self._export_worker.start()
 
     def _on_import(self) -> None:
         # 4.0 修复: 之前 _on_import 只是个占位提示, 现在接 project_io.import_project.
@@ -1890,6 +1905,15 @@ class KnowledgePage(QWidget):
         """主题切换时刷新 viewer 样式表。"""
         self.viewer.document().setDefaultStyleSheet(self._viewer_stylesheet())
 
+    def _rebuild_zvec_if_available(self) -> None:
+        """知识文档变更后触发 zvec 索引重建 (best-effort)."""
+        try:
+            from app.knowledge._zvec_index import ZvecIndex
+            idx = ZvecIndex()
+            idx._populate_from_knowledge()
+        except Exception:
+            pass
+
     def _viewer_stylesheet(self) -> str:
         """返回 QTextBrowser 的 DefaultStyleSheet（body/h1-h6/code 等颜色由 CSS 变量驱动）。"""
         if self._is_dark_theme():
@@ -2184,6 +2208,8 @@ class KnowledgePage(QWidget):
         cur_idx = self.cmb_cat.currentIndex()
         self.cmb_cat.setCurrentIndex(-1)
         self.cmb_cat.setCurrentIndex(cur_idx)
+        # 触发 zvec 索引重建
+        self._rebuild_zvec_if_available()
 
     def _on_cancel_edit(self) -> None:
         """放弃编辑, 恢复原内容."""
@@ -2246,6 +2272,7 @@ class KnowledgePage(QWidget):
         cur_idx = self.cmb_cat.currentIndex()
         self.cmb_cat.setCurrentIndex(-1)
         self.cmb_cat.setCurrentIndex(cur_idx)
+        self._rebuild_zvec_if_available()
 
 
 # ────────────────── 知识库编辑对话框 ──────────────────

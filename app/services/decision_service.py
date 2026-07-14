@@ -77,7 +77,8 @@ def record(
         )
         _logger.debug("recorded: %s %s guide=%s", dec.action, unit_id, dec.guide_id[:8])
     except Exception as e:
-        _logger.warning("record 落库失败 (降级为内存对象): %s", e)
+        _logger.error("decision record 落库失败: %s", e)
+        raise
 
     return dec
 
