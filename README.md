@@ -281,7 +281,7 @@ python smoke/smoke_v4_guide_decision.py  # 引导+决策测试
 python smoke/smoke_v4_prompt.py          # 提示系统测试
 python smoke/smoke_v4_runtime.py         # 运行循环测试
 python smoke/smoke_v4_isolation.py       # 智能体隔离测试
-python smoke/smoke_v4_event_store.py     # 事件存储测试
+python smoke/smoke_v4_publish.py         # 发布模块测试
 ```
 
 ### 测试结果

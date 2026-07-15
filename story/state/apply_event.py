@@ -14,6 +14,7 @@ from story.state.story_state import (
     HookSnapshot,
     CommitmentSnapshot,
 )
+from dataclasses import replace
 
 _logger = logging.getLogger("NovelWriter.story.apply_event")
 
@@ -88,14 +89,7 @@ def _apply_character_event(state: StoryState, event: dict, event_type: str) -> S
         name=name, traits=traits, location=location, relationship_to_pov=relationship,
     )
 
-    return StoryState(
-        unit_id=state.unit_id, title=state.title, unit_type=state.unit_type,
-        current_step=state.current_step, total_steps=state.total_steps,
-        pov_character=state.pov_character, transition_type=state.transition_type,
-        synopsis=state.synopsis, characters=chars, hooks=list(state.hooks),
-        world=state.world, commitments=list(state.commitments),
-        memories=list(state.memories), phase=state.phase,
-    )
+    return replace(state, characters=chars)
 
 
 def _apply_world_event(state: StoryState, event: dict, event_type: str) -> StoryState:
@@ -175,14 +169,7 @@ def _apply_commitment_event(state: StoryState, event: dict, event_type: str) -> 
                 ))
             else:
                 commitments.append(c)
-        return StoryState(
-            unit_id=state.unit_id, title=state.title, unit_type=state.unit_type,
-            current_step=state.current_step, total_steps=state.total_steps,
-            pov_character=state.pov_character, transition_type=state.transition_type,
-            synopsis=state.synopsis, characters=dict(state.characters),
-            hooks=list(state.hooks), world=state.world, commitments=commitments,
-            memories=list(state.memories), phase=state.phase,
-        )
+        return replace(state, commitments=commitments)
 
     return state
 

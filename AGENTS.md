@@ -285,7 +285,7 @@ python smoke/smoke_v4_guide_decision.py
 python smoke/smoke_v4_prompt.py
 python smoke/smoke_v4_runtime.py
 python smoke/smoke_v4_isolation.py
-python smoke/smoke_v4_event_store.py
+python smoke/smoke_v4_publish.py
 ```
 
 ## 版本历史

@@ -10,7 +10,7 @@ and mutated by apply_event() returning new instances.
 """
 from __future__ import annotations
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from typing import Any
 
 
@@ -168,26 +168,12 @@ class StoryState:
                                             relationship_to_pov=existing.relationship_to_pov)
         else:
             chars[name] = CharacterSnapshot(name=name, traits=traits)
-        return StoryState(
-            unit_id=self.unit_id, title=self.title, unit_type=self.unit_type,
-            current_step=self.current_step, total_steps=self.total_steps,
-            pov_character=self.pov_character, transition_type=self.transition_type,
-            synopsis=self.synopsis, characters=chars, hooks=list(self.hooks),
-            world=self.world, commitments=list(self.commitments),
-            memories=list(self.memories), phase=self.phase,
-        )
+        return replace(self, characters=chars)
 
     def with_hook(self, snap: HookSnapshot) -> StoryState:
         hooks = [h for h in self.hooks if h.hook_id != snap.hook_id]
         hooks.append(snap)
-        return StoryState(
-            unit_id=self.unit_id, title=self.title, unit_type=self.unit_type,
-            current_step=self.current_step, total_steps=self.total_steps,
-            pov_character=self.pov_character, transition_type=self.transition_type,
-            synopsis=self.synopsis, characters=dict(self.characters),
-            hooks=hooks, world=self.world, commitments=list(self.commitments),
-            memories=list(self.memories), phase=self.phase,
-        )
+        return replace(self, hooks=hooks)
 
     def with_world(self, **kwargs) -> StoryState:
         w = WorldSnapshot(
@@ -197,48 +183,18 @@ class StoryState:
             active_factions=list(kwargs.get("active_factions", self.world.active_factions)),
             custom=dict(kwargs.get("custom", self.world.custom)),
         )
-        return StoryState(
-            unit_id=self.unit_id, title=self.title, unit_type=self.unit_type,
-            current_step=self.current_step, total_steps=self.total_steps,
-            pov_character=self.pov_character, transition_type=self.transition_type,
-            synopsis=self.synopsis, characters=dict(self.characters),
-            hooks=list(self.hooks), world=w, commitments=list(self.commitments),
-            memories=list(self.memories), phase=self.phase,
-        )
+        return replace(self, world=w)
 
     def with_commitment(self, c: CommitmentSnapshot) -> StoryState:
         commitments = list(self.commitments)
         commitments.append(c)
-        return StoryState(
-            unit_id=self.unit_id, title=self.title, unit_type=self.unit_type,
-            current_step=self.current_step, total_steps=self.total_steps,
-            pov_character=self.pov_character, transition_type=self.transition_type,
-            synopsis=self.synopsis, characters=dict(self.characters),
-            hooks=list(self.hooks), world=self.world, commitments=commitments,
-            memories=list(self.memories), phase=self.phase,
-        )
+        return replace(self, commitments=commitments)
 
     def with_phase(self, phase: str) -> StoryState:
-        return StoryState(
-            unit_id=self.unit_id, title=self.title, unit_type=self.unit_type,
-            current_step=self.current_step, total_steps=self.total_steps,
-            pov_character=self.pov_character, transition_type=self.transition_type,
-            synopsis=self.synopsis, characters=dict(self.characters),
-            hooks=list(self.hooks), world=self.world,
-            commitments=list(self.commitments), memories=list(self.memories),
-            phase=phase,
-        )
+        return replace(self, phase=phase)
 
     def with_step(self, current_step: int) -> StoryState:
-        return StoryState(
-            unit_id=self.unit_id, title=self.title, unit_type=self.unit_type,
-            current_step=current_step, total_steps=self.total_steps,
-            pov_character=self.pov_character, transition_type=self.transition_type,
-            synopsis=self.synopsis, characters=dict(self.characters),
-            hooks=list(self.hooks), world=self.world,
-            commitments=list(self.commitments), memories=list(self.memories),
-            phase=self.phase,
-        )
+        return replace(self, current_step=current_step)
 
     def to_dict(self) -> dict:
         return {
