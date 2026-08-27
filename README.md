@@ -1,3 +1,8 @@
+> ⚠️ **已归档 · 仅参考**
+> 本仓库已停止维护，仅作为历史参考保留。
+> 所有能力已融合到 **Novel Engine v1.1**：https://github.com/jiangying3222880/novel-engine
+>
+> 演进路线：novel-writer-jy v5.4（硬约束）→ novel-writer-pure（Python）→ story-engine-skill v6.0（Guide）→ **Novel Engine v1.1**（当前）
 # 小说写作助手 v4.3 — Story OS 架构
 
 > 版本：4.3.0
